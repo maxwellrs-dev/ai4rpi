@@ -1,0 +1,1457 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Ahmed2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=a945577812d26e4c145a9ec98d499c4b}{%
+           family={Ahmed},
+           familyi={A\bibinitperiod},
+           given={Haval\bibnamedelima A.},
+           giveni={H\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19aa9a125d564f756e89badfa313fe36}{%
+           family={Muhammad\bibnamedelima Ali},
+           familyi={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Peshawa\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b605f39699c7e285359e5f51efb8200e}{%
+           family={Faeq},
+           familyi={F\bibinitperiod},
+           given={Abdulbasit\bibnamedelima K.},
+           giveni={A\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0ba5e9936cdc89f81220b85c6d58b6f}{%
+           family={Abdullah},
+           familyi={A\bibinitperiod},
+           given={Saman\bibnamedelima M.},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e3baf5e7669c352f4dd8d3824bd07492}
+      \strng{fullhash}{a3bd7cf89dc02597443fea5c803c7668}
+      \strng{fullhashraw}{a3bd7cf89dc02597443fea5c803c7668}
+      \strng{bibnamehash}{e3baf5e7669c352f4dd8d3824bd07492}
+      \strng{authorbibnamehash}{e3baf5e7669c352f4dd8d3824bd07492}
+      \strng{authornamehash}{e3baf5e7669c352f4dd8d3824bd07492}
+      \strng{authorfullhash}{a3bd7cf89dc02597443fea5c803c7668}
+      \strng{authorfullhashraw}{a3bd7cf89dc02597443fea5c803c7668}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Data normalization can be useful in eliminating the effect of inconsistent ranges in some machine learning (ML) techniques and in speeding up the optimization process in others. Many studies apply different methods of data normalization with an aim to reduce or eliminate the impact of data variance on the accuracy rate of ML-based models. However, the significance of this impact aligning with the mathematical concept of the ML algorithms still needs more investigation and tests. To identify that, this work proposes an investigation methodology involving three different ML algorithms, which are support vector machine (SVM), artificial neural network (ANN), and Euclidean-based K-nearest neighbor (E-KNN). Throughout this work, five different datasets have been utilized, and each has been taken from different application fields with different statistical properties. Although there are many data normalization methods available, this work focuses on the min-max method, because it actively eliminates the effect of inconsistent ranges of the datasets. Moreover, other factors that are challenging the process of min-max normalization, such as including or excluding outliers or the least significant feature, have also been considered in this work. The finding of this work shows that each ML technique responds differently to the min-max normalization. The performance of SVM models has been improved, while no significant improvement happened to the performance of ANN models. It is been concluded that the performance of E-KNN models may improve or degrade with the min-max normalization, and it depends on the statistical properties of the dataset.}
+      \field{journaltitle}{ARO - The Scientific Journal of Koya University}
+      \field{month}{9}
+      \field{number}{2}
+      \field{title}{An Investigation on Disparity Responds of Machine Learning Algorithms to Data Normalization Method}
+      \field{volume}{10}
+      \field{year}{2022}
+      \field{pages}{29\bibrangedash 37}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.14500/aro.10970
+      \endverb
+      \verb{urlraw}
+      \verb https://aro.koyauniversity.org/index.php/aro/article/view/970
+      \endverb
+      \verb{url}
+      \verb https://aro.koyauniversity.org/index.php/aro/article/view/970
+      \endverb
+    \endentry
+    \entry{Alshammari2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e4e46a3236a8a8b99233fdf64cc203ff}{%
+           family={Alshammari},
+           familyi={A\bibinitperiod},
+           given={Ahmad},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \strng{fullhash}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \strng{fullhashraw}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \strng{bibnamehash}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \strng{authorbibnamehash}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \strng{authornamehash}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \strng{authorfullhash}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \strng{authorfullhashraw}{e4e46a3236a8a8b99233fdf64cc203ff}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Computer Applications}
+      \field{month}{11}
+      \field{title}{Implementation of Model Evaluation using Confusion Matrix in Python}
+      \field{volume}{186}
+      \field{year}{2024}
+      \field{pages}{42\bibrangedash 48}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.5120/ijca2024924236
+      \endverb
+    \endentry
+    \entry{datasetSize}{article}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=3bc6a17f021db2eef87763da9762fe7d}{%
+           family={Althnian},
+           familyi={A\bibinitperiod},
+           given={Alhanoof},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0a4dd28b33f29841941f0b36300301f}{%
+           family={AlSaeed},
+           familyi={A\bibinitperiod},
+           given={Duaa},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eda5f996b25bc3f2ad8f4128db327d8e}{%
+           family={Al-Baity},
+           familyi={A\bibinithyphendelim B\bibinitperiod},
+           given={Heyam},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d69a4879055681c8990b1bcc57903f6}{%
+           family={Samha},
+           familyi={S\bibinitperiod},
+           given={Amani},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e857f608dd53f3845079948dda7631f}{%
+           family={Dris},
+           familyi={D\bibinitperiod},
+           given={Alanoud\bibnamedelima Bin},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c9abb119aca669dd61a6b9fbf8e8dc7}{%
+           family={Alzakari},
+           familyi={A\bibinitperiod},
+           given={Najla},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49284a1f77457b5ed38190c512e6f7c4}{%
+           family={Abou\bibnamedelima Elwafa},
+           familyi={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Afnan},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72a722aae9aa6b03d966122fba011976}{%
+           family={Kurdi},
+           familyi={K\bibinitperiod},
+           given={Heba},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1bd36aa9436aef5234dca3863486f752}
+      \strng{fullhash}{84b3e35acd3558c881cca1a0261ba2fc}
+      \strng{fullhashraw}{84b3e35acd3558c881cca1a0261ba2fc}
+      \strng{bibnamehash}{1bd36aa9436aef5234dca3863486f752}
+      \strng{authorbibnamehash}{1bd36aa9436aef5234dca3863486f752}
+      \strng{authornamehash}{1bd36aa9436aef5234dca3863486f752}
+      \strng{authorfullhash}{84b3e35acd3558c881cca1a0261ba2fc}
+      \strng{authorfullhashraw}{84b3e35acd3558c881cca1a0261ba2fc}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Dataset size is considered a major concern in the medical domain, where lack of data is a common occurrence. This study aims to investigate the impact of dataset size on the overall performance of supervised classification models. We examined the performance of six widely-used models in the medical field, including support vector machine (SVM), neural networks (NN), C4.5 decision tree (DT), random forest (RF), adaboost (AB), and naïve Bayes (NB) on eighteen small medical UCI datasets. We further implemented three dataset size reduction scenarios on two large datasets and analyze the performance of the models when trained on each resulting dataset with respect to accuracy, precision, recall, f-score, specificity, and area under the ROC curve (AUC). Our results indicated that the overall performance of classifiers depend on how much a dataset represents the original distribution rather than its size. Moreover, we found that the most robust model for limited medical data is AB and NB, followed by SVM, and then RF and NN, while the least robust model is DT. Furthermore, an interesting observation is that a robust machine learning model to limited dataset does not necessary imply that it provides the best performance compared to other models.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{2}
+      \field{title}{Impact of Dataset Size on Classification Performance: An Empirical Evaluation in the Medical Domain}
+      \field{volume}{11}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.3390/app11020796
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/11/2/796
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/11/2/796
+      \endverb
+    \endentry
+    \entry{harvard_dataverse}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b6647834d593d90d9ca42139ae49ecd}{%
+           family={Dataverse},
+           familyi={D\bibinitperiod},
+           given={Harvard},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4b6647834d593d90d9ca42139ae49ecd}
+      \strng{fullhash}{4b6647834d593d90d9ca42139ae49ecd}
+      \strng{fullhashraw}{4b6647834d593d90d9ca42139ae49ecd}
+      \strng{bibnamehash}{4b6647834d593d90d9ca42139ae49ecd}
+      \strng{authorbibnamehash}{4b6647834d593d90d9ca42139ae49ecd}
+      \strng{authornamehash}{4b6647834d593d90d9ca42139ae49ecd}
+      \strng{authorfullhash}{4b6647834d593d90d9ca42139ae49ecd}
+      \strng{authorfullhashraw}{4b6647834d593d90d9ca42139ae49ecd}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acessado em: 4 jun. 2025}
+      \field{title}{Harvard Dataverse: An Online Repository for Research Data}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://dataverse.harvard.edu
+      \endverb
+      \verb{url}
+      \verb https://dataverse.harvard.edu
+      \endverb
+    \endentry
+    \entry{iotIndustria}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=68b6c6a735889658978f7080cd1073a7}{%
+           family={Demir},
+           familyi={D\bibinitperiod},
+           given={Erkan},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c169be8c02a2fc3d28c265c1dfe5d51f}{%
+           family={Korkmaz},
+           familyi={K\bibinitperiod},
+           given={Hayriye},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ac024586a329534698326a1d96f9289f}
+      \strng{fullhash}{ac024586a329534698326a1d96f9289f}
+      \strng{fullhashraw}{ac024586a329534698326a1d96f9289f}
+      \strng{bibnamehash}{ac024586a329534698326a1d96f9289f}
+      \strng{authorbibnamehash}{ac024586a329534698326a1d96f9289f}
+      \strng{authornamehash}{ac024586a329534698326a1d96f9289f}
+      \strng{authorfullhash}{ac024586a329534698326a1d96f9289f}
+      \strng{authorfullhashraw}{ac024586a329534698326a1d96f9289f}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2023 IEEE International Workshop on Metrology for Industry 4.0 \& IoT (MetroInd4.0\&IoT)}
+      \field{title}{A Novel Monitoring Dashboard And Hardware Implementation Simplifying The Remote Access In Industry}
+      \field{year}{2023}
+      \field{pages}{399\bibrangedash 403}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/MetroInd4.0IoT57462.2023.10180193
+      \endverb
+      \keyw{Industries;Industrial facilities;Inverters;Delays;Problem-solving;Personnel;Internet of Things;Industrial IoT;Machine-Cloud-Human Interaction;Remote Monitoring and Control;Frequency Inverters;Smart Machines;Smart Factories}
+    \endentry
+    \entry{litert2024}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5cacc9dc28a935ab0b5425caccd7dd41}{%
+           family={Edge},
+           familyi={E\bibinitperiod},
+           given={Google\bibnamedelima AI},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \strng{fullhash}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \strng{fullhashraw}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \strng{bibnamehash}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \strng{authorbibnamehash}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \strng{authornamehash}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \strng{authorfullhash}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \strng{authorfullhashraw}{5cacc9dc28a935ab0b5425caccd7dd41}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acessado em: 4 jun. 2025}
+      \field{title}{LiteRT: High-Performance On-Device AI Runtime (formerly TensorFlow Lite)}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://ai.google.dev/edge/litert
+      \endverb
+      \verb{url}
+      \verb https://ai.google.dev/edge/litert
+      \endverb
+    \endentry
+    \entry{edgeDocs}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d29db41b60ea60f80ff180bc5009cd1d}{%
+           family={{Edge Impulse}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{d29db41b60ea60f80ff180bc5009cd1d}
+      \strng{fullhash}{d29db41b60ea60f80ff180bc5009cd1d}
+      \strng{fullhashraw}{d29db41b60ea60f80ff180bc5009cd1d}
+      \strng{bibnamehash}{d29db41b60ea60f80ff180bc5009cd1d}
+      \strng{authorbibnamehash}{d29db41b60ea60f80ff180bc5009cd1d}
+      \strng{authornamehash}{d29db41b60ea60f80ff180bc5009cd1d}
+      \strng{authorfullhash}{d29db41b60ea60f80ff180bc5009cd1d}
+      \strng{authorfullhashraw}{d29db41b60ea60f80ff180bc5009cd1d}
+      \field{extraname}{1}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acessado em: 7 jun. 2025}
+      \field{title}{Image Classification - Edge Impulse Documentation}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://docs.edgeimpulse.com/docs/tutorials/end-to-end-tutorials/computer-vision/image-classification
+      \endverb
+      \verb{url}
+      \verb https://docs.edgeimpulse.com/docs/tutorials/end-to-end-tutorials/computer-vision/image-classification
+      \endverb
+    \endentry
+    \entry{edge_impulse}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4c855d0c3b5e9bc68fcf48f4e20a93c6}{%
+           family={Edge\bibnamedelima Impulse},
+           familyi={E\bibinitperiod\bibinitdelim I\bibinitperiod},
+           given={Inc.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \strng{fullhash}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \strng{fullhashraw}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \strng{bibnamehash}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \strng{authorbibnamehash}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \strng{authornamehash}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \strng{authorfullhash}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \strng{authorfullhashraw}{4c855d0c3b5e9bc68fcf48f4e20a93c6}
+      \field{extraname}{2}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acessado em: 4 jun. 2025}
+      \field{title}{Edge Impulse: The Leading Edge AI Development Platform}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.edgeimpulse.com
+      \endverb
+      \verb{url}
+      \verb https://www.edgeimpulse.com
+      \endverb
+    \endentry
+    \entry{EssanoahArthur2024}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=3852276db11200bf0fe9b3af74c6d483}{%
+           family={Essanoah\bibnamedelima Arthur},
+           familyi={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Ewura\bibnamedelima Abena},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f99d6af09a8c052afbb001b2f24a3bce}{%
+           family={Aabangbio\bibnamedelima Wulnye},
+           familyi={A\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Fortunatus},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ace94dd12a7dbdbe0554e662022393ec}{%
+           family={Nana\bibnamedelima Gookyi},
+           familyi={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Dennis\bibnamedelima Agyemanh},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=06fbbf3055b4faeb5ecef8e73c54609e}{%
+           family={Obour\bibnamedelima Agyekum},
+           familyi={O\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Kwame\bibnamedelima Opuni-Boachie},
+           giveni={K\bibinitperiod\bibinitdelim O\bibinithyphendelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6109558c78fbf1f523064025c77451f3}{%
+           family={Danquah},
+           familyi={D\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=67581eb02edc862a10ef0b78252ce842}{%
+           family={Gyaang},
+           familyi={G\bibinitperiod},
+           given={Raymond},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{92d33fdfcd900bf8dadd46e0f3ebb51a}
+      \strng{fullhash}{bb18713edc9c4f8f06d32b70509a8b14}
+      \strng{fullhashraw}{bb18713edc9c4f8f06d32b70509a8b14}
+      \strng{bibnamehash}{92d33fdfcd900bf8dadd46e0f3ebb51a}
+      \strng{authorbibnamehash}{92d33fdfcd900bf8dadd46e0f3ebb51a}
+      \strng{authornamehash}{92d33fdfcd900bf8dadd46e0f3ebb51a}
+      \strng{authorfullhash}{bb18713edc9c4f8f06d32b70509a8b14}
+      \strng{authorfullhashraw}{bb18713edc9c4f8f06d32b70509a8b14}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 Conference on Information Communications Technology and Society (ICTAS)}
+      \field{title}{Edge Impulse vs TensorFlow: A Comparative Analysis of TinyML Platforms for Maize Leaf Disease Identification}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICTAS59620.2024.10507119
+      \endverb
+      \keyw{Training;Microcontrollers;Image edge detection;Scalability;Data models;Reliability;Stakeholders;TensorFlow;Edge Impulse;machine learning;Maize leaf disease identification;disease identification}
+    \endentry
+    \entry{tinyModels}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9dfd1673e182a14ee1690b92e55941f7}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f719847015a2a8859c5aa18be0d19f2d}{%
+           family={Siebert},
+           familyi={S\bibinitperiod},
+           given={Julien},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e90acba9429b5d627e909450fbbefe60}
+      \strng{fullhash}{e90acba9429b5d627e909450fbbefe60}
+      \strng{fullhashraw}{e90acba9429b5d627e909450fbbefe60}
+      \strng{bibnamehash}{e90acba9429b5d627e909450fbbefe60}
+      \strng{authorbibnamehash}{e90acba9429b5d627e909450fbbefe60}
+      \strng{authornamehash}{e90acba9429b5d627e909450fbbefe60}
+      \strng{authorfullhash}{e90acba9429b5d627e909450fbbefe60}
+      \strng{authorfullhashraw}{e90acba9429b5d627e909450fbbefe60}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 International Conference on Artificial Intelligence in Information and Communication (ICAIIC)}
+      \field{title}{TinyML: A Systematic Review and Synthesis of Existing Research}
+      \field{year}{2022}
+      \field{pages}{269\bibrangedash 274}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICAIIC54071.2022.9722636
+      \endverb
+      \keyw{Privacy;Systematics;Machine learning algorithms;Software algorithms;Machine learning;Hardware;Software;TinyML;Systematic review;Data synthesis;MCUs;TensorFlow Lite;Neural networks}
+    \endentry
+    \entry{kaggle}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8fec9765921cfa63cb331e42a924c27c}{%
+           family={Kaggle},
+           familyi={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{fullhash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{fullhashraw}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{bibnamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorbibnamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authornamehash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorfullhash}{8fec9765921cfa63cb331e42a924c27c}
+      \strng{authorfullhashraw}{8fec9765921cfa63cb331e42a924c27c}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2024-11-02}
+      \field{title}{Kaggle: Your Machine Learning and Data Science Community}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.kaggle.com
+      \endverb
+      \verb{url}
+      \verb https://www.kaggle.com
+      \endverb
+    \endentry
+    \entry{Kallimani2024}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=0986002ca8bdc85b6f9b4d659b0c53d6}{%
+           family={Kallimani},
+           familyi={K\bibinitperiod},
+           given={Rakhee},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0da6d68e60981654646c0daf2e6f859b}{%
+           family={Pai},
+           familyi={P\bibinitperiod},
+           given={Krishna},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=99f1e3e65dfa5048e1be75851d1866df}{%
+           family={Raghuwanshi},
+           familyi={R\bibinitperiod},
+           given={Prasoon},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1e37ae077caf3af40f75ad31aaf4d90}{%
+           family={Iyer},
+           familyi={I\bibinitperiod},
+           given={Sridhar},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a4343045da95c9206141eb1769383e8c}{%
+           family={López},
+           familyi={L\bibinitperiod},
+           given={Onel\bibnamedelimb L.\bibnamedelimi A.},
+           giveni={O\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c9752ba3f76a69236bb0525ba2871081}
+      \strng{fullhash}{3251a98780b2d0d81efb271ffaa3cafd}
+      \strng{fullhashraw}{3251a98780b2d0d81efb271ffaa3cafd}
+      \strng{bibnamehash}{c9752ba3f76a69236bb0525ba2871081}
+      \strng{authorbibnamehash}{c9752ba3f76a69236bb0525ba2871081}
+      \strng{authornamehash}{c9752ba3f76a69236bb0525ba2871081}
+      \strng{authorfullhash}{3251a98780b2d0d81efb271ffaa3cafd}
+      \strng{authorfullhashraw}{3251a98780b2d0d81efb271ffaa3cafd}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In recent years, Artificial Intelligence (AI) and Machine learning (ML) have gained significant interest from both, industry and academia. Notably, conventional ML techniques require enormous amounts of power to meet the desired accuracy, which has limited their use mainly to high-capability devices such as network nodes. However, with many advancements in technologies such as the Internet of Things (IoT) and edge computing, it is desirable to incorporate ML techniques into resource-constrained embedded devices for distributed and ubiquitous intelligence. This has motivated the emergence of the TinyML paradigm which is an embedded ML technique that enables ML applications on multiple cheap, resource- and power-constrained devices. However, during this transition towards appropriate implementation of the TinyML technology, multiple challenges such as processing capacity optimisation, improved reliability, and maintenance of learning models' accuracy require timely solutions. In this article, various avenues available for TinyML implementation are reviewed. Firstly, a background of TinyML is provided, followed by detailed discussions on various tools supporting TinyML. Then, state-of-art applications of TinyML using advanced technologies are detailed. Lastly, detailed prospects are presented which include various research challenges and identification of future directions.}
+      \field{issn}{1573-7721}
+      \field{journaltitle}{Multimedia Tools and Applications}
+      \field{month}{3}
+      \field{number}{10}
+      \field{title}{TinyML: Tools, applications, challenges, and future research directions}
+      \field{volume}{83}
+      \field{year}{2024}
+      \field{pages}{29015\bibrangedash 29045}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1007/s11042-023-16740-9
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s11042-023-16740-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s11042-023-16740-9
+      \endverb
+    \endentry
+    \entry{iotAgricultura}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=8e3f45162c452624c78e28ae2c694402}{%
+           family={Kjellby},
+           familyi={K\bibinitperiod},
+           given={Rolf\bibnamedelima A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ef360944f44806001e5a897ce84f8128}{%
+           family={Cenkeramaddi},
+           familyi={C\bibinitperiod},
+           given={Linga\bibnamedelima R.},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=92b8451d1354c3b0cef82b4ab4ac8a80}{%
+           family={Frøytlog},
+           familyi={F\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3468fe9efddb6706da48fbca2f41efc8}{%
+           family={Lozano},
+           familyi={L\bibinitperiod},
+           given={Baltasar\bibnamedelima B.},
+           giveni={B\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=398d6a07e93395389d5654d7b1b7b128}{%
+           family={Soumya},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c2c37d54b187b28cd8035f8b81529eb}{%
+           family={Bhange},
+           familyi={B\bibinitperiod},
+           given={Meghana},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{24f4b7298528b3e96bc5a1d7c3af74fb}
+      \strng{fullhash}{84884577ce250aa0b2582b16f8a199a6}
+      \strng{fullhashraw}{84884577ce250aa0b2582b16f8a199a6}
+      \strng{bibnamehash}{24f4b7298528b3e96bc5a1d7c3af74fb}
+      \strng{authorbibnamehash}{24f4b7298528b3e96bc5a1d7c3af74fb}
+      \strng{authornamehash}{24f4b7298528b3e96bc5a1d7c3af74fb}
+      \strng{authorfullhash}{84884577ce250aa0b2582b16f8a199a6}
+      \strng{authorfullhashraw}{84884577ce250aa0b2582b16f8a199a6}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 IEEE 5th World Forum on Internet of Things (WF-IoT)}
+      \field{title}{Long-range \& Self-powered IoT Devices for Agriculture \& Aquaponics Based on Multi-hop Topology}
+      \field{year}{2019}
+      \field{pages}{545\bibrangedash 549}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/WF-IoT.2019.8767196
+      \endverb
+      \keyw{Logic gates;Protocols;Agriculture;Energy harvesting;Energy consumption;Internet of Things;Topology;Wireless Sensor Networks;IoT;Wireless Embedded Systems;Energy Harvesting;Self-Powered IoT;Multi-Hop Topology;Agriculture;Aquaponics}
+    \endentry
+    \entry{Mellit2025}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=6a2f238cb606a9c4164af28e46fe586b}{%
+           family={Mellit},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33b02f41f3c002c6c42ff04719e25eb0}{%
+           family={Blasuttigh},
+           familyi={B\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=24f384eadb8ed1fc461755b8de3b4bf0}{%
+           family={Pastore},
+           familyi={P\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fdf94dfa0e00ba5ee99aa5359764cd1c}{%
+           family={Zennaro},
+           familyi={Z\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b81104022654099dc42affe8259816a6}{%
+           family={Pavan},
+           familyi={P\bibinitperiod},
+           given={A.\bibnamedelimi Massi},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{eb7cc87a14bce01530326012761bfad5}
+      \strng{fullhash}{9fc229727aea0a715dc2e5ea712e31bd}
+      \strng{fullhashraw}{9fc229727aea0a715dc2e5ea712e31bd}
+      \strng{bibnamehash}{eb7cc87a14bce01530326012761bfad5}
+      \strng{authorbibnamehash}{eb7cc87a14bce01530326012761bfad5}
+      \strng{authornamehash}{eb7cc87a14bce01530326012761bfad5}
+      \strng{authorfullhash}{9fc229727aea0a715dc2e5ea712e31bd}
+      \strng{authorfullhashraw}{9fc229727aea0a715dc2e5ea712e31bd}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Industry Applications}
+      \field{title}{TinyML for Fault Diagnosis of Photovoltaic Modules Using Edge Impulse Platform and IR Thermography Images}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 12}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1109/TIA.2025.3556792
+      \endverb
+      \keyw{Image edge detection;Fault diagnosis;Accuracy;Tiny machine learning;Fault detection;Classification algorithms;Real-time systems;Infrared imaging;Imputation;Data models;Photovoltaic;fault diagnosis;TinyML;edge impulse;edge device}
+    \endentry
+    \entry{specificDomain}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=57edf45ed11a0466f7ed4b91a85f2f3b}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Tymoteusz},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d9d16cb54f5f2954b41d276ccac4d259}{%
+           family={Durlik},
+           familyi={D\bibinitperiod},
+           given={Irmina},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3541ad30f4a9fa2acbe3cb3d6cbe91c}{%
+           family={Łobodzińska},
+           familyi={Ł\bibinitperiod},
+           given={Adrianna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d7293269a8e3106b968b89a5570b5711}{%
+           family={Dorobczyński},
+           familyi={D\bibinitperiod},
+           given={Lech},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1586fe530830880ed242fb758f142d32}{%
+           family={Jasionowski},
+           familyi={J\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a16191e2cd8193901c8eb6a68080e817}
+      \strng{fullhash}{b6c2612b8790e4c9defe920a9d04bb23}
+      \strng{fullhashraw}{b6c2612b8790e4c9defe920a9d04bb23}
+      \strng{bibnamehash}{a16191e2cd8193901c8eb6a68080e817}
+      \strng{authorbibnamehash}{a16191e2cd8193901c8eb6a68080e817}
+      \strng{authornamehash}{a16191e2cd8193901c8eb6a68080e817}
+      \strng{authorfullhash}{b6c2612b8790e4c9defe920a9d04bb23}
+      \strng{authorfullhashraw}{b6c2612b8790e4c9defe920a9d04bb23}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article delves into the critical integration of domain knowledge into AI/ML systems across various industries, highlighting its importance in developing ethically responsible, effective, and contextually relevant solutions. Through detailed case studies from the healthcare and manufacturing sectors, we explore the challenges, strategies, and successes of this integration. We discuss the evolving role of domain experts and the emerging tools and technologies that facilitate the incorporation of human expertise into AI/ML models. The article forecasts future trends, predicting a more seamless and strategic collaboration between AI/ML and domain expertise. It emphasizes the necessity of this synergy for fostering innovation, ensuring ethical practices, and aligning technological advancements with human values and real-world complexities.}
+      \field{issn}{2076-3417}
+      \field{journaltitle}{Applied Sciences}
+      \field{number}{24}
+      \field{title}{AI in Context: Harnessing Domain Knowledge for Smarter Machine Learning}
+      \field{volume}{14}
+      \field{year}{2024}
+      \verb{doi}
+      \verb 10.3390/app142411612
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2076-3417/14/24/11612
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2076-3417/14/24/11612
+      \endverb
+    \endentry
+    \entry{quantization}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e423309a2c8e5d641ec74fe3918bd2e4}{%
+           family={Moriello},
+           familyi={M\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Politecnico di Milano}%
+      }
+      \strng{namehash}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \strng{fullhash}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \strng{fullhashraw}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \strng{bibnamehash}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \strng{authorbibnamehash}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \strng{authornamehash}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \strng{authorfullhash}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \strng{authorfullhashraw}{e423309a2c8e5d641ec74fe3918bd2e4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{month}{7}
+      \field{title}{Optimizing Neural Networks for TinyML: A Study on Quantization Schemes}
+      \field{type}{Master's Thesis}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://hdl.handle.net/10589/222539
+      \endverb
+      \verb{url}
+      \verb https://hdl.handle.net/10589/222539
+      \endverb
+    \endentry
+    \entry{Oladokun2025}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=13a45c0bcbd01a2b566fdde4c36b9cbc}{%
+           family={Oladokun},
+           familyi={O\bibinitperiod},
+           given={Martins},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \strng{fullhash}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \strng{fullhashraw}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \strng{bibnamehash}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \strng{authorbibnamehash}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \strng{authornamehash}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \strng{authorfullhash}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \strng{authorfullhashraw}{13a45c0bcbd01a2b566fdde4c36b9cbc}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2505.XXXX}
+      \field{month}{5}
+      \field{note}{Discusses desafios de latência em setores como saúde, transporte e manufatura em aplicações de IoT em tempo real}
+      \field{title}{Latency and Throughput Tradeoffs in Real‑Time IoT Data Analytics}
+      \field{year}{2025}
+    \endentry
+    \entry{Oliveira2024}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3d619637e98a9508562a62620fd5d000}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Franklin},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b035935b7f267b5f2a450478c9c5973}{%
+           family={Costa},
+           familyi={C\bibinitperiod},
+           given={Daniel\bibnamedelima G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c64fe0d5e8e260233c95a3dd045eeb9b}{%
+           family={Assis},
+           familyi={A\bibinitperiod},
+           given={Flávio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d895b26bd9aa1ee68b792d486dde9cd0}{%
+           family={Silva},
+           familyi={S\bibinitperiod},
+           given={Ivanovitch},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{efe97cc0855ef054745e84d4c0ec8861}
+      \strng{fullhash}{2ab4a018bf72df751cd4886e47aa66ee}
+      \strng{fullhashraw}{2ab4a018bf72df751cd4886e47aa66ee}
+      \strng{bibnamehash}{efe97cc0855ef054745e84d4c0ec8861}
+      \strng{authorbibnamehash}{efe97cc0855ef054745e84d4c0ec8861}
+      \strng{authornamehash}{efe97cc0855ef054745e84d4c0ec8861}
+      \strng{authorfullhash}{2ab4a018bf72df751cd4886e47aa66ee}
+      \strng{authorfullhashraw}{2ab4a018bf72df751cd4886e47aa66ee}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article comprehensively reviews the emerging concept of Internet of Intelligent Things (IoIT), adopting an integrated perspective centred on the areas of embedded systems, edge computing, and machine learning. With rapid developments in these areas, new solutions are emerging to address previously unsolved problems, demanding novel research and development paradigms. In this sense, this article aims to fulfil some important research gaps, laying down the foundations for cutting-edge research works following an ever-increasing trend based on embedded devices powered by compressed artificial intelligence models. For that, this article first traces the evolution of embedded devices and wireless communication technologies in the last decades, leading to the emergence of IoT applications in various domains. The evolution of machine learning and its applications, along with associated challenges and architectures, is also discussed. In this context, the concept of embedded machine learning (TinyML) is introduced within the context of the Internet of Intelligent Things paradigm, highlighting its unique characteristics and the process of developing and deploying such solutions. Furthermore, we perform an extensive state-of-the-art survey to identify very recent works that have implemented TinyML models on different off-the-shelf embedded devices, analysing the development of practical solutions and discussing recent research trends and future perspectives. By providing a comprehensive literature review across all layers of the Internet of Intelligent Things paradigm, addressing potential applications and proposing a new taxonomy to guide new development efforts, this article aims to offer a holistic perspective on this challenging and rapidly evolving research field.}
+      \field{issn}{2542-6605}
+      \field{journaltitle}{Internet of Things}
+      \field{title}{Internet of Intelligent Things: A convergence of embedded systems, edge computing and machine learning}
+      \field{volume}{26}
+      \field{year}{2024}
+      \field{pages}{101153}
+      \range{pages}{1}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.iot.2024.101153
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S2542660524000945
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S2542660524000945
+      \endverb
+      \keyw{TinyML,IoT,Hardware,Artificial intelligence,Survey}
+    \endentry
+    \entry{comparaAlg}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d4a098f6281efbb77c38505a694ba3b7}{%
+           family={Poojary},
+           familyi={P\bibinitperiod},
+           given={Ramaprasad},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=af070e81c9ecda515ddf1ecadf8143b5}{%
+           family={Pai},
+           familyi={P\bibinitperiod},
+           given={Akul},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f894fac900f6c7b980ee7905feb0c8e3}
+      \strng{fullhash}{f894fac900f6c7b980ee7905feb0c8e3}
+      \strng{fullhashraw}{f894fac900f6c7b980ee7905feb0c8e3}
+      \strng{bibnamehash}{f894fac900f6c7b980ee7905feb0c8e3}
+      \strng{authorbibnamehash}{f894fac900f6c7b980ee7905feb0c8e3}
+      \strng{authornamehash}{f894fac900f6c7b980ee7905feb0c8e3}
+      \strng{authorfullhash}{f894fac900f6c7b980ee7905feb0c8e3}
+      \strng{authorfullhashraw}{f894fac900f6c7b980ee7905feb0c8e3}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 International Conference on Electrical and Computing Technologies and Applications (ICECTA)}
+      \field{title}{Comparative Study of Model Optimization Techniques in Fine-Tuned CNN Models}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICECTA48151.2019.8959681
+      \endverb
+      \keyw{Deep learning;Convolutional Neural Network;Fine-Tuning;Model-Optimizer}
+    \endentry
+    \entry{Rainio2024}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=31eb6d9f894cdef018cd826123dfdcf7}{%
+           family={Rainio},
+           familyi={R\bibinitperiod},
+           given={Oona},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce373b267ee77b68302d20ba348f955a}{%
+           family={Teuho},
+           familyi={T\bibinitperiod},
+           given={Jarmo},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a01a54ceb9135d767ef375cb1f0f3428}{%
+           family={Klén},
+           familyi={K\bibinitperiod},
+           given={Riku},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0bcb0ea524f5e6331eb73589302a45e9}
+      \strng{fullhash}{0bcb0ea524f5e6331eb73589302a45e9}
+      \strng{fullhashraw}{0bcb0ea524f5e6331eb73589302a45e9}
+      \strng{bibnamehash}{0bcb0ea524f5e6331eb73589302a45e9}
+      \strng{authorbibnamehash}{0bcb0ea524f5e6331eb73589302a45e9}
+      \strng{authornamehash}{0bcb0ea524f5e6331eb73589302a45e9}
+      \strng{authorfullhash}{0bcb0ea524f5e6331eb73589302a45e9}
+      \strng{authorfullhashraw}{0bcb0ea524f5e6331eb73589302a45e9}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Research on different machine learning (ML) has become incredibly popular during the past few decades. However, for some researchers not familiar with statistics, it might be difficult to understand how to evaluate the performance of ML models and compare them with each other. Here, we introduce the most common evaluation metrics used for the typical supervised ML tasks including binary, multi-class, and multi-label classification, regression, image segmentation, object detection, and information retrieval. We explain how to choose a suitable statistical test for comparing models, how to obtain enough values of the metric for testing, and how to perform the test and interpret its results. We also present a few practical examples about comparing convolutional neural networks used to classify X-rays with different lung infections and detect cancer tumors in positron emission tomography images.}
+      \field{issn}{2045-2322}
+      \field{journaltitle}{Scientific Reports}
+      \field{number}{1}
+      \field{title}{Evaluation metrics and statistical tests for machine learning}
+      \field{volume}{14}
+      \field{year}{2024}
+      \field{pages}{6086}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1038/s41598-024-56706-x
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1038/s41598-024-56706-x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1038/s41598-024-56706-x
+      \endverb
+    \endentry
+    \entry{edge}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2ea2e44cd8c9a27853a385090a8dea61}{%
+           family={Saraswathi},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ea2e44cd8c9a27853a385090a8dea61}
+      \strng{fullhash}{2ea2e44cd8c9a27853a385090a8dea61}
+      \strng{fullhashraw}{2ea2e44cd8c9a27853a385090a8dea61}
+      \strng{bibnamehash}{2ea2e44cd8c9a27853a385090a8dea61}
+      \strng{authorbibnamehash}{2ea2e44cd8c9a27853a385090a8dea61}
+      \strng{authornamehash}{2ea2e44cd8c9a27853a385090a8dea61}
+      \strng{authorfullhash}{2ea2e44cd8c9a27853a385090a8dea61}
+      \strng{authorfullhashraw}{2ea2e44cd8c9a27853a385090a8dea61}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 International Conference on Emerging Smart Computing and Informatics (ESCI)}
+      \field{title}{Optimizing Latency and Energy Efficiency in Edge Computing with Reinforcement Learning and TinyML}
+      \field{year}{2025}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/ESCI63694.2025.10987923
+      \endverb
+      \keyw{Adaptation models;Energy consumption;Accuracy;Federated learning;Computational modeling;Tiny machine learning;Medical services;Reinforcement learning;Throughput;Real-time systems;AI-Driven Adaptive Edge Computing Framework;TinyML;Federated Learning;latency;throughput;and energy consumption}
+    \endentry
+    \entry{iotSaude}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=53f1ad52fe83f6f428986c59bafdf722}{%
+           family={Shwetha},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6de652057a4111a67aebc3c1a700333d}{%
+           family={Swetha},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b7ff4f67af58dd232debabd461b564d}
+      \strng{fullhash}{3b7ff4f67af58dd232debabd461b564d}
+      \strng{fullhashraw}{3b7ff4f67af58dd232debabd461b564d}
+      \strng{bibnamehash}{3b7ff4f67af58dd232debabd461b564d}
+      \strng{authorbibnamehash}{3b7ff4f67af58dd232debabd461b564d}
+      \strng{authornamehash}{3b7ff4f67af58dd232debabd461b564d}
+      \strng{authorfullhash}{3b7ff4f67af58dd232debabd461b564d}
+      \strng{authorfullhashraw}{3b7ff4f67af58dd232debabd461b564d}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 2024 International Conference on Advances in Modern Age Technologies for Health and Engineering Science (AMATHE)}
+      \field{title}{IoT's Impact on Personal Devices and Health: Wearable Technology}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 8}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/AMATHE61652.2024.10582194
+      \endverb
+      \keyw{Data privacy;Data security;Ecosystems;Medical services;Streaming media;Real-time systems;Internet of Things;Internet of Things (IoT);Health Wearable Technology;Personal Devices;Real-time Health Monitoring;Data Privacy and Security;Predictive Health Management;IoT Ecosystem in Healthcare;Smart Health Wearables}
+    \endentry
+    \entry{Sinha2024}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f08be59af1edb235f14afd150401e7e7}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Satyajit},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f08be59af1edb235f14afd150401e7e7}
+      \strng{fullhash}{f08be59af1edb235f14afd150401e7e7}
+      \strng{fullhashraw}{f08be59af1edb235f14afd150401e7e7}
+      \strng{bibnamehash}{f08be59af1edb235f14afd150401e7e7}
+      \strng{authorbibnamehash}{f08be59af1edb235f14afd150401e7e7}
+      \strng{authornamehash}{f08be59af1edb235f14afd150401e7e7}
+      \strng{authorfullhash}{f08be59af1edb235f14afd150401e7e7}
+      \strng{authorfullhashraw}{f08be59af1edb235f14afd150401e7e7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{State of IoT 2024: Number of connected IoT devices growing 13\% to 18.8 billion globally}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://iot-analytics.com/number-connected-iot-devices/
+      \endverb
+      \verb{url}
+      \verb https://iot-analytics.com/number-connected-iot-devices/
+      \endverb
+    \endentry
+    \entry{tensorDocs}{manual}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=074dd699710da0ec1eb45f13b31788e3}{%
+           family={{TensorFlow}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{fullhash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{fullhashraw}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{bibnamehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{authorbibnamehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{authornamehash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{authorfullhash}{074dd699710da0ec1eb45f13b31788e3}
+      \strng{authorfullhashraw}{074dd699710da0ec1eb45f13b31788e3}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Acessado em: 7 jun. 2025}
+      \field{title}{Image Classification - TensorFlow Models}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.tensorflow.org/tfmodels/vision/image_classification
+      \endverb
+      \verb{url}
+      \verb https://www.tensorflow.org/tfmodels/vision/image_classification
+      \endverb
+    \endentry
+    \entry{Wang2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2ff53b99cb226c6384ebd0abb3e330b1}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qi},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb8bee3c4fa68f86fad2c1c6daa46faf}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Yue},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=16d893723c65bc3104b838aa4bcc1444}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Kun},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4bce5642e77cba6ef95525f9299e4088}{%
+           family={Tian},
+           familyi={T\bibinitperiod},
+           given={Yingjie},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fa09a84f8b4d4d0802c635f54c81c921}
+      \strng{fullhash}{0096566f22ac7d87295cb2ca4f444094}
+      \strng{fullhashraw}{0096566f22ac7d87295cb2ca4f444094}
+      \strng{bibnamehash}{fa09a84f8b4d4d0802c635f54c81c921}
+      \strng{authorbibnamehash}{fa09a84f8b4d4d0802c635f54c81c921}
+      \strng{authornamehash}{fa09a84f8b4d4d0802c635f54c81c921}
+      \strng{authorfullhash}{0096566f22ac7d87295cb2ca4f444094}
+      \strng{authorfullhashraw}{0096566f22ac7d87295cb2ca4f444094}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{As one of the important research topics in machine learning, loss function plays an important role in the construction of machine learning algorithms and the improvement of their performance, which has been concerned and explored by many researchers. But it still has a big gap to summarize, analyze and compare the classical loss functions. Therefore, this paper summarizes and analyzes 31 classical loss functions in machine learning. Specifically, we describe the loss functions from the aspects of traditional machine learning and deep learning respectively. The former is divided into classification problem, regression problem and unsupervised learning according to the task type. The latter is subdivided according to the application scenario, and here we mainly select object detection and face recognition to introduces their loss functions. In each task or application, in addition to analyzing each loss function from formula, meaning, image and algorithm, the loss functions under the same task or application are also summarized and compared to deepen the understanding and provide help for the selection and improvement of loss function.}
+      \field{issn}{2198-5812}
+      \field{journaltitle}{Annals of Data Science}
+      \field{month}{4}
+      \field{number}{2}
+      \field{title}{A Comprehensive Survey of Loss Functions in Machine Learning}
+      \field{volume}{9}
+      \field{year}{2022}
+      \field{pages}{187\bibrangedash 212}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1007/s40745-020-00253-5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s40745-020-00253-5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s40745-020-00253-5
+      \endverb
+    \endentry
+    \entry{Whang2023}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=cefe4c5e8286fe1f3f2673605cfdf181}{%
+           family={Whang},
+           familyi={W\bibinitperiod},
+           given={Steven\bibnamedelima Euijong},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a4a33d78113eddcb272d58b4e4fc176}{%
+           family={Roh},
+           familyi={R\bibinitperiod},
+           given={Yuji},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3c9d92281fa5496ef1bf22058d8a54a}{%
+           family={Song},
+           familyi={S\bibinitperiod},
+           given={Hwanjun},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=711b2b2036dca62e14a5d95d1640ce84}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Jae-Gil},
+           giveni={J\bibinithyphendelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6e0667bd90bac541629e4b1500049e90}
+      \strng{fullhash}{f61907af007e23038f055c6afe99190f}
+      \strng{fullhashraw}{f61907af007e23038f055c6afe99190f}
+      \strng{bibnamehash}{6e0667bd90bac541629e4b1500049e90}
+      \strng{authorbibnamehash}{6e0667bd90bac541629e4b1500049e90}
+      \strng{authornamehash}{6e0667bd90bac541629e4b1500049e90}
+      \strng{authorfullhash}{f61907af007e23038f055c6afe99190f}
+      \strng{authorfullhashraw}{f61907af007e23038f055c6afe99190f}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Data-centric AI is at the center of a fundamental shift in software engineering where machine learning becomes the new software, powered by big data and computing infrastructure. Here, software engineering needs to be re-thought where data become a first-class citizen on par with code. One striking observation is that a significant portion of the machine learning process is spent on data preparation. Without good data, even the best machine learning algorithms cannot perform well. As a result, data-centric AI practices are now becoming mainstream. Unfortunately, many datasets in the real world are small, dirty, biased, and even poisoned. In this survey, we study the research landscape for data collection and data quality primarily for deep learning applications. Data collection is important because there is lesser need for feature engineering for recent deep learning approaches, but instead more need for large amounts of data. For data quality, we study data validation, cleaning, and integration techniques. Even if the data cannot be fully cleaned, we can still cope with imperfect data during model training using robust model training techniques. In addition, while bias and fairness have been less studied in traditional data management research, these issues become essential topics in modern machine learning applications. We thus study fairness measures and unfairness mitigation techniques that can be applied before, during, or after model training. We believe that the data management community is well poised to solve these problems.}
+      \field{issn}{0949-877X}
+      \field{journaltitle}{The VLDB Journal}
+      \field{month}{7}
+      \field{number}{4}
+      \field{title}{Data collection and quality challenges in deep learning: a data-centric AI perspective}
+      \field{volume}{32}
+      \field{year}{2023}
+      \field{pages}{791\bibrangedash 813}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1007/s00778-022-00775-9
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00778-022-00775-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00778-022-00775-9
+      \endverb
+    \endentry
+    \entry{Wulnye2024}{inproceedings}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=5cbd7b21ea08328066bb5fcc255b95b3}{%
+           family={Wulnye},
+           familyi={W\bibinitperiod},
+           given={Fortunatus\bibnamedelima Aabangbio},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3852276db11200bf0fe9b3af74c6d483}{%
+           family={Essanoah\bibnamedelima Arthur},
+           familyi={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Ewura\bibnamedelima Abena},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ace94dd12a7dbdbe0554e662022393ec}{%
+           family={Nana\bibnamedelima Gookyi},
+           familyi={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Dennis\bibnamedelima Agyemanh},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5261634de591a4716071a78f68f01a95}{%
+           family={Kwaku\bibnamedelimb Pobi\bibnamedelima Asiedu},
+           familyi={K\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Derek},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=787fc08539979052119961b89b38f29f}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1b6611f2db18d318dcb64da6b553a8ec}{%
+           family={Agyemang},
+           familyi={A\bibinitperiod},
+           given={Justice\bibnamedelima Owusu},
+           giveni={J\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{02f879e6eb8afb3b9f60a517af3af31e}
+      \strng{fullhash}{db8812f5a1ba212a7cc797804a9d8bc8}
+      \strng{fullhashraw}{db8812f5a1ba212a7cc797804a9d8bc8}
+      \strng{bibnamehash}{02f879e6eb8afb3b9f60a517af3af31e}
+      \strng{authorbibnamehash}{02f879e6eb8afb3b9f60a517af3af31e}
+      \strng{authornamehash}{02f879e6eb8afb3b9f60a517af3af31e}
+      \strng{authorfullhash}{db8812f5a1ba212a7cc797804a9d8bc8}
+      \strng{authorfullhashraw}{db8812f5a1ba212a7cc797804a9d8bc8}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2024 Conference on Information Communications Technology and Society (ICTAS)}
+      \field{title}{TinyML Implementation on Microcontrollers: The Case of Maize Leaf Disease Identification}
+      \field{year}{2024}
+      \field{pages}{180\bibrangedash 185}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ICTAS59620.2024.10507115
+      \endverb
+      \keyw{Training;Microcontrollers;Crops;Random access memory;Data augmentation;Convolutional neural networks;Object recognition;Convolutional Neural Network;maize leaf disease;optimization;microcontroller unit}
+    \endentry
+    \entry{Xavier2022}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=a5f49280879ff4ce422a6f2668b9eeff}{%
+           family={Xavier},
+           familyi={X\bibinitperiod},
+           given={Tiago\bibnamedelimb C.\bibnamedelimi S.},
+           giveni={T\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96b355707395ccab54f4489af3b0418f}{%
+           family={Delicato},
+           familyi={D\bibinitperiod},
+           given={Flavia\bibnamedelima C.},
+           giveni={F\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=05bc9cbf4853b67544a69cce4b77b519}{%
+           family={Pires},
+           familyi={P\bibinitperiod},
+           given={Paulo\bibnamedelima F.},
+           giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e4d8a221ee8b1c979a7e66395a858e24}{%
+           family={Amorim},
+           familyi={A\bibinitperiod},
+           given={Claudio\bibnamedelima L.},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be6f1b6df7f1ddfafad18806238fa391}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8095c196b581be42ce639ecd4a3b650d}{%
+           family={Zomaya},
+           familyi={Z\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{058f3f5873fa28faeac71326aa5fe0e0}
+      \strng{fullhash}{78b4e21e560713eafe8aad15494a2dcb}
+      \strng{fullhashraw}{78b4e21e560713eafe8aad15494a2dcb}
+      \strng{bibnamehash}{058f3f5873fa28faeac71326aa5fe0e0}
+      \strng{authorbibnamehash}{058f3f5873fa28faeac71326aa5fe0e0}
+      \strng{authornamehash}{058f3f5873fa28faeac71326aa5fe0e0}
+      \strng{authorfullhash}{78b4e21e560713eafe8aad15494a2dcb}
+      \strng{authorfullhashraw}{78b4e21e560713eafe8aad15494a2dcb}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In the Internet of Things (IoT) environment, the computing resources available in the cloud are often unable to meet the latency constraints of time critical applications due to the large distance between the cloud and data sources (IoT devices).}
+      \field{journaltitle}{ACM Transactions on Internet of Things}
+      \field{month}{5}
+      \field{number}{2}
+      \field{title}{Managing Heterogeneous and Time-Sensitive {IoT} Applications through Collaborative and Energy-Aware Resource Allocation}
+      \field{volume}{3}
+      \field{year}{2022}
+      \field{pages}{10:1\bibrangedash 10:28}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1145/3488248
+      \endverb
+    \endentry
+    \entry{Yap2024}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8749162f20320969efef0e269c97f228}{%
+           family={Yap},
+           familyi={Y\bibinitperiod},
+           given={Yan\bibnamedelima Siang},
+           giveni={Y\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f79694c7cae9031367f1aca2145a8c05}{%
+           family={Ahmad},
+           familyi={A\bibinitperiod},
+           given={Mohd\bibnamedelima Ridzuan},
+           giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ede69ab016a2586e1eb2edf7a67b1505}
+      \strng{fullhash}{ede69ab016a2586e1eb2edf7a67b1505}
+      \strng{fullhashraw}{ede69ab016a2586e1eb2edf7a67b1505}
+      \strng{bibnamehash}{ede69ab016a2586e1eb2edf7a67b1505}
+      \strng{authorbibnamehash}{ede69ab016a2586e1eb2edf7a67b1505}
+      \strng{authornamehash}{ede69ab016a2586e1eb2edf7a67b1505}
+      \strng{authorfullhash}{ede69ab016a2586e1eb2edf7a67b1505}
+      \strng{authorfullhashraw}{ede69ab016a2586e1eb2edf7a67b1505}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Sensors Letters}
+      \field{number}{10}
+      \field{title}{Modified Overcomplete Autoencoder for Anomaly Detection Based on TinyML}
+      \field{volume}{8}
+      \field{year}{2024}
+      \field{pages}{1\bibrangedash 4}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/LSENS.2024.3463977
+      \endverb
+      \keyw{Training;Decoding;Microcontrollers;Tiny machine learning;Accuracy;Computer architecture;Autoencoders;Mechanical systems;Sensors;Mechanical sensors;anomaly detection;autoencoder (AE);embedded system;tiny machine learning (TinyML)}
+    \endentry
+    \entry{latencia}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=de8235145bca0c0b34aec3a86ed3b8a7}{%
+           family={Zen},
+           familyi={Z\bibinitperiod},
+           given={Kartinah},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eff1a2d4dc5430b5b936149a898cfca5}{%
+           family={Mohanan},
+           familyi={M\bibinitperiod},
+           given={Saju},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eef22953160cdb327787229be4a0d66e}{%
+           family={Tarmizi},
+           familyi={T\bibinitperiod},
+           given={Seleviawati},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=249ab21dd5a507a7abdf72ecc1522484}{%
+           family={Annuar},
+           familyi={A\bibinitperiod},
+           given={Noralifah},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d5dfb542721f8a1ad4c85c0d0cf7ae65}{%
+           family={Sama},
+           familyi={S\bibinitperiod},
+           given={Najm\bibnamedelima Us},
+           giveni={N\bibinitperiod\bibinitdelim U\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{232bcfca2decb23da7c618233d2aeff1}
+      \strng{fullhash}{39d0b074bc92ff823950ae4dfd34c915}
+      \strng{fullhashraw}{39d0b074bc92ff823950ae4dfd34c915}
+      \strng{bibnamehash}{232bcfca2decb23da7c618233d2aeff1}
+      \strng{authorbibnamehash}{232bcfca2decb23da7c618233d2aeff1}
+      \strng{authornamehash}{232bcfca2decb23da7c618233d2aeff1}
+      \strng{authorfullhash}{39d0b074bc92ff823950ae4dfd34c915}
+      \strng{authorfullhashraw}{39d0b074bc92ff823950ae4dfd34c915}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2022 Applied Informatics International Conference (AiIC)}
+      \field{title}{Latency Analysis of Cloud Infrastructure for Time-Critical IoT Use Cases}
+      \field{year}{2022}
+      \field{pages}{111\bibrangedash 116}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/AiIC54368.2022.9914601
+      \endverb
+      \keyw{Cloud computing;Program processors;Machine learning algorithms;Web services;Data processing;Manipulators;Real-time systems;Latency;IoT;Edge Computing;Cloud Computing;RTT}
+    \endentry
+  \enddatalist
+  \missing{Do autor}
+\endrefsection
+\endinput
+

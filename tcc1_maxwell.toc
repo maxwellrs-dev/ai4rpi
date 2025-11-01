@@ -1,0 +1,71 @@
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\setcounter {tocdepth}{-1}\ignorespaces 
+\contentsline {chapter}{Dedicatória}{4}{chapter*.1}%
+\setcounter {tocdepth}{3}\ignorespaces 
+\setcounter {tocdepth}{-1}\ignorespaces 
+\contentsline {chapter}{Agradecimentos}{5}{chapter*.2}%
+\setcounter {tocdepth}{3}\ignorespaces 
+\setcounter {tocdepth}{-1}\ignorespaces 
+\contentsline {chapter}{Resumo}{6}{chapter*.3}%
+\setcounter {tocdepth}{3}\ignorespaces 
+\babel@toc {english}{}\relax 
+\setcounter {tocdepth}{-1}\ignorespaces 
+\contentsline {chapter}{Abstract}{7}{chapter*.4}%
+\setcounter {tocdepth}{3}\ignorespaces 
+\babel@toc {brazilian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introdução}{11}{chapter.8}%
+\contentsline {section}{\numberline {1.1}Objetivos gerais}{11}{section.9}%
+\contentsline {section}{\numberline {1.2}Objetivos específicos}{12}{section.10}%
+\contentsline {section}{\numberline {1.3}Hipótese}{12}{section.15}%
+\contentsline {section}{\numberline {1.4}Estrutura do trabalho}{12}{section.16}%
+\contentsline {chapter}{\numberline {2}Revisão Bibliográfica}{13}{chapter.17}%
+\contentsline {section}{\numberline {2.1}TinyML e Dispositivos Embarcados}{13}{section.18}%
+\contentsline {section}{\numberline {2.2}Trabalhos Relacionados e Abordagens na Literatura}{13}{section.19}%
+\contentsline {section}{\numberline {2.3}Considerações Finais da Revisão}{14}{section.27}%
+\contentsline {chapter}{\numberline {3}Fundamentação teórica}{15}{chapter.28}%
+\contentsline {section}{\numberline {3.1}Aquisição e Preparação dos Dados}{15}{section.29}%
+\contentsline {section}{\numberline {3.2}Desenvolvimento e Treinamento de Modelos}{16}{section.30}%
+\contentsline {section}{\numberline {3.3}Quantização para compactação de Modelos}{17}{section.34}%
+\contentsline {section}{\numberline {3.4}Validação, Ajuste Fino e Métricas de Desempenho}{18}{section.35}%
+\contentsline {section}{\numberline {3.5}Implantação em Dispositivos Embarcados}{20}{section.43}%
+\contentsline {chapter}{\numberline {4}Proposta de trabalho}{22}{chapter.47}%
+\contentsline {section}{\numberline {4.1}Descrição da proposta}{22}{section.48}%
+\contentsline {section}{\numberline {4.2}Etapas do trabalho}{23}{section.49}%
+\contentsline {section}{\numberline {4.3}Cronograma de atividades}{24}{section.59}%
+\contentsline {section}{\numberline {4.4}Resultados esperados}{24}{section.61}%
+\contentsline {chapter}{\numberline {5}Conclusões}{25}{chapter.62}%
+\contentsline {chapter}{Refer\^encias}{26}{chapter*.63}%
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\contentsfinish 

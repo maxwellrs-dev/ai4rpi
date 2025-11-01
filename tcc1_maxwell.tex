@@ -1,0 +1,502 @@
+% !TeX document-id = {d610dd92-676b-4488-a736-e7b4d0b52fa8}
+%mame  !TEX program = pdflatex
+% !TEX ext =  --interaction=nonstopmode --enable-etex --enable-write18
+% !BIB program = biber
+
+\documentclass[repeatfields,xlists,xpacks,oneside]{ufrgscca}
+\usepackage{float}
+\usepackage{graphicx} % Adicione noo preâmbulo, se ainda não estiver lá
+\addbibresource{tccMaxwell.bib} % Inclua seu arquivo de referências aqui
+
+\begin{document}
+
+\MakeCoverPages{tccI}
+%\MakeCoverPages{tccII}
+
+% dedicatoria é opcional
+%\nonum\chapter{Dedicatória} %vai ter uma entrada no sumário
+\notoc\chapter{Dedicatória} %não vi aparecer no sumário
+
+Dedico este trabalho à minha mãe e ao meu pai que sempre me apoiaram, ao Bruno, o melhor irmão que alguém poderia ter, a todos meus queridos amigos que alegram minha vida e em especial à Jaque, minha esposa, pela dedicação e apoio em todos os momentos difíceis, por sempre estar ao meu lado e pelo nosso amor. Sou grato por ter o privilégio de compartilhar um tempo e uma existência junto à ela. São estas relações de amizade e afeto que dão sentido à vida.
+
+% agradecimentos são opcionais
+%\nonum\chapter{Agradecimentos}
+\notoc\chapter{Agradecimentos}
+
+À Universidade Federal do Rio Grande do Sul (UFRGS), pela oportunidade de estudar em uma das instituições mais renomadas da América Latina e do mundo, de forma gratuita.
+
+A todos que lutam e lutaram pela implementação da Lei de Cotas no Brasil, um marco para a construção de um país mais justo e que possibilitou minha formação acadêmica.
+
+Ao Laboratório de Metalurgia Física (LAMEF), por ter me dado a oportunidade de iniciar minha trajetória profissional, onde tive a chance de aprender e crescer.
+
+À minha liderança na TK Elevadores, pela compreensão e flexibilidade diante dos horários desafiadores do curso de Engenharia da UFRGS, conciliados com as demandas do trabalho.
+
+E, por fim, ao corpo docente da Escola de Engenharia desta Universidade, que, mesmo utilizando métodos por vezes desafiadores e pouco ortodoxos, contribuiu significativamente para minha formação como profissional.
+
+% palavras-chave
+% iniciar todas com letras minúsculas, exceto no caso de abreviaturas
+
+\mainkeywords{TinyML}
+\mainkeywords{sistemas embarcados}
+\mainkeywords{aprendizado de máquina}
+\mainkeywords{computação de borda}
+\mainkeywords{internet das coisas}
+
+% resumo no idioma do documento
+\begin{mainabstract}
+
+Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e exigências de inteligência embarcada, o paradigma TinyML surge como uma solução promissora. Este trabalho tem como objetivo avaliar o estado atual da aplicação de soluções baseadas em aprendizado de máquina a sistemas embarcados, com foco em dispositivos caracterizados por recursos computacionais limitados. A pesquisa abrange a análise de ferramentas de desenvolvimento TinyML, levantamento de plataformas disponíveis e elaboração de um fluxo de trabalho ponta-a-ponta para o desenvolvimento de soluções. A hipótese é que técnicas de TinyML podem substituir ou complementar arquiteturas IoT tradicionais, proporcionando maior eficiência e menor latência em aplicações críticas que utilizem inteligência artificial. Ademais, ao final, uma proposta de trabalho prático é apresentada, utilizando todo o resultado da pesquisa em uma solução aplicada de aprendizado de máquina embarcado.
+
+\end{mainabstract}
+
+\otherkeywords{TinyML}
+\otherkeywords{embedded systems}
+\otherkeywords{machine learning}
+\otherkeywords{edge computing}
+\otherkeywords{internet of things}
+
+\begin{otherabstract}
+With the growing demand for Internet of Things (IoT) devices and the increasing need for embedded intelligence, the TinyML paradigm emerges as a promising solution. This work aims to evaluate the current state of applying machine learning-based solutions to embedded systems, focusing on devices characterized by limited computational resources. The research includes an analysis of TinyML development tools, a review of available platforms, and the design of an end-to-end workflow for solution development. The hypothesis is that TinyML techniques can replace or complement traditional IoT architectures, offering greater efficiency and lower latency in critical applications using artificial intelligence. Furthermore, a practical work proposal is presented at the end, leveraging all research findings in an applied embedded machine learning solution.
+\end{otherabstract}
+
+% sumario
+\setcounter{tocdepth}{3}
+
+% lista de ilustrações
+\listoffigures
+
+% lista de tabelas
+\listoftables
+
+% lista de listagens (código fonte)
+%\listofcodelist %% doesn't work on overleaf
+
+% lista de abreviaturas e siglas
+% o parametro deve ser a abreviatura mais longa
+%\begin{listofabbrv}{PPGEE}
+    %\item[ABNT] Associação Brasileira de Normas Técnicas
+    %\item[GCAR] Grupo de Controle, Automação e Robótica
+    %\item[PPGEE] Programa de Pós-Graduação em Engenharia Elétrica
+    %\item[CCA] Curso de Eng. em Controle e Automação
+%\end{listofabbrv}
+
+% lista de símbolos é opcional
+%\begin{listofsymbols}{$\alpha\beta\pi\omega$}
+%       \item[$\sum$] Somatório
+%       \item[$\alpha\beta\pi\omega$] Fator de inconstância do resultado
+%\end{listofsymbols}
+
+\tableofcontents
+
+% AQUI COMEÇA O TEXTO PROPRIAMENTE DITO
+
+% introducao
+\chapter{Introdução}
+
+O avanço da tecnologia e a popularização dos dispositivos conectados têm impulsionado o desenvolvimento de soluções inteligentes em diversas áreas. Nesse cenário, a Internet das Coisas (IoT) destaca-se como um dos principais motores da transformação digital, permitindo a integração de sensores, atuadores e sistemas embarcados em aplicações que vão da saúde à indústria. No entanto, desafios como a latência na comunicação com a nuvem e a limitação de recursos computacionais em dispositivos embarcados exigem novas abordagens para garantir eficiência e desempenho em tempo real \cite{Xavier2022}.
+
+O número de dispositivos pertencentes à IoT tem apresentado um crescimento constante durante a terceira década do século XXI \cite{Sinha2024}. Esses dispositivos estão sendo implementados em diversas áreas, como saúde \cite{iotSaude}, agronomia \cite{iotAgricultura} e indústria \cite{iotIndustria}. Esse cenário reforça a importância de estudar soluções eficientes para IoT, já que seu impacto se estende a áreas essenciais do cotidiano e do desenvolvimento econômico.
+
+Uma limitação dos dispositivos IoT é a latência do envio de dados para centros de processamento remotos. Mesmo os melhores serviços de nuvem alcançam latências de até 28 ms \cite{latencia}, variando conforme horário e tráfego de dados. Essa latência é um desafio em aplicações que exigem decisões em tempo real, como controle crítico, automação industrial e dispositivos de saúde \cite{Oladokun2025}.
+
+A tecnologia de aprendizado de máquina aplicada a sistemas embarcados, conhecida como TinyML, permite realizar o processamento local dos dados no próprio dispositivo. Esse paradigma, associado à computação de borda, reduz a dependência de processamento remoto e melhora significativamente a latência, com reduções de 35\% a 40\% conforme indicado em \cite{edge}, tornando-a mais adequada para aplicações em tempo real.
+
+Avaliar o estado atual de desenvolvimento do TinyML e um fluxo de trabalho para o desenvolvimento de soluções utilizando dispositivos embarcados pode contribuir para superar os desafios relacionados à dependência de conectividade. Além disso, tal abordagem viabiliza o desenvolvimento de sistemas mais robustos, eficientes e adaptados a aplicações críticas ou em áreas remotas. Com base nisso, este trabalho propõe-se a investigar, de forma estruturada, até que ponto as soluções baseadas em TinyML podem, atualmente, substituir ou complementar arquiteturas IoT tradicionais — conforme detalhado nos objetivos específicos a seguir.
+
+\section{Objetivos gerais}
+Este trabalho tem como objetivo avaliar a viabilidade de aplicar soluções baseadas em aprendizado de máquina a sistemas embarcados, com foco em dispositivos caracterizados por recursos computacionais limitados.
+
+\section{Objetivos específicos}
+Os objetivos específicos deste trabalho são os seguintes:
+
+\begin{enumerate}
+    \item Pesquisar e avaliar as ferramentas de desenvolvimento TinyML disponíveis, considerando critérios como facilidade de uso e integração com as plataformas mais populares; \\
+    
+    \item Realizar o levantamento e a análise das plataformas disponíveis para projetos TinyML, considerando aspectos como desempenho, consumo energético e custo; \\
+    
+    \item Elaborar um fluxo de trabalho ponta-a-ponta para desenvolvimento de soluções baseadas em técnicas TinyML, de forma a ilustrar o processo; \\
+
+    \item Desenvolver e aplicar, como solução proposta, um modelo TinyML para classificação de resíduos sólidos, comparando seu desempenho com alternativas tradicionais.
+\end{enumerate}
+
+\section{Hipótese}
+A aplicação de técnicas de TinyML em dispositivos embarcados com recursos computacionais limitados é viável e prática nos dias atuais, devido à disponibilidade crescente de ferramentas de desenvolvimento acessíveis, plataformas de hardware compatíveis e métodos eficientes de otimização de modelos que permitem o processamento local com baixo consumo energético.
+
+\section{Estrutura do trabalho}
+Este trabalho está estruturado em cinco capítulos, incluindo esta introdução. O segundo capítulo apresenta uma revisão bibliográfica sobre TinyML e dispositivos embarcados, abordando os principais conceitos, desafios e trabalhos relacionados. O terceiro capítulo fornece a fundamentação teórica necessária para o desenvolvimento da solução proposta, detalhando as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML. O quarto capítulo apresenta a proposta de trabalho, descrevendo a solução prática a ser desenvolvida e o planejamento das etapas do projeto. Por fim, o quinto capítulo conclui o trabalho, apresentando considerações finais e definições para o trabalho futuro.
+
+\chapter{Revisão Bibliográfica}
+
+\section{TinyML e Dispositivos Embarcados}
+% Combinação dos dois temas: O que é TinyML e por que ele surgiu? Quais os desafios técnicos que justificam soluções específicas? Dispositivos?
+TinyML é uma subárea do aprendizado de máquina dedicada à implementação de modelos de Aprendizado de Máquina em dispositivos embarcados com recursos computacionais limitados, como microcontroladores e sensores. Esses dispositivos, como o Arduino Nano 33 BLE Sense, Raspberry Pi, ESP32 e placas STM32, são amplamente utilizados em aplicações de IoT e automação, onde a eficiência energética e a baixa latência são fatores críticos.
+Os desafios técnicos incluem a limitação de memória, capacidade de processamento e consumo de energia desses dispositivos, o que exige técnicas específicas de otimização de modelos e algoritmos para garantir que as aplicações funcionem de maneira eficiente e eficaz.
+
+
+\section{Trabalhos Relacionados e Abordagens na Literatura}
+\label{sec:relacionados}
+Diversos estudos têm demonstrado o potencial do TinyML em aplicações de diferentes áreas, especialmente aquelas que exigem soluções embarcadas com baixo consumo de energia e capacidade de processamento local. Os trabalhos apresentados a seguir utilizam técnicas, ferramentas e plataformas voltadas à implementação eficiente de modelos de aprendizado de máquina em dispositivos com recursos limitados.
+
+Por exemplo, \cite{Wulnye2024} propõe uma solução aplicada à agricultura de precisão, utilizando imagens capturadas por um módulo de câmera VGA acoplada a um Arduino Nano 33 BLE Sense para detecção de avarias em folhas de milho. O modelo treinado possui tamanho de 321 kB e alcança uma acurácia (proporção de acertos do modelo) de 94,56\%, demonstrando a viabilidade de aplicações visuais embarcadas com alto desempenho em campo. Ademais, o trabalho utilizou bancos de dados públicos de alta confiabilidade, como o repositório Harvard Dataverse \cite{harvard_dataverse} para treinamento do modelo aliado à plataforma Edge Impulse \cite{edge_impulse}.
+
+Outro exemplo é o estudo de \cite{Yap2024}, que apresenta uma solução simples para detecção de anomalias em um ventilador. Seu trabalho consiste em um giroscópio alinhado a um Arduino Nano 33 BLE Sense. O modelo de apenas 17 kB é capaz de detectar comportamentos anormais com 99,23\% de acurácia. Para o treino do modelo, o autor realizou a coleta de dados empiricamente em dois cenários diferentes: um ventilador em funcionamento normal e outro com uma falha simulada com a quebra parcial de uma das hélices. O modelo foi treinado utilizando a plataforma LiteR, anteriormente conhecida como TensorFlow Lite \cite{litert2024}.
+
+Dispositivos embarcados são em geral compactos e eficientes, podem realizar tarefas computacionais específicas por um custo de espaço e energia reduzidos. Neste sentido, soluções TinyML podem ser ferramentas práticas para uso cotidiano, como mostra o estudo de \cite{Mellit2025} utilizando sensor de infra-vermelho e um Arduino Portento H7 para detecção de danos em painéis fotovoltaicos, trabalhando na plataforma Edge Impulse e adquirindo os dados utilizando drone em fazendas algerianas, o modelo treinado alcançou uma acurácia de 98\% e é apresentado no formato de pistola portátil com tela amigável para o usuário.
+
+Nesses trabalhos citados, observa-se um fluxo de desenvolvimento recorrente para soluções baseadas em TinyML. As etapas principais de um projeto desse tipo podem ser resumidas da seguinte forma:
+
+\begin{enumerate}
+    \item \textbf{Coleta de dados:} Captura de dados relevantes para o problema proposto, ou uso de repositórios públicos com conjuntos de dados apropriados;
+    \item \textbf{Pré-processamento:} Limpeza e preparação dos dados, incluindo normalização, remoção de ruídos, rotularização, seleção de características relevantes e aumento do númer de dados utilizando IA (data augmentation), se necessário;
+    \item \textbf{Escolha e treinamento do modelo:} Uso de plataformas como TensorFlow ou Edge Impulse para treinar modelos de aprendizado de máquina com os dados já preparados;
+    \item \textbf{Quantização do modelo:} Redução do tamanho e da complexidade do modelo, tornando-o mais eficiente para execução em dispositivos embarcados com recursos limitados;
+    \item \textbf{Validação do modelo:} Avaliação do desempenho do modelo utilizando dados de validação, verificando sua precisão, robustez e capacidade de generalização;
+    \item \textbf{Ajuste fino:} Modificações em hiperparâmetros, arquitetura ou técnicas de regularização para aprimorar o desempenho do modelo;
+    \item \textbf{Implementação:} Integração do modelo quantizado no dispositivo embarcado, com testes em ambiente real e adaptação ao hardware utilizado.
+\end{enumerate}
+
+A escolha do modelo e a quantização do modelo são peças chaves na elaboração do projeto. Modelos de redes neurais como Redes Neurais Convolucionais (RNC) são frequentemente utilizados em aplicações de visão computacional, por exemplo. A quantização é particularmente importante em aplicações TinyML, pois trata-se de uma técnica que reduz a precisão dos pesos do modelo, permitindo que ele ocupe menos espaço e consuma menos recursos computacionais, sem comprometer significativamente o desempenho.
+
+\section{Considerações Finais da Revisão}
+% Neste item, você faz a síntese dos pontos-chave da revisão e justifica como seu trabalho se insere nesse contexto.
+Durante a revisão bibliográfica foi observado que projetos TinyML podem ser executados em algumas etapas principais. Dentro de cada uma destas etapas decisões importantes são tomadas, como a escolha do modelo, a plataforma de desenvolvimento e a forma de coleta dos dados. As vastas opções de plataformas disponíveis como TensorFlor e Edge Impulse, bem como a variedade de dispositivos IoT, permitem uma vasta gama de soluções em Aprendizado de Máquina embarcado. 
+
+\chapter{Fundamentação teórica}
+%5 Páginas - Embasamento teórico para o desenvolvimento da solução proposta.
+Neste capítulo, serão abordados todas as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML, explorando nuances e escolhas importantes a serem feitas em cada passo.
+
+\section{Aquisição e Preparação dos Dados}
+%Aborda a coleta, limpeza, transformação e normalização dos dados para uso em modelos TinyML.
+
+%intro, Importância da aquisição e preparação dos dados
+O primeiro passo para o desenvolvimento de soluções TinyML é a coleta dos dados para treinamento. Esta etapa é fundamental, pois a quantidade e a qualidade dos dados influenciam diretamente a eficácia do modelo de aprendizado de máquina. Não há um número mínimo universal de dados necessários, nem um número mágico que funcione em todos os casos. Em geral, quanto mais representativos forem os dados e em maior volume estiverem disponíveis, melhor será o desempenho do modelo \cite{datasetSize}. Se a quantidade de dados não for suficiente, existem técnicas como \textit{Aumento de Dados} que consiste em gerar novas amostras a partir dos dados existentes, aplicando transformações como rotação, escala, adição de ruído, entre outras \cite{Whang2023}.
+
+%métodos comuns de aquisição de dados em dispositivos embarcados
+Os métodos mais comuns de aquisição de dados podem ser divididos em duas grandes categorias: dados coletados empiricamente, realizando a captura de informação diretamente do ambiente ou realizando ensaios. Este método possui a vantagem de estar alinhado com a aplicação específica, o que leva a modelos mais eficazes \cite{specificDomain}, mas pode ser custoso e demorado. A outra categoria é a utilização de bancos de dados públicos, que podem ser encontrados em repositórios como o Kaggle \cite{kaggle} ou Harvard Dataverse \cite{harvard_dataverse}. Esses bancos de dados são frequentemente utilizados para treinamento de modelos e podem acelerar o processo de desenvolvimento, mas é importante garantir que os dados sejam representativos do problema específico a ser resolvido.
+
+%preparação dos dadostrainamento
+Após a coleta dos dados, é necessário realizar uma etapa de curadoria para remoção de ruídos, inconsistências, duplicatas e outras anomalias que podem afetar o treinamento do modelo. Ao limpar dados para treinamento de modelos, deve-se utilizar ferramentas próprias para aplicações em Aprendizado de Máquina \cite{Whang2023}. Quando aplicável, os dados também devem ser rotulados cuidadosamente, garantindo que cada amostra possua uma anotação precisa e consistente com o objetivo da tarefa de aprendizagem. Além disso, é necessário normalizar os dados, isto é, ajustar as escalas das amostras de forma que tenham tamanho, resolução, frequência e demais características semelhantes. Com isso, garantimos que o modelo não seja enviesado por dados com características muito distintas, aprendendo características irrelevantes \cite{Ahmed2022}.
+
+
+\section{Desenvolvimento e Treinamento de Modelos}
+%Explora as principais abordagens de modelos de aprendizado de máquina aplicáveis ao contexto TinyML, bem como ferramentas utilizadas no treinamento (ex: TensorFlow Lite, Edge Impulse).
+% > Arquiteturas e seleção;
+O desenvolvimento da solução começa com a escolha do tipo de modelo de aprendizado de máquina. Modelos de aprendizado de máquina são algoritmos que aprendem padrões a partir dos dados fornecidos, e sua escolha depende do tipo de problema a ser resolvido. Atualmente há uma variedade de modelos disponíveis, a Tabela \ref{tinyml_models} apresenta alguns dos modelos mais comuns utilizados em TinyML e suas principais funções \cite{tinyModels}.
+
+\begin{table}[H]
+ \begin{center}
+  \caption{Modelos de aprendizado de máquina e suas principais funções no contexto de TinyML.}\label{tinyml_models}
+  \begin{tabular}{c|c}
+  \hline
+  \textbf{Modelo} & \textbf{Função Principal} \\
+  \hline
+    Redes Neurais Convolucionais (RNC)  & Classificação de imagens \\
+    Redes Neurais Densas (RND)          & Reconhecimento de palavras \\
+    Redes de Memória de Longo Prazo (RMLP) & Processamento de fala \\
+    Redes Neurais Recorrentes (RNR)     & Processamento sequencial \\
+  \hline
+  \end{tabular}
+ \end{center}
+ {\sourcecitation{\textcite{Do autor}}}
+\end{table}
+
+Para o cumprimento do objetivo específico 4, o modelo a ser desenvolvido será do tipo Rede Neural Convolucional (RNC), pois esse tipo de arquitetura é amplamente utilizado em tarefas de classificação de imagens em aplicações TinyML \cite{tinyModels}. A escolha detalhada da arquitetura, como a utilização de variantes compactas (por exemplo, TinyYOLO ou outras), será definida durante a implementação prática no TCC-II, levando em conta os requisitos do projeto e as limitações do hardware selecionado.
+
+Uma arquitetura de rede neural é construída basicamente por camadas de neurônios. Neurônios, neste contexto, são basicamente unidades de funções matemáticas que recebem valores de entradas, realiza uma soma ponderada, efetua uma operação matemática chamada de Função de Ativação e então direciona este resultado para a saída. Essa saída pode ser um neurônio de uma próxima camada ou a saída final do modelo. A Figura \ref{fig:redeneural} mostra um simples exemplo.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.5\textwidth]{imagens/redeneural.png}
+ \caption{Exemplo de uma rede neural simples.}
+ \label{fig:redeneural}
+ {\sourcecitation{\textcite{Do autor}}}
+\end{figure}
+
+Os pesos exibidos na Figura \ref{fig:redeneural} são os pesos da soma ponderada que são ajustados em cada neurônio durante o treinamento do modelo. Para realizar o ajuste destes pesos, durante o treinamento é utilizado um algoritmo de otimização, este programa trata-se de uma técnica matemática que busca minimizar a diferença entre a saída prevista pelo modelo e a saída real dos dados de treinamento. Conforme descreve \cite{comparaAlg}, o algoritmo mais comum utilizado para este fim é o \textit{Gradiente Descendente Estocástico} (GDE), que ajusta os pesos da rede neural iterativamente, utilizando o gradiente da função de perda em relação aos pesos. Porém, ainda conforme \cite{comparaAlg}, outros algoritmos como Adam e RMSprop também são amplamente utilizados.
+
+Ademais, é importante considerar qual Função de Custo utilizar, pois é através dela que o algoritmo de otimização avalia o desempenho do modelo e determina como reajustar os pesos para melhorar o aprendizado.
+Há várias funções de custo que podem ser escolhidas para o treinamento do modelo. Esta escolha deve ser efetuada levando em consideração qual tipo de problema o aprendizado de máquina visa resolver \cite{Wang2022}.
+
+\begin{table}[H]
+ \begin{center}
+  \caption{Principais funções de perda para diferentes categorias de aprendizado de máquina.}\label{loss_functions}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{c|c}
+  \hline
+  \textbf{Categoria} & \textbf{Funções de Perda} \\
+  \hline
+  Problema de classificação & Perda 0-1, Perda Perceptron, Perda Logarítmica \\
+  Problema de regressão     & Perda Quadrática, Perda Absoluta, Perda de Huber \\
+  Aprendizado não supervisionado & Erro Quadrático, Erro de Distância, Erro de Reconstrução \\
+  \hline
+  \end{tabular}
+  }
+ \end{center}
+ {\sourcecitation{Adaptado de \cite{Wang2022}}}
+\end{table}
+
+Na definição do treinamento da rede, existem alguns ajustes chamados de hiperparâmetros. Os hiperparâmetros incluem número de épocas, tamanho do lote e taxa de aprendizado. Cada época é definida como uma passagem completa por todos os dados de treinamento. O tamanho do lote é o número de amostras que o modelo processará antes de atualizar os pesos. A taxa de aprendizado é o quão rápido os pesos do modelo são atualizados.
+
+Na prática, o treinamento de modelos de aprendizado de máquina é desenvolvido utilizando ferramentas próprias para este fim. Com base em \cite{Kallimani2024}, podemos citar LiteRT, desenvolvido pela Google para dispositivos Android, iOS, Linux e microcontroladores, assim como $\mu$Tensor desenvolvido pela ARM e Edge Impulse desenvolvido por Zach Shelby e Jan Jongboom.
+
+\section{Quantização para compactação de Modelos}
+%Discute a conversão de modelos para formatos compactos (como int8) e técnicas de otimização para execução eficiente em dispositivos com restrições.
+Um importante passo no desenvolvimento de soluções TinyML é a quantização do modelo. A etapa de quantização, segundo \cite{quantization}, literalmente compacta o modelo, reduzindo seu tamanho para que possa ser executado em dispositivos embarcados. A realização da quantização é feita através do mapeamento dos pesos do modelo de ponto flutuante de 32 bits, por exemplo, para inteiros de 8 ou 4 bits. A quantização de modelos em contexto de TinyML é essencial para que a solução consuma uma quantidade menor de recursos. Contudo, a escolha do tipo de quantização deve ser feita com cautela, pois impacta diretamente a precisão e acurácia do modelo.
+
+\section{Validação, Ajuste Fino e Métricas de Desempenho}
+\label{sec:validacao}
+%Apresenta os métodos de avaliação do modelo, métricas relevantes (acurácia, F1, etc.), validação cruzada e técnicas de ajuste fino para maximizar o desempenho em ambiente embarcado.
+A validação dos modelos de aprendizado de máquina consiste em avaliar se o modelo está desempenhando adequadamente sua função. Como apresentado na Seção \ref{sec:relacionados}, uma prática comum é reservar de 20\% a 30\% dos dados coletados para testes, após o treinamento. Com base nesses testes, são calculadas métricas de desempenho. As principais métricas para avaliação de classificadores binários, segundo \cite{Rainio2024}, são: \textbf{acurácia} (ACU), \textbf{sensibilidade} (SEN), \textbf{especificidade} (ESP), \textbf{precisão} (PRE) e \textbf{medida F1} (F1), definidas nas Equações \ref{eq:acu}, \ref{eq:sen}, \ref{eq:esp}, \ref{eq:pre} e \ref{eq:f1}, respectivamente.
+
+\begin{equation}
+\text{ACU} = \frac{\text{VP} + \text{VN}}{\text{VP} + \text{VN} + \text{FP} + \text{FN}} \quad \in [0, 1],
+\label{eq:acu}
+\end{equation}
+
+\begin{equation}
+\text{SEN} = \text{Rec.} = \frac{\text{VP}}{\text{VP} + \text{FN}} \quad \in [0, 1],
+\label{eq:sen}
+\end{equation}
+
+\begin{equation}
+\text{ESP} = \frac{\text{VN}}{\text{VN} + \text{FP}} \quad \in [0, 1],
+\label{eq:esp}
+\end{equation}
+
+\begin{equation}
+\text{PRE} = \frac{\text{VP}}{\text{VP} + \text{FP}} \quad \in [0, 1].
+\label{eq:pre}
+\end{equation}
+
+A medida F1 é definida como a média harmônica entre a precisão e a sensibilidade.
+
+\begin{equation}
+\text{F1} = 2 \cdot \frac{\text{PRE} \cdot \text{SEN}}{\text{PRE} + \text{SEN}}
+\label{eq:f1}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item \textbf{VP}: Verdadeiros Positivos, número de instâncias corretamente classificadas como positivas.
+    \item \textbf{VN}: Verdadeiros Negativos, número de instâncias corretamente classificadas como negativas.
+    \item \textbf{FP}: Falsos Positivos, número de instâncias incorretamente classificadas como positivas.
+    \item \textbf{FN}: Falsos Negativos, número de instâncias incorretamente classificadas como negativas.
+\end{itemize}
+
+Ademais, existem algumas métricas com apelo mais visual, como é o caso do gráfico denominado Característica de Operação do Receptor (COR). Um gráfico COR é obtido a partir da variação do Limiar de Decisão, calculando especificidade e sensibilidade e então plotando num gráfico.
+A Figura \ref{fig:exemploROC} exibe um exemplo de curva COR, um comparativo entre o desempenho de dois modelos.
+
+Um gráfico COR de um modelo ideal seria composto por uma reta vertical de (1,0) até (1,1) e então uma reta horizontal de (1,1) até (0,1), indicando máxima sensibilidade e especificidade.
+Ainda sobre o gráfico COR, uma métrica para desempenho é a Área Sobre a Curva (ASC). No caso ideal, ASC = 1. Desta forma, quanto mais tender ao ponto (1,1) o gráfico COR, melhor o modelo. Da mesma forma, quanto mais elevado o indicador ASC, melhor.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{imagens/exemploROC.png}
+ \caption{Exemplo de um gráfico COR.}
+ \label{fig:exemploROC}
+ {\sourcecitation{Adaptado de \cite{Rainio2024}}}
+\end{figure}
+
+Ainda sobre métricas visuais, temos a Matriz de Confusão. Esta matriz relaciona os valores previstos pelo modelo com os valores reais. A Figura \ref{fig:exemploConfusao} mostra um exemplo deste tipo de métrica.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{imagens/exemploConfusao.png}
+ \caption{Exemplo de uma Matriz de Confusão.}
+ \label{fig:exemploConfusao}
+ {\sourcecitation{Adaptado de \cite{Alshammari2024}}}
+\end{figure}
+
+No caso de um modelo ideal, todos os valores da matriz de confusão estariam na diagonal principal da matriz, indicando que o modelo acerta 100\% das predições.
+
+Finalmente, caso as métricas de desempenho do modelo não forem satisfatórias, ajustes nos hiperparâmetros podem ser feitos a fim de melhorar a resposta do modelo. Esta etapa é denominada Ajuste Fino e será aprofundada na segunda parte deste trabalho, Trabalho de Conclusão II.
+
+\section{Implantação em Dispositivos Embarcados}\label{sec:implantacao}
+%Esta seção aborda a integração do modelo treinado em hardware real, como microcontroladores, com ênfase em desafios práticos e ferramentas de suporte.
+Há vários dispositivos no mercado que podem trabalhar com soluções TinyML. \cite{Oliveira2024} realiza uma pesquisa dos principais dispositivos no mercado comparando suas configurações. Estas comparações são exibidas na Tabela \ref{tab:comparativoPlataformas}.
+
+\begin{table}[H]
+ \begin{center}
+  \caption{Especificações de dispositivos TinyML de baixo e alto desempenho.}
+  \label{tab:comparativoPlataformas}
+  \resizebox{\textwidth}{!}{
+  \begin{tabular}{l|c|c|c|c|c|c}
+  \hline
+  \textbf{Categoria} & \textbf{Placa} & \textbf{Custo (US\$)} & \textbf{Corrente (A)} & \textbf{RAM (MB)} & \textbf{Arquitetura} & \textbf{Freq. (MHz)} \\
+  \hline
+  \multirow{6}{*}{Low-end} 
+  & Arduino Nano BLE 33    & $\sim$25 & 0.5  & 0.256 & 32-bit & 64  \\
+  & Adafruit EdgeBadge      & $\sim$36 & 1.0  & 0.192 & 32-bit & 120 \\
+  & ESP32 DevKitC           & $\sim$10 & 0.5  & 0.512 & 32-bit & 240 \\
+  & Raspberry Pi Pico W     & $\sim$7  & 0.5  & 0.256 & 32-bit & 133 \\
+  & STM32F746               & $\sim$15 & 0.5  & 0.5   & 32-bit & 216 \\
+  & Sipeed Maix Bit         & $\sim$45 & 1.0  & 8.0   & 64-bit & 600 \\
+  & SparkFun Edge           & $\sim$17 & 0.5  & 0.384 & 32-bit & 96  \\
+  \hline
+  \multirow{6}{*}{High-end} 
+  & Banana Pi M2 Zero       & $\sim$20 & 2.0  & 512   & 32-bit & 1200 \\
+  & Orange Pi Zero 3        & $\sim$35 & 2.0  & 1000  & 64-bit & 1500 \\
+  & Raspberry Pi Zero W     & $\sim$15 & 1.2  & 512   & 32-bit & 1000 \\
+  & Raspberry Pi Zero 2 W   & $\sim$20 & 1.2  & 512   & 64-bit & 1000 \\
+  & Raspberry Pi 3 model B  & $\sim$35 & 2.5  & 1000  & 64-bit & 1200 \\
+  & Raspberry Pi 4 model B  & $\sim$35 & 3.0  & 4000  & 64-bit & 1800 \\
+  & Raspberry Pi 5          & $\sim$56 & 5.0  & 4000  & 64-bit & 2400 \\
+  & NVIDIA Jetson Nano      & $\sim$99 & 5.0  & 4000  & 64-bit & 1430 \\
+  \hline
+  \end{tabular}
+  }
+ \end{center}
+ {\sourcecitation{Adaptado de \cite{Oliveira2024}}}
+\end{table}
+
+É fundamental que a plataforma escolhida e o modelo desenvolvido sejam compatíveis, ou seja, suas configurações e requisitos devem ser alinhados para evitar desperdício de recursos computacionais e garantir uma solução final eficiente. Além disso, é essencial considerar o consumo de energia e garantir que a escolha atenda às restrições do projeto.
+
+A implantação do modelo final varia conforme a plataforma de desenvolvimento escolhida. Principais ferramentas como TensorFlow e Edge Impulse permitem gerar bibliotecas contendo o modelo treinado quantizado completo, prontas para integração no código do dispositivo embarcado, conforme descrito em \cite{edgeDocs} e \cite{tensorDocs}. Ambas oferecem suporte a diversas linguagens de programação, como C++ e Python, garantindo flexibilidade no desenvolvimento e na integração com diferentes tipos de hardware.
+
+Um comparativo entre as ferramentas TensorFlow e Edge Impulse pode ser visto em \cite{EssanoahArthur2024}, que compara o desempenho de dois modelos que servem ao mesmo propósito, que neste caso é identificação de doenças em folhas de milho.
+
+As Tabelas \ref{tab:desempenhoHardware} e \ref{tab:resultadosValidacao} mostram uma comparação entre os consumos de recursos computacionais e uma comparação das métricas de desempenho, respectivamente.
+
+\begin{table}[H]
+ \begin{center}
+  \caption{Comparação de desempenho entre TensorFlow e Edge Impulse.}\label{tab:desempenhoHardware}
+  \begin{tabular}{c|c|c}
+  \hline
+  \textbf{Métrica} & \textbf{TensorFlow} & \textbf{Edge Impulse} \\
+  \hline
+  RAM & 890,5 kB & 726,6 kB \\
+  Flash & 374,4 kB & 344,7 kB \\
+  Latência & 84,99 ms & 76,48 ms \\
+  \hline
+  \end{tabular}
+ \end{center}
+ {\sourcecitation{Adaptado de \cite{EssanoahArthur2024}}}
+\end{table}
+
+\begin{table}[H]
+ \begin{center}
+  \caption{Comparação de métricas de desempenho entre TensorFlow e Edge Impulse.}\label{tab:resultadosValidacao}
+  \begin{tabular}{c|c|c}
+  \hline
+  \textbf{Métrica} & \textbf{TensorFlow} & \textbf{Edge Impulse} \\
+  \hline
+  Acurácia no treinamento & 97\% & 96\% \\
+  Acurácia na validação & 96,54\% & 95\% \\
+  Acurácia no teste & 96,38\% & 94,84\% \\
+  \hline
+  \end{tabular}
+ \end{center}
+ \sourcecitation{Adaptado de \cite{EssanoahArthur2024}}
+\end{table}
+
+Por fim, a escolha definitiva do dispositivo embarcado e da plataforma de desenvolvimento será realizada no Trabalho de Conclusão II, considerando critérios como custo, facilidade de uso, compatibilidade com o modelo treinado e requisitos de desempenho.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Proposta de trabalho}
+Neste capítulo será apresentada a proposta de trabalho para o TCC-II, com base nos conceitos e técnicas discutidos nos capítulos anteriores. O objetivo é desenvolver uma solução real de aprendizado de máquina embarcado utilizando o fluxo de trabalho proposto.
+
+\section{Descrição da proposta}
+
+Em continuidade aos objetivos traçados neste trabalho, a proposta do TCC-II é aplicar, na prática, o fluxo de desenvolvimento TinyML para resolver um problema real de classificação de resíduos sólidos. O projeto busca consolidar os conhecimentos adquiridos ao longo do trabalho, conectando teoria e prática, e evidenciar, de forma aplicada, as vantagens do aprendizado de máquina embarcado. Além disso, será realizada uma comparação entre a solução TinyML desenvolvida e abordagens tradicionais de aprendizado de máquina, de modo a destacar os diferenciais e limitações de cada abordagem no contexto do problema proposto.
+
+A proposta de trabalho consiste no desenvolvimento de um modelo de aprendizado de máquina embarcado para categorização de lixo em 12 categorias diferentes:
+
+\begin{itemize}
+    \item Pilhas e baterias;
+    \item Orgânico;
+    \item Vidro marrom;
+    \item Vidro transparente;
+    \item Vidro verde;
+    \item Papelão;
+    \item Roupas;
+    \item Metal;
+    \item Papel;
+    \item Plástico;
+    \item Calçados;
+    \item Rejeitos.
+\end{itemize}
+
+Esta proposta foi definida por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo será treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados será realizada utilizando o repositório de dados públicos do Kaggle \cite{kaggle}, que disponibiliza um conjunto de dados com imagens de lixo categorizadas, facilitando o treinamento do modelo.
+
+\section{Etapas do trabalho}
+% Detalhamento das etapas ou blocos do desenvolvimento (ex: revisão final, coleta de dados complementar, análise, redação, apresentação, etc.)
+O trabalho será desenvolvido em etapas, baseada no fluxo de trabalho apresentado no Seção \ref{sec:implantacao} com a adição de alguns pontos. Ressalta-se que o fluxo poderá sofrer ajustes ao longo do TCC-II conforme os resultados e necessidades identificados durante as experimentações. As etapas são apresentadas a seguir com suas respectivas atribuições:
+
+\begin{enumerate}
+    \item \textbf{Coleta de dados:}  
+    A primeira etapa consiste em obter imagens de lixo categorizadas a partir de repositórios públicos. Essa abordagem garante acesso a dados variados e já organizados em classes, essenciais para o treinamento de modelos de aprendizado de máquina. A diversidade do conjunto de dados é crucial para que o modelo possa generalizar bem a diferentes tipos de resíduos.
+    
+    \item \textbf{Pré-processamento:}  
+    Após a coleta, as imagens passam por uma etapa de limpeza e normalização, que inclui o redimensionamento para tamanhos uniformes e o aumento de dados (\textit{data augmentation}). Essas técnicas visam melhorar a qualidade do conjunto de dados, aumentar sua robustez e reduzir possíveis vieses durante o treinamento.
+    
+    \item \textbf{Desenvolvimento e treinamento do modelo:}  
+    Nesta etapa, será implementada uma Rede Neural Convolucional (RNC) utilizando TensorFlow. Essa arquitetura é ideal para classificação de imagens, permitindo que o modelo aprenda padrões visuais complexos necessários para identificar diferentes categorias de lixo.
+    
+    \item \textbf{Escolha da plataforma de hardware:}  
+    O hardware ideal para execução do modelo será avaliado com base na complexidade do programa e nos requisitos de desempenho, consumo energético e custo. Essa etapa garante que o dispositivo escolhido seja compatível com as restrições de um sistema embarcado.
+    
+    \item \textbf{Quantização do modelo:}  
+    Técnicas de quantização serão aplicadas para reduzir o tamanho e os requisitos computacionais do modelo, permitindo sua execução eficiente em dispositivos embarcados. Essa etapa é fundamental para garantir a viabilidade da solução TinyML.
+    
+    \item \textbf{Validação e ajuste fino:}  
+    O modelo treinado será avaliado utilizando métricas como acurácia, precisão e \textit{F1-score}. Com base nos resultados obtidos, ajustes serão realizados para melhorar o desempenho do modelo, corrigindo possíveis falhas de generalização ou subaproveitamento.
+    
+    \item \textbf{Implantação:}  
+    Após a validação, o modelo quantizado será integrado em um microcontrolador compatível. Testes práticos serão realizados para avaliar o desempenho da solução em um ambiente real, verificando sua eficiência e tempo de resposta.
+    
+    \item \textbf{Avaliação dos resultados:}  
+    Nesta etapa, serão realizados comparativos entre as métricas de desempenho elencadas na Seção \ref{sec:validacao} da solução TinyML desenvolvida e aplicações de inteligência artificial tradicionais. O objetivo é destacar as vantagens em termos de eficiência, latência, custo e desempenho.
+    
+    \item \textbf{Escrita do Trabalho de Conclusão II:}  
+    A escrita do relatório será uma atividade contínua, desenvolvida em paralelo às demais etapas do cronograma. Isso assegura que todos os passos sejam documentados detalhadamente, facilitando a organização e o cumprimento dos prazos acadêmicos.
+\end{enumerate}
+
+Demais detalhes de cada etapa serão discutidos e decididos durante o desenvolvimento do trabalho, considerando as especificidades do modelo e do dispositivo embarcado escolhido.
+
+\section{Cronograma de atividades}
+
+% Tabela ou lista com prazos e metas, linkando com as etapas descritas acima.
+A Tabela \ref{tab:cronograma_projeto} apresenta o cronograma do projeto, detalhando as etapas e os períodos estimados para cada uma delas. O cronograma foi elaborado considerando a complexidade de cada etapa e a necessidade de ajustes finos durante o desenvolvimento.
+
+\begin{table}[H]
+ \begin{center}
+  \caption{Cronograma do projeto de classificação de lixo}
+  \label{tab:cronograma_projeto}
+  \begin{tabular}{c|c}
+  \hline
+  \textbf{Etapa} & \textbf{Período} \\
+  \hline
+    Coleta de dados & 01/08 a 15/08 \\
+    Pré-processamento & 16/08 a 25/08 \\
+    Desenvolvimento e treinamento do modelo & 26/08 a 15/09 \\
+    Escolha da plataforma de hardware & 26/08 a 15/09 \\
+    Quantização do modelo & 16/09 a 22/09 \\
+    Validação e ajuste fino & 23/09 a 06/10 \\
+    Implantação & 07/10 a 20/10 \\
+    Avaliação dos resultados & 21/10 a 27/10 \\
+    Escrita do Trabalho de Conclusão II & 01/08 a 31/10 \\
+  \hline
+  \end{tabular}
+ \end{center}
+ {\sourcecitation{\textcite{Do autor}}}
+\end{table}
+
+\section{Resultados esperados}
+Após a conclusão do trabalho, espera-se obter um modelo de aprendizado de máquina embarcado capaz de classificar imagens de lixo em 12 categorias diferentes com acurácia e eficiência compatíveis com soluções atuais. O modelo deverá ser executável em um microcontrolador com recursos limitados, demonstrando a eficácia da aplicação de técnicas TinyML em dispositivos embarcados. Ademais, comparativos entre a solução TinyML e aplicações de inteligência artificial tradicionais deverão evidenciar as vantagens do processamento local, como redução de latência, menor consumo energético e independência de conectividade com a nuvem, comparando as métricas de desempenho e consumo de recursos computacionais.
+
+\chapter{Conclusões}
+\label{conclusao}
+
+O presente trabalho busca avaliar o estado atual da tecnologia e os desafios da aplicação de técnicas de aprendizado de máquina embarcado, o TinyML, em dispositivos com recursos computacionais limitados. A partir de uma revisão bibliográfica detalhada, foi possível compreender o contexto atual do TinyML e identificar como a latência, o consumo energético e a dependência de conectividade ainda são obstáculos relevantes para a adoção de soluções inteligentes em larga escala. Nesse cenário, o TinyML surge como uma alternativa promissora, permitindo o processamento local dos dados e reduzindo a necessidade de comunicação constante com a nuvem.
+
+No decorrer deste trabalho, os três primeiros objetivos específicos propostos foram plenamente atingidos: realizou-se a pesquisa e avaliação das ferramentas TinyML, o levantamento e análise das plataformas disponíveis, bem como a elaboração de um fluxo de trabalho ponta-a-ponta para soluções TinyML. O quarto objetivo, referente ao desenvolvimento e aplicação prática do modelo TinyML para classificação de resíduos sólidos, será melhor abordado e concluído no TCC-II.
+
+Durante o desenvolvimento do trabalho, foram analisadas as principais ferramentas e plataformas disponíveis para projetos TinyML, considerando critérios como facilidade de uso, integração com hardware e desempenho. Observou-se que o ecossistema de desenvolvimento está em rápida evolução, com soluções cada vez mais acessíveis tanto do ponto de vista de software quanto de hardware. A análise comparativa entre plataformas e dispositivos demonstrou que já é possível implementar modelos de aprendizado de máquina eficientes em microcontroladores e placas de baixo custo, ampliando o leque de aplicações práticas.
+
+Além disso, foi elaborado um fluxo de trabalho ponta-a-ponta para o desenvolvimento de soluções TinyML, detalhando desde a aquisição e preparação dos dados até a quantização, validação e implantação do modelo em dispositivos embarcados. Destacou-se a importância da escolha adequada dos modelos, das técnicas de otimização e das métricas de avaliação, bem como a necessidade de ajustes finos para garantir o melhor desempenho possível dentro das limitações impostas pelo hardware.
+
+Por fim, observa-se que a aplicação de TinyML em sistemas embarcados apresenta potencial para superar desafios atuais da IoT, especialmente em cenários críticos ou remotos. O trabalho prático proposto para o TCC-II buscará consolidar os conhecimentos adquiridos, aplicando o fluxo de trabalho desenvolvido em uma solução real de aprendizado de máquina embarcado, com o objetivo de validar na prática os conceitos discutidos e contribuir para o avanço da área.
+
+\printbibliography
+\end{document}
