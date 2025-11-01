@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.6)  6 OCT 2025 15:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.1)  1 NOV 2025 17:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./tcc1_maxwell.tex
 (tcc1_maxwell.tex
 LaTeX2e <2025-06-01> patch level 1
-L3 programming layer <2025-09-02>
+L3 programming layer <2025-10-09>
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/ufrgscca\ufrgscca.cls
 Document Class: ufrgscca 2024/10/17 v2.11 UFRGS/CCA class
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/etex-pkg\etex.sty
@@ -19,7 +19,7 @@ Package etex Warning: Extended allocation already in use.
 (etex)                at the start of the document.
 
 ) (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count275
 )
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/starray\starray.sty
@@ -114,29 +114,34 @@ LaTeX Info: Redefining \GenericError on input line 601.
 sty
 Package: ufrgscca-abnt 2024/10/17 v2.11 UFRGS/CCA ABNT layout
  (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/08/03 v25.12 The multilingual framework for LuaLaTeX, pdfLa
+Package: babel 2025/10/22 v25.14 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
 \babel@savecnt=\count295
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2045.
+ne 2050.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2047.
+ne 2052.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2049.
+e 2054.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2050.
+e 2055.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2051.
+on input line 2056.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2053.
+on input line 2058.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2078.
+on input line 2083.
 \U@D=\dimen149
 \l@unhyphenated=\language79
 
 (C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count296
+
+
+Package babel Warning: Configuration files are deprecated, as
+(babel)                they can break document portability.
+(babel)                Reported on input line 4172.
 
 *************************************
 * Local config file bblopts.cfg used
@@ -145,13 +150,13 @@ on input line 2078.
 File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/en\babel-english.tex)
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/pt\babel-brazilian.tex)
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 4295.
+
 (C:\Program Files\MiKTeX\tex/latex/babel-english\english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-
-(C:\Program Files\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
-Package babel Info: Importing font and identification data for english
-(babel)             from babel-en.ini. Reported on input line 12.
-)
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
 Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
@@ -159,13 +164,12 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language73). Reported on input line 108.
 )
+Package babel Info: Importing font and identification data for brazilian
+(babel)             from babel-pt-BR.ini. Reported on input line 4295.
+
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/babel-portuges\brazilia
 n.ldf
 Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
- (C:\Program Files\MiKTeX\tex/generic/babel/locale/pt\babel-brazilian.tex
-Package babel Info: Importing font and identification data for brazilian
-(babel)             from babel-pt-BR.ini. Reported on input line 12.
-)
 Package babel Info: Hyphen rules for 'brazilian' set to \l@portuguese
 (babel)             (\language56). Reported on input line 111.
 Package babel Info: Making " an active character on input line 143.
@@ -301,7 +305,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 106.
 
 (C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen175
 \Gin@req@width=\dimen176
@@ -877,13 +881,13 @@ bbx
 File: abnt.bbx 2018-11-17 v3.4 ABNT BibLaTeX citation style
  (C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
 (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2025-09-02 L3 programming layer (loader) 
+Package: expl3 2025-10-09 L3 programming layer (loader) 
 
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count496
 ))
-Package: xparse 2024-08-16 L3 Experimental document command parser
+Package: xparse 2025-10-09 L3 Experimental document command parser
 )
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/xpatch\xpatch.sty
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
@@ -937,7 +941,7 @@ File: biblatex.cfg
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
 Package biblatex Info: ... and expl3
-(biblatex)             2025-09-02 L3 programming layer (loader) 
+(biblatex)             2025-10-09 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
@@ -1640,16 +1644,19 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks68
 \@floatcapt=\box114
 )
+(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+6.
+
+(C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'brazilian'.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
-.
 
-(C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 
 LaTeX Warning: Unused global option(s):
     [oneside].
@@ -1660,24 +1667,24 @@ Package babel Info: 'brazilian' activates 'portuges' shorthands.
 )
 \openout1 = `tcc1_maxwell.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/ufrgscca\ufrgscca-base-
 ptBR.def)
@@ -1735,8 +1742,16 @@ Package caption Info: End \AtBeginDocument code.
 \everyMPtoPDFconversion=\toks70
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+
+(C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
 
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
@@ -1832,15 +1847,15 @@ Package biblatex Warning: The following entry could not be found
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 11.
-Package biblatex Info: Reference segment=0 on input line 11.
-LaTeX Info: Redefining \microtypecontext on input line 11.
-Package microtype Info: Applying patch `item' on input line 11.
-Package microtype Info: Applying patch `toc' on input line 11.
-Package microtype Info: Applying patch `eqnum' on input line 11.
-Package microtype Info: Applying patch `footnote' on input line 11.
-Package microtype Info: Applying patch `verbatim' on input line 11.
-LaTeX Info: Redefining \microtypesetup on input line 11.
+Package biblatex Info: Reference section=0 on input line 13.
+Package biblatex Info: Reference segment=0 on input line 13.
+LaTeX Info: Redefining \microtypecontext on input line 13.
+Package microtype Info: Applying patch `item' on input line 13.
+Package microtype Info: Applying patch `toc' on input line 13.
+Package microtype Info: Applying patch `eqnum' on input line 13.
+Package microtype Info: Applying patch `footnote' on input line 13.
+Package microtype Info: Applying patch `verbatim' on input line 13.
+LaTeX Info: Redefining \microtypesetup on input line 13.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1869,7 +1884,7 @@ File: translations-basic-dictionary-brazil.trsl (brazil translation file `trans
 lations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `brazil'. on input line 11.
+or `brazil'. on input line 13.
 
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
 slations-basic-dictionary-english.trsl
@@ -1877,8 +1892,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 11.
-Package hyperref Info: Link coloring OFF on input line 11.
+or `english'. on input line 13.
+Package hyperref Info: Link coloring OFF on input line 13.
  (tcc1_maxwell.out) (tcc1_maxwell.out)
 \@outlinefile=\write5
 \openout5 = `tcc1_maxwell.out'.
@@ -1918,12 +1933,17 @@ les/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}]
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 13--13
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
 
  []
 
@@ -1932,8 +1952,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--13
 [3
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
-8.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
+0.
  (C:\Program Files\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1983,17 +2003,14 @@ Package microtype Info: Loading generic protrusion settings for font family
 [10
 
 ]
+
+[11]
 Cap\'{\i }tulo 1.
 
 
-[11
+[12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
@@ -2004,58 +2021,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--118
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
-[12]
+ []
+
+
+
+[13]
 Cap\'{\i }tulo 2.
 
 
-[13
+[14
 
 ]
 
-[14]
+[15]
 Cap\'{\i }tulo 3.
 
 
-[15
+[16
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-89.
+91.
  (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-89.
+91.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-189.
+191.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-189.
+191.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 189.
+(Font)              <12> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 189.
+(Font)              <8> on input line 191.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 189.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18
-9.
+(Font)              <6> on input line 191.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 19
+1.
 
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 189
+LaTeX Font Info:    Trying to load font information for U+msa on input line 191
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
@@ -2064,7 +2086,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 189
+LaTeX Font Info:    Trying to load font information for U+msb on input line 191
 .
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -2074,71 +2096,83 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
-LaTeX Warning: Citation 'Do autor' on page 16 undefined on input line 200.
+LaTeX Warning: Citation 'Do autor' on page 17 undefined on input line 202.
 
-<imagens/redeneural.png, id=352, 590.205pt x 496.85625pt>
+<imagens/redeneural.png, id=422, 590.205pt x 496.85625pt>
 File: imagens/redeneural.png Graphic file (type png)
 <use imagens/redeneural.png>
-Package pdftex.def Info: imagens/redeneural.png  used on input line 209.
+Package pdftex.def Info: imagens/redeneural.png  used on input line 211.
 (pdftex.def)             Requested size: 227.62206pt x 191.62003pt.
 
-LaTeX Warning: Citation 'Do autor' on page 16 undefined on input line 212.
+LaTeX Warning: Citation 'Do autor' on page 17 undefined on input line 214.
 
 
 
-[16 <./imagens/redeneural.png>]
+[17 <./imagens/redeneural.png>]
 
-[17{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
+[18{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-80.
+82.
 
 (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<imagens/exemploROC.png, id=396, 609.77812pt x 441.14813pt>
+<imagens/exemploROC.png, id=466, 609.77812pt x 441.14813pt>
 File: imagens/exemploROC.png Graphic file (type png)
 <use imagens/exemploROC.png>
-Package pdftex.def Info: imagens/exemploROC.png  used on input line 294.
+Package pdftex.def Info: imagens/exemploROC.png  used on input line 296.
 (pdftex.def)             Requested size: 318.66948pt x 230.54941pt.
 
 
-[18{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKT
+[19{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKT
 eX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm
 /lm-ts1.enc}]
-<imagens/exemploConfusao.png, id=413, 499.11469pt x 467.49657pt>
+<imagens/exemploConfusao.png, id=484, 499.11469pt x 467.49657pt>
 File: imagens/exemploConfusao.png Graphic file (type png)
 <use imagens/exemploConfusao.png>
-Package pdftex.def Info: imagens/exemploConfusao.png  used on input line 304.
+Package pdftex.def Info: imagens/exemploConfusao.png  used on input line 306.
 (pdftex.def)             Requested size: 318.66948pt x 298.49057pt.
 
 
-[19 <./imagens/exemploROC.png> <./imagens/exemploConfusao.png>]
-
-[20]
+[20 <./imagens/exemploROC.png> <./imagens/exemploConfusao.png>]
 
 [21]
+
+[22]
 Cap\'{\i }tulo 4.
 
 
-[22
+[23
 
 ]
 
-[23]
-
-LaTeX Warning: Citation 'Do autor' on page 24 undefined on input line 482.
-
-
-
 [24]
+
+LaTeX Warning: Citation 'Do autor' on page 25 undefined on input line 486.
+
+
+
+[25]
 Cap\'{\i }tulo 5.
 
 
-[25
+[26
+
+]
+Cap\'{\i }tulo 6.
+
+
+[27
+
+]
+Cap\'{\i }tulo 7.
+
+
+[28
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-01.
+50.
  (C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2148,29 +2182,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 
-[26
+[29
 
 ]
 
-[27]
+[30]
 
-[28] (tcc1_maxwell.aux)
+[31]
+
+[32] (tcc1_maxwell.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `tcc1_maxwell.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `tcc1_maxwell.out':
-(rerunfilecheck)             Before: 9D547CA9F53B300B036DF18590E0C97D;4388
-(rerunfilecheck)             After:  B60706C924FE14C7D007E3A58DFFB693;4492.
+Package rerunfilecheck Info: File `tcc1_maxwell.out' has not changed.
+(rerunfilecheck)             Checksum: C6A36FCD20DC5506DF193A4EE666ADEC;6737.
 
 Package biblatex Warning: Please rerun LaTeX.
 (biblatex)                Page breaks have changed.
@@ -2180,11 +2210,11 @@ Package logreq Info: Writing requests to 'tcc1_maxwell.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 68875 strings out of 468130
- 1622478 string characters out of 5440700
- 2774133 words of memory out of 5000000
- 96223 multiletter control sequences out of 15000+600000
- 714059 words of font info for 253 fonts, out of 8000000 for 9000
+ 69043 strings out of 468080
+ 1624874 string characters out of 5435839
+ 2779632 words of memory out of 5000000
+ 96422 multiletter control sequences out of 15000+600000
+ 714826 words of font info for 252 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,11n,129p,1913b,3961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
@@ -2197,9 +2227,9 @@ am Files/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Program Files/MiKTeX/fonts
 /type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss
 bx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program 
 Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc1_maxwell.pdf (28 pages, 582740 bytes).
+Output written on tcc1_maxwell.pdf (32 pages, 597586 bytes).
 PDF statistics:
- 645 PDF objects out of 1000 (max. 8388607)
- 122 named destinations out of 1000 (max. 500000)
- 45892 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 738 PDF objects out of 1000 (max. 8388607)
+ 137 named destinations out of 1000 (max. 500000)
+ 45980 words of extra memory for PDF output out of 51595 (max. 10000000)
 

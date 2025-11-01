@@ -5,13 +5,15 @@
 
 \documentclass[repeatfields,xlists,xpacks,oneside]{ufrgscca}
 \usepackage{float}
-\usepackage{graphicx} % Adicione noo preâmbulo, se ainda não estiver lá
+\usepackage[utf8]{inputenc}    % <-- adicionar (se estiver usando pdflatex)
+\usepackage[T1]{fontenc}       % <-- adicionar para acentuação correta
+\usepackage{graphicx} % Adicione no preâmbulo, se ainda não estiver lá
 \addbibresource{tccMaxwell.bib} % Inclua seu arquivo de referências aqui
 
 \begin{document}
 
-\MakeCoverPages{tccI}
-%\MakeCoverPages{tccII}
+%\MakeCoverPages{tccI}
+\MakeCoverPages{tccII}
 
 % dedicatoria é opcional
 %\nonum\chapter{Dedicatória} %vai ter uma entrada no sumário
@@ -419,6 +421,8 @@ A proposta de trabalho consiste no desenvolvimento de um modelo de aprendizado d
 
 Esta proposta foi definida por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo será treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados será realizada utilizando o repositório de dados públicos do Kaggle \cite{kaggle}, que disponibiliza um conjunto de dados com imagens de lixo categorizadas, facilitando o treinamento do modelo.
 
+Durante a execução do TCC-II, a escolha do conjunto de dados foi revisada. Inicialmente, havia sido planejada a utilização de um banco de dados público do Kaggle \cite{kaggle} para o treinamento do modelo de classificação de resíduos. Contudo, optou-se pela adoção do conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024), o qual está associado a um artigo publicado, possibilitando omparações diretas entre o modelo desenvolvido neste trabalho e o apresentado no estudo de referência. Os detalhes sobre o novo conjunto de dados são descritos na Seção~\ref{sec:coleta}.
+
 \section{Etapas do trabalho}
 % Detalhamento das etapas ou blocos do desenvolvimento (ex: revisão final, coleta de dados complementar, análise, redação, apresentação, etc.)
 O trabalho será desenvolvido em etapas, baseada no fluxo de trabalho apresentado no Seção \ref{sec:implantacao} com a adição de alguns pontos. Ressalta-se que o fluxo poderá sofrer ajustes ao longo do TCC-II conforme os resultados e necessidades identificados durante as experimentações. As etapas são apresentadas a seguir com suas respectivas atribuições:
@@ -482,8 +486,53 @@ A Tabela \ref{tab:cronograma_projeto} apresenta o cronograma do projeto, detalha
  {\sourcecitation{\textcite{Do autor}}}
 \end{table}
 
-\section{Resultados esperados}
-Após a conclusão do trabalho, espera-se obter um modelo de aprendizado de máquina embarcado capaz de classificar imagens de lixo em 12 categorias diferentes com acurácia e eficiência compatíveis com soluções atuais. O modelo deverá ser executável em um microcontrolador com recursos limitados, demonstrando a eficácia da aplicação de técnicas TinyML em dispositivos embarcados. Ademais, comparativos entre a solução TinyML e aplicações de inteligência artificial tradicionais deverão evidenciar as vantagens do processamento local, como redução de latência, menor consumo energético e independência de conectividade com a nuvem, comparando as métricas de desempenho e consumo de recursos computacionais.
+% ==========================
+% CAPÍTULO 5 - DESENVOLVIMENTO
+% ==========================
+\chapter{Desenvolvimento}
+\label{cap:desenvolvimento}
+
+\section{Coleta e seleção do banco de dados}
+\label{sec:coleta}
+% Descrição do banco planejado, justificativa da troca e novo dataset.
+
+\section{Pré-processamento dos dados}
+\label{sec:preprocessamento}
+% Breve descrição das etapas realizadas e justificativa da simplicidade.
+
+\section{Desenvolvimento e treinamento do modelo}
+\label{sec:treinamento}
+% Ambiente Colab, arquitetura CNN, hiperparâmetros, early stop, ajuste LR.
+
+\section{Quantização do modelo}
+\label{sec:quantizacao}
+% Processo de quantização pós-treinamento com TensorFlow Lite.
+
+\section{Escolha e preparação do hardware}
+\label{sec:hardware}
+% Descrição do Raspberry Pi 3 B+, justificativa e configuração.
+
+\section{Implementação e demonstração prática}
+\label{sec:implementacao}
+% Execução do modelo no RPi, script Python/TFLite e validação funcional.
+
+% ==========================
+% CAPÍTULO 6 - RESULTADOS E DISCUSSÃO
+% ==========================
+\chapter{Resultados e Discussão}
+\label{cap:resultados}
+
+\section{Avaliação de desempenho}
+\label{sec:avaliacao-desempenho}
+% Métricas: ACU, SEN, ESP, PRE, F1, curva COR, matriz de confusão.
+
+\section{Avaliação e análise de eficiência computacional}
+\label{sec:avaliacao-eficiencia}
+% Tempo de inferência, uso de memória, comparação com o paper de referência.
+
+\section{Limitações e sugestões de melhoria}
+\label{sec:limitacoes}
+% Limitações e propostas para trabalhos futuros.
 
 \chapter{Conclusões}
 \label{conclusao}
