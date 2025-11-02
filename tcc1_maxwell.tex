@@ -458,39 +458,17 @@ O trabalho será desenvolvido em etapas, baseada no fluxo de trabalho apresentad
 
 Demais detalhes de cada etapa serão discutidos e decididos durante o desenvolvimento do trabalho, considerando as especificidades do modelo e do dispositivo embarcado escolhido.
 
-\section{Cronograma de atividades}
-
-% Tabela ou lista com prazos e metas, linkando com as etapas descritas acima.
-A Tabela \ref{tab:cronograma_projeto} apresenta o cronograma do projeto, detalhando as etapas e os períodos estimados para cada uma delas. O cronograma foi elaborado considerando a complexidade de cada etapa e a necessidade de ajustes finos durante o desenvolvimento.
-
-\begin{table}[H]
- \begin{center}
-  \caption{Cronograma do projeto de classificação de lixo}
-  \label{tab:cronograma_projeto}
-  \begin{tabular}{c|c}
-  \hline
-  \textbf{Etapa} & \textbf{Período} \\
-  \hline
-    Coleta de dados & 01/08 a 15/08 \\
-    Pré-processamento & 16/08 a 25/08 \\
-    Desenvolvimento e treinamento do modelo & 26/08 a 15/09 \\
-    Escolha da plataforma de hardware & 26/08 a 15/09 \\
-    Quantização do modelo & 16/09 a 22/09 \\
-    Validação e ajuste fino & 23/09 a 06/10 \\
-    Implantação & 07/10 a 20/10 \\
-    Avaliação dos resultados & 21/10 a 27/10 \\
-    Escrita do Trabalho de Conclusão II & 01/08 a 31/10 \\
-  \hline
-  \end{tabular}
- \end{center}
- {\sourcecitation{\textcite{Do autor}}}
-\end{table}
-
 % ==========================
 % CAPÍTULO 5 - DESENVOLVIMENTO
 % ==========================
 \chapter{Desenvolvimento}
 \label{cap:desenvolvimento}
+
+Este capítulo apresenta a execução prática do fluxo de trabalho proposto no TCC-I,
+abrangendo todas as etapas do desenvolvimento da solução TinyML para classificação de
+resíduos sólidos. São detalhados o processo de seleção e preparação do conjunto de dados,
+a implementação e o treinamento do modelo em ambiente de nuvem, as técnicas de
+quantização aplicadas e a implantação da rede neural em um dispositivo embarcado.
 
 \section{Coleta e seleção do banco de dados}
 \label{sec:coleta}
