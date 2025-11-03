@@ -2487,28 +2487,30 @@
     <bcf:citekey order="20" intorder="1">Whang2023</bcf:citekey>
     <bcf:citekey order="21" intorder="1">Ahmed2022</bcf:citekey>
     <bcf:citekey order="22" intorder="1">tinyModels</bcf:citekey>
-    <bcf:citekey order="23" intorder="1">Do autor</bcf:citekey>
-    <bcf:citekey order="24" intorder="1">tinyModels</bcf:citekey>
-    <bcf:citekey order="25" intorder="1">Do autor</bcf:citekey>
-    <bcf:citekey order="26" intorder="1">comparaAlg</bcf:citekey>
-    <bcf:citekey order="27" intorder="1">comparaAlg</bcf:citekey>
-    <bcf:citekey order="28" intorder="1">Wang2022</bcf:citekey>
-    <bcf:citekey order="29" intorder="1">Wang2022</bcf:citekey>
-    <bcf:citekey order="30" intorder="1">Kallimani2024</bcf:citekey>
-    <bcf:citekey order="31" intorder="1">quantization</bcf:citekey>
-    <bcf:citekey order="32" intorder="1">Rainio2024</bcf:citekey>
-    <bcf:citekey order="33" intorder="1">Rainio2024</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">Alshammari2024</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">Oliveira2024</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">Oliveira2024</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">edgeDocs</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">tensorDocs</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">tinyModels</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">comparaAlg</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">comparaAlg</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">Wang2022</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">Wang2022</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">Kallimani2024</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">quantization</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">Rainio2024</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">Rainio2024</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">Alshammari2024</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">Oliveira2024</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">Oliveira2024</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">edgeDocs</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">tensorDocs</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">EssanoahArthur2024</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">EssanoahArthur2024</bcf:citekey>
     <bcf:citekey order="39" intorder="1">EssanoahArthur2024</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">EssanoahArthur2024</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">EssanoahArthur2024</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">kaggle</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">kaggle</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">kaggle</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">realwaste2023</bcf:citekey>
     <bcf:citekey order="43" intorder="1">kaggle</bcf:citekey>
     <bcf:citekey order="44" intorder="1">realwaste2023</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">rwPaper</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">realwaste2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

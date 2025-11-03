@@ -1039,7 +1039,7 @@
       \endverb
       \keyw{Data privacy;Data security;Ecosystems;Medical services;Streaming media;Real-time systems;Internet of Things;Internet of Things (IoT);Health Wearable Technology;Personal Devices;Real-time Health Monitoring;Data Privacy and Security;Predictive Health Management;IoT Ecosystem in Healthcare;Smart Health Wearables}
     \endentry
-    \entry{realwaste2023}{dataset}{}{}
+    \entry{realwaste2023}{misc}{}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=018f8877f3dfb3cf2d139d2342c02ea9}{%
            family={Single},
@@ -1068,23 +1068,71 @@
       \strng{authornamehash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
       \strng{authorfullhash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
       \strng{authorfullhashraw}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \field{extraname}{1}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{UCI Machine Learning Repository}
-      \field{note}{Dataset and accompanying article. Disponível em: \url{https://archive.ics.uci.edu/dataset/908/realwaste}}
-      \field{title}{RealWaste: A Novel Real-Life Data Set for Landfill Waste Classification Using Deep Learning}
+      \field{note}{{DOI}: https://doi.org/10.24432/C5SS4G}
+      \field{title}{{RealWaste}}
       \field{year}{2023}
+    \endentry
+    \entry{rwPaper}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=018f8877f3dfb3cf2d139d2342c02ea9}{%
+           family={Single},
+           familyi={S\bibinitperiod},
+           given={Sam},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2582d5be34ccd7ba8e04328b8c06cff7}{%
+           family={Iranmanesh},
+           familyi={I\bibinitperiod},
+           given={Saeid},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ed2f074c8a6a3b33060534faf02d811}{%
+           family={Raad},
+           familyi={R\bibinitperiod},
+           given={Raad},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \strng{fullhash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \strng{fullhashraw}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \strng{bibnamehash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \strng{authorbibnamehash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \strng{authornamehash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \strng{authorfullhash}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \strng{authorfullhashraw}{e8d1ad8f4cc2b2b1748da2e413ad4c10}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2078-2489}
+      \field{journaltitle}{Information}
+      \field{number}{12}
+      \field{title}{RealWaste: A Novel Real-Life Data Set for Landfill Waste Classification Using Deep Learning}
+      \field{volume}{14}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.3390/info14120633
+      \endverb
       \verb{urlraw}
-      \verb https://archive.ics.uci.edu/dataset/908/realwaste
+      \verb https://www.mdpi.com/2078-2489/14/12/633
       \endverb
       \verb{url}
-      \verb https://archive.ics.uci.edu/dataset/908/realwaste
+      \verb https://www.mdpi.com/2078-2489/14/12/633
       \endverb
-      \keyw{waste classification,dataset,image classification,landfill,deep learning}
     \endentry
     \entry{Sinha2024}{article}{}{}
       \name{author}{1}{}{%
@@ -1498,7 +1546,6 @@
       \keyw{Cloud computing;Program processors;Machine learning algorithms;Web services;Data processing;Manipulators;Real-time systems;Latency;IoT;Edge Computing;Cloud Computing;RTT}
     \endentry
   \enddatalist
-  \missing{Do autor}
 \endrefsection
 \endinput
 

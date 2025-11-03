@@ -199,7 +199,7 @@ O desenvolvimento da solução começa com a escolha do tipo de modelo de aprend
   \hline
   \end{tabular}
  \end{center}
- {\sourcecitation{\textcite{Do autor}}}
+ {\sourcecitation{\textit{Do autor}}}
 \end{table}
 
 Para o cumprimento do objetivo específico 4, o modelo a ser desenvolvido será do tipo Rede Neural Convolucional (RNC), pois esse tipo de arquitetura é amplamente utilizado em tarefas de classificação de imagens em aplicações TinyML \cite{tinyModels}. A escolha detalhada da arquitetura, como a utilização de variantes compactas (por exemplo, TinyYOLO ou outras), será definida durante a implementação prática no TCC-II, levando em conta os requisitos do projeto e as limitações do hardware selecionado.
@@ -211,7 +211,7 @@ Uma arquitetura de rede neural é construída basicamente por camadas de neurôn
  \includegraphics[width=0.5\textwidth]{imagens/redeneural.png}
  \caption{Exemplo de uma rede neural simples.}
  \label{fig:redeneural}
- {\sourcecitation{\textcite{Do autor}}}
+ {\sourcecitation{\textit{Do autor}}}
 \end{figure}
 
 Os pesos exibidos na Figura \ref{fig:redeneural} são os pesos da soma ponderada que são ajustados em cada neurônio durante o treinamento do modelo. Para realizar o ajuste destes pesos, durante o treinamento é utilizado um algoritmo de otimização, este programa trata-se de uma técnica matemática que busca minimizar a diferença entre a saída prevista pelo modelo e a saída real dos dados de treinamento. Conforme descreve \cite{comparaAlg}, o algoritmo mais comum utilizado para este fim é o \textit{Gradiente Descendente Estocástico} (GDE), que ajusta os pesos da rede neural iterativamente, utilizando o gradiente da função de perda em relação aos pesos. Porém, ainda conforme \cite{comparaAlg}, outros algoritmos como Adam e RMSprop também são amplamente utilizados.
@@ -464,15 +464,50 @@ Demais detalhes de cada etapa serão discutidos e decididos durante o desenvolvi
 \chapter{Desenvolvimento}
 \label{cap:desenvolvimento}
 
-Este capítulo apresenta a execução prática do fluxo de trabalho proposto no TCC-I,
-abrangendo todas as etapas do desenvolvimento da solução TinyML para classificação de
-resíduos sólidos. São detalhados o processo de seleção e preparação do conjunto de dados,
-a implementação e o treinamento do modelo em ambiente de nuvem, as técnicas de
-quantização aplicadas e a implantação da rede neural em um dispositivo embarcado.
+Este capítulo apresenta a execução prática do fluxo de trabalho proposto no TCC-I, abrangendo todas as etapas do desenvolvimento da solução TinyML para classificação de resíduos sólidos. São detalhados o processo de seleção e preparação do conjunto de dados, a implementação e o treinamento do modelo em ambiente de nuvem, as técnicas de quantização aplicadas e a implantação da rede neural em um dispositivo embarcado.
 
 \section{Coleta e seleção do banco de dados}
 \label{sec:coleta}
 % Descrição do banco planejado, justificativa da troca e novo dataset.
+
+Inicialmente, havia sido planejada a utilização de um conjunto de dados público do \textit{Kaggle} \cite{kaggle}, contendo 12 categorias distintas de resíduos sólidos. No entanto, optou-se por empregar o conjunto de dados \textit{RealWaste} \cite{realwaste2023}, proveniente do UCI Machine Learning Repository, em virtude de estar associado ao artigo \textit{A Novel Real-Life Data Set for Landfill Waste Classification Using Deep Learning} \cite{rwPaper}. Essa associação permite a realização de comparações diretas entre o modelo desenvolvido neste trabalho e o apresentado no estudo de referência, fortalecendo a análise dos resultados.
+
+O conjunto \textit{RealWaste} é composto por imagens reais de resíduos coletados em aterros sanitários, classificadas conforme o tipo de material predominante. Os rótulos atribuídos às imagens representam a categoria principal. A Tabela~\ref{tab:realwaste_classes} apresenta as categorias e a quantidade de amostras disponíveis em cada uma delas.
+
+\begin{table}[H]
+\centering
+\caption{Categorias e quantidade de imagens no conjunto de dados RealWaste.}
+\label{tab:realwaste_classes}
+\begin{tabular}{l c}
+\hline
+\textbf{Categoria} & \textbf{Quantidade de imagens} \\
+\hline
+Papelão & 461 \\
+Resíduos orgânicos alimentares & 411 \\
+Vidro & 420 \\
+Metal & 790 \\
+Lixo diverso & 495 \\
+Papel & 500 \\
+Plástico & 921 \\
+Têxteis & 318 \\
+Vegetação & 436 \\
+\hline
+\textbf{Total} & \textbf{4.752} \\
+\hline
+\end{tabular}
+\end{table}
+
+O total de 4.752 imagens fornece um conjunto de dados de tamanho moderado, adequado para o treinamento de redes neurais convolucionais compactas voltadas a aplicações embarcadas. O dataset apresenta boa diversidade de materiais, o que contribui para a generalização do modelo em cenários reais.
+
+A Figura~\ref{fig:rw_exemplos} apresenta exemplos de imagens pertencentes ao conjunto de dados \textit{RealWaste}, ilustrando algumas das categorias utilizadas no treinamento do modelo. As amostras demonstram a variabilidade visual entre diferentes tipos de materiais, evidenciando as diferenças de textura, cor e formato que o modelo deve aprender a distinguir durante o processo de classificação.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{imagens/rw.png}
+    \caption{Exemplos de imagens do conjunto de dados \textit{RealWaste}: (a) papel; (b) metal; (c) vidro; (d) plástico; (e) resíduo orgânico alimentar; (f) resíduo têxtil.}
+    \label{fig:rw_exemplos}
+    \sourcecitation{\cite{realwaste2023}}
+\end{figure}
 
 \section{Pré-processamento dos dados}
 \label{sec:preprocessamento}
