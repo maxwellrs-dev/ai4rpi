@@ -2,42 +2,9 @@
 \babel@toc {brazilian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {brazilian}{}\relax 
-\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de uma rede neural simples.}}{16}{figure.caption.32}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de um gráfico COR.}}{19}{figure.caption.41}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo de uma Matriz de Confusão.}}{19}{figure.caption.42}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Exemplos de imagens do conjunto de dados \textit {RealWaste}: (a) papel; (b) metal; (c) vidro; (d) plástico; (e) resíduo orgânico alimentar; (f) resíduo têxtil.}}{26}{figure.caption.62}%
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de uma rede neural simples.}}{17}{figure.caption.32}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de um gráfico COR.}}{20}{figure.caption.41}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo de uma Matriz de Confusão.}}{20}{figure.caption.42}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Exemplos de imagens do conjunto de dados \textit {RealWaste}: (a) papel; (b) metal; (c) vidro; (d) plástico; (e) resíduo orgânico alimentar; (f) resíduo têxtil.}}{27}{figure.caption.62}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Curvas de acurácia e perda por época (treino e validação).}}{30}{figure.caption.73}%
 \contentsfinish 

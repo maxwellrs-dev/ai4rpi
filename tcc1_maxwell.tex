@@ -511,11 +511,83 @@ A Figura~\ref{fig:rw_exemplos} apresenta exemplos de imagens pertencentes ao con
 
 \section{Pré-processamento dos dados}
 \label{sec:preprocessamento}
-% Breve descrição das etapas realizadas e justificativa da simplicidade.
+
+O conjunto de dados \textit{RealWaste} já se apresenta homogêneo quanto à resolução (522\(\times\)522 px) e à organização em subpastas por classe, o que dispensou etapas extensas de limpeza, remoção de ruído ou correções manuais. Assim, adotou-se um pré-processamento propositalmente simples, com dois objetivos principais: (i) adequar o tamanho das imagens à entrada da rede e (ii) balancear as classes para reduzir vieses no treinamento.
+
+As etapas executadas foram:
+
+\begin{enumerate}
+    \item \textbf{Redimensionamento para a entrada do modelo.} Durante o carregamento, cada imagem foi redimensionada para 224\(\times\)224 px, tamanho compatível com arquiteturas convolucionais compactas e com as restrições de memória/CPU do alvo embarcado. Esse redimensionamento é realizado diretamente no script ao chamar \texttt{load\_img(..., target\_size=(224,224))}, garantindo que todo o conjunto balanceado seja gravado já no tamanho esperado pelo modelo.
+
+    \item \textbf{Balanceamento via aumento de dados (data augmentation).} Após contabilizar as imagens por classe, definiu-se uma meta por classe igual ao maior valor entre a classe mais populosa do conjunto e 523 amostras. Na prática, isso faz com que todas as classes sejam expandidas até o tamanho da classe majoritária. Para gerar amostras sintéticas preservando a semântica, aplicaram-se apenas transformações geométricas e fotométricas leves com \textit{ImageDataGenerator}: rotação (\(\pm 20^{\circ}\)), deslocamentos horizontais e verticais (até 20\%), cisalhamento (0{,}15), \textit{zoom} (0{,}15), espelhamento horizontal e variação de brilho entre 0{,}7 e 1{,}3. O espelhamento vertical foi evitado por potencialmente alterar a plausibilidade física de algumas cenas. Limitou-se a no máximo 10 variações por imagem base, reduzindo redundância. As imagens originais redimensionadas foram copiadas para o diretório de saída e, em seguida, as variações foram geradas até atingir a meta por classe.
+\end{enumerate}
+
+Todo o procedimento está implementado em \texttt{metadados/aumento\_de\_dados.py}, que mantém a estrutura de diretórios por classe, grava o conjunto balanceado em disco e facilita a reprodução dos resultados.
+
+    	extbf{Justificativa da simplicidade.} Optou-se por um pipeline enxuto porque:
+\begin{itemize}
+    \item o dataset já era limpo e uniformizado (522\(\times\)522 px), de modo que etapas adicionais de filtragem/segmentação não agregariam benefício claro;
+    \item em cenários TinyML, evitar pré-processamentos pesados reduz acoplamento e mantém a inferência simples no dispositivo embarcado;
+    \item as transformações escolhidas aumentam a diversidade sem introduzir artefatos ou deslocar o domínio dos dados, favorecendo a generalização em condições reais (iluminação e enquadramento variáveis);
+    \item manter o fluxo curto melhora a reprodutibilidade e reduz o risco de \textit{data leakage} entre treino e teste.
+\end{itemize}
+
+Por fim, a normalização de intensidade (por exemplo, reescala para [0,1] ou padronização por canal) é tratada no pipeline de treinamento, junto com a alimentação em lotes, não exigindo transformações adicionais na etapa de pré-processamento offline.
 
 \section{Desenvolvimento e treinamento do modelo}
 \label{sec:treinamento}
-% Ambiente Colab, arquitetura CNN, hiperparâmetros, early stop, ajuste LR.
+
+Esta seção descreve a implementação prática do modelo de classificação, desde a preparação do pipeline de dados até o treinamento com ajuste fino. A implementação foi conduzida em ambiente de nuvem do Google Colab, com aceleração disponível, utilizando TensorFlow/Keras. Estas escolhas foram feitas com base principalmente na facilidade de acesso, onde basta ter um navegador da web para acessar a plataforma da Google. Uma vez dentro do ambiente, é possível utilizar CPUs, GPUs e TPUs gratuitamente (com limitações) e instalar bibliotecas, pacotes e dependências conforme necessário. Além disso, o Colab oferece integração nativa com o Google Drive, facilitando o armazenamento e o compartilhamento de arquivos.
+
+\subsection{Pipeline de dados}
+Os conjuntos de treino e validação foram criados a partir do diretório base do \textit{RealWaste}, empregando o TensorFlow, com divisão estratificada aproximada de 80/20 e semente 123 para reprodutibilidade. As imagens foram redimensionadas para 224\(\times\)224 px e carregadas em lotes (\textit{batch}) de 64 amostras.
+
+\subsection{Arquitetura e estratégia de treino}
+Utilizou-se a \textbf{MobileNetV2} como extratora de atributos base (\texttt{include\_top = false}, \texttt{weights = imagenet}, \texttt{alpha = 1}), por ser uma arquitetura leve, adequada ao contexto TinyML. Sobre a base, adicionaram-se camadas finais para classificação multiclasse:
+
+\begin{itemize}
+    \item \texttt{GlobalAveragePooling2D};
+    \item \texttt{Dropout}(0{,}2) para regularização;
+    \item \texttt{Dense}(128, ReLU);
+    \item \texttt{Dense}(\#classes, Softmax).
+\end{itemize}
+
+A estratégia de treinamento adotou duas fases:
+\begin{enumerate}
+    \item \textbf{Aquecimento (\textit{warm-up})}: base congelada (\texttt{base\_model.trainable = False}) por 5 épocas, para estabilizar as camadas adicionadas;
+    \item \textbf{Ajuste fino (\textit{fine-tuning})}: base liberada parcialmente, mantendo congeladas todas as camadas exceto as \textbf{80 últimas}, permitindo especialização progressiva dos filtros superiores à tarefa.
+\end{enumerate}
+
+\subsection{Função de perda, otimizador e \textit{callbacks}}
+O modelo foi compilado com \texttt{loss = sparse\_categorical\_crossentropy} e métrica principal \texttt{accuracy}. Como otimizador, empregou-se \textbf{AdamW} com taxa de aprendizado inicial de \(1\times 10^{-4}\) e \textit{weight decay} \(1\times 10^{-5}\).
+
+Para robustez adicional frente a eventuais desequilíbrios residuais das classes, foram usados \textbf{pesos por classe} (\textit{class weights}) obtidos via \texttt{sklearn.utils.compute\_class\_weight} sobre as \textit{labels} do conjunto de treino.
+
+Dois \textit{callbacks} controlaram o processo de otimização:
+\begin{itemize}
+    \item \textbf{\textit{EarlyStopping}} monitorando \texttt{val\_loss}, com \texttt{patience = 10} e restauração dos melhores pesos;
+    \item \textbf{\textit{ReduceLROnPlateau}} (\texttt{factor = 0{,}5}, \texttt{patience = 3}, \texttt{min\_lr = 1e-6}), reduzindo a taxa de aprendizado quando a validação estagna.
+\end{itemize}
+
+O treino completo foi limitado a \textbf{150 épocas} e interrompido pelo \textit{early stopping} quando apropriado.
+
+\subsection{Resultados do treino}
+Durante o treinamento, foram salvas as curvas de \textbf{acurácia} e \textbf{perda} para treino e validação. A Figura~\ref{fig:treino_curvas} exibe essas curvas ao longo das épocas, evidenciando a convergência do modelo e o ponto de parada determinado pelo \textit{early stopping}.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{imagens/treino_acc_loss.png}{%
+        \includegraphics[width=0.85\textwidth]{imagens/treino_acc_loss.png}%
+    }{%
+    \fbox{\parbox{0.8\textwidth}{\centering Placeholder: inserir em \\
+    	exttt{imagens/treino\_acc\_loss.png} as curvas de acurácia e perda (treino/validação).}}%
+    }
+    \caption{Curvas de acurácia e perda por época (treino e validação).}
+    \label{fig:treino_curvas}
+    {\sourcecitation{Do autor}}
+\end{figure}
+
+Ao final, o modelo em ponto flutuante (\texttt{.keras}) foi salvo para posterior conversão e quantização (Seção~\ref{sec:quantizacao}).
 
 \section{Quantização do modelo}
 \label{sec:quantizacao}
