@@ -10,6 +10,14 @@
 \usepackage{graphicx} % Adicione no preâmbulo, se ainda não estiver lá
 \addbibresource{tccMaxwell.bib} % Inclua seu arquivo de referências aqui
 
+\usepackage{listings}
+ \lstset{
+   basicstyle=\ttfamily\small,
+   breaklines=true,
+   breakatwhitespace=true,
+   columns=fullflexible
+ }
+
 \begin{document}
 
 %\MakeCoverPages{tccI}
@@ -524,7 +532,7 @@ As etapas executadas foram:
 
 Todo o procedimento está implementado em \texttt{metadados/aumento\_de\_dados.py}, que mantém a estrutura de diretórios por classe, grava o conjunto balanceado em disco e facilita a reprodução dos resultados.
 
-    	extbf{Justificativa da simplicidade.} Optou-se por um pipeline enxuto porque:
+    	extbf{Justificativa da simplicidade.} Optou-se por um fluxo enxuto porque:
 \begin{itemize}
     \item o dataset já era limpo e uniformizado (522\(\times\)522 px), de modo que etapas adicionais de filtragem/segmentação não agregariam benefício claro;
     \item em cenários TinyML, evitar pré-processamentos pesados reduz acoplamento e mantém a inferência simples no dispositivo embarcado;
@@ -537,13 +545,13 @@ Por fim, a normalização de intensidade (por exemplo, reescala para [0,1] ou pa
 \section{Desenvolvimento e treinamento do modelo}
 \label{sec:treinamento}
 
-Esta seção descreve a implementação prática do modelo de classificação, desde a preparação do pipeline de dados até o treinamento com ajuste fino. A implementação foi conduzida em ambiente de nuvem do Google Colab, com aceleração disponível, utilizando TensorFlow/Keras. Estas escolhas foram feitas com base principalmente na facilidade de acesso, onde basta ter um navegador da web para acessar a plataforma da Google. Uma vez dentro do ambiente, é possível utilizar CPUs, GPUs e TPUs gratuitamente (com limitações) e instalar bibliotecas, pacotes e dependências conforme necessário. Além disso, o Colab oferece integração nativa com o Google Drive, facilitando o armazenamento e o compartilhamento de arquivos.
+Esta seção descreve a implementação prática do modelo de classificação, desde a preparação do fluxo de dados (\textit{pipeline}) até o treinamento com ajuste fino. A implementação foi conduzida em ambiente de nuvem (Google Colab) utilizando TensorFlow/Keras. Essa escolha apoia-se na facilidade de acesso (basta um navegador), disponibilidade gratuita — ainda que limitada — de CPU/GPU/TPU e integração direta com Google Drive para armazenamento e compartilhamento de artefatos.
 
-\subsection{Pipeline de dados}
-Os conjuntos de treino e validação foram criados a partir do diretório base do \textit{RealWaste}, empregando o TensorFlow, com divisão estratificada aproximada de 80/20 e semente 123 para reprodutibilidade. As imagens foram redimensionadas para 224\(\times\)224 px e carregadas em lotes (\textit{batch}) de 64 amostras.
+\subsection{Fluxo de dados}
+Os conjuntos de treino e validação foram criados a partir do diretório base do \textit{RealWaste}, empregando TensorFlow, com divisão estratificada aproximada de 80/20 e semente 123 para reprodutibilidade. As imagens foram redimensionadas para 224\(\times\)224 px e carregadas em \textbf{lotes} de 64 amostras.
 
-\subsection{Arquitetura e estratégia de treino}
-Utilizou-se a \textbf{MobileNetV2} como extratora de atributos base (\texttt{include\_top = false}, \texttt{weights = imagenet}, \texttt{alpha = 1}), por ser uma arquitetura leve, adequada ao contexto TinyML. Sobre a base, adicionaram-se camadas finais para classificação multiclasse:
+\subsection{Arquitetura e estratégia de treinamento}
+Utilizou-se a \textbf{MobileNetV2} como extratora de atributos base (\texttt{include\_top = False}, \texttt{weights = 'imagenet'}, \texttt{alpha = 1}), por ser uma arquitetura leve, adequada ao contexto TinyML. Sobre essa base adicionaram-se camadas finais para classificação multiclasse:
 
 \begin{itemize}
     \item \texttt{GlobalAveragePooling2D};
@@ -552,27 +560,27 @@ Utilizou-se a \textbf{MobileNetV2} como extratora de atributos base (\texttt{inc
     \item \texttt{Dense}(\#classes, Softmax).
 \end{itemize}
 
-A estratégia de treinamento adotou duas fases:
+A estratégia de treinamento adotou duas fases principais:
 \begin{enumerate}
-    \item \textbf{Aquecimento (\textit{warm-up})}: base congelada (\texttt{base\_model.trainable = False}) por 5 épocas, para estabilizar as camadas adicionadas;
-    \item \textbf{Ajuste fino (\textit{fine-tuning})}: base liberada parcialmente, mantendo congeladas todas as camadas exceto as \textbf{80 últimas}, permitindo especialização progressiva dos filtros superiores à tarefa.
+    \item \textbf{Pré-treino}: base congelada (\texttt{base\_model.trainable = False}) por 5 épocas, para estabilizar as camadas adicionadas;
+    \item \textbf{Ajuste fino}: base liberada parcialmente, mantendo congeladas todas as camadas exceto as \textbf{80 últimas}, permitindo especialização progressiva dos filtros superiores à tarefa.
 \end{enumerate}
 
-\subsection{Função de perda, otimizador e \textit{callbacks}}
-O modelo foi compilado com \texttt{loss = sparse\_categorical\_crossentropy} e métrica principal \texttt{accuracy}. Como otimizador, empregou-se \textbf{AdamW} com taxa de aprendizado inicial de \(1\times 10^{-4}\) e \textit{weight decay} \(1\times 10^{-5}\).
+\subsection{Função de perda, otimizador e mecanismos de controle (\textit{callbacks})}
+O modelo foi compilado com \texttt{loss = 'sparse\_categorical\_crossentropy'} e métrica principal foi a acurácia. Como otimizador empregou-se \textbf{AdamW} com taxa de aprendizado inicial de \(1\times 10^{-4}\) e \textit{decaimento de peso} (\textit{weight decay}) de \(1\times 10^{-5}\).
 
-Para robustez adicional frente a eventuais desequilíbrios residuais das classes, foram usados \textbf{pesos por classe} (\textit{class weights}) obtidos via \texttt{sklearn.utils.compute\_class\_weight} sobre as \textit{labels} do conjunto de treino.
+Para maior robustez frente a eventuais desequilíbrios residuais, utilizaram-se \textbf{pesos por classe} obtidos via \texttt{sklearn.utils.compute\_class\_weight} sobre os \textbf{rótulos} do conjunto de treino.
 
-Dois \textit{callbacks} controlaram o processo de otimização:
+Dois mecanismos de controle (\textit{callbacks}) acompanharam o processo de otimização:
 \begin{itemize}
-    \item \textbf{\textit{EarlyStopping}} monitorando \texttt{val\_loss}, com \texttt{patience = 10} e restauração dos melhores pesos;
-    \item \textbf{\textit{ReduceLROnPlateau}} (\texttt{factor = 0{,}5}, \texttt{patience = 3}, \texttt{min\_lr = 1e-6}), reduzindo a taxa de aprendizado quando a validação estagna.
+    \item \textbf{Parada antecipada} (\textit{EarlyStopping}) monitorando \texttt{val\_loss}, com \texttt{patience = 10} e restauração dos melhores pesos;
+    \item \textbf{Redução da taxa em platô} (\textit{ReduceLROnPlateau}) com \texttt{factor = 0{,}5}, \texttt{patience = 3}, \texttt{min\_lr = 1e-6}, reduzindo a taxa de aprendizado quando a validação estagna.
 \end{itemize}
 
-O treino completo foi limitado a \textbf{150 épocas} e interrompido pelo \textit{early stopping} quando apropriado.
+O treinamento completo foi limitado a \textbf{150 épocas} e interrompido pela parada antecipada quando apropriado.
 
 \subsection{Resultados do treino}
-Durante o treinamento, foram salvas as curvas de \textbf{acurácia} e \textbf{perda} para treino e validação. A Figura~\ref{fig:treino_curvas} exibe essas curvas ao longo das épocas, evidenciando a convergência do modelo e o ponto de parada determinado pelo \textit{early stopping}.
+Durante o treinamento, foram registradas as curvas de \textbf{acurácia} e \textbf{perda} para treino e validação, respectivamente. A Figura~\ref{fig:treino_curvas} ilustra a evolução dessas métricas e o ponto de parada determinado pela parada antecipada.
 
 \begin{figure}[H]
     \centering
@@ -587,19 +595,184 @@ Durante o treinamento, foram salvas as curvas de \textbf{acurácia} e \textbf{pe
     {\sourcecitation{Do autor}}
 \end{figure}
 
-Ao final, o modelo em ponto flutuante (\texttt{.keras}) foi salvo para posterior conversão e quantização (Seção~\ref{sec:quantizacao}).
+Ao final, o modelo em ponto flutuante foi salvo para posterior conversão e quantização (Seção~\ref{sec:quantizacao}).
 
 \section{Quantização do modelo}
 \label{sec:quantizacao}
-% Processo de quantização pós-treinamento com TensorFlow Lite.
+Nesta etapa, o modelo treinado em ponto flutuante foi convertido para o formato TensorFlow Lite com \textbf{quantização pós-treinamento} para \textbf{INT8}, visando reduzir tamanho do arquivo do modelo, uso de memória e latência de inferência, tornando-o adequado a dispositivos embarcados com recursos limitados.
+
+\subsection{Abordagem adotada}
+Empregou-se \textbf{quantização estática} com calibração via \textit{conjunto representativo}. Os passos implementados no código Python foram:
+
+\begin{enumerate}
+  \item Criar o conversor:
+\begin{lstlisting}
+converter = tf.lite.TFLiteConverter.from_keras_model(model)
+\end{lstlisting}
+
+  \item Ativar otimizações:
+\begin{lstlisting}
+converter.optimizations = [tf.lite.Optimize.DEFAULT]
+\end{lstlisting}
+
+  \item Definir gerador representativo (100 lotes):
+\begin{lstlisting}
+def representative_data_gen():
+    for _ in range(100):
+        imgs, _ = next(train_ds_iter)
+        yield [tf.cast(imgs, tf.float32)]
+converter.representative_dataset = representative_data_gen
+\end{lstlisting}
+
+  \item Restringir operações a inteiros:
+\begin{lstlisting}
+converter.target_spec.supported_ops = [tf.lite.OpsSet.TFLITE_BUILTINS_INT8]
+\end{lstlisting}
+
+  \item Fixar tipos de entrada/saída:
+\begin{lstlisting}
+converter.inference_input_type  = tf.uint8
+converter.inference_output_type = tf.uint8
+\end{lstlisting}
+
+  \item Converter e salvar:
+\begin{lstlisting}
+tflite_model = converter.convert()
+with open(tflite_model_path, "wb") as f:
+    f.write(tflite_model)
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{Conjunto representativo}
+O gerador percorre lotes reais do fluxo de dados (pré-processados para \(224\times 224\)) e fornece tensores \texttt{float32} ao conversor. Durante a calibração, o TensorFlow Lite estima \textbf{escala} e \textbf{ponto-zero} de cada tensor (pesos e ativações), permitindo mapear eficientemente valores originais para o intervalo inteiro \([0,255]\) sem perda severa de informação estatística.
+
+\subsection{Validação do modelo quantizado}
+O arquivo quantizado foi carregado via \texttt{tf.lite.Interpreter}. O processo de avaliação seguiu:
+\begin{itemize}
+    \item Alocação de tensores e leitura de metadados de entrada/saída;
+    \item Conversão condicional das imagens para \texttt{uint8} conforme tipo exigido pelo tensor de entrada;
+    \item Execução de inferência (\texttt{invoke()}) e coleta das distribuições de probabilidades para cada classe;
+    \item Cálculo de acurácia, precisão ponderada, sensibilidade ponderada, F1 ponderado, matriz de confusão normalizada e curvas ROC multiclasse a partir das pontuações.
+\end{itemize}
+
+\subsection{Principais benefícios e trade-offs}
+\begin{itemize}
+    \item \textbf{Redução de tamanho}: modelos INT8 tipicamente ocupam ~25\% do espaço do equivalente em ponto flutuante, neste estudo tivemos uma redução de 10,4 Mb para 2,7 Mb no modelo quantizado;
+    \item \textbf{Latência menor}: operações inteiras são mais rápidas em hardware embarcado quando comparadas ao mesmo modelo em ponto flutuante, resultando em inferências mais ágeis;
+    \item \textbf{Energia}: menor número de ciclos computacionais reduz consumo energético por inferência;
+    \item \textbf{Impacto na acurácia}: pequena queda potencial mitigada por um conjunto representativo bem escolhido; neste trabalho, a calibração usou amostras diversificadas dos lotes iniciais do treino;
+    \item \textbf{Compatibilidade}: entrada/saída em \texttt{uint8} simplifica implantação em microcontroladores que carecem de FPU (sigla em inglês para Unidade de Ponto Flutuante).
+\end{itemize}
+
+Em síntese, a quantização INT8 permitiu obter um modelo compacto e eficiente sem alterar o fluxo principal de treinamento, viabilizando sua execução futura em dispositivos embarcados conforme discutido nas próximas seções.
 
 \section{Escolha e preparação do hardware}
 \label{sec:hardware}
-% Descrição do Raspberry Pi 3 B+, justificativa e configuração.
+Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. Optou-se por utilizar uma \textbf{Raspberry Pi 3 Model B+} principalmente pela \textit{facilidade de acesso}: já se encontrava disponível fisicamente no início do projeto, evitando custos adicionais e atrasos de aquisição. A escolha conserva também benefícios técnicos relevantes para um protótipo TinyML:
+
+\begin{itemize}
+    \item Equilíbrio entre \textbf{recursos computacionais} (CPU quad-core 64-bit) e \textbf{simplicidade de uso};
+    \item Comunidade ampla e maturidade de \textbf{ecossistema de software} (suporte direto a Python, TensorFlow Lite e bibliotecas de acesso a periféricos);
+    \item \textbf{Custo e disponibilidade} inferiores a placas mais avançadas (ex.: Jetson), mantendo desempenho suficiente para um modelo convolucional quantizado;
+    \item Suporte a \textbf{câmera} para aquisição direta de imagens;
+\end{itemize}
+
+A Tabela \ref{tab:rpi3_specs} resume as principais especificações técnicas empregadas no protótipo.
+
+\begin{table}[H]
+    \centering
+    \caption{Especificações principais da Raspberry Pi 3 Model B+.}\label{tab:rpi3_specs}
+    \begin{tabular}{p{0.38\textwidth}|p{0.58\textwidth}}
+    \hline
+    	\textbf{Característica} & \textbf{Especificação} \\
+    \hline
+    Processador & Broadcom BCM2837B0, Cortex-A53 (ARMv8) 64-bit, 1{,}4 GHz \\
+    Memória RAM & 1 GB LPDDR2 SDRAM \\
+    Conectividade & Wi-Fi 2{,}4/5 GHz 802.11 b/g/n/ac; Bluetooth 4.2 BLE \\
+    Portas USB & 4 \texttt{USB} 2.0 \\
+    GPIO & 40 pinos (compatível com versões anteriores) \\
+    Saída de vídeo & 1 porta HDMI \\
+    Periféricos & Conectores DSI (display) e CSI (câmera) \\
+    Áudio/Vídeo analógico & Conector P2 4 polos (áudio estéreo + vídeo composto) \\
+    Armazenamento & Slot microSD (SO e dados) \\
+    Alimentação & 5 V / 2{,}5 A (mínimo) via micro USB \\
+    \hline
+    \end{tabular}
+    {\sourcecitation{Ficha técnica do fabricante}}
+\end{table}
+
+\subsection{Preparação e configuração inicial}
+Os passos principais para preparar o dispositivo para a execução do modelo foram:
+\begin{enumerate}
+    \item \textbf{Gravação do sistema operacional}: uso do Raspberry Pi Imager para instalar Raspberry Pi OS Lite (versão 64-bit), reduzindo consumo de recursos e tempo de inicialização;
+    \item \textbf{Acesso remoto}: habilitação de \texttt{SSH} e definição de hostname específico para identificação na rede local;
+    \item \textbf{Atualização de pacotes}: execução de atualização e cuidado em manter versão de Python compatível com dependências de inferência (TensorFlow Lite requer armv8 64-bit);
+    \item \textbf{Instalação das dependências}: instalação de \texttt{python3-pip}, bibliotecas de suporte (\texttt{numpy}, \texttt{tflite-runtime} ou \texttt{tensorflow-lite});
+    \item \textbf{Habilitação de periféricos}: ativação opcional do suporte à câmera via \texttt{raspi-config};
+    \item \textbf{Validação do ambiente}: teste de carregamento do modelo quantizado, verificação de memória disponível, tempo médio de inferência e temperatura sob carga leve.
+\end{enumerate}
+
+\subsection{Adequação ao escopo do projeto}
+Para o modelo quantizado em INT8, o hardware oferece margem confortável de CPU e RAM, permitindo incluir instrumentação de métricas (registro de latência e uso de memória) sem comprometer a responsividade. Embora microcontroladores menores representem cenários TinyML mais restritos, a Raspberry Pi 3 B+ facilita fases exploratórias de prototipagem antes de um eventual porte para plataformas com menos recursos.
+
+Em síntese, a escolha foi guiada por disponibilidade imediata, suporte amplo de software e equilíbrio entre recursos e simplicidade, viabilizando medições confiáveis do impacto da quantização.
 
 \section{Implementação e demonstração prática}
 \label{sec:implementacao}
-% Execução do modelo no RPi, script Python/TFLite e validação funcional.
+Esta subseção descreve a execução prática do modelo quantizado em uma Raspberry Pi 3 Model B+, conforme especificado na Seção \ref{sec:hardware}. O objetivo é demonstrar a captura de imagem, pré-processamento mínimo e inferência usando o \texttt{tflite\_runtime}, validando o fluxo ponta-a-ponta em ambiente embarcado.
+
+\subsection{Fluxo de inferência}
+Assumem-se as seguintes bibliotecas importadas e o caminho do modelo definidos previamente:
+\begin{lstlisting}[language=Python]
+import cv2, time; import numpy as np
+from tflite_runtime.interpreter import Interpreter
+MODEL_PATH = "mobilenet_test.tflite"
+\end{lstlisting}
+
+Os passos principais executados pelo script são:
+\begin{enumerate}
+    \item Captura de um quadro da câmera.
+\begin{lstlisting}[language=Python]
+cap = cv2.VideoCapture(0); ret, frame = cap.read(); cap.release()
+\end{lstlisting}
+    \item Armazenamento da imagem original para registro e auditoria (\texttt{foto\_teste.jpg}).
+\begin{lstlisting}[language=Python]
+cv2.imwrite("foto_teste.jpg", frame)
+\end{lstlisting}
+    \item Redimensionamento para 224\(\times\)224 px (entrada do modelo).\footnote{MobileNetV2 tradicionalmente utiliza normalização para [0,1] ou centragem em [-1,1]; o modelo quantizado foi calibrado diretamente em \texttt{uint8}, permitindo uso direto do frame bruto.}
+\begin{lstlisting}[language=Python]
+rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB); img = cv2.resize(rgb, (224, 224), interpolation=cv2.INTER_AREA)
+\end{lstlisting}
+    \item Expansão da dimensão de lote (shape \texttt{(1,224,224,3)}).
+\begin{lstlisting}[language=Python]
+input_data = np.expand_dims(img, axis=0).astype(np.uint8)
+\end{lstlisting}
+    \item Carregamento do arquivo \texttt{.tflite}, alocação de tensores e leitura dos descritores de I/O.
+\begin{lstlisting}[language=Python]
+interpreter = Interpreter(model_path=MODEL_PATH); interpreter.allocate_tensors(); inp = interpreter.get_input_details()[0]; out = interpreter.get_output_details()[0]
+\end{lstlisting}
+    \item Escrita dos dados de entrada e invocação da inferência (com medição simples de latência).
+\begin{lstlisting}[language=Python]
+interpreter.set_tensor(inp['index'], input_data); start = time.time(); interpreter.invoke(); latency_ms = (time.time() - start) * 1000
+\end{lstlisting}
+    \item Leitura das probabilidades de saída e seleção da classe de maior valor (\textit{argmax}).
+\begin{lstlisting}[language=Python]
+output = interpreter.get_tensor(out['index'])[0]; pred_index = int(np.argmax(output))
+\end{lstlisting}
+\end{enumerate}
+
+\subsection{Observações e melhorias possíveis}
+\begin{itemize}
+    \item \textbf{Normalização}: Se o modelo original foi treinado com normalização para [0,1] ou centragem em [-1,1], seria necessário aplicar a mesma transformação antes da quantização ou adaptar a calibração; neste caso o conjunto representativo em uint8 permite uso direto.
+    \item \textbf{Mapeamento de classes}: A lista \texttt{CLASS\_NAMES} deve refletir exatamente a ordem interna do modelo; caso contrário a interpretação semântica da saída estará incorreta.
+    \item \textbf{Latência}: A medição simples pode ser refinada repetindo inferências consecutivas e descartando a primeira (\textit{warm-up}).
+    \item \textbf{Robustez}: Uma captura contínua (loop) permitiria comparar desempenho médio (FPS) e aplicar filtros de estabilização luminosa.
+    \item \textbf{Uso de memória}: Ferramentas como \texttt{/usr/bin/time -v} ou leitura de \texttt{/proc/meminfo} podem ser integradas para registrar consumo real durante testes.
+    \item \textbf{Tratamento de iluminação}: Ajustes automáticos simples (balanceamento de branco ou equalização de histograma) podem melhorar consistência em ambientes variáveis; evitou-se aqui para manter simplicidade.
+\end{itemize}
+
+\subsection{Resultado funcional}
+O teste básico produziu saída textual contendo a classe de maior probabilidade e a latência observada, confirmando que o modelo quantizado executa com responsividade adequada na Raspberry Pi 3 B+. Este resultado demonstra a viabilidade do fluxo TinyML completo: coleta e preparação (Seção \ref{sec:preprocessamento}), treinamento (Seção \ref{sec:treinamento}), quantização (Seção \ref{sec:quantizacao}) e execução embarcada (esta seção).
 
 % ==========================
 % CAPÍTULO 6 - RESULTADOS E DISCUSSÃO
@@ -607,9 +780,105 @@ Ao final, o modelo em ponto flutuante (\texttt{.keras}) foi salvo para posterior
 \chapter{Resultados e Discussão}
 \label{cap:resultados}
 
-\section{Avaliação de desempenho}
+Neste capítulo, apresentamos e discutimos os resultados experimentais do estudo, analisando o desempenho do modelo nas principais métricas, a eficiência computacional da inferência em dispositivo embarcado e as limitações e implicações práticas dos achados à luz dos objetivos e da literatura.
+
+% Fallback para subchapter caso não exista no template
+\providecommand{\subchapter}[1]{\section{#1}}
+
+\subchapter{Avaliação de desempenho}
 \label{sec:avaliacao-desempenho}
-% Métricas: ACU, SEN, ESP, PRE, F1, curva COR, matriz de confusão.
+
+Esta seção sumariza o desempenho do classificador com base no roteiro executado no notebook \texttt{metadados/cria\_modelo.ipynb}, avaliando o \textbf{modelo quantizado em INT8 (TFLite)} sobre o conjunto de validação. São reportadas métricas globais (médias ponderadas), a matriz de confusão normalizada por classe e as curvas ROC multiclasse.
+
+\subsection{Métricas globais}
+As métricas foram computadas via \texttt{scikit-learn} diretamente sobre as predições do intérprete TFLite:
+\begin{itemize}
+    \item \textbf{Acurácia} (ACU): proporção de acertos no conjunto de validação;
+    \item \textbf{Precisão ponderada} (PRE): média ponderada da precisão por classe, ponderada pelo suporte (número de amostras por classe);
+    \item \textbf{Sensibilidade ponderada} (SEN/Rec.): média ponderada do \textit{recall} por classe, ponderada pelo suporte;
+    \item \textbf{F1 ponderado}: média ponderada do F1 por classe, combinando precisão e sensibilidade.
+\end{itemize}
+
+Os resultados consolidados para o conjunto de validação foram:
+
+\begin{table}[H]
+ \centering
+ \caption{Métricas globais (validação) — modelo TFLite INT8.}
+ \label{tab:metricas_globais}
+ \begin{tabular}{l c}
+  \hline
+    	extbf{Métrica} & \textbf{Valor} \\
+  \hline
+  Acurácia (ACU) & 0,68 \\
+  Precisão (ponderada) & 0,69 \\
+  Sensibilidade/Recall (ponderado) & 0,68 \\
+  F1-score (ponderado) & 0,68 \\
+  \hline
+ \end{tabular}
+ {\sourcecitation{Do autor}}
+\end{table}
+
+\subsection{Relatório de classificação por classe}
+O relatório por classe (precisão, sensibilidade e F1 por rótulo) é apresentado na Tabela~\ref{tab:class_report}. Os valores refletem o comportamento do classificador por categoria específica, auxiliando na identificação de classes com maior taxa de confusão.
+
+\begin{table}[H]
+ \centering
+ \caption{Relatório de classificação por classe (validação).}
+ \label{tab:class_report}
+ \resizebox{\textwidth}{!}{
+ \begin{tabular}{l c c c}
+  \hline
+  	extbf{Classe} & \textbf{Precisão} & \textbf{Sensibilidade} & \textbf{F1-score} \\
+  \hline
+  Metal & 0,67 & 0,58 & 0,62 \\
+  Orgânicos & 0,64 & 0,84 & 0,73 \\
+  Papel & 0,70 & 0,67 & 0,69 \\
+  Papelão & 0,70 & 0,72 & 0,71 \\
+  Plástico & 0,69 & 0,50 & 0,58 \\
+  Rejeito & 0,50 & 0,45 & 0,47 \\
+  Têxtil & 0,57 & 0,72 & 0,64 \\
+  Vegetação & 0,81 & 0,93 & 0,87 \\
+  Vidro & 0,88 & 0,74 & 0,80 \\
+  \hline
+ \end{tabular}
+ }
+ {\sourcecitation{Do autor}}
+\end{table}
+
+\subsection{Matriz de confusão}
+A Figura~\ref{fig:cm_normalizada} apresenta a \textbf{matriz de confusão normalizada por classe} (em \%), permitindo visualizar padrões de acerto/erro entre categorias. As diagonais indicam acertos; valores fora da diagonal revelam confusões recorrentes.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{imagens/matriz_confusao.png}{%
+        \includegraphics[width=0.9\textwidth]{imagens/matriz_confusao.png}%
+    }{%
+    \fbox{\parbox{0.85\textwidth}{\centering Placeholder: inserir em \\
+    	exttt{imagens/matriz\_confusao.png} a matriz de confusão normalizada.}}%
+    }
+    \caption{Matriz de confusão normalizada (\%).}
+    \label{fig:cm_normalizada}
+    {\sourcecitation{Do autor}}
+\end{figure}
+
+\subsection{Curvas ROC multiclasse}
+A Figura~\ref{fig:roc_multiclasse} mostra as \textbf{curvas ROC por classe} e as respectivas áreas sob a curva (AUC), calculadas a partir dos escores de saída do modelo para cada rótulo. Em cenários multiclasse, cada curva contrasta o desempenho \textit{um-versus-rest} de uma classe específica.
+
+\begin{figure}[H]
+    \centering
+    \IfFileExists{imagens/roc_multiclasse.png}{%
+        \includegraphics[width=0.9\textwidth]{imagens/roc_multiclasse.png}%
+    }{%
+    \fbox{\parbox{0.85\textwidth}{\centering Placeholder: inserir em \\
+    	exttt{imagens/roc\_multiclasse.png} as curvas ROC por classe.}}%
+    }
+    \caption{Curvas ROC por classe e respectivas AUCs.}
+    \label{fig:roc_multiclasse}
+    {\sourcecitation{Do autor}}
+\end{figure}
+
+\subsection{Discussão}
+Em linhas gerais, as médias ponderadas (PRE, SEN, F1) refletem o impacto do \textit{suporte} de cada classe; assim, classes com menos amostras tendem a apresentar maior variância nas métricas individuais, influenciando menos o agregado ponderado. A leitura conjunta da matriz de confusão e das curvas ROC permite identificar pares de classes mais propensos à confusão e orientar possíveis ajustes: coleta adicional para classes minoritárias, refinamento de aumento de dados direcionado e, se necessário, afrouxar ou ajustar limiares de decisão em cenários operacionais específicos.
 
 \section{Avaliação e análise de eficiência computacional}
 \label{sec:avaliacao-eficiencia}
