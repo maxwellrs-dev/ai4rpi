@@ -37,31 +37,30 @@
 \contentsline {section}{\numberline {5.2}Pré-processamento dos dados}{27}{section.63}%
 \contentsline {section}{\numberline {5.3}Desenvolvimento e treinamento do modelo}{28}{section.66}%
 \contentsline {subsection}{\numberline {5.3.1}Fluxo de dados}{28}{subsection.67}%
-\contentsline {subsection}{\numberline {5.3.2}Arquitetura e estratégia de treinamento}{29}{subsection.68}%
+\contentsline {subsection}{\numberline {5.3.2}Arquitetura e estratégia de treinamento}{28}{subsection.68}%
 \contentsline {subsection}{\numberline {5.3.3}Função de perda, otimizador e mecanismos de controle (\textit {callbacks})}{29}{subsection.71}%
-\contentsline {subsection}{\numberline {5.3.4}Resultados do treino}{30}{subsection.72}%
+\contentsline {subsection}{\numberline {5.3.4}Resultados do treino}{29}{subsection.72}%
 \contentsline {section}{\numberline {5.4}Quantização do modelo}{30}{section.74}%
 \contentsline {subsection}{\numberline {5.4.1}Abordagem adotada}{30}{subsection.75}%
-\contentsline {subsection}{\numberline {5.4.2}Conjunto representativo}{31}{subsection.101}%
+\contentsline {subsection}{\numberline {5.4.2}Conjunto representativo}{30}{subsection.101}%
 \contentsline {subsection}{\numberline {5.4.3}Validação do modelo quantizado}{31}{subsection.102}%
-\contentsline {subsection}{\numberline {5.4.4}Principais benefícios e trade-offs}{32}{subsection.103}%
-\contentsline {section}{\numberline {5.5}Escolha e preparação do hardware}{32}{section.104}%
-\contentsline {subsection}{\numberline {5.5.1}Preparação e configuração inicial}{33}{subsection.106}%
-\contentsline {subsection}{\numberline {5.5.2}Adequação ao escopo do projeto}{33}{subsection.113}%
-\contentsline {section}{\numberline {5.6}Implementação e demonstração prática}{34}{section.114}%
-\contentsline {subsection}{\numberline {5.6.1}Fluxo de inferência}{34}{subsection.115}%
-\contentsline {subsection}{\numberline {5.6.2}Observações e melhorias possíveis}{35}{subsection.142}%
-\contentsline {subsection}{\numberline {5.6.3}Resultado funcional}{35}{subsection.143}%
-\contentsline {chapter}{\numberline {6}Resultados e Discussão}{36}{chapter.144}%
-\contentsline {section}{\numberline {6.1}Avaliação de desempenho}{36}{section.145}%
-\contentsline {subsection}{\numberline {6.1.1}Métricas globais}{36}{subsection.146}%
-\contentsline {subsection}{\numberline {6.1.2}Matriz de confusão}{37}{subsection.147}%
-\contentsline {subsection}{\numberline {6.1.3}Curvas ROC multiclasse}{37}{subsection.149}%
-\contentsline {subsection}{\numberline {6.1.4}Discussão}{38}{subsection.151}%
-\contentsline {section}{\numberline {6.2}Avaliação e análise de eficiência computacional}{38}{section.152}%
-\contentsline {section}{\numberline {6.3}Limitações e sugestões de melhoria}{38}{section.153}%
-\contentsline {chapter}{\numberline {7}Conclusões}{39}{chapter.154}%
-\contentsline {chapter}{Refer\^encias}{40}{chapter*.155}%
+\contentsline {section}{\numberline {5.5}Escolha e preparação do hardware}{31}{section.103}%
+\contentsline {subsection}{\numberline {5.5.1}Preparação e configuração inicial}{32}{subsection.105}%
+\contentsline {section}{\numberline {5.6}Implementação e demonstração prática}{32}{section.112}%
+\contentsline {subsection}{\numberline {5.6.1}Fluxo de inferência}{32}{subsection.113}%
+\contentsline {chapter}{\numberline {6}Resultados e Discussão}{34}{chapter.140}%
+\contentsline {section}{\numberline {6.1}Avaliação de desempenho}{34}{section.141}%
+\contentsline {subsection}{\numberline {6.1.1}Métricas globais}{34}{subsection.142}%
+\contentsline {subsection}{\numberline {6.1.2}Relatório de classificação por classe}{35}{subsection.144}%
+\contentsline {subsection}{\numberline {6.1.3}Matriz de confusão}{35}{subsection.146}%
+\contentsline {subsection}{\numberline {6.1.4}Curvas COR multiclasse}{36}{subsection.148}%
+\contentsline {subsection}{\numberline {6.1.5}Discussão}{37}{subsection.150}%
+\contentsline {section}{\numberline {6.2}Avaliação e análise de eficiência computacional}{37}{section.151}%
+\contentsline {section}{\numberline {6.3}Limitações e sugestões de melhoria}{37}{section.152}%
+\contentsline {chapter}{\numberline {7}Conclusões}{38}{chapter.153}%
+\contentsline {chapter}{Refer\^encias}{39}{chapter*.154}%
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 

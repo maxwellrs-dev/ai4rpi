@@ -8,7 +8,11 @@
 \contentsline {table}{\numberline {4}{\ignorespaces Comparação de desempenho entre TensorFlow e Edge Impulse.}}{22}{table.caption.45}%
 \contentsline {table}{\numberline {5}{\ignorespaces Comparação de métricas de desempenho entre TensorFlow e Edge Impulse.}}{22}{table.caption.46}%
 \contentsline {table}{\numberline {6}{\ignorespaces Categorias e quantidade de imagens no conjunto de dados RealWaste.}}{26}{table.caption.61}%
-\contentsline {table}{\numberline {7}{\ignorespaces Especificações principais da Raspberry Pi 3 Model B+.}}{33}{table.caption.105}%
+\contentsline {table}{\numberline {7}{\ignorespaces Especificações principais da Raspberry Pi 3 Model B+.}}{31}{table.caption.104}%
+\contentsline {table}{\numberline {8}{\ignorespaces Métricas globais (validação) — modelo TFLite INT8.}}{34}{table.caption.143}%
+\contentsline {table}{\numberline {9}{\ignorespaces Relatório de classificação por classe (validação).}}{35}{table.caption.145}%
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 

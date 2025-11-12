@@ -2511,6 +2511,8 @@
     <bcf:citekey order="44" intorder="1">realwaste2023</bcf:citekey>
     <bcf:citekey order="45" intorder="1">rwPaper</bcf:citekey>
     <bcf:citekey order="46" intorder="1">realwaste2023</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">rpi3</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">rpi3</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

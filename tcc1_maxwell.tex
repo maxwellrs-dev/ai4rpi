@@ -514,7 +514,7 @@ A Figura~\ref{fig:rw_exemplos} apresenta exemplos de imagens pertencentes ao con
     \includegraphics[width=0.85\textwidth]{imagens/rw.png}
     \caption{Exemplos de imagens do conjunto de dados \textit{RealWaste}: (a) papel; (b) metal; (c) vidro; (d) plástico; (e) resíduo orgânico alimentar; (f) resíduo têxtil.}
     \label{fig:rw_exemplos}
-    \sourcecitation{\cite{realwaste2023}}
+    \sourcecitation{Adaptado de \cite{realwaste2023}}
 \end{figure}
 
 \section{Pré-processamento dos dados}
@@ -525,22 +525,12 @@ O conjunto de dados \textit{RealWaste} já se apresenta homogêneo quanto à res
 As etapas executadas foram:
 
 \begin{enumerate}
-    \item \textbf{Redimensionamento para a entrada do modelo.} Durante o carregamento, cada imagem foi redimensionada para 224\(\times\)224 px, tamanho compatível com arquiteturas convolucionais compactas e com as restrições de memória/CPU do alvo embarcado. Esse redimensionamento é realizado diretamente no script ao chamar \texttt{load\_img(..., target\_size=(224,224))}, garantindo que todo o conjunto balanceado seja gravado já no tamanho esperado pelo modelo.
+    \item \textbf{Redimensionamento para a entrada do modelo.} Durante o carregamento, cada imagem foi redimensionada para 224\(\times\)224 px, tamanho compatível com arquiteturas convolucionais compactas e com as restrições de memória/processamento do alvo embarcado. Esse redimensionamento é realizado diretamente no script ao chamar \texttt{load\_img(..., target\_size=(224,224))}, garantindo que todo o conjunto balanceado seja gravado já no tamanho esperado pelo modelo.
 
-    \item \textbf{Balanceamento via aumento de dados (data augmentation).} Após contabilizar as imagens por classe, definiu-se uma meta por classe igual ao maior valor entre a classe mais populosa do conjunto e 523 amostras. Na prática, isso faz com que todas as classes sejam expandidas até o tamanho da classe majoritária. Para gerar amostras sintéticas preservando a semântica, aplicaram-se apenas transformações geométricas e fotométricas leves com \textit{ImageDataGenerator}: rotação (\(\pm 20^{\circ}\)), deslocamentos horizontais e verticais (até 20\%), cisalhamento (0{,}15), \textit{zoom} (0{,}15), espelhamento horizontal e variação de brilho entre 0{,}7 e 1{,}3. O espelhamento vertical foi evitado por potencialmente alterar a plausibilidade física de algumas cenas. Limitou-se a no máximo 10 variações por imagem base, reduzindo redundância. As imagens originais redimensionadas foram copiadas para o diretório de saída e, em seguida, as variações foram geradas até atingir a meta por classe.
+    \item \textbf{Balanceamento via aumento de dados (data augmentation).} Após contabilizar as imagens por classe, definiu-se uma meta por classe igual ao maior valor entre a classe mais populosa do conjunto. Na prática, isso faz com que todas as classes sejam expandidas até o tamanho da classe majoritária, que neste caso é de 921. Para gerar amostras sintéticas preservando a semântica, aplicaram-se apenas transformações geométricas e fotométricas leves com \textit{ImageDataGenerator}: rotação (\(\pm 20^{\circ}\)), deslocamentos horizontais e verticais (até 20\%), cisalhamento (0{,}15), \textit{zoom} (0{,}15), espelhamento horizontal e variação de brilho entre 0{,}7 e 1{,}3. O espelhamento vertical foi evitado por potencialmente alterar a plausibilidade física de algumas cenas. Limitou-se a no máximo 10 variações por imagem base, reduzindo redundância. As imagens originais redimensionadas foram copiadas para o diretório de saída e, em seguida, as variações foram geradas até atingir a meta por classe.
 \end{enumerate}
 
 Todo o procedimento está implementado em \texttt{metadados/aumento\_de\_dados.py}, que mantém a estrutura de diretórios por classe, grava o conjunto balanceado em disco e facilita a reprodução dos resultados.
-
-    	extbf{Justificativa da simplicidade.} Optou-se por um fluxo enxuto porque:
-\begin{itemize}
-    \item o dataset já era limpo e uniformizado (522\(\times\)522 px), de modo que etapas adicionais de filtragem/segmentação não agregariam benefício claro;
-    \item em cenários TinyML, evitar pré-processamentos pesados reduz acoplamento e mantém a inferência simples no dispositivo embarcado;
-    \item as transformações escolhidas aumentam a diversidade sem introduzir artefatos ou deslocar o domínio dos dados, favorecendo a generalização em condições reais (iluminação e enquadramento variáveis);
-    \item manter o fluxo curto melhora a reprodutibilidade e reduz o risco de \textit{data leakage} entre treino e teste.
-\end{itemize}
-
-Por fim, a normalização de intensidade (por exemplo, reescala para [0,1] ou padronização por canal) é tratada no pipeline de treinamento, junto com a alimentação em lotes, não exigindo transformações adicionais na etapa de pré-processamento offline.
 
 \section{Desenvolvimento e treinamento do modelo}
 \label{sec:treinamento}
@@ -647,35 +637,13 @@ with open(tflite_model_path, "wb") as f:
 O gerador percorre lotes reais do fluxo de dados (pré-processados para \(224\times 224\)) e fornece tensores \texttt{float32} ao conversor. Durante a calibração, o TensorFlow Lite estima \textbf{escala} e \textbf{ponto-zero} de cada tensor (pesos e ativações), permitindo mapear eficientemente valores originais para o intervalo inteiro \([0,255]\) sem perda severa de informação estatística.
 
 \subsection{Validação do modelo quantizado}
-O arquivo quantizado foi carregado via \texttt{tf.lite.Interpreter}. O processo de avaliação seguiu:
-\begin{itemize}
-    \item Alocação de tensores e leitura de metadados de entrada/saída;
-    \item Conversão condicional das imagens para \texttt{uint8} conforme tipo exigido pelo tensor de entrada;
-    \item Execução de inferência (\texttt{invoke()}) e coleta das distribuições de probabilidades para cada classe;
-    \item Cálculo de acurácia, precisão ponderada, sensibilidade ponderada, F1 ponderado, matriz de confusão normalizada e curvas ROC multiclasse a partir das pontuações.
-\end{itemize}
-
-\subsection{Principais benefícios e trade-offs}
-\begin{itemize}
-    \item \textbf{Redução de tamanho}: modelos INT8 tipicamente ocupam ~25\% do espaço do equivalente em ponto flutuante, neste estudo tivemos uma redução de 10,4 Mb para 2,7 Mb no modelo quantizado;
-    \item \textbf{Latência menor}: operações inteiras são mais rápidas em hardware embarcado quando comparadas ao mesmo modelo em ponto flutuante, resultando em inferências mais ágeis;
-    \item \textbf{Energia}: menor número de ciclos computacionais reduz consumo energético por inferência;
-    \item \textbf{Impacto na acurácia}: pequena queda potencial mitigada por um conjunto representativo bem escolhido; neste trabalho, a calibração usou amostras diversificadas dos lotes iniciais do treino;
-    \item \textbf{Compatibilidade}: entrada/saída em \texttt{uint8} simplifica implantação em microcontroladores que carecem de FPU (sigla em inglês para Unidade de Ponto Flutuante).
-\end{itemize}
+O arquivo quantizado foi carregado via \texttt{tf.lite.Interpreter}. Para a avaliação, os tensores foram alocados e os metadados de entrada/saída inspecionados; as imagens foram convertidas condicionalmente para \texttt{uint8} conforme o tipo requerido pelo tensor de entrada; em seguida, realizou-se a inferência com \texttt{invoke()} e coletaram-se as distribuições de probabilidades por classe. A partir dessas pontuações, foram calculadas a acurácia, a precisão ponderada, a sensibilidade ponderada, o F1 ponderado, além da matriz de confusão normalizada e das curvas COR em esquema multiclasse.
 
 Em síntese, a quantização INT8 permitiu obter um modelo compacto e eficiente sem alterar o fluxo principal de treinamento, viabilizando sua execução futura em dispositivos embarcados conforme discutido nas próximas seções.
 
 \section{Escolha e preparação do hardware}
 \label{sec:hardware}
-Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. Optou-se por utilizar uma \textbf{Raspberry Pi 3 Model B+} principalmente pela \textit{facilidade de acesso}: já se encontrava disponível fisicamente no início do projeto, evitando custos adicionais e atrasos de aquisição. A escolha conserva também benefícios técnicos relevantes para um protótipo TinyML:
-
-\begin{itemize}
-    \item Equilíbrio entre \textbf{recursos computacionais} (CPU quad-core 64-bit) e \textbf{simplicidade de uso};
-    \item Comunidade ampla e maturidade de \textbf{ecossistema de software} (suporte direto a Python, TensorFlow Lite e bibliotecas de acesso a periféricos);
-    \item \textbf{Custo e disponibilidade} inferiores a placas mais avançadas (ex.: Jetson), mantendo desempenho suficiente para um modelo convolucional quantizado;
-    \item Suporte a \textbf{câmera} para aquisição direta de imagens;
-\end{itemize}
+Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. Optou-se por utilizar uma \textbf{Raspberry Pi 3 Model B+} principalmente pela disponibilidade física imediata no início do projeto, eliminando custos e atrasos de aquisição. Somam-se a isso: o equilíbrio entre recursos computacionais (CPU quad-core 64-bit e 1~GB de RAM) e simplicidade de uso; a ampla comunidade e maturidade do ecossistema (documentação consolidada, suporte direto a Python, TensorFlow Lite e bibliotecas de captura de vídeo e GPIO); o suporte nativo a câmera para aquisição direta das imagens de teste; e a compatibilidade com o fluxo de quantização INT8 (uso do \texttt{tflite\_runtime}) sem necessidade de aceleração especializada. Esses fatores tornam a placa adequada como alvo intermediário: suficientemente capaz para validar latência e robustez do modelo convolucional quantizado, mas ainda representativa de um ambiente de recursos restritos frente a soluções de maior porte.
 
 A Tabela \ref{tab:rpi3_specs} resume as principais especificações técnicas empregadas no protótipo.
 
@@ -689,7 +657,7 @@ A Tabela \ref{tab:rpi3_specs} resume as principais especificações técnicas em
     Processador & Broadcom BCM2837B0, Cortex-A53 (ARMv8) 64-bit, 1{,}4 GHz \\
     Memória RAM & 1 GB LPDDR2 SDRAM \\
     Conectividade & Wi-Fi 2{,}4/5 GHz 802.11 b/g/n/ac; Bluetooth 4.2 BLE \\
-    Portas USB & 4 \texttt{USB} 2.0 \\
+    Portas USB & 4 USB 2.0 \\
     GPIO & 40 pinos (compatível com versões anteriores) \\
     Saída de vídeo & 1 porta HDMI \\
     Periféricos & Conectores DSI (display) e CSI (câmera) \\
@@ -698,24 +666,19 @@ A Tabela \ref{tab:rpi3_specs} resume as principais especificações técnicas em
     Alimentação & 5 V / 2{,}5 A (mínimo) via micro USB \\
     \hline
     \end{tabular}
-    {\sourcecitation{Ficha técnica do fabricante}}
+    {\sourcecitation{Adaptado de \cite{rpi3}.}}
 \end{table}
 
 \subsection{Preparação e configuração inicial}
 Os passos principais para preparar o dispositivo para a execução do modelo foram:
 \begin{enumerate}
-    \item \textbf{Gravação do sistema operacional}: uso do Raspberry Pi Imager para instalar Raspberry Pi OS Lite (versão 64-bit), reduzindo consumo de recursos e tempo de inicialização;
+    \item \textbf{Gravação do sistema operacional}: uso do Raspberry Pi Imager para instalar Raspberry Pi OS Lite (versão 64-bit), disponível no site oficial \cite{rpi3};
     \item \textbf{Acesso remoto}: habilitação de \texttt{SSH} e definição de hostname específico para identificação na rede local;
     \item \textbf{Atualização de pacotes}: execução de atualização e cuidado em manter versão de Python compatível com dependências de inferência (TensorFlow Lite requer armv8 64-bit);
     \item \textbf{Instalação das dependências}: instalação de \texttt{python3-pip}, bibliotecas de suporte (\texttt{numpy}, \texttt{tflite-runtime} ou \texttt{tensorflow-lite});
     \item \textbf{Habilitação de periféricos}: ativação opcional do suporte à câmera via \texttt{raspi-config};
     \item \textbf{Validação do ambiente}: teste de carregamento do modelo quantizado, verificação de memória disponível, tempo médio de inferência e temperatura sob carga leve.
 \end{enumerate}
-
-\subsection{Adequação ao escopo do projeto}
-Para o modelo quantizado em INT8, o hardware oferece margem confortável de CPU e RAM, permitindo incluir instrumentação de métricas (registro de latência e uso de memória) sem comprometer a responsividade. Embora microcontroladores menores representem cenários TinyML mais restritos, a Raspberry Pi 3 B+ facilita fases exploratórias de prototipagem antes de um eventual porte para plataformas com menos recursos.
-
-Em síntese, a escolha foi guiada por disponibilidade imediata, suporte amplo de software e equilíbrio entre recursos e simplicidade, viabilizando medições confiáveis do impacto da quantização.
 
 \section{Implementação e demonstração prática}
 \label{sec:implementacao}
@@ -761,19 +724,6 @@ output = interpreter.get_tensor(out['index'])[0]; pred_index = int(np.argmax(out
 \end{lstlisting}
 \end{enumerate}
 
-\subsection{Observações e melhorias possíveis}
-\begin{itemize}
-    \item \textbf{Normalização}: Se o modelo original foi treinado com normalização para [0,1] ou centragem em [-1,1], seria necessário aplicar a mesma transformação antes da quantização ou adaptar a calibração; neste caso o conjunto representativo em uint8 permite uso direto.
-    \item \textbf{Mapeamento de classes}: A lista \texttt{CLASS\_NAMES} deve refletir exatamente a ordem interna do modelo; caso contrário a interpretação semântica da saída estará incorreta.
-    \item \textbf{Latência}: A medição simples pode ser refinada repetindo inferências consecutivas e descartando a primeira (\textit{warm-up}).
-    \item \textbf{Robustez}: Uma captura contínua (loop) permitiria comparar desempenho médio (FPS) e aplicar filtros de estabilização luminosa.
-    \item \textbf{Uso de memória}: Ferramentas como \texttt{/usr/bin/time -v} ou leitura de \texttt{/proc/meminfo} podem ser integradas para registrar consumo real durante testes.
-    \item \textbf{Tratamento de iluminação}: Ajustes automáticos simples (balanceamento de branco ou equalização de histograma) podem melhorar consistência em ambientes variáveis; evitou-se aqui para manter simplicidade.
-\end{itemize}
-
-\subsection{Resultado funcional}
-O teste básico produziu saída textual contendo a classe de maior probabilidade e a latência observada, confirmando que o modelo quantizado executa com responsividade adequada na Raspberry Pi 3 B+. Este resultado demonstra a viabilidade do fluxo TinyML completo: coleta e preparação (Seção \ref{sec:preprocessamento}), treinamento (Seção \ref{sec:treinamento}), quantização (Seção \ref{sec:quantizacao}) e execução embarcada (esta seção).
-
 % ==========================
 % CAPÍTULO 6 - RESULTADOS E DISCUSSÃO
 % ==========================
@@ -782,24 +732,21 @@ O teste básico produziu saída textual contendo a classe de maior probabilidade
 
 Neste capítulo, apresentamos e discutimos os resultados experimentais do estudo, analisando o desempenho do modelo nas principais métricas, a eficiência computacional da inferência em dispositivo embarcado e as limitações e implicações práticas dos achados à luz dos objetivos e da literatura.
 
-% Fallback para subchapter caso não exista no template
-\providecommand{\subchapter}[1]{\section{#1}}
-
-\subchapter{Avaliação de desempenho}
+\section{Avaliação de desempenho}
 \label{sec:avaliacao-desempenho}
 
-Esta seção sumariza o desempenho do classificador com base no roteiro executado no notebook \texttt{metadados/cria\_modelo.ipynb}, avaliando o \textbf{modelo quantizado em INT8 (TFLite)} sobre o conjunto de validação. São reportadas métricas globais (médias ponderadas), a matriz de confusão normalizada por classe e as curvas ROC multiclasse.
+Esta seção sumariza o desempenho do classificador com base no roteiro executado no Google Colab, avaliando o modelo quantizado em INT8 sobre o conjunto de validação. São reportadas métricas globais (médias ponderadas), a matriz de confusão normalizada por classe e as curvas COR multiclasse.
 
 \subsection{Métricas globais}
 As métricas foram computadas via \texttt{scikit-learn} diretamente sobre as predições do intérprete TFLite:
 \begin{itemize}
     \item \textbf{Acurácia} (ACU): proporção de acertos no conjunto de validação;
     \item \textbf{Precisão ponderada} (PRE): média ponderada da precisão por classe, ponderada pelo suporte (número de amostras por classe);
-    \item \textbf{Sensibilidade ponderada} (SEN/Rec.): média ponderada do \textit{recall} por classe, ponderada pelo suporte;
+    \item \textbf{Sensibilidade ponderada} (SEN): média ponderada da sensibilidade por classe, ponderada pelo suporte;
     \item \textbf{F1 ponderado}: média ponderada do F1 por classe, combinando precisão e sensibilidade.
 \end{itemize}
 
-Os resultados consolidados para o conjunto de validação foram:
+Os resultados consolidados para o conjunto de validação são os exibidos na Tabela~\ref{tab:metricas_globais}.
 
 \begin{table}[H]
  \centering
@@ -807,11 +754,11 @@ Os resultados consolidados para o conjunto de validação foram:
  \label{tab:metricas_globais}
  \begin{tabular}{l c}
   \hline
-    	extbf{Métrica} & \textbf{Valor} \\
+    	\textbf{Métrica} & \textbf{Valor} \\
   \hline
-  Acurácia (ACU) & 0,68 \\
+  Acurácia & 0,68 \\
   Precisão (ponderada) & 0,69 \\
-  Sensibilidade/Recall (ponderado) & 0,68 \\
+  Sensibilidade (ponderada) & 0,68 \\
   F1-score (ponderado) & 0,68 \\
   \hline
  \end{tabular}
@@ -825,7 +772,6 @@ O relatório por classe (precisão, sensibilidade e F1 por rótulo) é apresenta
  \centering
  \caption{Relatório de classificação por classe (validação).}
  \label{tab:class_report}
- \resizebox{\textwidth}{!}{
  \begin{tabular}{l c c c}
   \hline
   	extbf{Classe} & \textbf{Precisão} & \textbf{Sensibilidade} & \textbf{F1-score} \\
@@ -841,7 +787,6 @@ O relatório por classe (precisão, sensibilidade e F1 por rótulo) é apresenta
   Vidro & 0,88 & 0,74 & 0,80 \\
   \hline
  \end{tabular}
- }
  {\sourcecitation{Do autor}}
 \end{table}
 
@@ -861,8 +806,8 @@ A Figura~\ref{fig:cm_normalizada} apresenta a \textbf{matriz de confusão normal
     {\sourcecitation{Do autor}}
 \end{figure}
 
-\subsection{Curvas ROC multiclasse}
-A Figura~\ref{fig:roc_multiclasse} mostra as \textbf{curvas ROC por classe} e as respectivas áreas sob a curva (AUC), calculadas a partir dos escores de saída do modelo para cada rótulo. Em cenários multiclasse, cada curva contrasta o desempenho \textit{um-versus-rest} de uma classe específica.
+\subsection{Curvas COR multiclasse}
+A Figura~\ref{fig:roc_multiclasse} mostra as \textbf{curvas COR por classe} e as respectivas áreas sob a curva (AUC), calculadas a partir dos escores de saída do modelo para cada rótulo. Em cenários multiclasse, cada curva contrasta o desempenho \textit{um-versus-resto} de uma classe específica.
 
 \begin{figure}[H]
     \centering
@@ -870,15 +815,15 @@ A Figura~\ref{fig:roc_multiclasse} mostra as \textbf{curvas ROC por classe} e as
         \includegraphics[width=0.9\textwidth]{imagens/roc_multiclasse.png}%
     }{%
     \fbox{\parbox{0.85\textwidth}{\centering Placeholder: inserir em \\
-    	exttt{imagens/roc\_multiclasse.png} as curvas ROC por classe.}}%
+    	exttt{imagens/roc\_multiclasse.png} as curvas COR por classe.}}%
     }
-    \caption{Curvas ROC por classe e respectivas AUCs.}
+    \caption{Curvas COR por classe e respectivas AUCs.}
     \label{fig:roc_multiclasse}
     {\sourcecitation{Do autor}}
 \end{figure}
 
 \subsection{Discussão}
-Em linhas gerais, as médias ponderadas (PRE, SEN, F1) refletem o impacto do \textit{suporte} de cada classe; assim, classes com menos amostras tendem a apresentar maior variância nas métricas individuais, influenciando menos o agregado ponderado. A leitura conjunta da matriz de confusão e das curvas ROC permite identificar pares de classes mais propensos à confusão e orientar possíveis ajustes: coleta adicional para classes minoritárias, refinamento de aumento de dados direcionado e, se necessário, afrouxar ou ajustar limiares de decisão em cenários operacionais específicos.
+Em linhas gerais, as médias ponderadas (PRE, SEN, F1) refletem o impacto do \textit{suporte} de cada classe; assim, classes com menos amostras tendem a apresentar maior variância nas métricas individuais, influenciando menos o agregado ponderado. A leitura conjunta da matriz de confusão e das curvas COR permite identificar pares de classes mais propensos à confusão e orientar possíveis ajustes: coleta adicional para classes minoritárias, refinamento de aumento de dados direcionado e, se necessário, afrouxar ou ajustar limiares de decisão em cenários operacionais específicos.
 
 \section{Avaliação e análise de eficiência computacional}
 \label{sec:avaliacao-eficiencia}
