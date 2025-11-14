@@ -56,43 +56,10 @@
 \contentsline {subsection}{\numberline {6.1.4}Curvas COR multiclasse}{36}{subsection.148}%
 \contentsline {subsection}{\numberline {6.1.5}Discussão}{37}{subsection.150}%
 \contentsline {section}{\numberline {6.2}Avaliação e análise de eficiência computacional}{37}{section.151}%
-\contentsline {section}{\numberline {6.3}Limitações e sugestões de melhoria}{37}{section.152}%
-\contentsline {chapter}{\numberline {7}Conclusões}{38}{chapter.153}%
-\contentsline {chapter}{Refer\^encias}{39}{chapter*.154}%
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
+\contentsline {subsection}{\numberline {6.2.1}Montagem experimental}{37}{subsection.152}%
+\contentsline {subsection}{\numberline {6.2.2}Resultados sobre o tempo de inferência}{38}{subsection.154}%
+\contentsline {subsection}{\numberline {6.2.3}Uso de CPU e memória RAM}{41}{subsection.159}%
+\contentsline {subsection}{\numberline {6.2.4}Síntese dos resultados}{41}{subsection.160}%
+\contentsline {section}{\numberline {6.3}Limitações e sugestões de melhoria}{42}{section.161}%
+\contentsline {chapter}{\numberline {7}Conclusões}{43}{chapter.162}%
 \contentsfinish 

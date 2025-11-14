@@ -827,7 +827,93 @@ Em linhas gerais, as médias ponderadas (PRE, SEN, F1) refletem o impacto do \te
 
 \section{Avaliação e análise de eficiência computacional}
 \label{sec:avaliacao-eficiencia}
-% Tempo de inferência, uso de memória, comparação com o paper de referência.
+
+A eficiência computacional do sistema foi avaliada considerando três aspectos principais: 
+(i) tempo médio de inferência por imagem, 
+(ii) uso de CPU durante a execução do modelo e 
+(iii) consumo de memória RAM. 
+Todos os ensaios foram realizados utilizando a montagem descrita a seguir.
+
+\subsection{Montagem experimental}
+
+A Figura~\ref{fig:montagem-ensaio} apresenta a estrutura física utilizada para todos os ensaios. 
+O suporte foi construído com tubos de PVC, permitindo fixar a webcam USB na posição superior, perpendicular ao plano de deposição dos resíduos. 
+O Raspberry~Pi utilizado para realizar as inferências foi instalado diretamente na estrutura, garantindo estabilidade e reduzindo interferências externas. 
+Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uniforme e reprodutibilidade dos testes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/montagem.jpeg}
+    \caption{Montagem utilizada nos ensaios, composta por tubos de PVC, presilhas de fixação, webcam USB e Raspberry Pi.}
+    \label{fig:montagem-ensaio}
+    \caption*{Fonte: autor.}
+\end{figure}
+
+\subsection{Resultados sobre o tempo de inferência}
+
+Durante os ensaios, observou-se que o sistema manteve tempos de inferência estáveis, próximos de 200~ms por imagem. 
+A Figura~\ref{fig:metal-ensaio} apresenta um exemplo do ensaio com um objeto metálico, onde o tempo de inferência registrado foi de aproximadamente 204~ms. 
+Esse valor é representativo do comportamento geral do modelo durante todo o período de testes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/metal.png}
+    \caption{Ensaio com objeto metálico, mostrando a predição da classe e o tempo de inferência.}
+    \label{fig:metal-ensaio}
+    \caption*{Fonte: autor.}
+\end{figure}
+
+Também foi avaliado o desempenho com resíduos da classe papel. 
+A Figura~\ref{fig:papel-ensaio} mostra que o sistema apresentou tempo de inferência da ordem de 220~ms, valor compatível com o observado nos demais ensaios.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/papel.png}
+    \caption{Ensaio com papel, ilustrando o tempo de inferência registrado e a classificação produzida pelo modelo.}
+    \label{fig:papel-ensaio}
+    \caption*{Fonte: autor.}
+\end{figure}
+
+A Figura~\ref{fig:papelao-ensaio} corresponde ao ensaio com papelão, com tempo de inferência em torno de 210~ms, mantendo o padrão observado nos demais testes e confirmando estabilidade temporal do modelo.
+    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/papelao.png}
+    \caption{Ensaio com papelão, exibindo o tempo de inferência e a predição realizada.}
+    \label{fig:papelao-ensaio}
+    \caption*{Fonte: autor.}
+\end{figure}
+
+Por fim, a Figura~\ref{fig:textil-ensaio} mostra o desempenho com material têxtil, novamente mantendo tempos de inferência próximos de 210~ms.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/textil.png}
+    \caption{Ensaio com resíduo têxtil, evidenciando tempo de inferência e classificação final.}
+    \label{fig:textil-ensaio}
+    \caption*{Fonte: autor.}
+\end{figure}
+
+\subsection{Uso de CPU e memória RAM}
+
+Em todos os experimentos, o uso de CPU observado no processo \texttt{python} permaneceu entre 25\% e 27\%. 
+Esse valor indica utilização praticamente completa de um dos quatro núcleos do Raspberry~Pi, o que é esperado, pois o TensorFlow Lite, em sua configuração padrão, executa inferências utilizando apenas um núcleo de processamento.
+
+O consumo de memória RAM apresentou valores entre 85~MB e 90~MB para o processo responsável pela inferência, enquanto o uso total do sistema permaneceu entre 280~MB e 330~MB. 
+Esses valores confirmam que a aplicação opera de forma estável, sem risco de esgotamento dos recursos físicos do dispositivo.
+
+\subsection{Síntese dos resultados}
+
+Os resultados obtidos permitem concluir que o modelo MobileNetV2 quantizado executado via TensorFlow Lite apresenta desempenho adequado para operação embarcada em tempo real, com:
+
+\begin{itemize}
+    \item latência média entre 205~ms e 215~ms por inferência;
+    \item uso estável de um único núcleo de CPU (aprox. 27\%);
+    \item baixo consumo de memória RAM (cerca de 85~MB);
+    \item estabilidade entre diferentes classes de resíduos.
+\end{itemize}
+
+Esses valores estão alinhados com trabalhos similares na literatura e confirmam que a solução proposta atende aos requisitos de desempenho definidos para o protótipo.
 
 \section{Limitações e sugestões de melhoria}
 \label{sec:limitacoes}

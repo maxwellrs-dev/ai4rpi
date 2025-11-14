@@ -9,40 +9,9 @@
 \contentsline {figure}{\numberline {5}{\ignorespaces Curvas de acurácia e perda por época (treino e validação).}}{29}{figure.caption.73}%
 \contentsline {figure}{\numberline {6}{\ignorespaces Matriz de confusão normalizada (\%).}}{36}{figure.caption.147}%
 \contentsline {figure}{\numberline {7}{\ignorespaces Curvas COR por classe e respectivas AUCs.}}{37}{figure.caption.149}%
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
-\babel@toc {brazilian}{}\relax 
+\contentsline {figure}{\numberline {8}{\ignorespaces Montagem utilizada nos ensaios, composta por tubos de PVC, presilhas de fixação, webcam USB e Raspberry Pi.}}{38}{figure.caption.153}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Ensaio com objeto metálico, mostrando a predição da classe e o tempo de inferência.}}{39}{figure.caption.155}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Ensaio com papel, ilustrando o tempo de inferência registrado e a classificação produzida pelo modelo.}}{39}{figure.caption.156}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Ensaio com papelão, exibindo o tempo de inferência e a predição realizada.}}{40}{figure.caption.157}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Ensaio com resíduo têxtil, evidenciando tempo de inferência e classificação final.}}{41}{figure.caption.158}%
 \contentsfinish 
