@@ -58,8 +58,45 @@
 \contentsline {section}{\numberline {6.2}Avaliação e análise de eficiência computacional}{37}{section.151}%
 \contentsline {subsection}{\numberline {6.2.1}Montagem experimental}{37}{subsection.152}%
 \contentsline {subsection}{\numberline {6.2.2}Resultados sobre o tempo de inferência}{38}{subsection.154}%
-\contentsline {subsection}{\numberline {6.2.3}Uso de CPU e memória RAM}{41}{subsection.159}%
+\contentsline {subsection}{\numberline {6.2.3}Uso de CPU e memória RAM}{40}{subsection.159}%
 \contentsline {subsection}{\numberline {6.2.4}Síntese dos resultados}{41}{subsection.160}%
-\contentsline {section}{\numberline {6.3}Limitações e sugestões de melhoria}{42}{section.161}%
+\contentsline {section}{\numberline {6.3}Limitações e sugestões de melhoria}{41}{section.161}%
 \contentsline {chapter}{\numberline {7}Conclusões}{43}{chapter.162}%
+\contentsline {chapter}{Refer\^encias}{44}{chapter*.163}%
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
 \contentsfinish 

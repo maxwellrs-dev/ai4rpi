@@ -843,10 +843,10 @@ Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uni
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/montagem.jpeg}
+    \includegraphics[width=0.7\linewidth]{imagens/ensaios/montagem.jpeg}
     \caption{Montagem utilizada nos ensaios, composta por tubos de PVC, presilhas de fixação, webcam USB e Raspberry Pi.}
     \label{fig:montagem-ensaio}
-    \caption*{Fonte: autor.}
+    {\sourcecitation{Do autor}}
 \end{figure}
 
 \subsection{Resultados sobre o tempo de inferência}
@@ -857,10 +857,10 @@ Esse valor é representativo do comportamento geral do modelo durante todo o per
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/metal.png}
+    \includegraphics[width=0.85\linewidth]{imagens/ensaios/metal.png}
     \caption{Ensaio com objeto metálico, mostrando a predição da classe e o tempo de inferência.}
     \label{fig:metal-ensaio}
-    \caption*{Fonte: autor.}
+    {\sourcecitation{Do autor}}
 \end{figure}
 
 Também foi avaliado o desempenho com resíduos da classe papel. 
@@ -868,30 +868,30 @@ A Figura~\ref{fig:papel-ensaio} mostra que o sistema apresentou tempo de inferê
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/papel.png}
+    \includegraphics[width=0.85\linewidth]{imagens/ensaios/papel.png}
     \caption{Ensaio com papel, ilustrando o tempo de inferência registrado e a classificação produzida pelo modelo.}
     \label{fig:papel-ensaio}
-    \caption*{Fonte: autor.}
+    {\sourcecitation{Do autor}}
 \end{figure}
 
 A Figura~\ref{fig:papelao-ensaio} corresponde ao ensaio com papelão, com tempo de inferência em torno de 210~ms, mantendo o padrão observado nos demais testes e confirmando estabilidade temporal do modelo.
     
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/papelao.png}
+    \includegraphics[width=0.85\linewidth]{imagens/ensaios/papelao.png}
     \caption{Ensaio com papelão, exibindo o tempo de inferência e a predição realizada.}
     \label{fig:papelao-ensaio}
-    \caption*{Fonte: autor.}
+    {\sourcecitation{Do autor}}
 \end{figure}
 
 Por fim, a Figura~\ref{fig:textil-ensaio} mostra o desempenho com material têxtil, novamente mantendo tempos de inferência próximos de 210~ms.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.85\linewidth]{/home/maxwell/ai4rpi/imagens/ensaios/textil.png}
+    \includegraphics[width=0.85\linewidth]{imagens/ensaios/textil.png}
     \caption{Ensaio com resíduo têxtil, evidenciando tempo de inferência e classificação final.}
     \label{fig:textil-ensaio}
-    \caption*{Fonte: autor.}
+    {\sourcecitation{Do autor}}
 \end{figure}
 
 \subsection{Uso de CPU e memória RAM}
@@ -917,7 +917,17 @@ Esses valores estão alinhados com trabalhos similares na literatura e confirmam
 
 \section{Limitações e sugestões de melhoria}
 \label{sec:limitacoes}
-% Limitações e propostas para trabalhos futuros.
+
+Durante o desenvolvimento e a análise dos resultados, algumas limitações do modelo puderam ser observadas. A matriz de confusão apresentada anteriormente já indicava a tendência do modelo em confundir determinadas classes, especialmente entre vidro, plástico e metal. Esse comportamento está alinhado com o valor do escore F1 obtido (aproximadamente 0{,}68), evidenciando que ainda há margem para melhorias na capacidade discriminativa do modelo.
+
+Outro ponto notado foi a influência da iluminação e da forma como os objetos são posicionados durante a captura das imagens. Variações nesses fatores impactaram diretamente o desempenho, sugerindo que a padronização das condições de captura poderia contribuir para resultados mais consistentes.
+
+Além disso, embora o uso de bancos de dados públicos tenha sido valioso, eles nem sempre se mostraram totalmente adequados para um problema tão específico quanto o abordado neste trabalho. A criação de um conjunto de imagens próprio, mais direcionado ao contexto real de uso, pode melhorar significativamente a qualidade do treinamento. Uma abordagem híbrida, combinando dados próprios com dados públicos selecionados, surge como alternativa mais robusta.
+
+A qualidade e o tipo da câmera utilizada também se mostraram fatores relevantes. A câmera empregada apresentou limitações, como ruído visual e granulação, o que possivelmente afetou o desempenho do modelo. Para trabalhos futuros, recomenda-se utilizar a mesma câmera tanto para a construção do conjunto de treinamento quanto para a realização das inferências, ou empregar câmeras de maior qualidade.
+
+Por fim, observa-se que a otimização dos parâmetros e hiperparâmetros do modelo pode ser uma linha promissora de evolução. Técnicas como ajuste sistemático de taxa de aprendizado, número de camadas treináveis, funções de ativação, além de estratégias de data augmentation específicas, podem contribuir para elevar significativamente o desempenho do modelo em aplicações reais.
+
 
 \chapter{Conclusões}
 \label{conclusao}
