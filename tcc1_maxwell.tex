@@ -102,7 +102,7 @@ With the growing demand for Internet of Things (IoT) devices and the increasing 
 
 % introducao
 \chapter{Introdução}
-
+\label{cap:introducao}
 O avanço da tecnologia e a popularização dos dispositivos conectados têm impulsionado o desenvolvimento de soluções inteligentes em diversas áreas. Nesse cenário, a Internet das Coisas (IoT) destaca-se como um dos principais motores da transformação digital, permitindo a integração de sensores, atuadores e sistemas embarcados em aplicações que vão da saúde à indústria. No entanto, desafios como a latência na comunicação com a nuvem e a limitação de recursos computacionais em dispositivos embarcados exigem novas abordagens para garantir eficiência e desempenho em tempo real \cite{Xavier2022}.
 
 O número de dispositivos pertencentes à IoT tem apresentado um crescimento constante durante a terceira década do século XXI \cite{Sinha2024}. Esses dispositivos estão sendo implementados em diversas áreas, como saúde \cite{iotSaude}, agronomia \cite{iotAgricultura} e indústria \cite{iotIndustria}. Esse cenário reforça a importância de estudar soluções eficientes para IoT, já que seu impacto se estende a áreas essenciais do cotidiano e do desenvolvimento econômico.
@@ -133,7 +133,7 @@ Os objetivos específicos deste trabalho são os seguintes:
 A aplicação de técnicas de TinyML em dispositivos embarcados com recursos computacionais limitados é viável e prática nos dias atuais, devido à disponibilidade crescente de ferramentas de desenvolvimento acessíveis, plataformas de hardware compatíveis e métodos eficientes de otimização de modelos que permitem o processamento local com baixo consumo energético.
 
 \section{Estrutura do trabalho}
-Este trabalho está estruturado em cinco capítulos, incluindo esta introdução. O segundo capítulo apresenta uma revisão bibliográfica sobre TinyML e dispositivos embarcados, abordando os principais conceitos, desafios e trabalhos relacionados. O terceiro capítulo fornece a fundamentação teórica necessária para o desenvolvimento da solução proposta, detalhando as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML. O quarto capítulo apresenta a proposta de trabalho, descrevendo a solução prática a ser desenvolvida e o planejamento das etapas do projeto. Por fim, o quinto capítulo conclui o trabalho, apresentando considerações finais e definições para o trabalho futuro.
+Este trabalho está estruturado em cinco capítulos, incluindo esta introdução. O segundo capítulo apresenta uma revisão bibliográfica sobre TinyML e dispositivos embarcados, abordando os principais conceitos, desafios e trabalhos relacionados. O terceiro capítulo fornece a fundamentação teórica necessária para o desenvolvimento da solução proposta, detalhando as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML. O quarto capítulo apresenta a proposta de trabalho, descrevendo a solução prática a ser desenvolvida e o planejamento das etapas do projeto. Por fim, o Capítulo \ref{cap:conclusao}, apresentando considerações finais e definições para o trabalho futuro.
 
 \chapter{Revisão Bibliográfica}
 
@@ -915,6 +915,21 @@ Os resultados obtidos permitem concluir que o modelo MobileNetV2 quantizado exec
 
 Esses valores estão alinhados com trabalhos similares na literatura e confirmam que a solução proposta atende aos requisitos de desempenho definidos para o protótipo.
 
+\subsection{Comparação com o estudo de referência}
+
+A utilização do conjunto de dados RealWaste neste trabalho permitiu uma comparação direta com os resultados apresentados no estudo que introduziu o dataset \cite{single2023realwaste}. No artigo, cinco arquiteturas de redes neurais convolucionais — VGG-16, InceptionResNetV2, DenseNet121, InceptionV3 e MobileNetV2 — foram avaliadas sobre o mesmo conjunto de imagens. O melhor desempenho foi obtido pela arquitetura InceptionV3, com acurácia de 89,19\%, precisão de 91,34\%, sensibilidade de 87,73\% e F1-score de 90,25\%.
+
+No presente trabalho, utilizando uma MobileNetV2 quantizada em INT8, foi alcançada uma acurácia e F1-score globais próximos de 0,68 no conjunto de validação, com tempos médios de inferência da ordem de 200~ms no dispositivo embarcado. Embora inferiores aos valores relatados no estudo original, essa diferença é esperada e pode ser justificada por aspectos metodológicos e restrições do ambiente embarcado.
+
+Em primeiro lugar, o estudo de referência empregou imagens em resolução de 524\,$\times$\,524~px, além de um processo de aumento de dados mais agressivo, que triplicou o tamanho do conjunto de treinamento utilizando transformações geométricas complexas (como \emph{elastic distortion} e \emph{shear}). Neste trabalho, optou-se por uma resolução menor (224\,$\times$\,224~px) e um conjunto mais restrito de transformações, de modo a equilibrar qualidade do treinamento e limitações de memória e processamento do sistema embarcado. Essa diferença reduz o espaço de atributos aprendido pelo modelo e, consequentemente, sua capacidade discriminativa.
+
+Além disso, os modelos do estudo original incluem arquiteturas substancialmente mais complexas, com profundidade e quantidade de parâmetros superiores à MobileNetV2 utilizada aqui, especialmente após a quantização para INT8. Redes como InceptionV3 e DenseNet121 apresentam maior capacidade de separação entre classes visualmente semelhantes — como vidro, metal e plástico — que também foram justamente as classes onde mais se observou confusão neste trabalho.
+
+Por outro lado, apesar do desempenho mais modesto em acurácia, a solução desenvolvida aqui demonstra a viabilidade prática da classificação de resíduos sólidos diretamente em hardware de baixo custo. Enquanto o estudo de referência avaliou o desempenho apenas em ambiente computacional tradicional, sem restrições de hardware, este trabalho valida que um modelo compactado pode operar em tempo quase real, com baixo consumo de CPU e memória, mantendo estabilidade durante toda a execução.
+
+Em síntese, os resultados obtidos não indicam inconsistência metodológica, mas refletem os compromissos exigidos pelo cenário embarcado. O estudo de referência demonstra o limite superior do desempenho possível com arquiteturas robustas e sem restrições computacionais, enquanto este trabalho evidencia a aplicabilidade prática do aprendizado de máquina embarcado em dispositivos de recursos limitados. Assim, ambas as abordagens se complementam: enquanto a primeira investiga desempenho máximo, a segunda valida a operação real em contexto TinyML.
+
+
 \section{Limitações e sugestões de melhoria}
 \label{sec:limitacoes}
 
@@ -930,17 +945,26 @@ Por fim, observa-se que a otimização dos parâmetros e hiperparâmetros do mod
 
 
 \chapter{Conclusões}
-\label{conclusao}
+\label{cap:conclusao}
 
-O presente trabalho busca avaliar o estado atual da tecnologia e os desafios da aplicação de técnicas de aprendizado de máquina embarcado, o TinyML, em dispositivos com recursos computacionais limitados. A partir de uma revisão bibliográfica detalhada, foi possível compreender o contexto atual do TinyML e identificar como a latência, o consumo energético e a dependência de conectividade ainda são obstáculos relevantes para a adoção de soluções inteligentes em larga escala. Nesse cenário, o TinyML surge como uma alternativa promissora, permitindo o processamento local dos dados e reduzindo a necessidade de comunicação constante com a nuvem.
+O presente trabalho teve como objetivo geral avaliar a viabilidade da aplicação de técnicas de aprendizado de máquina em dispositivos embarcados com recursos computacionais limitados. Com base nos resultados obtidos e nas etapas desenvolvidas ao longo do estudo, é possível afirmar que esse objetivo foi plenamente atingido.
 
-No decorrer deste trabalho, os três primeiros objetivos específicos propostos foram plenamente atingidos: realizou-se a pesquisa e avaliação das ferramentas TinyML, o levantamento e análise das plataformas disponíveis, bem como a elaboração de um fluxo de trabalho ponta-a-ponta para soluções TinyML. O quarto objetivo, referente ao desenvolvimento e aplicação prática do modelo TinyML para classificação de resíduos sólidos, será melhor abordado e concluído no TCC-II.
+Os objetivos específicos definidos no Capítulo~\ref{cap:introducao} também foram alcançados de forma consistente. Primeiramente, realizou-se uma pesquisa abrangente sobre ferramentas de desenvolvimento TinyML, destacando suas capacidades, limitações e adequação a diferentes cenários de uso. Em seguida, o levantamento e a análise das principais plataformas de hardware disponíveis permitiram contextualizar alternativas viáveis para implementação de soluções embarcadas, considerando fatores como desempenho, custo e consumo energético.
 
-Durante o desenvolvimento do trabalho, foram analisadas as principais ferramentas e plataformas disponíveis para projetos TinyML, considerando critérios como facilidade de uso, integração com hardware e desempenho. Observou-se que o ecossistema de desenvolvimento está em rápida evolução, com soluções cada vez mais acessíveis tanto do ponto de vista de software quanto de hardware. A análise comparativa entre plataformas e dispositivos demonstrou que já é possível implementar modelos de aprendizado de máquina eficientes em microcontroladores e placas de baixo custo, ampliando o leque de aplicações práticas.
+Na sequência, foi elaborado um fluxo de trabalho ponta-a-ponta para desenvolvimento de soluções TinyML, cobrindo desde a aquisição e preparação dos dados até a quantização, validação e implantação do modelo. Esse fluxo se mostrou adequado tanto conceitualmente quanto na prática, servindo como diretriz estruturada para projetos semelhantes.
 
-Além disso, foi elaborado um fluxo de trabalho ponta-a-ponta para o desenvolvimento de soluções TinyML, detalhando desde a aquisição e preparação dos dados até a quantização, validação e implantação do modelo em dispositivos embarcados. Destacou-se a importância da escolha adequada dos modelos, das técnicas de otimização e das métricas de avaliação, bem como a necessidade de ajustes finos para garantir o melhor desempenho possível dentro das limitações impostas pelo hardware.
+Por fim, o quarto objetivo específico — o desenvolvimento de um modelo TinyML para classificação de resíduos sólidos — foi atingido de forma completa. O modelo implementado, baseado em uma MobileNetV2 quantizada em INT8, apresentou desempenho satisfatório dentro das restrições de hardware, com latência estável em torno de 200 ms e consumo reduzido de recursos computacionais. Além disso, foi possível compará-lo diretamente com o estudo de referência do conjunto de dados RealWaste, reforçando a coerência dos resultados e evidenciando os compromissos associados a aplicações embarcadas.
 
-Por fim, observa-se que a aplicação de TinyML em sistemas embarcados apresenta potencial para superar desafios atuais da IoT, especialmente em cenários críticos ou remotos. O trabalho prático proposto para o TCC-II buscará consolidar os conhecimentos adquiridos, aplicando o fluxo de trabalho desenvolvido em uma solução real de aprendizado de máquina embarcado, com o objetivo de validar na prática os conceitos discutidos e contribuir para o avanço da área.
+Os experimentos realizados demonstram que o uso de TinyML é uma alternativa viável para sistemas que exigem processamento local, baixa latência e independência de conectividade. Embora o desempenho obtido seja inferior ao de modelos executados em ambientes tradicionais de maior capacidade computacional, os resultados mostram que soluções compactas e quantizadas podem operar de forma robusta e eficiente em dispositivos de baixo custo.
+
+Como perspectivas de continuidade, sugere-se o aprimoramento do conjunto de dados, a adoção de câmeras de maior qualidade, a exploração de arquiteturas mais otimizadas para quantização e o ajuste sistemático de hiperparâmetros. Essas estratégias podem elevar a precisão do modelo e ampliar sua aplicabilidade em cenários reais.
+
+Em síntese, o trabalho confirma que técnicas de TinyML podem substituir ou complementar arquiteturas tradicionais de IoT em aplicações práticas, consolidando o potencial da computação de borda como elemento fundamental na evolução de sistemas inteligentes embarcados.
+
+Assim, além de comprovar a viabilidade técnica, este estudo evidencia que
+aplicações TinyML representam um caminho concreto para a próxima geração de
+sistemas inteligentes embarcados, reforçando o papel de soluções compactas e
+eficientes na arquitetura tecnológica contemporânea.
 
 \printbibliography
 \end{document}

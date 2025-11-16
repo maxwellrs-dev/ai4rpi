@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.14)  14 NOV 2025 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.14)  14 NOV 2025 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2077,7 +2077,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\Users\rsmax\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<imagens/redeneural.png, id=566, 590.205pt x 496.85625pt>
+<imagens/redeneural.png, id=567, 590.205pt x 496.85625pt>
 File: imagens/redeneural.png Graphic file (type png)
 <use imagens/redeneural.png>
 Package pdftex.def Info: imagens/redeneural.png  used on input line 219.
@@ -2093,7 +2093,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
 (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<imagens/exemploROC.png, id=610, 609.77812pt x 441.14813pt>
+<imagens/exemploROC.png, id=611, 609.77812pt x 441.14813pt>
 File: imagens/exemploROC.png Graphic file (type png)
 <use imagens/exemploROC.png>
 Package pdftex.def Info: imagens/exemploROC.png  used on input line 304.
@@ -2103,7 +2103,7 @@ Package pdftex.def Info: imagens/exemploROC.png  used on input line 304.
 [19{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKT
 eX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX/fonts/enc/dvips/lm
 /lm-ts1.enc}]
-<imagens/exemploConfusao.png, id=628, 499.11469pt x 467.49657pt>
+<imagens/exemploConfusao.png, id=629, 499.11469pt x 467.49657pt>
 File: imagens/exemploConfusao.png Graphic file (type png)
 <use imagens/exemploConfusao.png>
 Package pdftex.def Info: imagens/exemploConfusao.png  used on input line 314.
@@ -2131,7 +2131,7 @@ Cap\'{\i }tulo 5.
 [26
 
 ]
-<imagens/rw.png, id=715, 623.32875pt x 476.53032pt>
+<imagens/rw.png, id=716, 623.32875pt x 476.53032pt>
 File: imagens/rw.png Graphic file (type png)
 <use imagens/rw.png>
 Package pdftex.def Info: imagens/rw.png  used on input line 514.
@@ -2153,7 +2153,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 559.
 
-<imagens/treino_acc_loss.png, id=733, 729.927pt x 341.1144pt>
+<imagens/treino_acc_loss.png, id=734, 729.927pt x 341.1144pt>
 File: imagens/treino_acc_loss.png Graphic file (type png)
 <use imagens/treino_acc_loss.png>
 Package pdftex.def Info: imagens/treino_acc_loss.png  used on input line 582.
@@ -2490,7 +2490,7 @@ Cap\'{\i }tulo 6.
 [34
 
 ]
-<imagens/matriz_confusao.png, id=836, 414.8298pt x 371.4678pt>
+<imagens/matriz_confusao.png, id=837, 414.8298pt x 371.4678pt>
 File: imagens/matriz_confusao.png Graphic file (type png)
 <use imagens/matriz_confusao.png>
 Package pdftex.def Info: imagens/matriz_confusao.png  used on input line 803.
@@ -2501,7 +2501,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [35]
-<imagens/roc_multiclasse.png, id=842, 731.3724pt x 506.6127pt>
+<imagens/roc_multiclasse.png, id=843, 731.3724pt x 506.6127pt>
 File: imagens/roc_multiclasse.png Graphic file (type png)
 <use imagens/roc_multiclasse.png>
 Package pdftex.def Info: imagens/roc_multiclasse.png  used on input line 819.
@@ -2512,7 +2512,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [36 <./imagens/matriz_confusao.png>]
-<imagens/ensaios/montagem.jpeg, id=849, 966.61125pt x 1284.8pt>
+<imagens/ensaios/montagem.jpeg, id=850, 966.61125pt x 1284.8pt>
 File: imagens/ensaios/montagem.jpeg Graphic file (type jpg)
 <use imagens/ensaios/montagem.jpeg>
 Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 846.
@@ -2521,7 +2521,7 @@ Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 846.
 
 
 [37 <./imagens/roc_multiclasse.png>]
-<imagens/ensaios/metal.png, id=857, 1445.4pt x 903.375pt>
+<imagens/ensaios/metal.png, id=858, 1445.4pt x 903.375pt>
 File: imagens/ensaios/metal.png Graphic file (type png)
 <use imagens/ensaios/metal.png>
 Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 860.
@@ -2529,12 +2529,12 @@ Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 860.
 
 
 [38 <./imagens/ensaios/montagem.jpeg>]
-<imagens/ensaios/papel.png, id=863, 1445.4pt x 903.375pt>
+<imagens/ensaios/papel.png, id=864, 1445.4pt x 903.375pt>
 File: imagens/ensaios/papel.png Graphic file (type png)
 <use imagens/ensaios/papel.png>
 Package pdftex.def Info: imagens/ensaios/papel.png  used on input line 871.
 (pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
-<imagens/ensaios/papelao.png, id=865, 1445.4pt x 903.375pt>
+<imagens/ensaios/papelao.png, id=866, 1445.4pt x 903.375pt>
 File: imagens/ensaios/papelao.png Graphic file (type png)
 <use imagens/ensaios/papelao.png>
 Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 881.
@@ -2543,7 +2543,7 @@ Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 881.
 
 [39 <./imagens/ensaios/metal.png (PNG copy)> <./imagens/ensaios/papel.png (PNG 
 copy)>]
-<imagens/ensaios/textil.png, id=871, 1445.4pt x 903.375pt>
+<imagens/ensaios/textil.png, id=872, 1445.4pt x 903.375pt>
 File: imagens/ensaios/textil.png Graphic file (type png)
 <use imagens/ensaios/textil.png>
 Package pdftex.def Info: imagens/ensaios/textil.png  used on input line 891.
@@ -2563,25 +2563,36 @@ Cap\'{\i }tulo 7.
 
 ]
 
-[44
+[44]
+
+[45
 
 ]
 
-[45]
-
 [46]
 
-[47] (tcc1_maxwell.aux)
+[47]
+
+[48] (tcc1_maxwell.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `tcc1_maxwell.out' has not changed.
-(rerunfilecheck)             Checksum: E35187ACA238A111DA79D95E0263B6BE;10172.
+
+Package rerunfilecheck Warning: File `tcc1_maxwell.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `tcc1_maxwell.out':
+(rerunfilecheck)             Before: DE564E636D6527839DE1A4BB3665714F;10336
+(rerunfilecheck)             After:  091501CE401F2A3CBAC9122B57380066;10441.
 
 Package biblatex Warning: Please rerun LaTeX.
 (biblatex)                Page breaks have changed.
@@ -2591,10 +2602,10 @@ Package logreq Info: Writing requests to 'tcc1_maxwell.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 70047 strings out of 468080
- 1640949 string characters out of 5435838
- 2820326 words of memory out of 5000000
- 97211 multiletter control sequences out of 15000+600000
+ 69985 strings out of 468080
+ 1640496 string characters out of 5435838
+ 2819189 words of memory out of 5000000
+ 97146 multiletter control sequences out of 15000+600000
  743005 words of font info for 308 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,11n,129p,1913b,3961s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2612,9 +2623,9 @@ public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pf
 b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/Mi
 KTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
 ic/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc1_maxwell.pdf (47 pages, 5122953 bytes).
+Output written on tcc1_maxwell.pdf (48 pages, 5129142 bytes).
 PDF statistics:
- 1108 PDF objects out of 1200 (max. 8388607)
- 244 named destinations out of 1000 (max. 500000)
+ 1123 PDF objects out of 1200 (max. 8388607)
+ 247 named destinations out of 1000 (max. 500000)
  62033 words of extra memory for PDF output out of 74296 (max. 10000000)
 
