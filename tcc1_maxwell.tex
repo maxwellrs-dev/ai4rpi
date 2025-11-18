@@ -689,6 +689,8 @@ Os passos principais para preparar o dispositivo para a execução do modelo for
 \label{sec:implementacao}
 Esta subseção descreve a execução prática do modelo quantizado em uma Raspberry Pi 3 Model B+, conforme especificado na Seção \ref{sec:hardware}. O objetivo é demonstrar a captura de imagem, pré-processamento mínimo e inferência usando o \texttt{tflite\_runtime}, validando o fluxo ponta-a-ponta em ambiente embarcado.
 
+O código na sua íntegra está disponível no link do GitHub mencionado inicialmente, no arquivo \texttt{metadados/test_tinyml_rpi.py}.
+
 \subsection{Fluxo de inferência}
 Assumem-se as seguintes bibliotecas importadas e o caminho do modelo definidos previamente:
 \begin{lstlisting}[language=Python]
@@ -855,6 +857,7 @@ Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uni
 \end{figure}
 
 \subsection{Resultados sobre o tempo de inferência}
+As medições de latência e as métricas apresentadas nesta subseção foram obtidas a partir do script de teste \texttt{metadados/test\_tinyml\_rpi.py}. O script carrega o modelo com \texttt{tflite\_runtime.Interpreter}, captura quadros da câmera via OpenCV, redimensiona cada frame para o \texttt{input\_shape} esperado pelo modelo e converte os dados para \texttt{uint8} quando se trata de modelo quantizado. A latência por inferência é medida com \texttt{time.perf\_counter()} imediatamente antes e após \texttt{interpreter.invoke()} e convertida para milissegundos; além disso é computada uma média exponencial (EMA) da latência usando \(\alpha=0{,}12\) para suavizar variações pontuais. O script registra um log simples a cada 30 frames e sobrepõe no próprio frame a predição, a confiança (saída dividida por 255 para modelos \texttt{uint8}) e o tempo de inferência atual.
 
 Durante os ensaios, observou-se que o sistema manteve tempos de inferência estáveis, próximos de 200~ms por imagem. 
 A Figura~\ref{fig:metal-ensaio} apresenta um exemplo do ensaio com um objeto metálico, onde o tempo de inferência registrado foi de aproximadamente 204~ms. 
