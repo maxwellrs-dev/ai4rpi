@@ -18,6 +18,9 @@
    columns=fullflexible
  }
 
+% Links clicáveis no PDF
+\usepackage[hidelinks]{hyperref}
+
 \begin{document}
 
 %\MakeCoverPages{tccI}
@@ -133,7 +136,7 @@ Os objetivos específicos deste trabalho são os seguintes:
 A aplicação de técnicas de TinyML em dispositivos embarcados com recursos computacionais limitados é viável e prática nos dias atuais, devido à disponibilidade crescente de ferramentas de desenvolvimento acessíveis, plataformas de hardware compatíveis e métodos eficientes de otimização de modelos que permitem o processamento local com baixo consumo energético.
 
 \section{Estrutura do trabalho}
-Este trabalho está estruturado em cinco capítulos, incluindo esta introdução. O segundo capítulo apresenta uma revisão bibliográfica sobre TinyML e dispositivos embarcados, abordando os principais conceitos, desafios e trabalhos relacionados. O terceiro capítulo fornece a fundamentação teórica necessária para o desenvolvimento da solução proposta, detalhando as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML. O quarto capítulo apresenta a proposta de trabalho, descrevendo a solução prática a ser desenvolvida e o planejamento das etapas do projeto. Por fim, o Capítulo \ref{cap:conclusao}, apresentando considerações finais e definições para o trabalho futuro.
+Este trabalho está organizado em sete capítulos. O Capítulo \ref{cap:introducao} apresenta o contexto, os objetivos, a hipótese e a organização geral do estudo. O Capítulo 2 desenvolve a revisão bibliográfica sobre TinyML e dispositivos embarcados, incluindo trabalhos relacionados e síntese crítica. O Capítulo 3 expõe a fundamentação teórica do fluxo de desenvolvimento TinyML (aquisição e preparação dos dados, escolha e treinamento de modelos, quantização, validação e implantação). O Capítulo 4 descreve a proposta prática de classificação de resíduos sólidos, definindo escopo e etapas. O Capítulo \ref{cap:desenvolvimento} detalha a execução do fluxo (seleção do dataset, pré-processamento, arquitetura, treinamento, quantização, escolha de hardware e implementação). O Capítulo \ref{cap:resultados} apresenta e discute os resultados: métricas globais e por classe, matriz de confusão, curvas COR, desempenho computacional em dispositivo embarcado, comparação com estudo de referência e limitações com sugestões de melhoria. Por fim, o Capítulo \ref{cap:conclusao} consolida as conclusões e indica perspectivas de continuidade.
 
 \chapter{Revisão Bibliográfica}
 
@@ -210,7 +213,7 @@ O desenvolvimento da solução começa com a escolha do tipo de modelo de aprend
  {\sourcecitation{\textit{Do autor}}}
 \end{table}
 
-Para o cumprimento do objetivo específico 4, o modelo a ser desenvolvido será do tipo Rede Neural Convolucional (RNC), pois esse tipo de arquitetura é amplamente utilizado em tarefas de classificação de imagens em aplicações TinyML \cite{tinyModels}. A escolha detalhada da arquitetura, como a utilização de variantes compactas (por exemplo, TinyYOLO ou outras), será definida durante a implementação prática no TCC-II, levando em conta os requisitos do projeto e as limitações do hardware selecionado.
+Para o cumprimento do objetivo específico 4 será utilizada uma Rede Neural Convolucional (RNC); a escolha concreta da arquitetura (MobileNetV2) é detalhada adiante no Capítulo \ref{cap:desenvolvimento}, Seção \ref{sec:treinamento}.
 
 Uma arquitetura de rede neural é construída basicamente por camadas de neurônios. Neurônios, neste contexto, são basicamente unidades de funções matemáticas que recebem valores de entradas, realiza uma soma ponderada, efetua uma operação matemática chamada de Função de Ativação e então direciona este resultado para a saída. Essa saída pode ser um neurônio de uma próxima camada ou a saída final do modelo. A Figura \ref{fig:redeneural} mostra um simples exemplo.
 
@@ -319,7 +322,7 @@ Ainda sobre métricas visuais, temos a Matriz de Confusão. Esta matriz relacion
 
 No caso de um modelo ideal, todos os valores da matriz de confusão estariam na diagonal principal da matriz, indicando que o modelo acerta 100\% das predições.
 
-Finalmente, caso as métricas de desempenho do modelo não forem satisfatórias, ajustes nos hiperparâmetros podem ser feitos a fim de melhorar a resposta do modelo. Esta etapa é denominada Ajuste Fino e será aprofundada na segunda parte deste trabalho, Trabalho de Conclusão II.
+Finalmente, caso as métricas de desempenho do modelo não sejam satisfatórias, realizam-se ajustes nos hiperparâmetros para melhorar sua resposta; esse processo, denominado Ajuste Fino, foi executado e está detalhado no Capítulo \ref{cap:desenvolvimento}, Seção \ref{sec:treinamento}.
 
 \section{Implantação em Dispositivos Embarcados}\label{sec:implantacao}
 %Esta seção aborda a integração do modelo treinado em hardware real, como microcontroladores, com ênfase em desafios práticos e ferramentas de suporte.
@@ -536,6 +539,8 @@ Todo o procedimento está implementado em \texttt{metadados/aumento\_de\_dados.p
 \label{sec:treinamento}
 
 Esta seção descreve a implementação prática do modelo de classificação, desde a preparação do fluxo de dados (\textit{pipeline}) até o treinamento com ajuste fino. A implementação foi conduzida em ambiente de nuvem (Google Colab) utilizando TensorFlow/Keras. Essa escolha apoia-se na facilidade de acesso (basta um navegador), disponibilidade gratuita — ainda que limitada — de CPU/GPU/TPU e integração direta com Google Drive para armazenamento e compartilhamento de artefatos.
+
+Todo o código-fonte apresentado neste trabalho está disponível em: \href{https://github.com/maxwellrs-dev/ai4rpi}{github.com/maxwellrs-dev/ai4rpi}.
 
 \subsection{Fluxo de dados}
 Os conjuntos de treino e validação foram criados a partir do diretório base do \textit{RealWaste}, empregando TensorFlow, com divisão estratificada aproximada de 80/20 e semente 123 para reprodutibilidade. As imagens foram redimensionadas para 224\(\times\)224 px e carregadas em \textbf{lotes} de 64 amostras.
