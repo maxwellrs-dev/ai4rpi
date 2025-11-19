@@ -58,7 +58,7 @@ E, por fim, ao corpo docente da Escola de Engenharia desta Universidade, que, me
 % resumo no idioma do documento
 \begin{mainabstract}
 
-Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e exigências de inteligência embarcada, o paradigma TinyML surge como uma solução promissora. Este trabalho tem como objetivo avaliar o estado atual da aplicação de soluções baseadas em aprendizado de máquina a sistemas embarcados, com foco em dispositivos caracterizados por recursos computacionais limitados. A pesquisa abrange a análise de ferramentas de desenvolvimento TinyML, levantamento de plataformas disponíveis e elaboração de um fluxo de trabalho ponta-a-ponta para o desenvolvimento de soluções. A hipótese é que técnicas de TinyML podem substituir ou complementar arquiteturas IoT tradicionais, proporcionando maior eficiência e menor latência em aplicações críticas que utilizem inteligência artificial. Ademais, ao final, uma proposta de trabalho prático é apresentada, utilizando todo o resultado da pesquisa em uma solução aplicada de aprendizado de máquina embarcado.
+Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e exigências de inteligência embarcada, o paradigma TinyML surge como uma solução promissora. Este trabalho tem como objetivo avaliar o estado atual da aplicação de soluções baseadas em aprendizado de máquina a sistemas embarcados, com foco em dispositivos caracterizados por recursos computacionais limitados. A pesquisa abrange a análise de ferramentas de desenvolvimento TinyML, levantamento de plataformas disponíveis e elaboração de um fluxo de trabalho ponta-a-ponta para o desenvolvimento de soluções. A hipótese é que técnicas de TinyML podem substituir ou complementar arquiteturas IoT tradicionais, proporcionando maior eficiência e menor latência em aplicações críticas que utilizem inteligência artificial. Ademais, ao final, um estudo de caso prático é apresentado, utilizando todo o resultado da pesquisa em uma solução aplicada de aprendizado de máquina embarcado.
 
 \end{mainabstract}
 
@@ -129,14 +129,14 @@ Os objetivos específicos deste trabalho são os seguintes:
     
     \item Elaborar um fluxo de trabalho ponta-a-ponta para desenvolvimento de soluções baseadas em técnicas TinyML, de forma a ilustrar o processo; \\
 
-    \item Desenvolver e aplicar, como solução proposta, um modelo TinyML para classificação de resíduos sólidos, comparando seu desempenho com alternativas tradicionais.
+    \item Desenvolver e aplicar, como estudo de caso, um modelo TinyML para classificação de resíduos sólidos, comparando seu desempenho com alternativas tradicionais.
 \end{enumerate}
 
 \section{Hipótese}
 A aplicação de técnicas de TinyML em dispositivos embarcados com recursos computacionais limitados é viável e prática nos dias atuais, devido à disponibilidade crescente de ferramentas de desenvolvimento acessíveis, plataformas de hardware compatíveis e métodos eficientes de otimização de modelos que permitem o processamento local com baixo consumo energético.
 
 \section{Estrutura do trabalho}
-Este trabalho está organizado em sete capítulos. O Capítulo \ref{cap:introducao} apresenta o contexto, os objetivos, a hipótese e a organização geral do estudo. O Capítulo 2 desenvolve a revisão bibliográfica sobre TinyML e dispositivos embarcados, incluindo trabalhos relacionados e síntese crítica. O Capítulo 3 expõe a fundamentação teórica do fluxo de desenvolvimento TinyML (aquisição e preparação dos dados, escolha e treinamento de modelos, quantização, validação e implantação). O Capítulo 4 descreve a proposta prática de classificação de resíduos sólidos, definindo escopo e etapas. O Capítulo \ref{cap:desenvolvimento} detalha a execução do fluxo (seleção do dataset, pré-processamento, arquitetura, treinamento, quantização, escolha de hardware e implementação). O Capítulo \ref{cap:resultados} apresenta e discute os resultados: métricas globais e por classe, matriz de confusão, curvas COR, desempenho computacional em dispositivo embarcado, comparação com estudo de referência e limitações com sugestões de melhoria. Por fim, o Capítulo \ref{cap:conclusao} consolida as conclusões e indica perspectivas de continuidade.
+Este trabalho está organizado em sete capítulos. O Capítulo \ref{cap:introducao} apresenta o contexto, os objetivos, a hipótese e a organização geral do estudo. O Capítulo 2 desenvolve a revisão bibliográfica sobre TinyML e dispositivos embarcados, incluindo trabalhos relacionados e síntese crítica. O Capítulo 3 expõe a fundamentação teórica do fluxo de desenvolvimento TinyML (aquisição e preparação dos dados, escolha e treinamento de modelos, quantização, validação e implantação). O Capítulo 4 descreve o estudo de caso prático de classificação de resíduos sólidos, definindo escopo e etapas. O Capítulo \ref{cap:desenvolvimento} detalha a execução do fluxo (seleção do dataset, pré-processamento, arquitetura, treinamento, quantização, escolha de hardware e implementação). O Capítulo \ref{cap:resultados} apresenta e discute os resultados: métricas globais e por classe, matriz de confusão, curvas COR, desempenho computacional em dispositivo embarcado, comparação com estudo de referência e limitações com sugestões de melhoria. Por fim, o Capítulo \ref{cap:conclusao} consolida as conclusões e indica perspectivas de continuidade.
 
 \chapter{Revisão Bibliográfica}
 
@@ -175,7 +175,7 @@ A escolha do modelo e a quantização do modelo são peças chaves na elaboraç�
 Durante a revisão bibliográfica foi observado que projetos TinyML podem ser executados em algumas etapas principais. Dentro de cada uma destas etapas decisões importantes são tomadas, como a escolha do modelo, a plataforma de desenvolvimento e a forma de coleta dos dados. As vastas opções de plataformas disponíveis como TensorFlor e Edge Impulse, bem como a variedade de dispositivos IoT, permitem uma vasta gama de soluções em Aprendizado de Máquina embarcado. 
 
 \chapter{Fundamentação teórica}
-%5 Páginas - Embasamento teórico para o desenvolvimento da solução proposta.
+%5 Páginas - Embasamento teórico para o desenvolvimento do estudo de caso.
 Neste capítulo, serão abordados todas as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML, explorando nuances e escolhas importantes a serem feitas em cada passo.
 
 \section{Aquisição e Preparação dos Dados}
@@ -406,14 +406,15 @@ Por fim, a escolha definitiva do dispositivo embarcado e da plataforma de desenv
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Proposta de trabalho}
-Neste capítulo será apresentada a proposta de trabalho para o TCC-II, com base nos conceitos e técnicas discutidos nos capítulos anteriores. O objetivo é desenvolver uma solução real de aprendizado de máquina embarcado utilizando o fluxo de trabalho proposto.
 
-\section{Descrição da proposta}
+\chapter{Estudo de Caso: Classificação de Resíduos Sólidos}
+Neste capítulo é apresentado o estudo de caso realizado para o TCC-II, baseado nos conceitos e técnicas discutidos nos capítulos anteriores. O objetivo é implementar e validar, na prática, uma solução de aprendizado de máquina embarcado seguindo o fluxo de trabalho proposto.
 
-Em continuidade aos objetivos traçados neste trabalho, a proposta do TCC-II é aplicar, na prática, o fluxo de desenvolvimento TinyML para resolver um problema real de classificação de resíduos sólidos. O projeto busca consolidar os conhecimentos adquiridos ao longo do trabalho, conectando teoria e prática, e evidenciar, de forma aplicada, as vantagens do aprendizado de máquina embarcado. Além disso, será realizada uma comparação entre a solução TinyML desenvolvida e abordagens tradicionais de aprendizado de máquina, de modo a destacar os diferenciais e limitações de cada abordagem no contexto do problema proposto.
+\section{Descrição do estudo de caso}
 
-A proposta de trabalho consiste no desenvolvimento de um modelo de aprendizado de máquina embarcado para categorização de lixo em 12 categorias diferentes:
+Em continuidade aos objetivos traçados neste trabalho, o presente estudo de caso aplica, na prática, o fluxo de desenvolvimento TinyML para resolver o problema de classificação de resíduos sólidos. O projeto busca consolidar os conhecimentos adquiridos ao longo do trabalho, conectando teoria e prática, e evidenciar, de forma aplicada, as vantagens do aprendizado de máquina embarcado. Além disso, será realizada uma comparação entre a solução TinyML desenvolvida e abordagens tradicionais de aprendizado de máquina, de modo a destacar os diferenciais e limitações de cada abordagem no contexto do problema proposto.
+
+O estudo de caso consiste no desenvolvimento de um modelo de aprendizado de máquina embarcado para categorização de lixo em 12 categorias diferentes:
 
 \begin{itemize}
     \item Pilhas e baterias;
@@ -430,13 +431,13 @@ A proposta de trabalho consiste no desenvolvimento de um modelo de aprendizado d
     \item Rejeitos.
 \end{itemize}
 
-Esta proposta foi definida por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo será treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados será realizada utilizando o repositório de dados públicos do Kaggle \cite{kaggle}, que disponibiliza um conjunto de dados com imagens de lixo categorizadas, facilitando o treinamento do modelo.
+Este estudo de caso foi definido por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo será treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados será realizada utilizando o repositório de dados públicos do Kaggle \cite{kaggle}, que disponibiliza um conjunto de dados com imagens de lixo categorizadas, facilitando o treinamento do modelo.
 
-Durante a execução do TCC-II, a escolha do conjunto de dados foi revisada. Inicialmente, havia sido planejada a utilização de um banco de dados público do Kaggle \cite{kaggle} para o treinamento do modelo de classificação de resíduos. Contudo, optou-se pela adoção do conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024), o qual está associado a um artigo publicado, possibilitando omparações diretas entre o modelo desenvolvido neste trabalho e o apresentado no estudo de referência. Os detalhes sobre o novo conjunto de dados são descritos na Seção~\ref{sec:coleta}.
+Durante a execução deste estudo de caso, a escolha do conjunto de dados foi revisada. Inicialmente, havia sido planejada a utilização de um banco de dados público do Kaggle \cite{kaggle} para o treinamento do modelo de classificação de resíduos. Contudo, optou-se pela adoção do conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024), o qual está associado a um artigo publicado, possibilitando omparações diretas entre o modelo desenvolvido neste trabalho e o apresentado no estudo de referência. Os detalhes sobre o novo conjunto de dados são descritos na Seção~\ref{sec:coleta}.
 
-\section{Etapas do trabalho}
+\section{Etapas do estudo de caso}
 % Detalhamento das etapas ou blocos do desenvolvimento (ex: revisão final, coleta de dados complementar, análise, redação, apresentação, etc.)
-O trabalho será desenvolvido em etapas, baseada no fluxo de trabalho apresentado no Seção \ref{sec:implantacao} com a adição de alguns pontos. Ressalta-se que o fluxo poderá sofrer ajustes ao longo do TCC-II conforme os resultados e necessidades identificados durante as experimentações. As etapas são apresentadas a seguir com suas respectivas atribuições:
+O estudo de caso foi desenvolvido em etapas, baseada no fluxo de trabalho apresentado na Seção \ref{sec:implantacao} com a adição de alguns pontos. As etapas são apresentadas a seguir com suas respectivas atribuições:
 
 \begin{enumerate}
     \item \textbf{Coleta de dados:}  
@@ -689,7 +690,7 @@ Os passos principais para preparar o dispositivo para a execução do modelo for
 \label{sec:implementacao}
 Esta subseção descreve a execução prática do modelo quantizado em uma Raspberry Pi 3 Model B+, conforme especificado na Seção \ref{sec:hardware}. O objetivo é demonstrar a captura de imagem, pré-processamento mínimo e inferência usando o \texttt{tflite\_runtime}, validando o fluxo ponta-a-ponta em ambiente embarcado.
 
-O código na sua íntegra está disponível no link do GitHub mencionado inicialmente, no arquivo \texttt{metadados/test_tinyml_rpi.py}.
+O código na sua íntegra está disponível no link do GitHub mencionado inicialmente, no arquivo \texttt{$metadados/test_tinyml_rpi.py$}.
 
 \subsection{Fluxo de inferência}
 Assumem-se as seguintes bibliotecas importadas e o caminho do modelo definidos previamente:
@@ -921,7 +922,7 @@ Os resultados obtidos permitem concluir que o modelo MobileNetV2 quantizado exec
     \item estabilidade entre diferentes classes de resíduos.
 \end{itemize}
 
-Esses valores estão alinhados com trabalhos similares na literatura e confirmam que a solução proposta atende aos requisitos de desempenho definidos para o protótipo.
+Esses valores estão alinhados com trabalhos similares na literatura e confirmam que a solução do estudo de caso atende aos requisitos de desempenho definidos para o protótipo.
 
 \subsection{Comparação com o estudo de referência}
 

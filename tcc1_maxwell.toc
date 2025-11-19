@@ -29,9 +29,9 @@
 \contentsline {section}{\numberline {3.3}Quantização para compactação de Modelos}{18}{section.34}%
 \contentsline {section}{\numberline {3.4}Validação, Ajuste Fino e Métricas de Desempenho}{19}{section.35}%
 \contentsline {section}{\numberline {3.5}Implantação em Dispositivos Embarcados}{21}{section.43}%
-\contentsline {chapter}{\numberline {4}Proposta de trabalho}{23}{chapter.47}%
-\contentsline {section}{\numberline {4.1}Descrição da proposta}{23}{section.48}%
-\contentsline {section}{\numberline {4.2}Etapas do trabalho}{24}{section.49}%
+\contentsline {chapter}{\numberline {4}Estudo de Caso: Classificação de Resíduos Sólidos}{23}{chapter.47}%
+\contentsline {section}{\numberline {4.1}Descrição do estudo de caso}{23}{section.48}%
+\contentsline {section}{\numberline {4.2}Etapas do estudo de caso}{24}{section.49}%
 \contentsline {chapter}{\numberline {5}Desenvolvimento}{26}{chapter.59}%
 \contentsline {section}{\numberline {5.1}Coleta e seleção do banco de dados}{26}{section.60}%
 \contentsline {section}{\numberline {5.2}Pré-processamento dos dados}{27}{section.63}%
@@ -58,12 +58,12 @@
 \contentsline {section}{\numberline {6.2}Avaliação e análise de eficiência computacional}{38}{section.151}%
 \contentsline {subsection}{\numberline {6.2.1}Montagem experimental}{38}{subsection.152}%
 \contentsline {subsection}{\numberline {6.2.2}Resultados sobre o tempo de inferência}{39}{subsection.154}%
-\contentsline {subsection}{\numberline {6.2.3}Uso de CPU e memória RAM}{41}{subsection.159}%
+\contentsline {subsection}{\numberline {6.2.3}Uso de CPU e memória RAM}{42}{subsection.159}%
 \contentsline {subsection}{\numberline {6.2.4}Síntese dos resultados}{42}{subsection.160}%
-\contentsline {subsection}{\numberline {6.2.5}Comparação com o estudo de referência}{42}{subsection.161}%
+\contentsline {subsection}{\numberline {6.2.5}Comparação com o estudo de referência}{43}{subsection.161}%
 \contentsline {section}{\numberline {6.3}Limitações e sugestões de melhoria}{43}{section.162}%
-\contentsline {chapter}{\numberline {7}Conclusões}{44}{chapter.163}%
-\contentsline {chapter}{Refer\^encias}{46}{chapter*.164}%
+\contentsline {chapter}{\numberline {7}Conclusões}{45}{chapter.163}%
+\contentsline {chapter}{Refer\^encias}{47}{chapter*.164}%
 \babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 
 \babel@toc {brazilian}{}\relax 

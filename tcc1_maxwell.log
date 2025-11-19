@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.18)  18 NOV 2025 19:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.18)  18 NOV 2025 21:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2218,13 +2218,13 @@ Cap\'{\i }tulo 5.
 [26
 
 ]
-<imagens/rw.png, id=721, 623.32875pt x 476.53032pt>
+<imagens/rw.png, id=722, 623.32875pt x 476.53032pt>
 File: imagens/rw.png Graphic file (type png)
 <use imagens/rw.png>
-Package pdftex.def Info: imagens/rw.png  used on input line 517.
+Package pdftex.def Info: imagens/rw.png  used on input line 518.
 (pdftex.def)             Requested size: 386.96027pt x 295.83112pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-31.
+32.
  (C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2233,25 +2233,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [27 <./imagens/rw.png>]
-Overfull \hbox (24.22095pt too wide) in paragraph at lines 543--544
+Overfull \hbox (24.22095pt too wide) in paragraph at lines 544--545
 []\T1/lmr/m/n/12 (-20) Todo o código-fonte apre-sen-tado neste tra-ba-lho está 
 dis-po-ní-vel em: []github.com/maxwellrs-
  []
 
 [28]
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 564.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 565.
 
-<imagens/treino_acc_loss.png, id=741, 729.927pt x 341.1144pt>
+<imagens/treino_acc_loss.png, id=742, 729.927pt x 341.1144pt>
 File: imagens/treino_acc_loss.png Graphic file (type png)
 <use imagens/treino_acc_loss.png>
-Package pdftex.def Info: imagens/treino_acc_loss.png  used on input line 587.
+Package pdftex.def Info: imagens/treino_acc_loss.png  used on input line 588.
 (pdftex.def)             Requested size: 386.96027pt x 180.8366pt.
 
 Underfull \vbox (badness 1259) has occurred while \output is active []
 
  [29]
-Package csquotes Info: Input encoding change on input line 604.
+Package csquotes Info: Input encoding change on input line 605.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2272,7 +2272,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 609.
+Package csquotes Info: Input encoding change on input line 610.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2293,7 +2293,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 614.
+Package csquotes Info: Input encoding change on input line 615.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2314,7 +2314,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 623.
+Package csquotes Info: Input encoding change on input line 624.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2335,7 +2335,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 ) [30 <./imagens/treino_acc_loss.png>]
-Package csquotes Info: Input encoding change on input line 628.
+Package csquotes Info: Input encoding change on input line 629.
  (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
 LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
@@ -2355,7 +2355,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 634.
+Package csquotes Info: Input encoding change on input line 635.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2376,12 +2376,12 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 ) [31]
-Overfull \hbox (6.19327pt too wide) in paragraph at lines 658--675
+Overfull \hbox (6.19327pt too wide) in paragraph at lines 659--676
  [][] 
  []
 
 
-Overfull \hbox (8.19629pt too wide) in paragraph at lines 684--685
+Overfull \hbox (8.19629pt too wide) in paragraph at lines 685--686
 []\T1/lmr/bx/n/12 (-20) Habilitação de pe-ri-fé-ri-cos\T1/lmr/m/n/12 (-20) : at
 i-va-ção op-ci-o-nal do su-porte à câ-mera via \T1/lmtt/m/n/12 raspi-config\T1/
 lmr/m/n/12 (-20) ; 
@@ -2390,7 +2390,7 @@ lmr/m/n/12 (-20) ;
 [32] (C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/10/06 1.11 listings language file
 )
-Package csquotes Info: Input encoding change on input line 694.
+Package csquotes Info: Input encoding change on input line 697.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2412,8 +2412,8 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 695.
-Package csquotes Info: Input encoding change on input line 703.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 698.
+Package csquotes Info: Input encoding change on input line 706.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2434,7 +2434,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 707.
+Package csquotes Info: Input encoding change on input line 710.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2456,12 +2456,12 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 710.
+(Font)              <10> on input line 713.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 710.
+(Font)              <7> on input line 713.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 710.
-Package csquotes Info: Input encoding change on input line 711.
+(Font)              <5> on input line 713.
+Package csquotes Info: Input encoding change on input line 714.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2482,7 +2482,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 715.
+Package csquotes Info: Input encoding change on input line 718.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2503,7 +2503,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 719.
+Package csquotes Info: Input encoding change on input line 722.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2524,7 +2524,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 723.
+Package csquotes Info: Input encoding change on input line 726.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2544,8 +2544,8 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
 coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 727.
+) [33]
+Package csquotes Info: Input encoding change on input line 730.
 
 (C:\Program Files\MiKTeX\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2565,67 +2565,68 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
 coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
-) [33] [34]
+) [34]
 Cap\'{\i }tulo 6.
 [35
 
 ]
-<imagens/matriz_confusao.png, id=848, 414.8298pt x 371.4678pt>
+<imagens/matriz_confusao.png, id=850, 414.8298pt x 371.4678pt>
 File: imagens/matriz_confusao.png Graphic file (type png)
 <use imagens/matriz_confusao.png>
-Package pdftex.def Info: imagens/matriz_confusao.png  used on input line 808.
+Package pdftex.def Info: imagens/matriz_confusao.png  used on input line 811.
 (pdftex.def)             Requested size: 409.71692pt x 366.89836pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
-<imagens/roc_multiclasse.png, id=854, 731.3724pt x 506.6127pt>
+<imagens/roc_multiclasse.png, id=856, 731.3724pt x 506.6127pt>
 File: imagens/roc_multiclasse.png Graphic file (type png)
 <use imagens/roc_multiclasse.png>
-Package pdftex.def Info: imagens/roc_multiclasse.png  used on input line 824.
+Package pdftex.def Info: imagens/roc_multiclasse.png  used on input line 827.
 (pdftex.def)             Requested size: 409.71692pt x 283.80939pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [37 <./imagens/matriz_confusao.png>]
-<imagens/ensaios/montagem.jpeg, id=862, 966.61125pt x 1284.8pt>
+<imagens/ensaios/montagem.jpeg, id=864, 724.95844pt x 963.6pt>
 File: imagens/ensaios/montagem.jpeg Graphic file (type jpg)
 <use imagens/ensaios/montagem.jpeg>
-Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 851.
+Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 854.
 
 (pdftex.def)             Requested size: 318.66948pt x 423.57362pt.
- [38 <./imagens/roc_multiclasse.png>]
-<imagens/ensaios/metal.png, id=869, 1445.4pt x 903.375pt>
+ [38 <./imagens/roc_multiclasse.png>] [39 <./imagens/ensaios/montagem.jpeg>]
+<imagens/ensaios/metal.png, id=875, 1445.4pt x 903.375pt>
 File: imagens/ensaios/metal.png Graphic file (type png)
 <use imagens/ensaios/metal.png>
-Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 865.
+Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 869.
 (pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
- [39 <./imagens/ensaios/montagem.jpeg>]
-<imagens/ensaios/papel.png, id=875, 1445.4pt x 903.375pt>
+<imagens/ensaios/papel.png, id=877, 1445.4pt x 903.375pt>
 File: imagens/ensaios/papel.png Graphic file (type png)
 <use imagens/ensaios/papel.png>
-Package pdftex.def Info: imagens/ensaios/papel.png  used on input line 876.
+Package pdftex.def Info: imagens/ensaios/papel.png  used on input line 880.
 (pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
-<imagens/ensaios/papelao.png, id=877, 1445.4pt x 903.375pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40 <./imagens/ensaios/metal.png (PNG copy)>]
+<imagens/ensaios/papelao.png, id=883, 1445.4pt x 903.375pt>
 File: imagens/ensaios/papelao.png Graphic file (type png)
 <use imagens/ensaios/papelao.png>
-Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 886.
+Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 890.
 (pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
- [40 <./imagens/ensaios/metal.png (PNG copy)> <./imagens/ensaios/papel.png (PNG
- copy)>]
-<imagens/ensaios/textil.png, id=883, 1445.4pt x 903.375pt>
+<imagens/ensaios/textil.png, id=885, 1445.4pt x 903.375pt>
 File: imagens/ensaios/textil.png Graphic file (type png)
 <use imagens/ensaios/textil.png>
-Package pdftex.def Info: imagens/ensaios/textil.png  used on input line 896.
+Package pdftex.def Info: imagens/ensaios/textil.png  used on input line 900.
 (pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
- [41 <./imagens/ensaios/papelao.png (PNG copy)> <./imagens/ensaios/textil.png (
-PNG copy)>] [42] [43]
+ [41 <./imagens/ensaios/papel.png (PNG copy)> <./imagens/ensaios/papelao.png (P
+NG copy)>] [42 <./imagens/ensaios/textil.png (PNG copy)>] [43] [44]
 Cap\'{\i }tulo 7.
-[44
+[45
 
-] [45] [46
+] [46] [47
 
-] [47] [48] [49] (tcc1_maxwell.aux)
+] [48] [49] [50] (tcc1_maxwell.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2020/03/25>
@@ -2643,8 +2644,8 @@ Package rerunfilecheck Warning: File `tcc1_maxwell.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `tcc1_maxwell.out':
-(rerunfilecheck)             Before: DE564E636D6527839DE1A4BB3665714F;10336
-(rerunfilecheck)             After:  091501CE401F2A3CBAC9122B57380066;10441.
+(rerunfilecheck)             Before: 8A4B4D162F655279E314781B87816B55;10577
+(rerunfilecheck)             After:  3B92AEBDF314557B74879165B90DF54F;10682.
 
 Package biblatex Warning: Please rerun LaTeX.
 (biblatex)                Page breaks have changed.
@@ -2654,9 +2655,9 @@ Package logreq Info: Writing requests to 'tcc1_maxwell.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 69973 strings out of 467871
- 1640244 string characters out of 5428442
- 2825756 words of memory out of 5000000
+ 69974 strings out of 467871
+ 1640251 string characters out of 5428442
+ 2818883 words of memory out of 5000000
  97341 multiletter control sequences out of 15000+600000
  743005 words of font info for 308 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -2664,20 +2665,21 @@ Here is how much of TeX's memory you used:
 <C:/Program Files/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Program Files/M
 iKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
 lic/lm/lmcsc10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
-/lmr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/typ
-e1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro10.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Program Files/MiKTeX/fonts/type1/
-public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
-ic/lm/lmtt10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tcc1_maxwell.pdf (49 pages, 5131474 bytes).
+:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm
+/lmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmri12.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmro10.pfb><C:/Program Files/M
+iKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/lm/lmssbo10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb
+><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/publi
+c/lm/lmtk10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on tcc1_maxwell.pdf (50 pages, 5222460 bytes).
 PDF statistics:
- 1135 PDF objects out of 1200 (max. 8388607)
- 248 named destinations out of 1000 (max. 500000)
+ 1145 PDF objects out of 1200 (max. 8388607)
+ 249 named destinations out of 1000 (max. 500000)
  62033 words of extra memory for PDF output out of 74296 (max. 10000000)
 
