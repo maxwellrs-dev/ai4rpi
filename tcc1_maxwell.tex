@@ -26,25 +26,26 @@
 %\MakeCoverPages{tccI}
 \MakeCoverPages{tccII}
 
-% dedicatoria é opcional
-%\nonum\chapter{Dedicatória} %vai ter uma entrada no sumário
-\notoc\chapter{Dedicatória} %não vi aparecer no sumário
+% ==========================
+% DEDICATÓRIA
+% ==========================
+\notoc\chapter{Dedicatória}
+Dedico este trabalho à minha mãe e ao meu pai por todo apoio, ao Bruno, o melhor irmão que alguém poderia ter, a todos meus queridos amigos que alegram minha vida e em especial à Jaque, minha esposa, pela dedicação e apoio em todos os momentos difíceis, por sempre estar ao meu lado e pelo nosso amor.
 
-Dedico este trabalho à minha mãe e ao meu pai que sempre me apoiaram, ao Bruno, o melhor irmão que alguém poderia ter, a todos meus queridos amigos que alegram minha vida e em especial à Jaque, minha esposa, pela dedicação e apoio em todos os momentos difíceis, por sempre estar ao meu lado e pelo nosso amor. Sou grato por ter o privilégio de compartilhar um tempo e uma existência junto à ela. São estas relações de amizade e afeto que dão sentido à vida.
-
-% agradecimentos são opcionais
-%\nonum\chapter{Agradecimentos}
+% ==========================
+% AGRADECIMENTOS
+% ==========================
 \notoc\chapter{Agradecimentos}
 
-À Universidade Federal do Rio Grande do Sul (UFRGS), pela oportunidade de estudar em uma das instituições mais renomadas da América Latina e do mundo, de forma gratuita.
+À Universidade Federal do Rio Grande do Sul (UFRGS), pela oportunidade de estudar em uma das instituições mais renomadas da América Latina e do mundo.
 
-A todos que lutam e lutaram pela implementação da Lei de Cotas no Brasil, um marco para a construção de um país mais justo e que possibilitou minha formação acadêmica.
+A todos que lutam e lutaram pela implementação da Lei de Cotas no Brasil, um marco na construção de um país mais justo e que possibilitou minha formação acadêmica.
 
 Ao Laboratório de Metalurgia Física (LAMEF), por ter me dado a oportunidade de iniciar minha trajetória profissional, onde tive a chance de aprender e crescer.
 
-À minha liderança na TK Elevadores, pela compreensão e flexibilidade diante dos horários desafiadores do curso de Engenharia da UFRGS, conciliados com as demandas do trabalho.
+À minha liderança Eng. Fábio Kipper, e também ao Eng. Cristiano Stefaniaki e Daniel Dias, por me receberem na TK Elevadores e pela compreensão e flexibilidade diante dos horários desafiadores do curso de Engenharia da UFRGS, conciliados com as demandas do trabalho. Agradeço também ao Lucas Schmidt, meu colega na TK Elevadores, pela ajuda prestada ao emprestar itens e ferramentas para este trabalho.
 
-E, por fim, ao corpo docente da Escola de Engenharia desta Universidade, que, mesmo utilizando métodos por vezes desafiadores e pouco ortodoxos, contribuiu significativamente para minha formação como profissional.
+E, por fim, ao corpo docente da Escola de Engenharia desta Universidade, que, mesmo recorrendo, por vezes, a métodos desafiadores e pouco ortodoxos, contribuiu significativamente para minha formação como profissional.
 
 % palavras-chave
 % iniciar todas com letras minúsculas, exceto no caso de abreviaturas
@@ -55,7 +56,9 @@ E, por fim, ao corpo docente da Escola de Engenharia desta Universidade, que, me
 \mainkeywords{computação de borda}
 \mainkeywords{internet das coisas}
 
-% resumo no idioma do documento
+% ==========================
+% RESUMO
+% ==========================
 \begin{mainabstract}
 
 Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e exigências de inteligência embarcada, o paradigma TinyML surge como uma solução promissora. Este trabalho tem como objetivo avaliar o estado atual da aplicação de soluções baseadas em aprendizado de máquina a sistemas embarcados, com foco em dispositivos caracterizados por recursos computacionais limitados. A pesquisa abrange a análise de ferramentas de desenvolvimento TinyML, levantamento de plataformas disponíveis e elaboração de um fluxo de trabalho ponta-a-ponta para o desenvolvimento de soluções. A hipótese é que técnicas de TinyML podem substituir ou complementar arquiteturas IoT tradicionais, proporcionando maior eficiência e menor latência em aplicações críticas que utilizem inteligência artificial. Ademais, ao final, um estudo de caso prático é apresentado, utilizando todo o resultado da pesquisa em uma solução aplicada de aprendizado de máquina embarcado.
@@ -68,42 +71,33 @@ Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e exigê
 \otherkeywords{edge computing}
 \otherkeywords{internet of things}
 
+% ==========================
+% ABSTRACT
+% ==========================
 \begin{otherabstract}
 With the growing demand for Internet of Things (IoT) devices and the increasing need for embedded intelligence, the TinyML paradigm emerges as a promising solution. This work aims to evaluate the current state of applying machine learning-based solutions to embedded systems, focusing on devices characterized by limited computational resources. The research includes an analysis of TinyML development tools, a review of available platforms, and the design of an end-to-end workflow for solution development. The hypothesis is that TinyML techniques can replace or complement traditional IoT architectures, offering greater efficiency and lower latency in critical applications using artificial intelligence. Furthermore, a practical work proposal is presented at the end, leveraging all research findings in an applied embedded machine learning solution.
 \end{otherabstract}
 
-% sumario
 \setcounter{tocdepth}{3}
 
-% lista de ilustrações
+% ==========================
+% LISTA DE ILUSTRAÇÕES
+% ==========================
 \listoffigures
 
-% lista de tabelas
+% ==========================
+% LISTA DE TABELAS
+% ==========================
 \listoftables
 
-% lista de listagens (código fonte)
-%\listofcodelist %% doesn't work on overleaf
-
-% lista de abreviaturas e siglas
-% o parametro deve ser a abreviatura mais longa
-%\begin{listofabbrv}{PPGEE}
-    %\item[ABNT] Associação Brasileira de Normas Técnicas
-    %\item[GCAR] Grupo de Controle, Automação e Robótica
-    %\item[PPGEE] Programa de Pós-Graduação em Engenharia Elétrica
-    %\item[CCA] Curso de Eng. em Controle e Automação
-%\end{listofabbrv}
-
-% lista de símbolos é opcional
-%\begin{listofsymbols}{$\alpha\beta\pi\omega$}
-%       \item[$\sum$] Somatório
-%       \item[$\alpha\beta\pi\omega$] Fator de inconstância do resultado
-%\end{listofsymbols}
-
+% ==========================
+% SUMÁRIO
+% ==========================
 \tableofcontents
 
-% AQUI COMEÇA O TEXTO PROPRIAMENTE DITO
-
-% introducao
+% ==========================
+% CAPÍTULO 1 - INTRODUÇÃO
+% ==========================
 \chapter{Introdução}
 \label{cap:introducao}
 O avanço da tecnologia e a popularização dos dispositivos conectados têm impulsionado o desenvolvimento de soluções inteligentes em diversas áreas. Nesse cenário, a Internet das Coisas (IoT) destaca-se como um dos principais motores da transformação digital, permitindo a integração de sensores, atuadores e sistemas embarcados em aplicações que vão da saúde à indústria. No entanto, desafios como a latência na comunicação com a nuvem e a limitação de recursos computacionais em dispositivos embarcados exigem novas abordagens para garantir eficiência e desempenho em tempo real \cite{Xavier2022}.
@@ -138,13 +132,15 @@ A aplicação de técnicas de TinyML em dispositivos embarcados com recursos com
 \section{Estrutura do trabalho}
 Este trabalho está organizado em sete capítulos. O Capítulo \ref{cap:introducao} apresenta o contexto, os objetivos, a hipótese e a organização geral do estudo. O Capítulo 2 desenvolve a revisão bibliográfica sobre TinyML e dispositivos embarcados, incluindo trabalhos relacionados e síntese crítica. O Capítulo 3 expõe a fundamentação teórica do fluxo de desenvolvimento TinyML (aquisição e preparação dos dados, escolha e treinamento de modelos, quantização, validação e implantação). O Capítulo 4 descreve o estudo de caso prático de classificação de resíduos sólidos, definindo escopo e etapas. O Capítulo \ref{cap:desenvolvimento} detalha a execução do fluxo (seleção do dataset, pré-processamento, arquitetura, treinamento, quantização, escolha de hardware e implementação). O Capítulo \ref{cap:resultados} apresenta e discute os resultados: métricas globais e por classe, matriz de confusão, curvas COR, desempenho computacional em dispositivo embarcado, comparação com estudo de referência e limitações com sugestões de melhoria. Por fim, o Capítulo \ref{cap:conclusao} consolida as conclusões e indica perspectivas de continuidade.
 
+% ==========================
+% CAPÍTULO 2 - REVISÃO BIBLIOGRÁFICA
+% ==========================
 \chapter{Revisão Bibliográfica}
 
 \section{TinyML e Dispositivos Embarcados}
 % Combinação dos dois temas: O que é TinyML e por que ele surgiu? Quais os desafios técnicos que justificam soluções específicas? Dispositivos?
 TinyML é uma subárea do aprendizado de máquina dedicada à implementação de modelos de Aprendizado de Máquina em dispositivos embarcados com recursos computacionais limitados, como microcontroladores e sensores. Esses dispositivos, como o Arduino Nano 33 BLE Sense, Raspberry Pi, ESP32 e placas STM32, são amplamente utilizados em aplicações de IoT e automação, onde a eficiência energética e a baixa latência são fatores críticos.
 Os desafios técnicos incluem a limitação de memória, capacidade de processamento e consumo de energia desses dispositivos, o que exige técnicas específicas de otimização de modelos e algoritmos para garantir que as aplicações funcionem de maneira eficiente e eficaz.
-
 
 \section{Trabalhos Relacionados e Abordagens na Literatura}
 \label{sec:relacionados}
@@ -174,6 +170,9 @@ A escolha do modelo e a quantização do modelo são peças chaves na elaboraç�
 % Neste item, você faz a síntese dos pontos-chave da revisão e justifica como seu trabalho se insere nesse contexto.
 Durante a revisão bibliográfica foi observado que projetos TinyML podem ser executados em algumas etapas principais. Dentro de cada uma destas etapas decisões importantes são tomadas, como a escolha do modelo, a plataforma de desenvolvimento e a forma de coleta dos dados. As vastas opções de plataformas disponíveis como TensorFlor e Edge Impulse, bem como a variedade de dispositivos IoT, permitem uma vasta gama de soluções em Aprendizado de Máquina embarcado. 
 
+% ==========================
+% CAPÍTULO 3 - FUNDAMENTAÇÃO TEÓRICA
+% ==========================
 \chapter{Fundamentação teórica}
 %5 Páginas - Embasamento teórico para o desenvolvimento do estudo de caso.
 Neste capítulo, serão abordados todas as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML, explorando nuances e escolhas importantes a serem feitas em cada passo.
@@ -406,7 +405,9 @@ Por fim, a escolha definitiva do dispositivo embarcado e da plataforma de desenv
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+% ==========================
+% CAPÍTULO 4 - ESTUDO DE CASO: CLASSIFICAÇÃO DE RESÍDUOS SÓLIDOS
+% ==========================
 \chapter{Estudo de Caso: Classificação de Resíduos Sólidos}
 Neste capítulo é apresentado o estudo de caso realizado para o TCC-II, baseado nos conceitos e técnicas discutidos nos capítulos anteriores. O objetivo é implementar e validar, na prática, uma solução de aprendizado de máquina embarcado seguindo o fluxo de trabalho proposto.
 
@@ -952,7 +953,9 @@ A qualidade e o tipo da câmera utilizada também se mostraram fatores relevante
 
 Por fim, observa-se que a otimização dos parâmetros e hiperparâmetros do modelo pode ser uma linha promissora de evolução. Técnicas como ajuste sistemático de taxa de aprendizado, número de camadas treináveis, funções de ativação, além de estratégias de data augmentation específicas, podem contribuir para elevar significativamente o desempenho do modelo em aplicações reais.
 
-
+% ==========================
+% CAPÍTULO 7 - CONCLUSÕES
+% ==========================
 \chapter{Conclusões}
 \label{cap:conclusao}
 
