@@ -61,7 +61,7 @@ E, por fim, ao corpo docente da Escola de Engenharia desta Universidade, que, me
 % ==========================
 \begin{mainabstract}
 
-Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e exigências de inteligência embarcada, o paradigma TinyML surge como uma solução promissora. Este trabalho tem como objetivo avaliar o estado atual da aplicação de soluções baseadas em aprendizado de máquina a sistemas embarcados, com foco em dispositivos caracterizados por recursos computacionais limitados. A pesquisa abrange a análise de ferramentas de desenvolvimento TinyML, levantamento de plataformas disponíveis e elaboração de um fluxo de trabalho ponta-a-ponta para o desenvolvimento de soluções. A hipótese é que técnicas de TinyML podem substituir ou complementar arquiteturas IoT tradicionais, proporcionando maior eficiência e menor latência em aplicações críticas que utilizem inteligência artificial. Ademais, ao final, um estudo de caso prático é apresentado, utilizando todo o resultado da pesquisa em uma solução aplicada de aprendizado de máquina embarcado.
+Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e a necessidade crescente de inteligência embarcada, este trabalho avaliou o estado da arte do TinyML e investigou sua aplicabilidade prática em sistemas com recursos limitados. Foi realizado um levantamento e análise de ferramentas e plataformas TinyML, seguido da proposição de um fluxo de trabalho ponta-a-ponta para desenvolvimento (aquisição e pré-processamento de dados, treinamento, quantização, validação e implantação). Como estudo de caso, implementou-se um classificador de resíduos sólidos: adotou-se o conjunto RealWaste, aplicou-se balanceamento via data augmentation, treinou-se uma MobileNetV2 em TensorFlow com ajuste fino, e converteu-se o modelo para TensorFlow Lite com quantização INT8. Para validação prática, o modelo quantizado foi implantado e testado em uma Raspberry Pi 3 Model B+, medindo latência, uso de CPU e consumo de memória. Os resultados mostram que a solução é funcional em ambiente embarcado (acurácia global ~0,68 no conjunto de validação; latência média ≈200 ms por inferência; uso de memória do processo ≈85 MB), evidenciando compromissos entre precisão e restrições de hardware. Conclui-se que TinyML é viável para reduzir latência e dependência de nuvem em aplicações reais, embora melhorias em dados (mais imagens e padronização de captura), ajustes de augmentations e exploração de arquiteturas/quantizações mais adequadas possam elevar a acurácia e robustez do sistema.
 
 \end{mainabstract}
 
@@ -75,7 +75,7 @@ Com a escalada da demanda por dispositivos da Internet das Coisas (IoT) e exigê
 % ABSTRACT
 % ==========================
 \begin{otherabstract}
-With the growing demand for Internet of Things (IoT) devices and the increasing need for embedded intelligence, the TinyML paradigm emerges as a promising solution. This work aims to evaluate the current state of applying machine learning-based solutions to embedded systems, focusing on devices characterized by limited computational resources. The research includes an analysis of TinyML development tools, a review of available platforms, and the design of an end-to-end workflow for solution development. The hypothesis is that TinyML techniques can replace or complement traditional IoT architectures, offering greater efficiency and lower latency in critical applications using artificial intelligence. Furthermore, a practical work proposal is presented at the end, leveraging all research findings in an applied embedded machine learning solution.
+With the escalating demand for Internet of Things (IoT) devices and the growing need for embedded intelligence, this work evaluated the state of the art of TinyML and investigated its practical applicability in resource-constrained systems. A survey and analysis of TinyML tools and platforms was conducted, followed by the proposal of an end-to-end workflow for development (data acquisition and preprocessing, training, quantization, validation, and deployment). As a case study, a solid waste classifier was implemented: the RealWaste dataset was adopted, balancing via data augmentation was applied, a MobileNetV2 was trained in TensorFlow with fine-tuning, and the model was converted to TensorFlow Lite with INT8 quantization. For practical validation, the quantized model was deployed and tested on a Raspberry Pi 3 Model B+, measuring latency, CPU usage, and memory consumption. The results show that the solution is functional in an embedded environment (overall accuracy ~0.68 in the validation set; average latency ≈200 ms per inference; process memory usage ≈85 MB), highlighting trade-offs between accuracy and hardware constraints. We conclude that TinyML is viable for reducing latency and cloud dependency in real applications, although improvements in data (more images and capture standardization), adjustments to augmentations, and exploration of more suitable architectures/quantizations could increase the accuracy and robustness of the system.
 \end{otherabstract}
 
 \setcounter{tocdepth}{3}
@@ -409,7 +409,17 @@ Por fim, a escolha definitiva do dispositivo embarcado e da plataforma de desenv
 % CAPÍTULO 4 - ESTUDO DE CASO: CLASSIFICAÇÃO DE RESÍDUOS SÓLIDOS
 % ==========================
 \chapter{Estudo de Caso: Classificação de Resíduos Sólidos}
-Neste capítulo é apresentado o estudo de caso realizado para o TCC-II, baseado nos conceitos e técnicas discutidos nos capítulos anteriores. O objetivo é implementar e validar, na prática, uma solução de aprendizado de máquina embarcado seguindo o fluxo de trabalho proposto.
+Neste capítulo é apresentado o estudo de caso realizado, baseado nos conceitos e técnicas discutidos nos capítulos anteriores. O objetivo é implementar e validar, na prática, uma solução de aprendizado de máquina embarcado seguindo o fluxo de trabalho proposto.
+
+A escolha pela classificação de resíduos se justifica pela necessidade de automatizar uma etapa que, segundo a fonte \cite{ecopel2025}, ainda é realizada manualmente e envolve riscos aos trabalhadores. Essa atividade expõe os operadores a perigos físicos e ambientais, tornando relevante o desenvolvimento de soluções que reduzam esse contato direto.
+
+\begin{figure}[H]
+    \label{fig:selecao}
+    \centering
+    \includegraphics[width=0.65\linewidth]{imagens/selecao.jpg}
+    \caption{Processo de seleção manual de resíduos.}
+    \sourcecitation{Fonte: \cite{ecopel2025}}
+\end{figure}
 
 \section{Descrição do estudo de caso}
 
@@ -848,7 +858,7 @@ Todos os ensaios foram realizados utilizando a montagem descrita a seguir.
 A Figura~\ref{fig:montagem-ensaio} apresenta a estrutura física utilizada para todos os ensaios. 
 O suporte foi construído com tubos de PVC, permitindo fixar a webcam USB na posição superior, perpendicular ao plano de deposição dos resíduos. 
 O Raspberry~Pi utilizado para realizar as inferências foi instalado diretamente na estrutura, garantindo estabilidade e reduzindo interferências externas. 
-Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uniforme e reprodutibilidade dos testes.
+Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uniforme e reprodutibilidade dos testes. A fonte de iluminação para os ensaios é natural indireta.
 
 \begin{figure}[H]
     \centering
@@ -858,48 +868,50 @@ Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uni
     {\sourcecitation{Do autor}}
 \end{figure}
 
+A base da estrutura mede 60 cm \(\times\) 60 cm, proporcionando área suficiente para a colocação dos resíduos a serem classificados. A altura da haste que suporta a câmera foi regulado experimentalmente, fixando o foco da câmera e ajustando a altura da câmera de forma a enquadar adequadamente a área interna do quadrado da base. Com este teste feito, a altura ideal encontrada para este caso foi de 90 cm. Finalmente, um tubo de 30 cm foi utilizado de forma a centralizar a câmera sobre a base.
+
 \subsection{Resultados sobre o tempo de inferência}
 As medições de latência e as métricas apresentadas nesta subseção foram obtidas a partir do script de teste \texttt{metadados/test\_tinyml\_rpi.py}. O script carrega o modelo com \texttt{tflite\_runtime.Interpreter}, captura quadros da câmera via OpenCV, redimensiona cada frame para o \texttt{input\_shape} esperado pelo modelo e converte os dados para \texttt{uint8} quando se trata de modelo quantizado. A latência por inferência é medida com \texttt{time.perf\_counter()} imediatamente antes e após \texttt{interpreter.invoke()} e convertida para milissegundos; além disso é computada uma média exponencial (EMA) da latência usando \(\alpha=0{,}12\) para suavizar variações pontuais. O script registra um log simples a cada 30 frames e sobrepõe no próprio frame a predição, a confiança (saída dividida por 255 para modelos \texttt{uint8}) e o tempo de inferência atual.
 
 Durante os ensaios, observou-se que o sistema manteve tempos de inferência estáveis, próximos de 200~ms por imagem. 
 A Figura~\ref{fig:metal-ensaio} apresenta um exemplo do ensaio com um objeto metálico, onde o tempo de inferência registrado foi de aproximadamente 204~ms. 
-Esse valor é representativo do comportamento geral do modelo durante todo o período de testes.
+Esse valor é representativo do comportamento geral do modelo durante todo o período de testes. Todos os ensaios foram realizados alocando os objetos de forma não ordenada, isto é de forma aleatóra.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\linewidth]{imagens/ensaios/metal.png}
-    \caption{Ensaio com objeto metálico, mostrando a predição da classe e o tempo de inferência.}
+    \caption{Ensaio com tampa metálico de Ø 160 mm mostrando a predição da classe e o tempo de inferência.}
     \label{fig:metal-ensaio}
     {\sourcecitation{Do autor}}
 \end{figure}
 
-Também foi avaliado o desempenho com resíduos da classe papel. 
+Também foi avaliado o desempenho com resíduos da classe papel A4. 
 A Figura~\ref{fig:papel-ensaio} mostra que o sistema apresentou tempo de inferência da ordem de 220~ms, valor compatível com o observado nos demais ensaios.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\linewidth]{imagens/ensaios/papel.png}
-    \caption{Ensaio com papel, ilustrando o tempo de inferência registrado e a classificação produzida pelo modelo.}
+    \caption{Ensaio com papel A4, ilustrando o tempo de inferência registrado e a classificação produzida pelo modelo.}
     \label{fig:papel-ensaio}
     {\sourcecitation{Do autor}}
 \end{figure}
 
-A Figura~\ref{fig:papelao-ensaio} corresponde ao ensaio com papelão, com tempo de inferência em torno de 210~ms, mantendo o padrão observado nos demais testes e confirmando estabilidade temporal do modelo.
+A Figura~\ref{fig:papelao-ensaio} corresponde ao ensaio com papelão, com tempo de inferência em torno de 210~ms, mantendo o padrão observado nos demais testes e confirmando estabilidade temporal do modelo. As amostras de papelão são caixas de medicamentos.
     
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\linewidth]{imagens/ensaios/papelao.png}
-    \caption{Ensaio com papelão, exibindo o tempo de inferência e a predição realizada.}
+    \caption{Ensaio com caixas de medicamento (papelão), exibindo o tempo de inferência e a predição realizada.}
     \label{fig:papelao-ensaio}
     {\sourcecitation{Do autor}}
 \end{figure}
 
-Por fim, a Figura~\ref{fig:textil-ensaio} mostra o desempenho com material têxtil, novamente mantendo tempos de inferência próximos de 210~ms.
+Por fim, a Figura~\ref{fig:textil-ensaio} mostra o desempenho com material têxtil, novamente mantendo tempos de inferência próximos de 210~ms. Neste caso foi utilizada toalha de banho amassada.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\linewidth]{imagens/ensaios/textil.png}
-    \caption{Ensaio com resíduo têxtil, evidenciando tempo de inferência e classificação final.}
+    \caption{Ensaio com toalha de banho (têxtil), evidenciando tempo de inferência e classificação final.}
     \label{fig:textil-ensaio}
     {\sourcecitation{Do autor}}
 \end{figure}
