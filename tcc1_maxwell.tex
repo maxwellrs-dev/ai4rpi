@@ -478,13 +478,11 @@ O estudo de caso consiste no desenvolvimento de um modelo de aprendizado de máq
     \item Rejeitos.
 \end{itemize}
 
-Este estudo de caso foi definido por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo foi treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados foi realizada utilizando o repositório de dados públicos do Kaggle \cite{kaggle}, que disponibiliza um conjunto de dados com imagens de lixo categorizadas, facilitando o treinamento do modelo.
-
-Durante a execução deste estudo de caso, a escolha do conjunto de dados foi revisada. Inicialmente, havia sido planejada a utilização de um banco de dados público do Kaggle \cite{kaggle} para o treinamento do modelo de classificação de resíduos. Contudo, optou-se pela adoção do conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024), o qual está associado a um artigo publicado, possibilitando comparações diretas entre o modelo desenvolvido neste trabalho e o apresentado no estudo de referência. Os detalhes sobre o novo conjunto de dados são descritos na Seção~\ref{sec:coleta}.
+Este estudo de caso foi definido por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo foi treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados foi baseada no conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024). A escolha por este conjunto justifica-se por sua associação a um estudo de referência publicado, o que possibilita a realização de comparações diretas de desempenho entre a abordagem TinyML proposta e classificadores de estado da arte — detalhadas posteriormente na Seção~\ref{sec:coleta}.
 
 \section{Etapas do estudo de caso}
 % Detalhamento das etapas ou blocos do desenvolvimento (ex: revisão final, coleta de dados complementar, análise, redação, apresentação, etc.)
-O estudo de caso foi desenvolvido em etapas, baseada no fluxo de trabalho apresentado na Seção \ref{sec:implantacao} com a adição de alguns pontos. As etapas são apresentadas a seguir com suas respectivas atribuições:
+O estudo de caso foi desenvolvido em etapas, baseada no fluxo de trabalho apresentado na Seção \ref{sec:relacionados} com a adição de alguns pontos. As etapas são apresentadas a seguir com suas respectivas atribuições:
 
 \begin{enumerate}
     \item \textbf{Coleta de dados:}  
@@ -494,7 +492,7 @@ O estudo de caso foi desenvolvido em etapas, baseada no fluxo de trabalho aprese
     Após a coleta, as imagens passam por uma etapa de limpeza e normalização, que inclui o redimensionamento para tamanhos uniformes e o aumento de dados (\textit{data augmentation}). Essas técnicas visam melhorar a qualidade do conjunto de dados, aumentar sua robustez e reduzir possíveis vieses durante o treinamento.
     
     \item \textbf{Desenvolvimento e treinamento do modelo:}  
-    Nesta etapa, foi implementada uma Rede Neural Convolucional (RNC) utilizando TensorFlow. Essa arquitetura é ideal para classificação de imagens, permitindo que o modelo aprenda padrões visuais complexos necessários para identificar diferentes categorias de lixo.
+    Nesta etapa, foi treinada uma Rede Neural Convolucional (RNC) utilizando TensorFlow. Essa arquitetura é ideal para classificação de imagens, permitindo que o modelo aprenda padrões visuais complexos necessários para identificar diferentes categorias de lixo.
     
     \item \textbf{Escolha da plataforma de hardware:}  
     O hardware ideal para execução do modelo foi avaliado com base na complexidade do programa e nos requisitos de desempenho, consumo energético e custo. Essa etapa garante que o dispositivo escolhido seja compatível com as restrições de um sistema embarcado.
@@ -580,12 +578,12 @@ O conjunto de dados \textit{RealWaste} já se apresenta homogêneo quanto à res
 As etapas executadas foram:
 
 \begin{enumerate}
-    \item \textbf{Redimensionamento para a entrada do modelo.} Durante o carregamento, cada imagem foi redimensionada para 224\(\times\)224 px, tamanho compatível com arquiteturas convolucionais compactas e com as restrições de memória/processamento do alvo embarcado. Esse redimensionamento é realizado diretamente no script ao chamar \texttt{load\_img(..., target\_size=(224,224))}, garantindo que todo o conjunto balanceado seja gravado já no tamanho esperado pelo modelo.
+    \item \textbf{Redimensionamento para a entrada do modelo.} Durante o carregamento, cada imagem foi redimensionada para 224\(\times\)224 px, tamanho compatível com arquiteturas convolucionais compactas e com as restrições de memória/processamento do alvo embarcado. Tal ajuste é executado diretamente pela rotina de processamento (\texttt{metadados/aumento_de_dados.py}) ao invocar a função \texttt{load\_img(..., target\_size=(224,224))}, assegurando que todo o conjunto balanceado seja gravado já no tamanho esperado pelo modelo.
 
     \item \textbf{Balanceamento via aumento de dados (data augmentation).} Após contabilizar as imagens por classe, definiu-se uma meta por classe igual ao maior valor entre a classe mais populosa do conjunto. Na prática, isso faz com que todas as classes sejam expandidas até o tamanho da classe majoritária, que neste caso é de 921. Para gerar amostras sintéticas preservando a semântica, aplicaram-se apenas transformações geométricas e fotométricas leves com \textit{ImageDataGenerator}: rotação (\(\pm 20^{\circ}\)), deslocamentos horizontais e verticais (até 20\%), cisalhamento (0{,}15), \textit{zoom} (0{,}15), espelhamento horizontal e variação de brilho entre 0{,}7 e 1{,}3. O espelhamento vertical foi evitado por potencialmente alterar a plausibilidade física de algumas cenas. Limitou-se a no máximo 10 variações por imagem base, reduzindo redundância. As imagens originais redimensionadas foram copiadas para o diretório de saída e, em seguida, as variações foram geradas até atingir a meta por classe.
 \end{enumerate}
 
-Todo o procedimento está implementado em \texttt{metadados/aumento\_de\_dados.py}, que mantém a estrutura de diretórios por classe, grava o conjunto balanceado em disco e facilita a reprodução dos resultados.
+Todo o procedimento está implementado em \texttt{metadados/aumento_de_dados.py}, que preserva a organização hierárquica original do dataset (com subpastas individuais para cada categoria), grava o conjunto balanceado em disco e facilita a reprodução dos resultados.
 
 \section{Desenvolvimento e treinamento do modelo}
 \label{sec:treinamento}
@@ -695,7 +693,7 @@ Em síntese, a quantização INT8 permitiu obter um modelo compacto e eficiente 
 
 \section{Escolha e preparação do hardware}
 \label{sec:hardware}
-Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. A escolha pela \textbf{Raspberry Pi 3 Model B+} foi definida com base em um conjunto de critérios técnicos que a qualificam como uma plataforma ideal para a validação de soluções TinyML em ambiente de borda, oferecendo o \textbf{equilíbrio ideal entre capacidade e restrição}.
+Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. A escolha pela Raspberry Pi 3 Model B+ foi definida com base em um conjunto de critérios técnicos que a qualificam como uma plataforma ideal para a validação de soluções TinyML em ambiente de borda, oferecendo o equilíbrio ideal entre capacidade e restrição.
 
 Os principais fatores considerados foram: o equilíbrio entre recursos computacionais (CPU quad-core 64-bit e 1~GB de RAM) e simplicidade de uso; a compatibilidade nativa com o fluxo de quantização INT8 (uso do \texttt{tflite\_runtime}) sem a necessidade de aceleração especializada; o suporte direto a câmera para aquisição das imagens de teste; e a ampla comunidade e maturidade do ecossistema (documentação consolidada, suporte direto a Python e TensorFlow Lite).
 
@@ -750,7 +748,7 @@ from tflite_runtime.interpreter import Interpreter
 MODEL_PATH = "mobilenet_test.tflite"
 \end{lstlisting}
 
-Os passos principais executados pelo script são:
+Os passos principais executados pela rotina são:
 \begin{enumerate}
     \item Captura de um quadro da câmera.
 \begin{lstlisting}[language=Python]
@@ -823,6 +821,23 @@ Os resultados consolidados para o conjunto de validação são os exibidos na Ta
     \end{center}
     {\sourcecitation{Do autor}}
 \end{table}
+
+\subsection{Comparação com o estudo de referência}
+
+O presente trabalho utilizou o mesmo conjunto de dados \textit{RealWaste} empregado no estudo de referência \cite{single2023realwaste}, o que permite estabelecer uma linha de base comum para análise. No entanto, é fundamental destacar que a comparação direta entre os resultados de acurácia absoluta deve ser feita com ressalvas, uma vez que os objetivos e as restrições de cada abordagem são fundamentalmente distintos.
+
+O estudo de referência teve como propósito validar a qualidade do conjunto de dados e estabelecer marcos de desempenho (\textit{benchmarks}) utilizando o estado da arte em Redes Neurais Convolucionais. Para isso, foram empregadas arquiteturas profundas e computacionalmente intensivas (como InceptionV3 e DenseNet121), imagens em alta resolução (524$\times$524 px) e técnicas de aumento de dados (\textit{data augmentation}) robustas e agressivas. Nesse cenário ideal, livre de restrições de hardware, o estudo reportou acurácias superiores a 89\%.
+
+Em contrapartida, o objetivo deste trabalho foi validar a viabilidade de uma aplicação \textit{TinyML} em um dispositivo de borda (Raspberry Pi 3). Para atender aos requisitos de latência em tempo real e limitações de memória (RAM e Flash) descritos na Seção \ref{sec:avaliacao-eficiencia}, foram necessárias escolhas de projeto que penalizam intencionalmente a capacidade preditiva em favor da eficiência:
+
+\begin{itemize}
+    \item \textbf{Arquitetura:} Adoção da MobileNetV2, uma rede significativamente mais leve e com menos parâmetros que as utilizadas na referência;
+    \item \textbf{Resolução:} Redução da entrada para 224$\times$224 px, diminuindo drasticamente a quantidade de informação visual processada;
+    \item \textbf{Quantização:} Conversão dos pesos para inteiros de 8 bits (INT8), o que introduz ruído de quantização e limita a precisão numérica;
+    \item \textbf{Pré-processamento:} Uso de técnicas de aumento de dados mais conservadoras, compatíveis com um fluxo de treinamento rápido e leve.
+\end{itemize}
+
+Dessa forma, a acurácia de aproximadamente 68\% obtida no conjunto de validação não deve ser interpretada apenas como um déficit de desempenho, mas sim como a demonstração do compromisso entre precisão e eficiência. O resultado confirma que, mesmo com drásticas reduções de complexidade para adequação ao hardware embarcado, o sistema mantém capacidade de generalização funcional para a tarefa proposta.
 
 \subsection{Relatório de classificação por classe}
 O relatório por classe (precisão, sensibilidade e F1 por rótulo) é apresentado na Tabela~\ref{tab:class_report}. Os valores refletem o comportamento do classificador por categoria específica, auxiliando na identificação de classes com maior taxa de confusão.
@@ -936,7 +951,7 @@ A Tabela \ref{tab:lista_materiais} detalha os materiais utilizados na construç�
 Nota: Para a montagem da base, o segmento de 60 cm deve ser seccionado para a inserção da conexão em T. Recomenda-se cortar o tubo inicialmente ao meio e acoplar as duas partes à conexão. Em seguida, deve-se realizar o ajuste final nas extremidades para que o conjunto (tubos + conexão) atinja o comprimento total exato de 60 cm.
 
 \subsection{Resultados sobre o tempo de inferência}
-As medições de latência e as métricas apresentadas nesta subseção foram obtidas a partir do script de teste \texttt{metadados/test\_tinyml\_rpi.py}. O script carrega o modelo com \texttt{tflite\_runtime.Interpreter}, captura quadros da câmera via OpenCV, redimensiona cada frame para o \texttt{input\_shape} esperado pelo modelo e converte os dados para \texttt{uint8} quando se trata de modelo quantizado. A latência por inferência é medida com \texttt{time.perf\_counter()} imediatamente antes e após \texttt{interpreter.invoke()} e convertida para milissegundos; além disso é computada uma média exponencial (EMA) da latência usando \(\alpha=0{,}12\) para suavizar variações pontuais. O script registra um log simples a cada 30 frames e sobrepõe no próprio frame a predição, a confiança (saída dividida por 255 para modelos \texttt{uint8}) e o tempo de inferência atual.
+As medições de latência e as métricas apresentadas nesta subseção foram obtidas a partir da rotina de teste desenvolvida no arquivo \texttt{metadados/test\_tinyml\_rpi.py}. O código carrega o modelo com \texttt{tflite\_runtime.Interpreter}, captura quadros da câmera via OpenCV, redimensiona cada frame para o \texttt{input\_shape} esperado pelo modelo e converte os dados para \texttt{uint8} quando se trata de modelo quantizado. A latência por inferência é medida com \texttt{time.perf\_counter()} imediatamente antes e após \texttt{interpreter.invoke()} e convertida para milissegundos; além disso é computada uma média exponencial (EMA) da latência usando \(\alpha=0{,}12\) para suavizar variações pontuais. A aplicação registra ainda um log simples a cada 30 frames e sobrepõe no próprio frame a predição, a confiança (saída dividida por 255 para modelos \texttt{uint8}) e o tempo de inferência atual.
 
 Durante os ensaios, observou-se que o sistema manteve tempos de inferência estáveis, próximos de 200~ms por imagem. 
 A Figura~\ref{fig:metal-ensaio} apresenta um exemplo do ensaio com um objeto metálico, onde o tempo de inferência registrado foi de aproximadamente 204~ms. 
@@ -1001,25 +1016,6 @@ Os resultados obtidos permitem concluir que o modelo MobileNetV2 quantizado exec
 \end{itemize}
 
 Esses valores estão alinhados com trabalhos similares na literatura e confirmam que a solução do estudo de caso atende aos requisitos de desempenho definidos para o protótipo.
-
-\subsection{Comparação com o estudo de referência}
-
-\subsection{Comparação com o estudo de referência}
-
-O presente trabalho utilizou o mesmo conjunto de dados \textit{RealWaste} empregado no estudo de referência \cite{single2023realwaste}, o que permite estabelecer uma linha de base comum para análise. No entanto, é fundamental destacar que a comparação direta entre os resultados de acurácia absoluta deve ser feita com ressalvas, uma vez que os objetivos e as restrições de cada abordagem são fundamentalmente distintos.
-
-O estudo de referência teve como propósito validar a qualidade do conjunto de dados e estabelecer marcos de desempenho (\textit{benchmarks}) utilizando o estado da arte em Redes Neurais Convolucionais. Para isso, foram empregadas arquiteturas profundas e computacionalmente intensivas (como InceptionV3 e DenseNet121), imagens em alta resolução (524$\times$524 px) e técnicas de aumento de dados (\textit{data augmentation}) robustas e agressivas. Nesse cenário ideal, livre de restrições de hardware, o estudo reportou acurácias superiores a 89\%.
-
-Em contrapartida, o objetivo deste trabalho foi validar a viabilidade de uma aplicação \textit{TinyML} em um dispositivo de borda (Raspberry Pi 3). Para atender aos requisitos de latência em tempo real e limitações de memória (RAM e Flash) descritos na Seção \ref{sec:avaliacao-eficiencia}, foram necessárias escolhas de projeto que penalizam intencionalmente a capacidade preditiva em favor da eficiência:
-
-\begin{itemize}
-    \item \textbf{Arquitetura:} Adoção da MobileNetV2, uma rede significativamente mais leve e com menos parâmetros que as utilizadas na referência;
-    \item \textbf{Resolução:} Redução da entrada para 224$\times$224 px, diminuindo drasticamente a quantidade de informação visual processada;
-    \item \textbf{Quantização:} Conversão dos pesos para inteiros de 8 bits (INT8), o que introduz ruído de quantização e limita a precisão numérica;
-    \item \textbf{Pré-processamento:} Uso de técnicas de aumento de dados mais conservadoras, compatíveis com um fluxo de treinamento rápido e leve.
-\end{itemize}
-
-Dessa forma, a acurácia de aproximadamente 68\% obtida no conjunto de validação não deve ser interpretada apenas como um déficit de desempenho, mas sim como a demonstração do compromisso entre precisão e eficiência. O resultado confirma que, mesmo com drásticas reduções de complexidade para adequação ao hardware embarcado, o sistema mantém capacidade de generalização funcional para a tarefa proposta.
 
 \section{Limitações e sugestões de melhoria}
 \label{sec:limitacoes}
