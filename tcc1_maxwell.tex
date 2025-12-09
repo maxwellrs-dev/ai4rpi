@@ -175,7 +175,7 @@ Durante a revisão bibliográfica foi observado que projetos TinyML podem ser ex
 % ==========================
 \chapter{Fundamentação teórica}
 %5 Páginas - Embasamento teórico para o desenvolvimento do estudo de caso.
-Neste capítulo, serão abordados todas as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML, explorando nuances e escolhas importantes a serem feitas em cada passo.
+Neste capítulo, são abordados todas as etapas do fluxo de trabalho de desenvolvimento de soluções TinyML, explorando nuances e escolhas importantes a serem feitas em cada passo.
 
 \section{Aquisição e Preparação dos Dados}
 %Aborda a coleta, limpeza, transformação e normalização dos dados para uso em modelos TinyML.
@@ -191,8 +191,7 @@ Após a coleta dos dados, é necessário realizar uma etapa de curadoria para re
 
 
 \section{Desenvolvimento e Treinamento de Modelos}
-%Explora as principais abordagens de modelos de aprendizado de máquina aplicáveis ao contexto TinyML, bem como ferramentas utilizadas no treinamento (ex: TensorFlow Lite, Edge Impulse).
-% > Arquiteturas e seleção;
+
 O desenvolvimento da solução começa com a escolha do tipo de modelo de aprendizado de máquina. Modelos de aprendizado de máquina são algoritmos que aprendem padrões a partir dos dados fornecidos, e sua escolha depende do tipo de problema a ser resolvido. Atualmente há uma variedade de modelos disponíveis, a Tabela \ref{tinyml_models} apresenta alguns dos modelos mais comuns utilizados em TinyML e suas principais funções \cite{tinyModels}.
 
 \begin{table}[H]
@@ -212,7 +211,7 @@ O desenvolvimento da solução começa com a escolha do tipo de modelo de aprend
  {\sourcecitation{\textit{Do autor}}}
 \end{table}
 
-Para o cumprimento do objetivo específico 4 será utilizada uma Rede Neural Convolucional (RNC); a escolha concreta da arquitetura (MobileNetV2) é detalhada adiante no Capítulo \ref{cap:desenvolvimento}, Seção \ref{sec:treinamento}.
+Para o cumprimento do objetivo específico 4 foi utilizada uma Rede Neural Convolucional (RNC); a escolha concreta da arquitetura (MobileNetV2) é detalhada adiante no Capítulo \ref{cap:desenvolvimento}, Seção \ref{sec:treinamento}.
 
 Uma arquitetura de rede neural é construída basicamente por camadas de neurônios. Neurônios, neste contexto, são basicamente unidades de funções matemáticas que recebem valores de entradas, realiza uma soma ponderada, efetua uma operação matemática chamada de Função de Ativação e então direciona este resultado para a saída. Essa saída pode ser um neurônio de uma próxima camada ou a saída final do modelo. A Figura \ref{fig:redeneural} mostra um simples exemplo.
 
@@ -251,9 +250,48 @@ Na definição do treinamento da rede, existem alguns ajustes chamados de hiperp
 
 Na prática, o treinamento de modelos de aprendizado de máquina é desenvolvido utilizando ferramentas próprias para este fim. Com base em \cite{Kallimani2024}, podemos citar LiteRT, desenvolvido pela Google para dispositivos Android, iOS, Linux e microcontroladores, assim como $\mu$Tensor desenvolvido pela ARM e Edge Impulse desenvolvido por Zach Shelby e Jan Jongboom.
 
-\section{Quantização para compactação de Modelos}
-%Discute a conversão de modelos para formatos compactos (como int8) e técnicas de otimização para execução eficiente em dispositivos com restrições.
-Um importante passo no desenvolvimento de soluções TinyML é a quantização do modelo. A etapa de quantização, segundo \cite{quantization}, literalmente compacta o modelo, reduzindo seu tamanho para que possa ser executado em dispositivos embarcados. A realização da quantização é feita através do mapeamento dos pesos do modelo de ponto flutuante de 32 bits, por exemplo, para inteiros de 8 ou 4 bits. A quantização de modelos em contexto de TinyML é essencial para que a solução consuma uma quantidade menor de recursos. Contudo, a escolha do tipo de quantização deve ser feita com cautela, pois impacta diretamente a precisão e acurácia do modelo.
+\section{Quantização para Compactação de Modelos}
+\label{sec:quantizacao_teoria}
+
+A quantização é uma das técnicas mais críticas no ecossistema TinyML, atuando como o principal viabilizador da execução de redes neurais profundas em microcontroladores e dispositivos de borda. Conforme definem \cite{Jacob2018}, a quantização consiste no processo de mapear valores de entrada de um conjunto grande (frequentemente contínuo, como números de ponto flutuante de 32 bits -- FP32) para um conjunto menor de valores discretos (como inteiros de 8 bits -- INT8).
+
+Essa transformação não visa apenas a redução do tamanho do arquivo do modelo armazenado em memória Flash, mas também a redução da latência de inferência e do consumo energético, uma vez que operações aritméticas com inteiros de 8 bits são computacionalmente menos custosas que operações em ponto flutuante \cite{Gholami2021}.
+
+\subsection{Formulação Matemática}
+A abordagem mais comum em frameworks como TensorFlow Lite é a \textit{Quantização Uniforme Afim}. Neste esquema, um valor real $r$ (ponto flutuante) é mapeado para um valor quantizado inteiro $q$ através de dois parâmetros principais: uma constante de escala $S$ (\textit{scale}) e um ponto zero $Z$ (\textit{zero-point}). A relação é dada pela Equação \ref{eq:quant}:
+
+\begin{equation}
+q = \text{clamp}\left( \text{round}\left( \frac{r}{S} \right) + Z \right)
+\label{eq:quant}
+\end{equation}
+
+Onde:
+\begin{itemize}
+    \item $r$ é o valor real (peso ou ativação original);
+    \item $S$ é um fator de escala (float32) que determina o tamanho do passo entre valores discretos;
+    \item $Z$ é o ponto zero (inteiro), que permite que o valor real $0.0$ seja representado exatamente por um valor inteiro quantizado, garantindo eficiência em operações de \textit{padding} (preenchimento);
+    \item $\text{round}(\cdot)$ é a operação de arredondamento para o inteiro mais próximo;
+    \item $\text{clamp}(\cdot)$ limita o valor ao intervalo suportado (ex: $[0, 255]$ para uint8 ou $[-128, 127]$ para int8).
+\end{itemize}
+
+Para recuperar a aproximação do valor real durante a inferência (ou desquantização), utiliza-se a Equação \ref{eq:dequant}:
+
+\begin{equation}
+r \approx S \cdot (q - Z)
+\label{eq:dequant}
+\end{equation}
+
+\subsection{Tipos de Quantização}
+Existem diferentes estratégias para aplicar a quantização, sendo as duas principais:
+
+\begin{enumerate}
+    \item \textbf{Quantização Pós-Treinamento (PTQ - \textit{Post-Training Quantization}):} Aplica-se a quantização após o modelo ter sido completamente treinado em ponto flutuante. É o método mais rápido e acessível, pois não requer retreinamento. Geralmente, utiliza-se um pequeno conjunto de dados representativo para calibrar os valores de $S$ e $Z$, minimizando a perda de acurácia. Esta foi a abordagem selecionada para o estudo de caso deste trabalho (detalhada no Capítulo \ref{cap:desenvolvimento}).
+    
+    \item \textbf{Treinamento Ciente de Quantização (QAT - \textit{Quantization-Aware Training}):} Simula os efeitos da quantização (ruído e arredondamento) durante a fase de treinamento (forward pass), permitindo que a rede neural aprenda parâmetros mais robustos à perda de precisão. Embora resulte em maior acurácia, possui um custo computacional e complexidade de implementação mais elevados.
+\end{enumerate}
+
+\subsection{Impacto na Acurácia e Desempenho}
+Embora a quantização ofereça ganhos significativos de eficiência -- frequentemente reduzindo o uso de memória em 4x (de 32 bits para 8 bits) -- ela introduz um erro inerente, conhecido como ruído de quantização. A eficácia da técnica depende da robustez da arquitetura da rede neural em tolerar essa redução de precisão sem degradar drasticamente a acurácia da classificação final. No contexto deste trabalho, a escolha pela quantização INT8 busca o equilíbrio ideal entre a viabilidade de execução no Raspberry Pi e a manutenção da capacidade preditiva do modelo MobileNetV2.
 
 \section{Validação, Ajuste Fino e Métricas de Desempenho}
 \label{sec:validacao}
@@ -401,8 +439,6 @@ As Tabelas \ref{tab:desempenhoHardware} e \ref{tab:resultadosValidacao} mostram 
  \sourcecitation{Adaptado de \cite{EssanoahArthur2024}}
 \end{table}
 
-Por fim, a escolha definitiva do dispositivo embarcado e da plataforma de desenvolvimento será realizada no Trabalho de Conclusão II, considerando critérios como custo, facilidade de uso, compatibilidade com o modelo treinado e requisitos de desempenho.
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % ==========================
@@ -423,7 +459,7 @@ A escolha pela classificação de resíduos se justifica pela necessidade de aut
 
 \section{Descrição do estudo de caso}
 
-Em continuidade aos objetivos traçados neste trabalho, o presente estudo de caso aplica, na prática, o fluxo de desenvolvimento TinyML para resolver o problema de classificação de resíduos sólidos. O projeto busca consolidar os conhecimentos adquiridos ao longo do trabalho, conectando teoria e prática, e evidenciar, de forma aplicada, as vantagens do aprendizado de máquina embarcado. Além disso, será realizada uma comparação entre a solução TinyML desenvolvida e abordagens tradicionais de aprendizado de máquina, de modo a destacar os diferenciais e limitações de cada abordagem no contexto do problema proposto.
+Em continuidade aos objetivos traçados neste trabalho, o presente estudo de caso aplica, na prática, o fluxo de desenvolvimento TinyML para resolver o problema de classificação de resíduos sólidos. O projeto busca consolidar os conhecimentos adquiridos ao longo do trabalho, conectando teoria e prática, e evidenciar, de forma aplicada, as vantagens do aprendizado de máquina embarcado. Além disso, foi realizada uma comparação entre a solução TinyML desenvolvida e abordagens tradicionais de aprendizado de máquina, de modo a destacar os diferenciais e limitações de cada abordagem no contexto do problema proposto.
 
 O estudo de caso consiste no desenvolvimento de um modelo de aprendizado de máquina embarcado para categorização de lixo em 12 categorias diferentes:
 
@@ -442,9 +478,9 @@ O estudo de caso consiste no desenvolvimento de um modelo de aprendizado de máq
     \item Rejeitos.
 \end{itemize}
 
-Este estudo de caso foi definido por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo será treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados será realizada utilizando o repositório de dados públicos do Kaggle \cite{kaggle}, que disponibiliza um conjunto de dados com imagens de lixo categorizadas, facilitando o treinamento do modelo.
+Este estudo de caso foi definido por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo foi treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados foi realizada utilizando o repositório de dados públicos do Kaggle \cite{kaggle}, que disponibiliza um conjunto de dados com imagens de lixo categorizadas, facilitando o treinamento do modelo.
 
-Durante a execução deste estudo de caso, a escolha do conjunto de dados foi revisada. Inicialmente, havia sido planejada a utilização de um banco de dados público do Kaggle \cite{kaggle} para o treinamento do modelo de classificação de resíduos. Contudo, optou-se pela adoção do conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024), o qual está associado a um artigo publicado, possibilitando omparações diretas entre o modelo desenvolvido neste trabalho e o apresentado no estudo de referência. Os detalhes sobre o novo conjunto de dados são descritos na Seção~\ref{sec:coleta}.
+Durante a execução deste estudo de caso, a escolha do conjunto de dados foi revisada. Inicialmente, havia sido planejada a utilização de um banco de dados público do Kaggle \cite{kaggle} para o treinamento do modelo de classificação de resíduos. Contudo, optou-se pela adoção do conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024), o qual está associado a um artigo publicado, possibilitando comparações diretas entre o modelo desenvolvido neste trabalho e o apresentado no estudo de referência. Os detalhes sobre o novo conjunto de dados são descritos na Seção~\ref{sec:coleta}.
 
 \section{Etapas do estudo de caso}
 % Detalhamento das etapas ou blocos do desenvolvimento (ex: revisão final, coleta de dados complementar, análise, redação, apresentação, etc.)
@@ -458,28 +494,28 @@ O estudo de caso foi desenvolvido em etapas, baseada no fluxo de trabalho aprese
     Após a coleta, as imagens passam por uma etapa de limpeza e normalização, que inclui o redimensionamento para tamanhos uniformes e o aumento de dados (\textit{data augmentation}). Essas técnicas visam melhorar a qualidade do conjunto de dados, aumentar sua robustez e reduzir possíveis vieses durante o treinamento.
     
     \item \textbf{Desenvolvimento e treinamento do modelo:}  
-    Nesta etapa, será implementada uma Rede Neural Convolucional (RNC) utilizando TensorFlow. Essa arquitetura é ideal para classificação de imagens, permitindo que o modelo aprenda padrões visuais complexos necessários para identificar diferentes categorias de lixo.
+    Nesta etapa, foi implementada uma Rede Neural Convolucional (RNC) utilizando TensorFlow. Essa arquitetura é ideal para classificação de imagens, permitindo que o modelo aprenda padrões visuais complexos necessários para identificar diferentes categorias de lixo.
     
     \item \textbf{Escolha da plataforma de hardware:}  
-    O hardware ideal para execução do modelo será avaliado com base na complexidade do programa e nos requisitos de desempenho, consumo energético e custo. Essa etapa garante que o dispositivo escolhido seja compatível com as restrições de um sistema embarcado.
+    O hardware ideal para execução do modelo foi avaliado com base na complexidade do programa e nos requisitos de desempenho, consumo energético e custo. Essa etapa garante que o dispositivo escolhido seja compatível com as restrições de um sistema embarcado.
     
     \item \textbf{Quantização do modelo:}  
-    Técnicas de quantização serão aplicadas para reduzir o tamanho e os requisitos computacionais do modelo, permitindo sua execução eficiente em dispositivos embarcados. Essa etapa é fundamental para garantir a viabilidade da solução TinyML.
+    Técnicas de quantização foram aplicadas para reduzir o tamanho e os requisitos computacionais do modelo, permitindo sua execução eficiente em dispositivos embarcados. Essa etapa é fundamental para garantir a viabilidade da solução TinyML.
     
     \item \textbf{Validação e ajuste fino:}  
-    O modelo treinado será avaliado utilizando métricas como acurácia, precisão e \textit{F1-score}. Com base nos resultados obtidos, ajustes serão realizados para melhorar o desempenho do modelo, corrigindo possíveis falhas de generalização ou subaproveitamento.
+    O modelo treinado foi avaliado utilizando métricas como acurácia, precisão e \textit{F1-score}. Com base nos resultados obtidos, ajustes foram realizados para melhorar o desempenho do modelo, corrigindo possíveis falhas de generalização ou subaproveitamento.
     
     \item \textbf{Implantação:}  
-    Após a validação, o modelo quantizado será integrado em um microcontrolador compatível. Testes práticos serão realizados para avaliar o desempenho da solução em um ambiente real, verificando sua eficiência e tempo de resposta.
+    Após a validação, o modelo quantizado foi integrado em um microcontrolador compatível. Testes práticos foram realizados para avaliar o desempenho da solução em um ambiente real, verificando sua eficiência e tempo de resposta.
     
     \item \textbf{Avaliação dos resultados:}  
-    Nesta etapa, serão realizados comparativos entre as métricas de desempenho elencadas na Seção \ref{sec:validacao} da solução TinyML desenvolvida e aplicações de inteligência artificial tradicionais. O objetivo é destacar as vantagens em termos de eficiência, latência, custo e desempenho.
+    Nesta etapa, foram realizados comparativos entre as métricas de desempenho elencadas na Seção \ref{sec:validacao} da solução TinyML desenvolvida e aplicações de inteligência artificial tradicionais. O objetivo é destacar as vantagens em termos de eficiência, latência, custo e desempenho.
     
     \item \textbf{Escrita do Trabalho de Conclusão II:}  
-    A escrita do relatório será uma atividade contínua, desenvolvida em paralelo às demais etapas do cronograma. Isso assegura que todos os passos sejam documentados detalhadamente, facilitando a organização e o cumprimento dos prazos acadêmicos.
+    A escrita do relatório foi uma atividade contínua, desenvolvida em paralelo às demais etapas do cronograma. Isso assegura que todos os passos sejam documentados detalhadamente, facilitando a organização e o cumprimento dos prazos acadêmicos.
 \end{enumerate}
 
-Demais detalhes de cada etapa serão discutidos e decididos durante o desenvolvimento do trabalho, considerando as especificidades do modelo e do dispositivo embarcado escolhido.
+Demais detalhes de cada etapa foram discutidos e decididos durante o desenvolvimento do trabalho, considerando as especificidades do modelo e do dispositivo embarcado escolhido.
 
 % ==========================
 % CAPÍTULO 5 - DESENVOLVIMENTO
@@ -489,7 +525,7 @@ Demais detalhes de cada etapa serão discutidos e decididos durante o desenvolvi
 
 Este capítulo apresenta a execução prática do fluxo de trabalho proposto no TCC-I, abrangendo todas as etapas do desenvolvimento da solução TinyML para classificação de resíduos sólidos. São detalhados o processo de seleção e preparação do conjunto de dados, a implementação e o treinamento do modelo em ambiente de nuvem, as técnicas de quantização aplicadas e a implantação da rede neural em um dispositivo embarcado.
 
-Ao longo deste capútlo e dos próximos, serçao citados trechos de código que podem ser consultados pelo leitor em: \href{https://github.com/maxwellrs-dev/ai4rpi}{github.com/maxwellrs-dev/ai4rpi}.
+Ao longo deste capítulo e dos próximos, foram citados trechos de código que podem ser consultados pelo leitor em: \href{https://github.com/maxwellrs-dev/ai4rpi}{github.com/maxwellrs-dev/ai4rpi}.
 
 \section{Coleta e seleção do banco de dados}
 \label{sec:coleta}
@@ -500,26 +536,28 @@ Inicialmente, havia sido planejada a utilização de um conjunto de dados públi
 O conjunto \textit{RealWaste} é composto por imagens reais de resíduos coletados em aterros sanitários, classificadas conforme o tipo de material predominante. Os rótulos atribuídos às imagens representam a categoria principal. A Tabela~\ref{tab:realwaste_classes} apresenta as categorias e a quantidade de amostras disponíveis em cada uma delas.
 
 \begin{table}[H]
-\centering
-\caption{Categorias e quantidade de imagens no conjunto de dados RealWaste.}
-\label{tab:realwaste_classes}
-\begin{tabular}{l c}
-\hline
-\textbf{Categoria} & \textbf{Quantidade de imagens} \\
-\hline
-Papelão & 461 \\
-Resíduos orgânicos alimentares & 411 \\
-Vidro & 420 \\
-Metal & 790 \\
-Lixo diverso & 495 \\
-Papel & 500 \\
-Plástico & 921 \\
-Têxteis & 318 \\
-Vegetação & 436 \\
-\hline
-\textbf{Total} & \textbf{4.752} \\
-\hline
-\end{tabular}
+    \begin{center}
+        \caption{Categorias e quantidade de imagens no conjunto de dados RealWaste.}
+        \label{tab:realwaste_classes}
+        \begin{tabular}{l c}
+            \hline
+            \textbf{Categoria} & \textbf{Quantidade de imagens} \\
+            \hline
+            Papelão & 461 \\
+            Resíduos orgânicos alimentares & 411 \\
+            Vidro & 420 \\
+            Metal & 790 \\
+            Lixo diverso & 495 \\
+            Papel & 500 \\
+            Plástico & 921 \\
+            Têxteis & 318 \\
+            Vegetação & 436 \\
+            \hline
+            \textbf{Total} & \textbf{4.752} \\
+            \hline
+        \end{tabular}
+    \end{center}
+    {\sourcecitation{Adaptado de \cite{realwaste2023}}}
 \end{table}
 
 O total de 4.752 imagens fornece um conjunto de dados de tamanho moderado, adequado para o treinamento de redes neurais convolucionais compactas voltadas a aplicações embarcadas. O dataset apresenta boa diversidade de materiais, o que contribui para a generalização do modelo em cenários reais.
@@ -650,9 +688,6 @@ with open(tflite_model_path, "wb") as f:
 \end{lstlisting}
 \end{enumerate}
 
-\subsection{Conjunto representativo}
-O gerador percorre lotes reais do fluxo de dados (pré-processados para \(224\times 224\)) e fornece tensores \texttt{float32} ao conversor. Durante a calibração, o TensorFlow Lite estima \textbf{escala} e \textbf{ponto-zero} de cada tensor (pesos e ativações), permitindo mapear eficientemente valores originais para o intervalo inteiro \([0,255]\) sem perda severa de informação estatística.
-
 \subsection{Validação do modelo quantizado}
 O arquivo quantizado foi carregado via \texttt{tf.lite.Interpreter}. Para a avaliação, os tensores foram alocados e os metadados de entrada/saída inspecionados; as imagens foram convertidas condicionalmente para \texttt{uint8} conforme o tipo requerido pelo tensor de entrada; em seguida, realizou-se a inferência com \texttt{invoke()} e coletaram-se as distribuições de probabilidades por classe. A partir dessas pontuações, foram calculadas a acurácia, a precisão ponderada, a sensibilidade ponderada, o F1 ponderado, além da matriz de confusão normalizada e das curvas COR em esquema multiclasse.
 
@@ -660,7 +695,11 @@ Em síntese, a quantização INT8 permitiu obter um modelo compacto e eficiente 
 
 \section{Escolha e preparação do hardware}
 \label{sec:hardware}
-Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. Optou-se por utilizar uma \textbf{Raspberry Pi 3 Model B+} principalmente pela disponibilidade física imediata no início do projeto, eliminando custos e atrasos de aquisição. Somam-se a isso: o equilíbrio entre recursos computacionais (CPU quad-core 64-bit e 1~GB de RAM) e simplicidade de uso; a ampla comunidade e maturidade do ecossistema (documentação consolidada, suporte direto a Python, TensorFlow Lite e bibliotecas de captura de vídeo e GPIO); o suporte nativo a câmera para aquisição direta das imagens de teste; e a compatibilidade com o fluxo de quantização INT8 (uso do \texttt{tflite\_runtime}) sem necessidade de aceleração especializada. Esses fatores tornam a placa adequada como alvo intermediário: suficientemente capaz para validar latência e robustez do modelo convolucional quantizado, mas ainda representativa de um ambiente de recursos restritos frente a soluções de maior porte.
+Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. A escolha pela \textbf{Raspberry Pi 3 Model B+} foi definida com base em um conjunto de critérios técnicos que a qualificam como uma plataforma ideal para a validação de soluções TinyML em ambiente de borda, oferecendo o \textbf{equilíbrio ideal entre capacidade e restrição}.
+
+Os principais fatores considerados foram: o equilíbrio entre recursos computacionais (CPU quad-core 64-bit e 1~GB de RAM) e simplicidade de uso; a compatibilidade nativa com o fluxo de quantização INT8 (uso do \texttt{tflite\_runtime}) sem a necessidade de aceleração especializada; o suporte direto a câmera para aquisição das imagens de teste; e a ampla comunidade e maturidade do ecossistema (documentação consolidada, suporte direto a Python e TensorFlow Lite).
+
+Esses fatores tornam a placa adequada como alvo intermediário: suficientemente capaz para validar latência e robustez do modelo convolucional quantizado, mas ainda representativa de um ambiente de recursos restritos frente a soluções de maior porte. Adicionalmente, a disponibilidade física imediata da plataforma no início do projeto permitiu eliminar custos e atrasos na aquisição do hardware.
 
 A Tabela \ref{tab:rpi3_specs} resume as principais especificações técnicas empregadas no protótipo.
 
@@ -768,45 +807,47 @@ As métricas foram computadas via \texttt{scikit-learn} diretamente sobre as pre
 Os resultados consolidados para o conjunto de validação são os exibidos na Tabela~\ref{tab:metricas_globais}.
 
 \begin{table}[H]
- \centering
- \caption{Métricas globais (validação) — modelo TFLite INT8.}
- \label{tab:metricas_globais}
- \begin{tabular}{l c}
-  \hline
-    	\textbf{Métrica} & \textbf{Valor} \\
-  \hline
-  Acurácia & 0,68 \\
-  Precisão (ponderada) & 0,69 \\
-  Sensibilidade (ponderada) & 0,68 \\
-  F1-score (ponderado) & 0,68 \\
-  \hline
- \end{tabular}
-\sourcecitation{Do autor}
+    \begin{center}
+        \caption{Métricas globais (validação) — modelo TFLite INT8.}
+        \label{tab:metricas_globais}
+        \begin{tabular}{l c}
+            \hline
+            \textbf{Métrica} & \textbf{Valor} \\
+            \hline
+            Acurácia & 0,68 \\
+            Precisão (ponderada) & 0,69 \\
+            Sensibilidade (ponderada) & 0,68 \\
+            F1-score (ponderado) & 0,68 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    {\sourcecitation{Do autor}}
 \end{table}
 
 \subsection{Relatório de classificação por classe}
 O relatório por classe (precisão, sensibilidade e F1 por rótulo) é apresentado na Tabela~\ref{tab:class_report}. Os valores refletem o comportamento do classificador por categoria específica, auxiliando na identificação de classes com maior taxa de confusão.
 
 \begin{table}[H]
- \centering
- \caption{Relatório de classificação por classe (validação).}
- \label{tab:class_report}
- \begin{tabular}{l c c c}
-  \hline
-  	\textbf{Classe} & \textbf{Precisão} & \textbf{Sensibilidade} & \textbf{F1-score} \\
-  \hline
-  Metal & 0,67 & 0,58 & 0,62 \\
-  Orgânicos & 0,64 & 0,84 & 0,73 \\
-  Papel & 0,70 & 0,67 & 0,69 \\
-  Papelão & 0,70 & 0,72 & 0,71 \\
-  Plástico & 0,69 & 0,50 & 0,58 \\
-  Rejeito & 0,50 & 0,45 & 0,47 \\
-  Têxtil & 0,57 & 0,72 & 0,64 \\
-  Vegetação & 0,81 & 0,93 & 0,87 \\
-  Vidro & 0,88 & 0,74 & 0,80 \\
-  \hline
- \end{tabular}
- {\sourcecitation{Do autor}}
+    \begin{center}
+        \caption{Relatório de classificação por classe (validação).}
+        \label{tab:class_report}
+        \begin{tabular}{l c c c}
+            \hline
+            \textbf{Classe} & \textbf{Precisão} & \textbf{Sensibilidade} & \textbf{F1-score} \\
+            \hline
+            Metal & 0,67 & 0,58 & 0,62 \\
+            Orgânicos & 0,64 & 0,84 & 0,73 \\
+            Papel & 0,70 & 0,67 & 0,69 \\
+            Papelão & 0,70 & 0,72 & 0,71 \\
+            Plástico & 0,69 & 0,50 & 0,58 \\
+            Rejeito & 0,50 & 0,45 & 0,47 \\
+            Têxtil & 0,57 & 0,72 & 0,64 \\
+            Vegetação & 0,81 & 0,93 & 0,87 \\
+            Vidro & 0,88 & 0,74 & 0,80 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    {\sourcecitation{Do autor}}
 \end{table}
 
 \subsection{Matriz de confusão}
@@ -869,6 +910,30 @@ Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uni
 \end{figure}
 
 A base da estrutura mede 60 cm \(\times\) 60 cm, proporcionando área suficiente para a colocação dos resíduos a serem classificados. A altura da haste que suporta a câmera foi regulado experimentalmente, fixando o foco da câmera e ajustando a altura da câmera de forma a enquadar adequadamente a área interna do quadrado da base. Com este teste feito, a altura ideal encontrada para este caso foi de 90 cm. Finalmente, um tubo de 30 cm foi utilizado de forma a centralizar a câmera sobre a base.
+
+A Tabela \ref{tab:lista_materiais} detalha os materiais utilizados na construção da estrutura.
+
+\begin{table}[H]
+    \begin{center}  % O ambiente center isola a tabela
+        \caption{Lista de materiais para a estrutura de suporte (PVC 1/2'').}
+        \label{tab:lista_materiais}
+        \begin{tabular}{l c}
+            \hline
+            \textbf{Item} & \textbf{Quantidade} \\
+            \hline
+            Segmentos de 60~cm (base) & 4 \\
+            Segmento de 90~cm & 1 \\
+            Segmento de 30~cm & 1 \\
+            Joelhos (90$^{\circ}$) & 5 \\
+            Conexão em T & 1 \\
+            Tampão (\textit{cap}) & 1 \\
+            \hline
+        \end{tabular}
+    \end{center}
+    {\sourcecitation{Do autor}}
+\end{table}
+
+Nota: Para a montagem da base, o segmento de 60 cm deve ser seccionado para a inserção da conexão em T. Recomenda-se cortar o tubo inicialmente ao meio e acoplar as duas partes à conexão. Em seguida, deve-se realizar o ajuste final nas extremidades para que o conjunto (tubos + conexão) atinja o comprimento total exato de 60 cm.
 
 \subsection{Resultados sobre o tempo de inferência}
 As medições de latência e as métricas apresentadas nesta subseção foram obtidas a partir do script de teste \texttt{metadados/test\_tinyml\_rpi.py}. O script carrega o modelo com \texttt{tflite\_runtime.Interpreter}, captura quadros da câmera via OpenCV, redimensiona cada frame para o \texttt{input\_shape} esperado pelo modelo e converte os dados para \texttt{uint8} quando se trata de modelo quantizado. A latência por inferência é medida com \texttt{time.perf\_counter()} imediatamente antes e após \texttt{interpreter.invoke()} e convertida para milissegundos; além disso é computada uma média exponencial (EMA) da latência usando \(\alpha=0{,}12\) para suavizar variações pontuais. O script registra um log simples a cada 30 frames e sobrepõe no próprio frame a predição, a confiança (saída dividida por 255 para modelos \texttt{uint8}) e o tempo de inferência atual.
@@ -939,18 +1004,22 @@ Esses valores estão alinhados com trabalhos similares na literatura e confirmam
 
 \subsection{Comparação com o estudo de referência}
 
-A utilização do conjunto de dados RealWaste neste trabalho permitiu uma comparação direta com os resultados apresentados no estudo que introduziu o dataset \cite{single2023realwaste}. No artigo, cinco arquiteturas de redes neurais convolucionais — VGG-16, InceptionResNetV2, DenseNet121, InceptionV3 e MobileNetV2 — foram avaliadas sobre o mesmo conjunto de imagens. O melhor desempenho foi obtido pela arquitetura InceptionV3, com acurácia de 89,19\%, precisão de 91,34\%, sensibilidade de 87,73\% e F1-score de 90,25\%.
+\subsection{Comparação com o estudo de referência}
 
-No presente trabalho, utilizando uma MobileNetV2 quantizada em INT8, foi alcançada uma acurácia e F1-score globais próximos de 0,68 no conjunto de validação, com tempos médios de inferência da ordem de 200~ms no dispositivo embarcado. Embora inferiores aos valores relatados no estudo original, essa diferença é esperada e pode ser justificada por aspectos metodológicos e restrições do ambiente embarcado.
+O presente trabalho utilizou o mesmo conjunto de dados \textit{RealWaste} empregado no estudo de referência \cite{single2023realwaste}, o que permite estabelecer uma linha de base comum para análise. No entanto, é fundamental destacar que a comparação direta entre os resultados de acurácia absoluta deve ser feita com ressalvas, uma vez que os objetivos e as restrições de cada abordagem são fundamentalmente distintos.
 
-Em primeiro lugar, o estudo de referência empregou imagens em resolução de 524\,$\times$\,524~px, além de um processo de aumento de dados mais agressivo, que triplicou o tamanho do conjunto de treinamento utilizando transformações geométricas complexas (como \emph{elastic distortion} e \emph{shear}). Neste trabalho, optou-se por uma resolução menor (224\,$\times$\,224~px) e um conjunto mais restrito de transformações, de modo a equilibrar qualidade do treinamento e limitações de memória e processamento do sistema embarcado. Essa diferença reduz o espaço de atributos aprendido pelo modelo e, consequentemente, sua capacidade discriminativa.
+O estudo de referência teve como propósito validar a qualidade do conjunto de dados e estabelecer marcos de desempenho (\textit{benchmarks}) utilizando o estado da arte em Redes Neurais Convolucionais. Para isso, foram empregadas arquiteturas profundas e computacionalmente intensivas (como InceptionV3 e DenseNet121), imagens em alta resolução (524$\times$524 px) e técnicas de aumento de dados (\textit{data augmentation}) robustas e agressivas. Nesse cenário ideal, livre de restrições de hardware, o estudo reportou acurácias superiores a 89\%.
 
-Além disso, os modelos do estudo original incluem arquiteturas substancialmente mais complexas, com profundidade e quantidade de parâmetros superiores à MobileNetV2 utilizada aqui, especialmente após a quantização para INT8. Redes como InceptionV3 e DenseNet121 apresentam maior capacidade de separação entre classes visualmente semelhantes — como vidro, metal e plástico — que também foram justamente as classes onde mais se observou confusão neste trabalho.
+Em contrapartida, o objetivo deste trabalho foi validar a viabilidade de uma aplicação \textit{TinyML} em um dispositivo de borda (Raspberry Pi 3). Para atender aos requisitos de latência em tempo real e limitações de memória (RAM e Flash) descritos na Seção \ref{sec:avaliacao-eficiencia}, foram necessárias escolhas de projeto que penalizam intencionalmente a capacidade preditiva em favor da eficiência:
 
-Por outro lado, apesar do desempenho mais modesto em acurácia, a solução desenvolvida aqui demonstra a viabilidade prática da classificação de resíduos sólidos diretamente em hardware de baixo custo. Enquanto o estudo de referência avaliou o desempenho apenas em ambiente computacional tradicional, sem restrições de hardware, este trabalho valida que um modelo compactado pode operar em tempo quase real, com baixo consumo de CPU e memória, mantendo estabilidade durante toda a execução.
+\begin{itemize}
+    \item \textbf{Arquitetura:} Adoção da MobileNetV2, uma rede significativamente mais leve e com menos parâmetros que as utilizadas na referência;
+    \item \textbf{Resolução:} Redução da entrada para 224$\times$224 px, diminuindo drasticamente a quantidade de informação visual processada;
+    \item \textbf{Quantização:} Conversão dos pesos para inteiros de 8 bits (INT8), o que introduz ruído de quantização e limita a precisão numérica;
+    \item \textbf{Pré-processamento:} Uso de técnicas de aumento de dados mais conservadoras, compatíveis com um fluxo de treinamento rápido e leve.
+\end{itemize}
 
-Em síntese, os resultados obtidos não indicam inconsistência metodológica, mas refletem os compromissos exigidos pelo cenário embarcado. O estudo de referência demonstra o limite superior do desempenho possível com arquiteturas robustas e sem restrições computacionais, enquanto este trabalho evidencia a aplicabilidade prática do aprendizado de máquina embarcado em dispositivos de recursos limitados. Assim, ambas as abordagens se complementam: enquanto a primeira investiga desempenho máximo, a segunda valida a operação real em contexto TinyML.
-
+Dessa forma, a acurácia de aproximadamente 68\% obtida no conjunto de validação não deve ser interpretada apenas como um déficit de desempenho, mas sim como a demonstração do compromisso entre precisão e eficiência. O resultado confirma que, mesmo com drásticas reduções de complexidade para adequação ao hardware embarcado, o sistema mantém capacidade de generalização funcional para a tarefa proposta.
 
 \section{Limitações e sugestões de melhoria}
 \label{sec:limitacoes}
@@ -979,16 +1048,13 @@ Na sequência, foi elaborado um fluxo de trabalho ponta-a-ponta para desenvolvim
 
 Por fim, o quarto objetivo específico — o desenvolvimento de um modelo TinyML para classificação de resíduos sólidos — foi atingido de forma completa. O modelo implementado, baseado em uma MobileNetV2 quantizada em INT8, apresentou desempenho satisfatório dentro das restrições de hardware, com latência estável em torno de 200 ms e consumo reduzido de recursos computacionais. Além disso, foi possível compará-lo diretamente com o estudo de referência do conjunto de dados RealWaste, reforçando a coerência dos resultados e evidenciando os compromissos associados a aplicações embarcadas.
 
-Os experimentos realizados demonstram que o uso de TinyML é uma alternativa viável para sistemas que exigem processamento local, baixa latência e independência de conectividade. Embora o desempenho obtido seja inferior ao de modelos executados em ambientes tradicionais de maior capacidade computacional, os resultados mostram que soluções compactas e quantizadas podem operar de forma robusta e eficiente em dispositivos de baixo custo.
+Os experimentos realizados demonstram que o uso de TinyML pode ser uma alternativa viável para sistemas que exigem processamento local, baixa latência e independência de conectividade, desde que os requisitos de latência da aplicação alvo sejam atendidos. Embora o desempenho obtido seja inferior ao de modelos executados em ambientes tradicionais de maior capacidade computacional, os resultados mostram que, para o contexto de recursos limitados da plataforma Raspberry Pi 3, soluções compactas e quantizadas podem operar de forma robusta e eficiente em dispositivos de baixo custo.
 
 Como perspectivas de continuidade, sugere-se o aprimoramento do conjunto de dados, a adoção de câmeras de maior qualidade, a exploração de arquiteturas mais otimizadas para quantização e o ajuste sistemático de hiperparâmetros. Essas estratégias podem elevar a precisão do modelo e ampliar sua aplicabilidade em cenários reais.
 
-Em síntese, o trabalho confirma que técnicas de TinyML podem substituir ou complementar arquiteturas tradicionais de IoT em aplicações práticas, consolidando o potencial da computação de borda como elemento fundamental na evolução de sistemas inteligentes embarcados.
+Em síntese, o trabalho confirma que técnicas de TinyML podem substituir ou complementar arquiteturas tradicionais de IoT em aplicações práticas, especialmente em cenários onde a velocidade de inferência obtida é suficiente para o fluxo de trabalho, consolidando o potencial da computação de borda como elemento fundamental na evolução de sistemas inteligentes embarcados.
 
-Assim, além de comprovar a viabilidade técnica, este estudo evidencia que
-aplicações TinyML representam um caminho concreto para a próxima geração de
-sistemas inteligentes embarcados, reforçando o papel de soluções compactas e
-eficientes na arquitetura tecnológica contemporânea.
+Assim, além de comprovar a viabilidade técnica para este estudo de caso, este estudo evidencia que aplicações TinyML representam um caminho concreto para a próxima geração de sistemas inteligentes embarcados que priorizam a eficiência energética e a autonomia de processamento, reforçando o papel de soluções compactas e eficientes na arquitetura tecnológica contemporânea.
 
 \printbibliography
 \end{document}

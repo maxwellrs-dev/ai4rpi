@@ -1,49 +1,7 @@
-
------------------
-Rafael Laranja
------------------
-
-* Tempo verbal (já fizeste o trabalho..)
-
-* Melhorar o resumo (falta colocar sobre os resultados obtidos)
-
-* Parte experimental:
-- Faltam dados, especificações, como: Os itens foram jogados (sob a câmera), fora colocados, os tamanhos dos objetos, distância, ... como foi decidida a distância da câmera...
-- Foco da câmera, iluminação (que é uma parte importante)
-O objetivo de melhorar esta parte é, também, permitir a replicação do experimento.
-
-* Cap 4, Estudo de Caso:
-- Por qual motivo foi escolhida a seleção de resíduos?
-
-* Cap 5, Figuras com baixa resolução... mesmo no PDF
-
-* Resultados:
-- A comparação usa os mesmos dados?
-Melhor não comparar diretamente. Por exemplo, em um a câmera é um tipo e no outro outro, ou pelo menos as imagens adquiridas são diferentes...
-Comparar mas resguardadas as diferenças (tem que pensar um pouco como colocar isso)...
-
-
 ------------------
 Aurélio
 ------------------
 
-* Pag 22: tempo verbal 
-
 * Tem também alguns pontos que tinha marcado em um dos PDFs que trocamos, mas que permaneceu na versão final (tem de conferir)
 
-* Dar mais ênfase na Quatização, que é o aspecto que é o aspecto chave do trabalho...
-
-* Seção 5.4.2.. tirar talvez?
-
-* Escolha do HW: não ser tão sincero... ir para o lado: foi escolhido por ser uma solução embarcada com certa capacidade computacional... linux embarcado..
-
-* Salientou sobre detalhar melhor os experimentos (mesma linha do Laranja)
-
-* Tentar verificar e comentar sobre os efeitos da quantização... se fosse possível realizar o mesmo experimento (pelo menos algum ) sem quantização e então comparar os tempos, latências, etc...
-
-* O trabalho não pode dizer que mostrou a viabilidade do TinyML, mas que isto depende de cada caso...
-Inclusive o seu, se for utilizado em uma esteira observando o lixo, não conseguiria decidir na velocidade necessária. Mas talvez em outro cenário de aplicação sim...
-
-
-
-
+* Tentar verificar e comentar sobre os efeitos da quantização... se fosse possível realizar o mesmo experimento (pelo menos algum) sem quantização e então comparar os tempos, latências, etc...

@@ -463,6 +463,69 @@
       \verb https://www.raspberrypi.com/products/raspberry-pi-3-model-b-plus/
       \endverb
     \endentry
+    \entry{Gholami2021}{article}{}{}
+      \name{author}{6}{}{%
+        {{un=0,uniquepart=base,hash=ff99b6be6f7ad0c9f311e5ddf91c01f7}{%
+           family={Gholami},
+           familyi={G\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=faeabf11d1a7a5d933680f8e5a503098}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Sehoon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acc5054a5bc78dfa6ee2c7da37062cd3}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Zhen},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e53d4d0172865556a0b0a5989a7f5c6f}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Zhewei},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6428c5852da0dfbdd50e39418c9571bf}{%
+           family={Mahoney},
+           familyi={M\bibinitperiod},
+           given={Michael\bibnamedelima W.},
+           giveni={M\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=994177386e5a63171a7be588e97df7e5}{%
+           family={Keutzer},
+           familyi={K\bibinitperiod},
+           given={Kurt},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{413a2af5b9f6f77f60bcb0182a76654a}
+      \strng{fullhash}{cba6f990167acbdbacbad01112645912}
+      \strng{fullhashraw}{cba6f990167acbdbacbad01112645912}
+      \strng{bibnamehash}{413a2af5b9f6f77f60bcb0182a76654a}
+      \strng{authorbibnamehash}{413a2af5b9f6f77f60bcb0182a76654a}
+      \strng{authornamehash}{413a2af5b9f6f77f60bcb0182a76654a}
+      \strng{authorfullhash}{cba6f990167acbdbacbad01112645912}
+      \strng{authorfullhashraw}{cba6f990167acbdbacbad01112645912}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2103.13630}
+      \field{title}{A Survey of Quantization Methods for Efficient Neural Network Inference}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2103.13630
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2103.13630
+      \endverb
+    \endentry
     \entry{tinyModels}{inproceedings}{}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=9dfd1673e182a14ee1690b92e55941f7}{%
@@ -501,6 +564,80 @@
       \verb 10.1109/ICAIIC54071.2022.9722636
       \endverb
       \keyw{Privacy;Systematics;Machine learning algorithms;Software algorithms;Machine learning;Hardware;Software;TinyML;Systematic review;Data synthesis;MCUs;TensorFlow Lite;Neural networks}
+    \endentry
+    \entry{Jacob2018}{inproceedings}{}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=73f11c7544252601f7e8c5f614c660f2}{%
+           family={Jacob},
+           familyi={J\bibinitperiod},
+           given={Benoit},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa58f2ae95227046f2fbba114f0fb625}{%
+           family={Kligys},
+           familyi={K\bibinitperiod},
+           given={Skirmantas},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31960f03389184b7f052f5b197cc9fdf}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Bo},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d767e8e4d733bcf728bcdf2c193462f7}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={Menglong},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=436cfd289182e9d6b0a46d79b8e91b6e}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=315c4166fc1f7cb66324a7f0d82827cd}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c707ec5b5997dc408a14a34a8380166c}{%
+           family={Adam},
+           familyi={A\bibinitperiod},
+           given={Hartwig},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6cbb997a11c6922af719c32863261918}{%
+           family={Kalenichenko},
+           familyi={K\bibinitperiod},
+           given={Dmitry},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{be1e8607db7344f1c8e395537c88d55a}
+      \strng{fullhash}{3ad38e526037fc692f33aef3160b0293}
+      \strng{fullhashraw}{3ad38e526037fc692f33aef3160b0293}
+      \strng{bibnamehash}{be1e8607db7344f1c8e395537c88d55a}
+      \strng{authorbibnamehash}{be1e8607db7344f1c8e395537c88d55a}
+      \strng{authornamehash}{be1e8607db7344f1c8e395537c88d55a}
+      \strng{authorfullhash}{3ad38e526037fc692f33aef3160b0293}
+      \strng{authorfullhashraw}{3ad38e526037fc692f33aef3160b0293}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}
+      \field{title}{Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference}
+      \field{year}{2018}
+      \field{pages}{2704\bibrangedash 2713}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/CVPR.2018.00286
+      \endverb
     \endentry
     \entry{kaggle}{misc}{}{}
       \name{author}{1}{}{%
@@ -781,44 +918,6 @@
       \endverb
       \verb{url}
       \verb https://www.mdpi.com/2076-3417/14/24/11612
-      \endverb
-    \endentry
-    \entry{quantization}{thesis}{}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=e423309a2c8e5d641ec74fe3918bd2e4}{%
-           family={Moriello},
-           familyi={M\bibinitperiod},
-           given={Claudio},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{institution}{1}{%
-        {Politecnico di Milano}%
-      }
-      \strng{namehash}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \strng{fullhash}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \strng{fullhashraw}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \strng{bibnamehash}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \strng{authorbibnamehash}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \strng{authornamehash}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \strng{authorfullhash}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \strng{authorfullhashraw}{e423309a2c8e5d641ec74fe3918bd2e4}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{bookpagination}{sheet}
-      \field{month}{7}
-      \field{title}{Optimizing Neural Networks for TinyML: A Study on Quantization Schemes}
-      \field{type}{Master's Thesis}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://hdl.handle.net/10589/222539
-      \endverb
-      \verb{url}
-      \verb https://hdl.handle.net/10589/222539
       \endverb
     \endentry
     \entry{Oladokun2025}{article}{}{}
