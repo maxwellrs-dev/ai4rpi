@@ -1,20 +1,20 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'build\tcc1_maxwell.blg'
-[126] biber-MSWIN64:342> INFO - === 
-[179] Biber.pm:421> INFO - Reading 'build\tcc1_maxwell.bcf'
-[293] Biber.pm:1002> INFO - Found 36 citekeys in bib section 0
-[304] Biber.pm:4487> INFO - Processing section 0
-[314] Biber.pm:4678> INFO - Looking for bibtex file 'tccMaxwell.bib' for section 0
-[430] bibtex.pm:1713> INFO - LaTeX decoding ...
-[495] bibtex.pm:1519> INFO - Found BibTeX data source 'tccMaxwell.bib'
-[693] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[693] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[693] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
-[694] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
-[725] bbl.pm:676> INFO - Writing 'build\tcc1_maxwell.bbl' with encoding 'UTF-8'
-[751] bbl.pm:779> INFO - Output to build\tcc1_maxwell.bbl
-[752] Biber.pm:132> WARN - legacy month field 'Jul' in entry 'Whang2023' is not an integer - this will probably not sort properly.
-[752] Biber.pm:132> WARN - legacy month field 'Sep' in entry 'Ahmed2022' is not an integer - this will probably not sort properly.
-[752] Biber.pm:132> WARN - legacy month field 'Apr' in entry 'Wang2022' is not an integer - this will probably not sort properly.
-[752] Biber.pm:132> WARN - legacy month field 'Mar' in entry 'Kallimani2024' is not an integer - this will probably not sort properly.
-[752] Biber.pm:134> INFO - WARNINGS: 4
+[203] biber-MSWIN64:342> INFO - === 
+[281] Biber.pm:421> INFO - Reading 'build\tcc1_maxwell.bcf'
+[491] Biber.pm:1002> INFO - Found 36 citekeys in bib section 0
+[523] Biber.pm:4487> INFO - Processing section 0
+[547] Biber.pm:4678> INFO - Looking for bibtex file 'tccMaxwell.bib' for section 0
+[678] bibtex.pm:1713> INFO - LaTeX decoding ...
+[790] bibtex.pm:1519> INFO - Found BibTeX data source 'tccMaxwell.bib'
+[1245] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1246] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1246] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'pt-BR'
+[1246] Biber.pm:4313> INFO - No sort tailoring available for locale 'pt-BR'
+[1326] bbl.pm:676> INFO - Writing 'build\tcc1_maxwell.bbl' with encoding 'UTF-8'
+[1375] bbl.pm:779> INFO - Output to build\tcc1_maxwell.bbl
+[1376] Biber.pm:132> WARN - legacy month field 'Jul' in entry 'Whang2023' is not an integer - this will probably not sort properly.
+[1376] Biber.pm:132> WARN - legacy month field 'Sep' in entry 'Ahmed2022' is not an integer - this will probably not sort properly.
+[1377] Biber.pm:132> WARN - legacy month field 'Apr' in entry 'Wang2022' is not an integer - this will probably not sort properly.
+[1377] Biber.pm:132> WARN - legacy month field 'Mar' in entry 'Kallimani2024' is not an integer - this will probably not sort properly.
+[1378] Biber.pm:134> INFO - WARNINGS: 4
