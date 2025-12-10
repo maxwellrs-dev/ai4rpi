@@ -9,6 +9,7 @@
 \usepackage[T1]{fontenc}       % <-- adicionar para acentuação correta
 \usepackage{graphicx} % Adicione no preâmbulo, se ainda não estiver lá
 \addbibresource{tccMaxwell.bib} % Inclua seu arquivo de referências aqui
+
 \usepackage{listings}
  \lstset{
    basicstyle=\ttfamily\small,
@@ -19,6 +20,7 @@
 
 % Links clicáveis no PDF
 \usepackage[hidelinks]{hyperref}
+
 \begin{document}
 
 %\MakeCoverPages{tccI}
@@ -161,7 +163,7 @@ Nesses trabalhos citados, observa-se um fluxo de desenvolvimento recorrente para
     \item \textbf{Implementação:} Integração do modelo quantizado no dispositivo embarcado, com testes em ambiente real e adaptação ao hardware utilizado.
 \end{enumerate}
 
-A escolha do modelo e a quantização do modelo são peças chaves na elaboração do projeto. Modelos de redes neurais como Redes Neurais Convolucionais (RNC) são frequentemente utilizados em aplicações de visão computacional, por exemplo. A quantização é particularmente importante em aplicações TinyML, pois trata-se de uma técnica que reduz a precisão dos pesos do modelo, permitindo que ele ocupe menos espaço e consuma menos recursos computacionais, sem comprometer significativamente o desempenho.
+A quantização é particularmente importante em aplicações TinyML, pois trata-se de uma técnica que reduz a precisão dos pesos do modelo, permitindo que ele ocupe menos espaço e consuma menos recursos computacionais, sem comprometer significativamente o desempenho \cite{Jacob2018, Gholami2021}.
 
 \section{Considerações Finais da Revisão}
 % Neste item, você faz a síntese dos pontos-chave da revisão e justifica como seu trabalho se insere nesse contexto.
@@ -243,7 +245,7 @@ Há várias funções de custo que podem ser escolhidas para o treinamento do mo
  {\sourcecitation{Adaptado de \cite{Wang2022}}}
 \end{table}
 
-Na definição do treinamento da rede, existem alguns ajustes chamados de hiperparâmetros. Os hiperparâmetros incluem número de épocas, tamanho do lote e taxa de aprendizado. Cada época é definida como uma passagem completa por todos os dados de treinamento. O tamanho do lote é o número de amostras que o modelo processará antes de atualizar os pesos. A taxa de aprendizado é o quão rápido os pesos do modelo são atualizados.
+Na definição do treinamento da rede, existem alguns ajustes chamados de hiperparâmetros. Os hiperparâmetros incluem número de épocas, tamanho do lote e taxa de aprendizado. Cada época é definida como uma passagem completa por todos os dados de treinamento. O tamanho do lote é o número de amostras que o modelo processará antes de atualizar os pesos. A taxa de aprendizado é o quão rápido os pesos do modelo são atualizados \cite{comparaAlg}.
 
 Na prática, o treinamento de modelos de aprendizado de máquina é desenvolvido utilizando ferramentas próprias para este fim. Com base em \cite{Kallimani2024}, podemos citar LiteRT, desenvolvido pela Google para dispositivos Android, iOS, Linux e microcontroladores, assim como $\mu$Tensor desenvolvido pela ARM e Edge Impulse desenvolvido por Zach Shelby e Jan Jongboom.
 
@@ -475,7 +477,7 @@ O estudo de caso consiste no desenvolvimento de um modelo de aprendizado de máq
     \item Rejeitos.
 \end{itemize}
 
-Este estudo de caso foi definido por tratar-se de um tema altamente relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo foi treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados foi baseada no conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024). A escolha por este conjunto justifica-se por sua associação a um estudo de referência publicado, o que possibilita a realização de comparações diretas de desempenho entre a abordagem TinyML proposta e classificadores de estado da arte — detalhadas posteriormente na Seção~\ref{sec:coleta}.
+Este estudo de caso foi definido por tratar-se de um tema relevante para o meio ambiente e pela ampla disponibilidade de dados em repositórios públicos, o que facilita a condução do fluxo de trabalho. O modelo foi treinado utilizando a plataforma TensorFlow, visto que se trata de uma solução gratuita e de código aberto, além de apresentar resultados superiores de acurácia e desempenho conforme discutido na Seção \ref{sec:implantacao}. A coleta dos dados foi baseada no conjunto de dados \textit{RealWaste} \cite{realwaste2023}, disponibilizado pelo UCI Machine Learning Repository (\textit{UCI},~2024). A escolha por este conjunto justifica-se por sua associação a um estudo de referência publicado, o que possibilita a realização de comparações diretas de desempenho entre a abordagem TinyML proposta e classificadores de estado da arte — detalhadas posteriormente na Seção~\ref{sec:coleta}.
 
 \section{Etapas do estudo de caso}
 % Detalhamento das etapas ou blocos do desenvolvimento (ex: revisão final, coleta de dados complementar, análise, redação, apresentação, etc.)
@@ -690,11 +692,11 @@ Em síntese, a quantização INT8 permitiu obter um modelo compacto e eficiente 
 
 \section{Escolha e preparação do hardware}
 \label{sec:hardware}
-Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. A escolha pela Raspberry Pi 3 Model B+ foi definida com base em um conjunto de critérios técnicos que a qualificam como uma plataforma ideal para a validação de soluções TinyML em ambiente de borda, oferecendo o equilíbrio ideal entre capacidade e restrição.
+Nesta seção é apresentada a justificativa da escolha da plataforma de execução do modelo e a preparação realizada para torná-la apta à inferência embarcada. A escolha pela Raspberry Pi 3 Model B+ foi definida com base em um conjunto de critérios técnicos que a qualificam como uma plataforma adequada para a validação de soluções TinyML em ambiente de borda, oferecendo o equilíbrio ideal entre capacidade e restrição.
 
 Os principais fatores considerados foram: o equilíbrio entre recursos computacionais (CPU quad-core 64-bit e 1~GB de RAM) e simplicidade de uso; a compatibilidade nativa com o fluxo de quantização INT8 (uso do \texttt{tflite\_runtime}) sem a necessidade de aceleração especializada; o suporte direto a câmera para aquisição das imagens de teste; e a ampla comunidade e maturidade do ecossistema (documentação consolidada, suporte direto a Python e TensorFlow Lite).
 
-Esses fatores tornam a placa adequada como alvo intermediário: suficientemente capaz para validar latência e robustez do modelo convolucional quantizado, mas ainda representativa de um ambiente de recursos restritos frente a soluções de maior porte. Adicionalmente, a disponibilidade física imediata da plataforma no início do projeto permitiu eliminar custos e atrasos na aquisição do hardware.
+Esses fatores tornam a placa adequada como alvo intermediário: suficientemente capaz para validar latência e robustez do modelo convolucional quantizado, mas ainda representativa de um ambiente de recursos restritos frente a soluções de maior porte.
 
 A Tabela \ref{tab:rpi3_specs} resume as principais especificações técnicas empregadas no protótipo.
 
@@ -780,18 +782,19 @@ output = interpreter.get_tensor(out['index'])[0]; pred_index = int(np.argmax(out
 % ==========================
 % CAPÍTULO 6 - RESULTADOS E DISCUSSÃO
 % ==========================
-\chapter{Resultados e Discussão}
+\chapter{Resultados e Discussões}
 \label{cap:resultados}
 
-Neste capítulo, apresentamos e discutimos os resultados experimentais do estudo, analisando o desempenho do modelo nas principais métricas, a eficiência computacional da inferência em dispositivo embarcado e as limitações e implicações práticas dos achados à luz dos objetivos e da literatura.
+Neste capítulo, são discutidos os resultados obtidos, com ênfase na análise de métricas de desempenho, na eficiência de inferência no hardware alvo e nas restrições técnicas identificadas no projeto.
 
 \section{Avaliação de desempenho}
 \label{sec:avaliacao-desempenho}
 
-Esta seção sumariza o desempenho do classificador com base no roteiro executado no Google Colab, avaliando o modelo quantizado em INT8 sobre o conjunto de validação. São reportadas métricas globais (médias ponderadas), a matriz de confusão normalizada por classe e as curvas COR multiclasse.
+Esta seção avalia o desempenho do classificador com base no roteiro executado no Google Colab, avaliando o modelo quantizado em INT8 sobre o conjunto de validação. São reportadas métricas globais (médias ponderadas), a matriz de confusão normalizada por classe e as curvas COR multiclasse.
 
 \subsection{Métricas globais}
-As métricas foram computadas via \texttt{scikit-learn} diretamente sobre as predições do intérprete TFLite:
+Após o treinamento, realizou-se a etapa de validação, onde o modelo processou as imagens de teste para verificar sua capacidade de generalização. Os resultados dessas inferências foram processados via \texttt{scikit-learn}, gerando os indicadores abaixo:
+
 \begin{itemize}
     \item \textbf{Acurácia} (ACU): proporção de acertos no conjunto de validação;
     \item \textbf{Precisão ponderada} (PRE): média ponderada da precisão por classe, ponderada pelo suporte (número de amostras por classe);
@@ -823,7 +826,7 @@ Os resultados consolidados para o conjunto de validação são os exibidos na Ta
 
 O presente trabalho utilizou o mesmo conjunto de dados \textit{RealWaste} empregado no estudo de referência \cite{single2023realwaste}, o que permite estabelecer uma linha de base comum para análise. No entanto, é fundamental destacar que a comparação direta entre os resultados de acurácia absoluta deve ser feita com ressalvas, uma vez que os objetivos e as restrições de cada abordagem são fundamentalmente distintos.
 
-O estudo de referência teve como propósito validar a qualidade do conjunto de dados e estabelecer marcos de desempenho (\textit{benchmarks}) utilizando o estado da arte em Redes Neurais Convolucionais. Para isso, foram empregadas arquiteturas profundas e computacionalmente intensivas (como InceptionV3 e DenseNet121), imagens em alta resolução (524$\times$524 px) e técnicas de aumento de dados (\textit{data augmentation}) robustas e agressivas. Nesse cenário ideal, livre de restrições de hardware, o estudo reportou acurácias superiores a 89\%.
+O estudo de referência teve como propósito validar a qualidade do conjunto de dados e estabelecer marcos de desempenho utilizando o estado da arte em Redes Neurais Convolucionais. Para isso, foram empregadas arquiteturas profundas e computacionalmente intensivas (como InceptionV3 e DenseNet121), imagens em alta resolução (524$\times$524 px) e técnicas de aumento de dados robustas e agressivas. Nesse cenário ideal, livre de restrições de hardware, o estudo reportou acurácias superiores a 89\%.
 
 Em contrapartida, o objetivo deste trabalho foi validar a viabilidade de uma aplicação \textit{TinyML} em um dispositivo de borda (Raspberry Pi 3). Para atender aos requisitos de latência em tempo real e limitações de memória (RAM e Flash) descritos na Seção \ref{sec:avaliacao-eficiencia}, foram necessárias escolhas de projeto que penalizam intencionalmente a capacidade preditiva em favor da eficiência:
 
@@ -909,7 +912,7 @@ Todos os ensaios foram realizados utilizando a montagem descrita a seguir.
 \subsection{Montagem experimental}
 
 A Figura~\ref{fig:montagem-ensaio} apresenta a estrutura física utilizada para todos os ensaios. 
-O suporte foi construído com tubos de PVC, permitindo fixar a webcam USB na posição superior, perpendicular ao plano de deposição dos resíduos. 
+O suporte foi construído com tubos de PVC, permitindo fixar a webcam USB genérica na posição superior, perpendicular ao plano de deposição dos resíduos. 
 O Raspberry~Pi utilizado para realizar as inferências foi instalado diretamente na estrutura, garantindo estabilidade e reduzindo interferências externas. 
 Essa montagem assegurou distância fixa entre câmera e objeto, iluminação uniforme e reprodutibilidade dos testes. A fonte de iluminação para os ensaios é natural indireta.
 
