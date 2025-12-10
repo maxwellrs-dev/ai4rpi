@@ -9,7 +9,6 @@
 \usepackage[T1]{fontenc}       % <-- adicionar para acentuação correta
 \usepackage{graphicx} % Adicione no preâmbulo, se ainda não estiver lá
 \addbibresource{tccMaxwell.bib} % Inclua seu arquivo de referências aqui
-
 \usepackage{listings}
  \lstset{
    basicstyle=\ttfamily\small,
@@ -20,7 +19,6 @@
 
 % Links clicáveis no PDF
 \usepackage[hidelinks]{hyperref}
-
 \begin{document}
 
 %\MakeCoverPages{tccI}
@@ -578,12 +576,12 @@ O conjunto de dados \textit{RealWaste} já se apresenta homogêneo quanto à res
 As etapas executadas foram:
 
 \begin{enumerate}
-    \item \textbf{Redimensionamento para a entrada do modelo.} Durante o carregamento, cada imagem foi redimensionada para 224\(\times\)224 px, tamanho compatível com arquiteturas convolucionais compactas e com as restrições de memória/processamento do alvo embarcado. Tal ajuste é executado diretamente pela rotina de processamento (\texttt{metadados/aumento_de_dados.py}) ao invocar a função \texttt{load\_img(..., target\_size=(224,224))}, assegurando que todo o conjunto balanceado seja gravado já no tamanho esperado pelo modelo.
+    \item \textbf{Redimensionamento para a entrada do modelo.} Durante o carregamento, cada imagem foi redimensionada para 224\(\times\)224 px, tamanho compatível com arquiteturas convolucionais compactas e com as restrições de memória/processamento do alvo embarcado. Tal ajuste é executado diretamente pela rotina de processamento (\texttt{metadados/aumento\_de\_dados.py}) ao invocar a função \texttt{load\_img(..., target\_size=(224,224))}, assegurando que todo o conjunto balanceado seja gravado já no tamanho esperado pelo modelo.
 
     \item \textbf{Balanceamento via aumento de dados (data augmentation).} Após contabilizar as imagens por classe, definiu-se uma meta por classe igual ao maior valor entre a classe mais populosa do conjunto. Na prática, isso faz com que todas as classes sejam expandidas até o tamanho da classe majoritária, que neste caso é de 921. Para gerar amostras sintéticas preservando a semântica, aplicaram-se apenas transformações geométricas e fotométricas leves com \textit{ImageDataGenerator}: rotação (\(\pm 20^{\circ}\)), deslocamentos horizontais e verticais (até 20\%), cisalhamento (0{,}15), \textit{zoom} (0{,}15), espelhamento horizontal e variação de brilho entre 0{,}7 e 1{,}3. O espelhamento vertical foi evitado por potencialmente alterar a plausibilidade física de algumas cenas. Limitou-se a no máximo 10 variações por imagem base, reduzindo redundância. As imagens originais redimensionadas foram copiadas para o diretório de saída e, em seguida, as variações foram geradas até atingir a meta por classe.
 \end{enumerate}
 
-Todo o procedimento está implementado em \texttt{metadados/aumento_de_dados.py}, que preserva a organização hierárquica original do dataset (com subpastas individuais para cada categoria), grava o conjunto balanceado em disco e facilita a reprodução dos resultados.
+Todo o procedimento está implementado em \texttt{metadados/aumento\_de\_dados.py}, que preserva a organização hierárquica original do dataset (com subpastas individuais para cada categoria), grava o conjunto balanceado em disco e facilita a reprodução dos resultados.
 
 \section{Desenvolvimento e treinamento do modelo}
 \label{sec:treinamento}
@@ -1003,6 +1001,33 @@ Esse valor indica utilização praticamente completa de um dos quatro núcleos d
 
 O consumo de memória RAM apresentou valores entre 85~MB e 90~MB para o processo responsável pela inferência, enquanto o uso total do sistema permaneceu entre 280~MB e 330~MB. 
 Esses valores confirmam que a aplicação opera de forma estável, sem risco de esgotamento dos recursos físicos do dispositivo.
+
+\subsection{Análise comparativa: Quantizado (INT8) vs. Ponto Flutuante (Float32)}
+\label{sec:comparativo-float}
+
+Com o objetivo de isolar e quantificar os ganhos reais trazidos pelo processo de quantização na plataforma Raspberry Pi 3 Model B+, realizou-se um experimento de controle executando o modelo original em ponto flutuante de 32 bits (\textit{Float32}), mantendo inalteradas as demais variáveis do sistema (hardware, versão do interpretador e script de teste). Os resultados visuais e numéricos deste ensaio são apresentados na Figura \ref{fig:result_float}.
+
+A análise dos dados revela dois fenômenos distintos no comportamento do hardware:
+
+\begin{enumerate}
+    \item \textbf{Latência de Inferência (Empate Técnico):}
+    Contrariando a intuição inicial de que modelos inteiros seriam drasticamente mais rápidos, a latência média permaneceu virtualmente idêntica entre as versões, orbitando a faixa de 183 ms. Este comportamento é atribuído à arquitetura do processador Broadcom BCM2837B0 (Cortex-A53). Esta CPU possui unidades de ponto flutuante robustas e suporte a instruções vetoriais NEON (SIMD). O interpretador TensorFlow Lite, quando executado neste hardware via biblioteca XNNPACK, consegue otimizar operações de ponto flutuante com eficiência similar às operações inteiras, anulando o ganho de velocidade que seria evidente em microcontroladores sem FPU dedicada (como um Arduino ou ESP32).
+
+    \item \textbf{Consumo de Memória (Redução Seletiva):}
+    A diferença crítica manifestou-se no consumo de memória RAM (RSS). O processo com o modelo \textit{Float32} ocupou \textbf{107,9 MB}, enquanto a versão quantizada (apresentada na Seção \ref{sec:avaliacao-eficiencia}) estabilizou em aproximadamente \textbf{85 MB}.
+    
+    A diferença de aproximadamente \textbf{23 MB} valida a eficácia da quantização, mas também expõe o custo fixo da aplicação. Embora a quantização reduza o tamanho dos pesos e tensores do modelo em quatro vezes (de 32 para 8 bits), o consumo total não cai na mesma proporção. Isso ocorre porque o \textit{footprint} basal do interpretador Python e das bibliotecas carregadas (TensorFlow Runtime, OpenCV, Numpy) representa um custo fixo imutável (o "chão" de consumo), sobre o qual o peso variável do modelo é adicionado.
+\end{enumerate}
+
+Conclui-se, portanto, que para a arquitetura Raspberry Pi 3, a principal vantagem da quantização INT8 reside na eficiência espacial (economia de RAM e armazenamento) e não na aceleração temporal, liberando recursos valiosos do sistema para outros processos concorrentes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{imagens/modelo32.png}
+    \caption{Ensaio de controle com modelo Float32: latência equivalente (~183 ms), porém com aumento significativo no consumo de memória (+27\%) devido à precisão de 32 bits.}
+    \label{fig:result_float}
+    {\sourcecitation{Do autor}}
+\end{figure}
 
 \subsection{Síntese dos resultados}
 
