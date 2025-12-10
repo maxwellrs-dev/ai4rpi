@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4 Portable) (preloaded format=pdflatex 2025.11.6)  9 DEC 2025 09:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4 Portable) (preloaded format=pdflatex 2025.11.6)  9 DEC 2025 16:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2112,42 +2112,42 @@ Cap\'{\i }tulo 3.
 [16
 
 ]
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-00.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+99.
  (C:\miktex-portable\texmfs\install\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-00.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+99.
 
 (C:\miktex-portable\texmfs\install\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-200.
+199.
 
 (C:\miktex-portable\texmfs\install\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-200.
+199.
 
 (C:\miktex-portable\texmfs\install\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 200.
+(Font)              <12> on input line 199.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 200.
+(Font)              <8> on input line 199.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 200.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20
-0.
+(Font)              <6> on input line 199.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 19
+9.
 
 (C:\miktex-portable\texmfs\install\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 200
+LaTeX Font Info:    Trying to load font information for U+msa on input line 199
 .
 
 (C:\miktex-portable\texmfs\install\tex/latex/amsfonts\umsa.fd
@@ -2156,7 +2156,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (C:\miktex-portable\texmfs\install\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 200
+LaTeX Font Info:    Trying to load font information for U+msb on input line 199
 .
 
 (C:\miktex-portable\texmfs\install\tex/latex/amsfonts\umsb.fd
@@ -2165,10 +2165,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (C:\miktex-portable\texmfs\install\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<imagens/redeneural.png, id=601, 590.205pt x 496.85625pt>
+<imagens/redeneural.png, id=609, 590.205pt x 496.85625pt>
 File: imagens/redeneural.png Graphic file (type png)
 <use imagens/redeneural.png>
-Package pdftex.def Info: imagens/redeneural.png  used on input line 220.
+Package pdftex.def Info: imagens/redeneural.png  used on input line 219.
 (pdftex.def)             Requested size: 227.62206pt x 191.62003pt.
 
 
@@ -2176,12 +2176,12 @@ Package pdftex.def Info: imagens/redeneural.png  used on input line 220.
 
 [18{C:/miktex-portable/texmfs/install/fonts/enc/dvips/lm/lm-mathit.enc}]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-70.
+69.
 
 (C:\miktex-portable\texmfs\install\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (0.56175pt too wide) in paragraph at lines 288--289
+Overfull \hbox (0.56175pt too wide) in paragraph at lines 287--288
 []\T1/lmr/bx/n/12 (-20) Quantização Pós-Treinamento (PTQ - \T1/lmr/bx/it/12 (-2
 0) Post-Training Quan-ti-za-tion\T1/lmr/bx/n/12 (-20) ): \T1/lmr/m/n/12 (-20) A
 plica-
@@ -2195,15 +2195,15 @@ mfs/install/fonts/enc/dvips/lm/lm-ts1.enc}{C:/miktex-portable/texmfs/install/fo
 nts/enc/dvips/lm/lm-mathsy.enc}]
 
 [20]
-<imagens/exemploROC.png, id=676, 609.77812pt x 441.14813pt>
+<imagens/exemploROC.png, id=683, 609.77812pt x 441.14813pt>
 File: imagens/exemploROC.png Graphic file (type png)
 <use imagens/exemploROC.png>
-Package pdftex.def Info: imagens/exemploROC.png  used on input line 344.
+Package pdftex.def Info: imagens/exemploROC.png  used on input line 343.
 (pdftex.def)             Requested size: 318.66948pt x 230.54941pt.
-<imagens/exemploConfusao.png, id=680, 499.11469pt x 467.49657pt>
+<imagens/exemploConfusao.png, id=687, 499.11469pt x 467.49657pt>
 File: imagens/exemploConfusao.png Graphic file (type png)
 <use imagens/exemploConfusao.png>
-Package pdftex.def Info: imagens/exemploConfusao.png  used on input line 354.
+Package pdftex.def Info: imagens/exemploConfusao.png  used on input line 353.
 (pdftex.def)             Requested size: 318.66948pt x 298.49057pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2224,10 +2224,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [24]
 Cap\'{\i }tulo 4.
-<imagens/selecao.jpg, id=728, 803.0pt x 602.25pt>
+<imagens/selecao.jpg, id=734, 803.0pt x 602.25pt>
 File: imagens/selecao.jpg Graphic file (type jpg)
 <use imagens/selecao.jpg>
-Package pdftex.def Info: imagens/selecao.jpg  used on input line 455.
+Package pdftex.def Info: imagens/selecao.jpg  used on input line 454.
 (pdftex.def)             Requested size: 295.90588pt x 221.92842pt.
 
 
@@ -2244,13 +2244,13 @@ Cap\'{\i }tulo 5.
 [28
 
 ]
-<imagens/rw.png, id=783, 623.32875pt x 476.53032pt>
+<imagens/rw.png, id=785, 623.32875pt x 476.53032pt>
 File: imagens/rw.png Graphic file (type png)
 <use imagens/rw.png>
-Package pdftex.def Info: imagens/rw.png  used on input line 569.
+Package pdftex.def Info: imagens/rw.png  used on input line 566.
 (pdftex.def)             Requested size: 386.96027pt x 295.83112pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-83.
+80.
  (C:\miktex-portable\texmfs\install\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2259,167 +2259,709 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.580 ...o (\texttt{metadados/aumento_de_dados.py}
+                                                  ) ao invocar a funÃ§Ã£o \t...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-[29 <./imagens/rw.png>]
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.580 ...o (\texttt{metadados/aumento_de_dados.py}
+                                                  ) ao invocar a funÃ§Ã£o \t...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-[30]
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 614.
 
-<imagens/treino_acc_loss.png, id=800, 729.927pt x 341.1144pt>
-File: imagens/treino_acc_loss.png Graphic file (type png)
-<use imagens/treino_acc_loss.png>
-Package pdftex.def Info: imagens/treino_acc_loss.png  used on input line 637.
-(pdftex.def)             Requested size: 386.96027pt x 180.8366pt.
+LaTeX Warning: Command \c invalid in math mode on input line 580.
 
 
-[31]
-Package csquotes Info: Input encoding change on input line 654.
- (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 659.
+LaTeX Warning: Command \~ invalid in math mode on input line 580.
 
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 664.
 
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 673.
+LaTeX Warning: Command \' invalid in math mode on input line 580.
 
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.581 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-[32 <./imagens/treino_acc_loss.png>]
-Package csquotes Info: Input encoding change on input line 678.
+! Missing } inserted.
+<inserted text> 
+                }
+l.581 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 684.
 
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Overfull \hbox (6.19327pt too wide) in paragraph at lines 705--722
- [][] 
+Overfull \hbox (519.43076pt too wide) in paragraph at lines 580--581
+\T1/lmr/m/n/12 (-20) (\T1/lmtt/m/n/12 metadados/aumento$[]\OML/lmm/m/it/12 e[]a
+dos:py\OT1/lmr/m/n/12 (-20) )\OML/lmm/m/it/12 aoinvocarafun\OT1/lmr/m/n/12 (-20
+) çã\OML/lmm/m/it/12 o[]; assegurandoquetodooconjuntobalanceadosejagravadoj\OT1
+/lmr/m/n/12 (-20) á\OML/lmm/m/it/12 notamanhoesperadopelomodelo:[]$ 
  []
 
 
 
+[29 <./imagens/rw.png>]
+
+! LaTeX Error: Unicode character âˆ˜ (U+2218)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.582 ...nservadoras (rotaÃ§Ãµes limitadas a 20âˆ˜
+                                                   e zoom de 15\%) para simu...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.585 ...em \texttt{metadados/aumento_de_dados.py}
+                                                  , que preserva a organizaÃ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.585 ...em \texttt{metadados/aumento_de_dados.py}
+                                                  , que preserva a organizaÃ...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 585.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 585.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 585.
+
+
+LaTeX Warning: Command \c invalid in math mode on input line 585.
+
+
+LaTeX Warning: Command \~ invalid in math mode on input line 585.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.586 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (857.18625pt too wide) in paragraph at lines 585--586
+[]\T1/lmr/m/n/12 (-20) Todo o pro-ce-di-mento está im-ple-men-tado em \T1/lmtt/
+m/n/12 metadados/aumento$[]\OML/lmm/m/it/12 e[]ados:py; quepreservaaorganiza\OT
+1/lmr/m/n/12 (-20) çã\OML/lmm/m/it/12 ohier\OT1/lmr/m/n/12 (-20) á\OML/lmm/m/it
+/12 rquicaoriginaldodataset\OT1/lmr/m/n/12 (-20) (\OML/lmm/m/it/12 comsubpastas
+individuaisparacadacategoria\OT1/lmr/m/n/12 (-20) )\OML/lmm/m/it/12 ; gravaocon
+juntobalanceadoemdiscoefacilitaareprodu\OT1/lmr/m/n/12 (-20) çã\OML/lmm/m/it/12
+ odosresultados:$ 
+ []
+
+
+Overfull \hbox (14.2369pt too wide) in paragraph at lines 590--591
+[]\T1/lmtt/m/n/12 Esta seção descreve a implementação prática do modelo de clas
+sificação,
+ []
+
+
+Overfull \hbox (17.13933pt too wide) in paragraph at lines 590--591
+\T1/lmtt/m/n/12 desde a preparação do fluxo de dados (\T1/lmtt/m/it/12 pipeline
+\T1/lmtt/m/n/12 ) até o treinamento com ajuste
+ []
+
+
+Overfull \hbox (51.10614pt too wide) in paragraph at lines 590--591
+\T1/lmtt/m/n/12 fino. A implementação foi conduzida em ambiente de nuvem (Googl
+e Colab) utilizando
+ []
+
+
+Overfull \hbox (66.2349pt too wide) in paragraph at lines 590--591
+\T1/lmtt/m/n/12 TensorFlow/Keras. Essa escolha apoia-se na facilidade de acesso
+ (basta um navegador),
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 590--591
+\T1/lmtt/m/n/12 disponibilidade gratuita ^^V ainda que limitada ^^V de CPU/GPU/
+TPU e integração
+ []
+
+
+Overfull \hbox (3.55861pt too wide) in paragraph at lines 590--591
+\T1/lmtt/m/n/12 direta com Google Drive para armazenamento e compartilhamento d
+e artefatos. 
+ []
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 593.
+
+Overfull \hbox (11.1494pt too wide) in paragraph at lines 593--594
+[]\T1/lmtt/m/n/12 Os conjuntos de treino e validação foram criados a partir do 
+diretório
+ []
+
+
+Overfull \hbox (27.53099pt too wide) in paragraph at lines 593--594
+\T1/lmtt/m/n/12 base do \T1/lmtt/m/it/12 RealWaste\T1/lmtt/m/n/12 , empregando 
+TensorFlow, com divisão estratificada aproximada
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 593--594
+\T1/lmtt/m/n/12 de 80/20 e semente 123 para reprodutibilidade. As imagens foram
+ redimensionadas
+ []
+
+
+Overfull \hbox (18.69923pt too wide) in paragraph at lines 596--597
+[]\T1/lmtt/m/n/12 Utilizou-se a \T1/lmtt/b/n/12 MobileNetV2 \T1/lmtt/m/n/12 com
+o extratora de atributos base (include_top
+ []
+
+
+Overfull \hbox (44.93114pt too wide) in paragraph at lines 596--597
+\T1/lmtt/m/n/12 = False, weights = 'imagenet', alpha = 1), por ser uma arquitet
+ura leve, adequada
+ []
+
+
+Overfull \hbox (63.45615pt too wide) in paragraph at lines 596--597
+\T1/lmtt/m/n/12 ao contexto TinyML. Sobre essa base adicionaram-se camadas fina
+is para classificação
+ []
+
+
+Overfull \hbox (10.71127pt too wide) in paragraph at lines 607--608
+[]\T1/lmtt/b/n/12 Pré-treino\T1/lmtt/m/n/12 : base congelada (base_model.traina
+ble = False) por 5 épocas,
+ []
+
+
+Overfull \hbox (1.25876pt too wide) in paragraph at lines 608--609
+[]\T1/lmtt/b/n/12 Ajuste fino\T1/lmtt/m/n/12 : base liberada parcialmente, mant
+endo congeladas todas as
+ []
+
+
+Overfull \hbox (13.79878pt too wide) in paragraph at lines 608--609
+\T1/lmtt/m/n/12 camadas exceto as \T1/lmtt/b/n/12 80 últimas\T1/lmtt/m/n/12 , p
+ermitindo especialização progressiva dos
+ []
+
+
+
+[30]
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 611.
+
+
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 612--613
+[]\T1/lmtt/m/n/12 O modelo foi compilado com loss = 'sparse_categorical_crossen
+tropy' e
+ []
+
+
+Overfull \hbox (14.68105pt too wide) in paragraph at lines 612--613
+\T1/lmtt/m/n/12 métrica principal foi a acurácia. Como otimizador empregou-se \
+T1/lmtt/b/n/12 AdamW \T1/lmtt/m/n/12 com taxa
+ []
+
+
+Overfull \hbox (60.54942pt too wide) in paragraph at lines 614--615
+[]\T1/lmtt/m/n/12 Para maior robustez frente a eventuais desequilíbrios residua
+is, utilizaram-se
+ []
+
+
+Overfull \hbox (41.63078pt too wide) in paragraph at lines 614--615
+\T1/lmtt/b/n/12 pesos por classe \T1/lmtt/m/n/12 obtidos via sklearn.utils.comp
+ute_class_weight sobre os \T1/lmtt/b/n/12 rótulos
+ []
+
+
+Overfull \hbox (60.6701pt too wide) in paragraph at lines 616--618
+[]\T1/lmtt/m/n/12 Dois mecanismos de controle (\T1/lmtt/m/it/12 callbacks\T1/lm
+tt/m/n/12 ) acompanharam o processo de otimização: 
+ []
+
+
+Overfull \hbox (12.2068pt too wide) in paragraph at lines 618--619
+[]\T1/lmtt/b/n/12 Parada antecipada \T1/lmtt/m/n/12 (\T1/lmtt/m/it/12 EarlyStop
+ping\T1/lmtt/m/n/12 ) monitorando val_loss, com patience =
+ []
+
+
+Overfull \hbox (19.75664pt too wide) in paragraph at lines 619--620
+[]\T1/lmtt/b/n/12 Redução da taxa em platô \T1/lmtt/m/n/12 (\T1/lmtt/m/it/12 Re
+duceLROnPlateau\T1/lmtt/m/n/12 ) com factor = 0,5, patience
+ []
+
+
+Overfull \hbox (6.36693pt too wide) in paragraph at lines 619--620
+\T1/lmtt/m/n/12 = 3, min_lr = 1e-6, reduzindo a taxa de aprendizado quando a va
+lidação
+ []
+
+
+Overfull \hbox (12.7742pt too wide) in paragraph at lines 625--626
+[]\T1/lmtt/m/n/12 Durante o treinamento, foram registradas as curvas de \T1/lmt
+t/b/n/12 acurácia \T1/lmtt/m/n/12 e \T1/lmtt/b/n/12 perda
+ []
+
+
+Overfull \hbox (26.39912pt too wide) in paragraph at lines 625--626
+\T1/lmtt/m/n/12 para treino e validação, respectivamente. A Figura []6[] ilustr
+a a evolução dessas
+ []
+
+<imagens/treino_acc_loss.png, id=804, 729.927pt x 341.1144pt>
+File: imagens/treino_acc_loss.png Graphic file (type png)
+<use imagens/treino_acc_loss.png>
+Package pdftex.def Info: imagens/treino_acc_loss.png  used on input line 634.
+(pdftex.def)             Requested size: 386.96027pt x 180.8366pt.
+
+Overfull \hbox (23.4994pt too wide) in paragraph at lines 640--641
+[]\T1/lmtt/m/n/12 Ao final, o modelo em ponto flutuante foi salvo para posterio
+r conversão
+ []
+
+
+
+[31 <./imagens/treino_acc_loss.png>]
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 644--645
+[]\T1/lmtt/m/n/12 Nesta etapa, o modelo treinado em ponto flutuante foi convert
+ido para
+ []
+
+
+Overfull \hbox (17.93065pt too wide) in paragraph at lines 644--645
+\T1/lmtt/m/n/12 o formato TensorFlow Lite com \T1/lmtt/b/n/12 quantização pós-t
+reinamento \T1/lmtt/m/n/12 para \T1/lmtt/b/n/12 INT8\T1/lmtt/m/n/12 , visando
+ []
+
+
+Overfull \hbox (23.31862pt too wide) in paragraph at lines 644--645
+\T1/lmtt/m/n/12 reduzir tamanho do arquivo do modelo, uso de memória e latência
+ de inferência,
+ []
+
+
+Overfull \hbox (49.25125pt too wide) in paragraph at lines 647--648
+[]\T1/lmtt/m/n/12 Empregou-se \T1/lmtt/b/n/12 quantização estática \T1/lmtt/m/n
+/12 com calibração via \T1/lmtt/m/it/12 conjunto representativo\T1/lmtt/m/n/12 
+.
+ []
+
+Package csquotes Info: Input encoding change on input line 651.
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 656.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 661.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 670.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 675.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 681.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Overfull \hbox (51.28691pt too wide) in paragraph at lines 689--690
+[]\T1/lmtt/m/n/12 O arquivo quantizado foi carregado via tf.lite.Interpreter. P
+ara a avaliação,
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 689--690
+\T1/lmtt/m/n/12 os tensores foram alocados e os metadados de entrada/saída insp
+ecionados; as
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 689--690
+\T1/lmtt/m/n/12 imagens foram convertidas condicionalmente para uint8 conforme 
+o tipo requerido
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 689--690
+\T1/lmtt/m/n/12 pelo tensor de entrada; em seguida, realizou-se a inferência co
+m invoke() e
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 689--690
+\T1/lmtt/m/n/12 coletaram-se as distribuições de probabilidades por classe. A p
+artir dessas
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 689--690
+\T1/lmtt/m/n/12 pontuações, foram calculadas a acurácia, a precisão ponderada, 
+a sensibilidade
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 689--690
+\T1/lmtt/m/n/12 ponderada, o F1 ponderado, além da matriz de confusão normaliza
+da e das curvas
+ []
+
+
+
+[32]
+Overfull \hbox (48.19942pt too wide) in paragraph at lines 691--692
+[]\T1/lmtt/m/n/12 Em síntese, a quantização INT8 permitiu obter um modelo compa
+cto e eficiente
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 691--692
+\T1/lmtt/m/n/12 sem alterar o fluxo principal de treinamento, viabilizando sua 
+execução futura
+ []
+
+
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 695--696
+[]\T1/lmtt/m/n/12 Nesta seção é apresentada a justificativa da escolha da plata
+forma de
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 695--696
+\T1/lmtt/m/n/12 execução do modelo e a preparação realizada para torná-la apta 
+à inferência
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 695--696
+\T1/lmtt/m/n/12 embarcada. A escolha pela Raspberry Pi 3 Model B+ foi definida 
+com base em
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 695--696
+\T1/lmtt/m/n/12 um conjunto de critérios técnicos que a qualificam como uma pla
+taforma ideal
+ []
+
+
+Overfull \hbox (44.93114pt too wide) in paragraph at lines 695--696
+\T1/lmtt/m/n/12 para a validação de soluções TinyML em ambiente de borda, ofere
+cendo o equilíbrio
+ []
+
+
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 697--698
+[]\T1/lmtt/m/n/12 Os principais fatores considerados foram: o equilíbrio entre 
+recursos
+ []
+
+
+Overfull \hbox (14.04912pt too wide) in paragraph at lines 697--698
+\T1/lmtt/m/n/12 computacionais (CPU quad-core 64-bit e 1 GB de RAM) e simplicid
+ade de uso; a
+ []
+
+
+Overfull \hbox (25.17113pt too wide) in paragraph at lines 697--698
+\T1/lmtt/m/n/12 compatibilidade nativa com o fluxo de quantização INT8 (uso do 
+tflite_runtime)
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 697--698
+\T1/lmtt/m/n/12 sem a necessidade de aceleração especializada; o suporte direto
+ a câmera para
+ []
+
+
+Overfull \hbox (38.75613pt too wide) in paragraph at lines 697--698
+\T1/lmtt/m/n/12 aquisição das imagens de teste; e a ampla comunidade e maturida
+de do ecossistema
+ []
+
+
+Overfull \hbox (60.54942pt too wide) in paragraph at lines 699--700
+[]\T1/lmtt/m/n/12 Esses fatores tornam a placa adequada como alvo intermediário
+: suficientemente
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 699--700
+\T1/lmtt/m/n/12 capaz para validar latência e robustez do modelo convolucional 
+quantizado, mas
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 699--700
+\T1/lmtt/m/n/12 ainda representativa de um ambiente de recursos restritos frent
+e a soluções
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 699--700
+\T1/lmtt/m/n/12 de maior porte. Adicionalmente, a disponibilidade física imedia
+ta da plataforma
+ []
+
+
+Overfull \hbox (40.60863pt too wide) in paragraph at lines 699--700
+\T1/lmtt/m/n/12 no início do projeto permitiu eliminar custos e atrasos na aqui
+sição do hardware. 
+ []
+
+
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 701--702
+[]\T1/lmtt/m/n/12 A Tabela []7[] resume as principais especificações técnicas e
+mpregadas no
+ []
+
+
+Overfull \hbox (6.19327pt too wide) in paragraph at lines 706--723
+ [][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
 [33]
-Overfull \hbox (8.19629pt too wide) in paragraph at lines 731--732
-[]\T1/lmr/bx/n/12 (-20) Habilitação de pe-ri-fé-ri-cos\T1/lmr/m/n/12 (-20) : at
-i-va-ção op-ci-o-nal do su-porte à câ-mera via \T1/lmtt/m/n/12 raspi-config\T1/
-lmr/m/n/12 (-20) ; 
+Overfull \hbox (35.84941pt too wide) in paragraph at lines 726--728
+[]\T1/lmtt/m/n/12 Os passos principais para preparar o dispositivo para a execu
+ção do modelo
+ []
+
+
+Overfull \hbox (28.46472pt too wide) in paragraph at lines 728--729
+[]\T1/lmtt/b/n/12 Gravação do sistema operacional\T1/lmtt/m/n/12 : uso do Raspb
+erry Pi Imager para instalar
+ []
+
+
+Overfull \hbox (12.83928pt too wide) in paragraph at lines 728--729
+\T1/lmtt/m/n/12 Raspberry Pi OS Lite (versão 64-bit), disponível no site oficia
+l ([][]\T1/lmtt/m/sc/12/50ls foun-
+ []
+
+
+Overfull \hbox (26.20874pt too wide) in paragraph at lines 729--730
+[]\T1/lmtt/b/n/12 Acesso remoto\T1/lmtt/m/n/12 : habilitação de SSH e definição
+ de hostname específico para
+ []
+
+
+Overfull \hbox (33.5086pt too wide) in paragraph at lines 730--731
+[]\T1/lmtt/b/n/12 Atualização de pacotes\T1/lmtt/m/n/12 : execução de atualizaç
+ão e cuidado em manter versão
+ []
+
+
+Overfull \hbox (36.9402pt too wide) in paragraph at lines 730--731
+\T1/lmtt/m/n/12 de Python compatível com dependências de inferência (TensorFlow
+ Lite requer
+ []
+
+
+Overfull \hbox (9.74852pt too wide) in paragraph at lines 731--732
+[]\T1/lmtt/b/n/12 Instalação das dependências\T1/lmtt/m/n/12 : instalação de py
+thon3-pip, bibliotecas de
+ []
+
+
+Overfull \hbox (3.44853pt too wide) in paragraph at lines 732--733
+[]\T1/lmtt/b/n/12 Habilitação de periféricos\T1/lmtt/m/n/12 : ativação opcional
+ do suporte à câmera via
+ []
+
+
+Overfull \hbox (58.08363pt too wide) in paragraph at lines 733--734
+[]\T1/lmtt/b/n/12 Validação do ambiente\T1/lmtt/m/n/12 : teste de carregamento 
+do modelo quantizado, verificação
+ []
+
+
+Overfull \hbox (18.72394pt too wide) in paragraph at lines 733--734
+\T1/lmtt/m/n/12 de memória disponível, tempo médio de inferência e temperatura 
+sob carga
+ []
+
+
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 738--739
+[]\T1/lmtt/m/n/12 Esta subseção descreve a execução prática do modelo quantizad
+o em uma
+ []
+
+
+Overfull \hbox (63.1474pt too wide) in paragraph at lines 738--739
+\T1/lmtt/m/n/12 Raspberry Pi 3 Model B+, conforme especificado na Seção []5.5[]
+. O objetivo é demonstrar
+ []
+
+
+Overfull \hbox (54.19363pt too wide) in paragraph at lines 738--739
+\T1/lmtt/m/n/12 a captura de imagem, pré-processamento mínimo e inferência usan
+do o tflite_runtime,
+ []
+
+
+Overfull \hbox (82.16193pt too wide) in paragraph at lines 740--741
+[]\T1/lmtt/m/n/12 O código na sua íntegra está disponível no link do GitHub men
+cionado inicialmente,
  []
 
 (C:\miktex-portable\texmfs\install\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
+Overfull \hbox (60.54942pt too wide) in paragraph at lines 743--744
+[]\T1/lmtt/m/n/12 Assumem-se as seguintes bibliotecas importadas e o caminho do
+ modelo definidos
+ []
+
+
 
 [34]
-Package csquotes Info: Input encoding change on input line 743.
+Package csquotes Info: Input encoding change on input line 744.
  (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
 LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
@@ -2440,8 +2982,8 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 744.
-Package csquotes Info: Input encoding change on input line 752.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 745.
+Package csquotes Info: Input encoding change on input line 753.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2462,8 +3004,12 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 756.
+Overfull \hbox (38.7927pt too wide) in paragraph at lines 756--757
+[]\T1/lmtt/m/n/12 Armazenamento da imagem original para registro e auditoria (f
+oto_teste.jpg). 
+ []
 
+Package csquotes Info: Input encoding change on input line 757.
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
 LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
@@ -2484,12 +3030,12 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 759.
+(Font)              <10> on input line 760.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 759.
+(Font)              <7> on input line 760.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 759.
-Package csquotes Info: Input encoding change on input line 760.
+(Font)              <5> on input line 760.
+Package csquotes Info: Input encoding change on input line 761.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2510,7 +3056,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 764.
+Package csquotes Info: Input encoding change on input line 765.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2531,8 +3077,12 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 768.
+Overfull \hbox (61.94896pt too wide) in paragraph at lines 768--769
+[]\T1/lmtt/m/n/12 Carregamento do arquivo .tflite, alocação de tensores e leitu
+ra dos descritores
+ []
 
+Package csquotes Info: Input encoding change on input line 769.
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
 LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
@@ -2552,8 +3102,12 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 772.
+Overfull \hbox (37.24895pt too wide) in paragraph at lines 772--773
+[]\T1/lmtt/m/n/12 Escrita dos dados de entrada e invocação da inferência (com m
+edição simples
+ []
 
+Package csquotes Info: Input encoding change on input line 773.
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
 LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
@@ -2573,8 +3127,12 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 776.
+Overfull \hbox (6.06519pt too wide) in paragraph at lines 776--777
+[]\T1/lmtt/m/n/12 Leitura das probabilidades de saída e seleção da classe de ma
+ior valor
+ []
 
+Package csquotes Info: Input encoding change on input line 777.
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
 LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
@@ -2598,143 +3156,1132 @@ ncoding ?) on input line 57.
 [35]
 Cap\'{\i }tulo 6.
 
+Overfull \hbox (42.02441pt too wide) in paragraph at lines 788--789
+[]\T1/lmtt/m/n/12 Neste capítulo, são discutidos os resultados obtidos, com ênf
+ase na análise
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 788--789
+\T1/lmtt/m/n/12 de métricas de desempenho, na eficiência de inferência no hardw
+are alvo e nas
+ []
+
+
+Overfull \hbox (54.37442pt too wide) in paragraph at lines 793--794
+[]\T1/lmtt/m/n/12 Esta seção avalia o desempenho do classificador com base no r
+oteiro executado
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 793--794
+\T1/lmtt/m/n/12 no Google Colab, avaliando o modelo quantizado em INT8 sobre o 
+conjunto de
+ []
+
+
+Overfull \hbox (7.57237pt too wide) in paragraph at lines 793--794
+\T1/lmtt/m/n/12 validação. São reportadas métricas globais (médias ponderadas),
+ a matriz de
+ []
+
+
+Overfull \hbox (54.37442pt too wide) in paragraph at lines 796--797
+[]\T1/lmtt/m/n/12 Após o treinamento, realizou-se a etapa de validação, onde o 
+modelo processou
+ []
+
+
+Overfull \hbox (44.93114pt too wide) in paragraph at lines 796--797
+\T1/lmtt/m/n/12 as imagens de teste para verificar sua capacidade de generaliza
+ção. Os resultados
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 796--797
+\T1/lmtt/m/n/12 dessas inferências foram processados via scikit-learn, gerando 
+os indicadores
+ []
+
+
+Overfull \hbox (39.49867pt too wide) in paragraph at lines 800--801
+[]\T1/lmtt/b/n/12 Precisão ponderada \T1/lmtt/m/n/12 (PRE): média ponderada da 
+precisão por classe, ponderada
+ []
+
+
+Overfull \hbox (37.03609pt too wide) in paragraph at lines 801--802
+[]\T1/lmtt/b/n/12 Sensibilidade ponderada \T1/lmtt/m/n/12 (SEN): média ponderad
+a da sensibilidade por classe,
+ []
+
+
+Overfull \hbox (1.69875pt too wide) in paragraph at lines 802--803
+[]\T1/lmtt/b/n/12 F1 ponderado\T1/lmtt/m/n/12 : média ponderada do F1 por class
+e, combinando precisão e
+ []
+
+
+Overfull \hbox (17.3244pt too wide) in paragraph at lines 805--806
+[]\T1/lmtt/m/n/12 Os resultados consolidados para o conjunto de validação são o
+s exibidos
+ []
+
+
+Overfull \hbox (39.0576pt too wide) in paragraph at lines 827--828
+[]\T1/lmtt/m/n/12 O presente trabalho utilizou o mesmo conjunto de dados \T1/lm
+tt/m/it/12 RealWaste \T1/lmtt/m/n/12 empregado
+ []
+
+
+Overfull \hbox (4.4559pt too wide) in paragraph at lines 827--828
+\T1/lmtt/m/n/12 no estudo de referência ([][]\T1/lmtt/m/sc/12/50ls sin-gle\T1/l
+mtt/m/n/12 ; \T1/lmtt/m/sc/12/50ls iran-ma-nesh\T1/lmtt/m/n/12 ; \T1/lmtt/m/sc/
+12/50ls raad[]\T1/lmtt/m/n/12 , []2023c[]), o que permite
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 827--828
+\T1/lmtt/m/n/12 estabelecer uma linha de base comum para análise. No entanto, é
+ fundamental
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 827--828
+\T1/lmtt/m/n/12 destacar que a comparação direta entre os resultados de acuráci
+a absoluta deve
+ []
+
+
+Overfull \hbox (57.28114pt too wide) in paragraph at lines 827--828
+\T1/lmtt/m/n/12 ser feita com ressalvas, uma vez que os objetivos e as restriçõ
+es de cada abordagem
+ []
+
+
 
 [36
 
 ]
-<imagens/matriz_confusao.png, id=904, 414.8298pt x 371.4678pt>
-File: imagens/matriz_confusao.png Graphic file (type png)
-<use imagens/matriz_confusao.png>
-Package pdftex.def Info: imagens/matriz_confusao.png  used on input line 859.
-(pdftex.def)             Requested size: 409.71692pt x 366.89836pt.
+Overfull \hbox (35.84941pt too wide) in paragraph at lines 829--830
+[]\T1/lmtt/m/n/12 O estudo de referência teve como propósito validar a qualidad
+e do conjunto
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Overfull \hbox (17.3893pt too wide) in paragraph at lines 829--830
+\T1/lmtt/m/n/12 de dados e estabelecer marcos de desempenho (\T1/lmtt/m/it/12 b
+enchmarks\T1/lmtt/m/n/12 ) utilizando o estado
+ []
+
+
+Overfull \hbox (44.93114pt too wide) in paragraph at lines 829--830
+\T1/lmtt/m/n/12 da arte em Redes Neurais Convolucionais. Para isso, foram empre
+gadas arquiteturas
+ []
+
+
+Overfull \hbox (4.79361pt too wide) in paragraph at lines 829--830
+\T1/lmtt/m/n/12 profundas e computacionalmente intensivas (como InceptionV3 e D
+enseNet121),
+ []
+
+
+Overfull \hbox (11.53941pt too wide) in paragraph at lines 829--830
+\T1/lmtt/m/n/12 imagens em alta resolução (524$\OMS/lmsy/m/n/12 ^^B$\T1/lmtt/m/
+n/12 524 px) e técnicas de aumento de dados (\T1/lmtt/m/it/12 data
+ []
+
+
+Overfull \hbox (23.81427pt too wide) in paragraph at lines 829--830
+\T1/lmtt/m/it/12 augmentation\T1/lmtt/m/n/12 ) robustas e agressivas. Nesse cen
+ário ideal, livre de restrições
+ []
+
+
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 831--832
+[]\T1/lmtt/m/n/12 Em contrapartida, o objetivo deste trabalho foi validar a via
+bilidade
+ []
+
+
+Overfull \hbox (47.45563pt too wide) in paragraph at lines 831--832
+\T1/lmtt/m/n/12 de uma aplicação \T1/lmtt/m/it/12 TinyML \T1/lmtt/m/n/12 em um 
+dispositivo de borda (Raspberry Pi 3). Para atender
+ []
+
+
+Overfull \hbox (25.17113pt too wide) in paragraph at lines 831--832
+\T1/lmtt/m/n/12 aos requisitos de latência em tempo real e limitações de memóri
+a (RAM e Flash)
+ []
+
+
+Overfull \hbox (7.87411pt too wide) in paragraph at lines 831--832
+\T1/lmtt/m/n/12 descritos na Seção []6.2[], foram necessárias escolhas de proje
+to que penalizam
+ []
+
+
+Overfull \hbox (26.08376pt too wide) in paragraph at lines 834--835
+[]\T1/lmtt/b/n/12 Arquitetura: \T1/lmtt/m/n/12 Adoção da MobileNetV2, uma rede 
+significativamente mais leve
+ []
+
+
+Overfull \hbox (16.95714pt too wide) in paragraph at lines 835--836
+[]\T1/lmtt/b/n/12 Resolução: \T1/lmtt/m/n/12 Redução da entrada para 224$\OMS/l
+msy/m/n/12 ^^B$\T1/lmtt/m/n/12 224 px, diminuindo drasticamente
+ []
+
+
+Overfull \hbox (7.87375pt too wide) in paragraph at lines 836--837
+[]\T1/lmtt/b/n/12 Quantização: \T1/lmtt/m/n/12 Conversão dos pesos para inteiro
+s de 8 bits (INT8), o que
+ []
+
+
+Overfull \hbox (30.23616pt too wide) in paragraph at lines 837--838
+[]\T1/lmtt/b/n/12 Pré-processamento: \T1/lmtt/m/n/12 Uso de técnicas de aumento
+ de dados mais conservadoras,
+ []
+
+
+Overfull \hbox (60.54242pt too wide) in paragraph at lines 840--841
+[]\T1/lmtt/m/n/12 Dessa forma, a acurácia de aproximadamente 68% obtida no conj
+unto de validação
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 840--841
+\T1/lmtt/m/n/12 não deve ser interpretada apenas como um déficit de desempenho,
+ mas sim como
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 840--841
+\T1/lmtt/m/n/12 a demonstração do compromisso entre precisão e eficiência. O re
+sultado confirma
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 840--841
+\T1/lmtt/m/n/12 que, mesmo com drásticas reduções de complexidade para adequaçã
+o ao hardware
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 840--841
+\T1/lmtt/m/n/12 embarcado, o sistema mantém capacidade de generalização funcion
+al para a tarefa
+ []
+
+
+Overfull \hbox (60.54942pt too wide) in paragraph at lines 843--844
+[]\T1/lmtt/m/n/12 O relatório por classe (precisão, sensibilidade e F1 por rótu
+lo) é apresentado
+ []
+
+
+Overfull \hbox (32.57413pt too wide) in paragraph at lines 843--844
+\T1/lmtt/m/n/12 na Tabela []9[]. Os valores refletem o comportamento do classif
+icador por categoria
+ []
+
+
+Overfull \hbox (22.08362pt too wide) in paragraph at lines 843--844
+\T1/lmtt/m/n/12 específica, auxiliando na identificação de classes com maior ta
+xa de confusão. 
+ []
 
 
 
 [37]
-<imagens/roc_multiclasse.png, id=911, 731.3724pt x 506.6127pt>
-File: imagens/roc_multiclasse.png Graphic file (type png)
-<use imagens/roc_multiclasse.png>
-Package pdftex.def Info: imagens/roc_multiclasse.png  used on input line 875.
-(pdftex.def)             Requested size: 409.71692pt x 283.80939pt.
+Overfull \hbox (3.92377pt too wide) in paragraph at lines 869--870
+[]\T1/lmtt/m/n/12 A Figura []7[] apresenta a \T1/lmtt/b/n/12 matriz de confusão
+ normalizada por classe \T1/lmtt/m/n/12 (em
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Overfull \hbox (32.27238pt too wide) in paragraph at lines 869--870
+\T1/lmtt/m/n/12 %), permitindo visualizar padrões de acerto/erro entre categori
+as. As diagonais
+ []
+
+<imagens/matriz_confusao.png, id=918, 414.8298pt x 371.4678pt>
+File: imagens/matriz_confusao.png Graphic file (type png)
+<use imagens/matriz_confusao.png>
+Package pdftex.def Info: imagens/matriz_confusao.png  used on input line 878.
+(pdftex.def)             Requested size: 409.71692pt x 366.89836pt.
+
+Overfull \hbox (7.59908pt too wide) in paragraph at lines 885--886
+[]\T1/lmtt/m/n/12 A Figura []8[] mostra as \T1/lmtt/b/n/12 curvas COR por class
+e \T1/lmtt/m/n/12 e as respectivas áreas sob
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 885--886
+\T1/lmtt/m/n/12 a curva (AUC), calculadas a partir dos escores de saída do mode
+lo para cada
+ []
+
+
+Overfull \hbox (52.98091pt too wide) in paragraph at lines 885--886
+\T1/lmtt/m/n/12 rótulo. Em cenários multiclasse, cada curva contrasta o desempe
+nho \T1/lmtt/m/it/12 um-versus-resto
+ []
 
 
 
 [38 <./imagens/matriz_confusao.png>]
+<imagens/roc_multiclasse.png, id=925, 731.3724pt x 506.6127pt>
+File: imagens/roc_multiclasse.png Graphic file (type png)
+<use imagens/roc_multiclasse.png>
+Package pdftex.def Info: imagens/roc_multiclasse.png  used on input line 894.
+(pdftex.def)             Requested size: 409.71692pt x 283.80939pt.
+
+Overfull \hbox (23.4994pt too wide) in paragraph at lines 901--902
+[]\T1/lmtt/m/n/12 Em linhas gerais, as médias ponderadas (PRE, SEN, F1) reflete
+m o impacto
+ []
+
+
+Overfull \hbox (41.40561pt too wide) in paragraph at lines 901--902
+\T1/lmtt/m/n/12 do \T1/lmtt/m/it/12 suporte \T1/lmtt/m/n/12 de cada classe; ass
+im, classes com menos amostras tendem a apresentar
+ []
+
+
+Overfull \hbox (52.95863pt too wide) in paragraph at lines 901--902
+\T1/lmtt/m/n/12 maior variância nas métricas individuais, influenciando menos o
+ agregado ponderado.
+ []
+
+
+Overfull \hbox (19.61363pt too wide) in paragraph at lines 901--902
+\T1/lmtt/m/n/12 A leitura conjunta da matriz de confusão e das curvas COR permi
+te identificar
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 901--902
+\T1/lmtt/m/n/12 pares de classes mais propensos à confusão e orientar possíveis
+ ajustes: coleta
+ []
+
+
+Overfull \hbox (38.75613pt too wide) in paragraph at lines 901--902
+\T1/lmtt/m/n/12 adicional para classes minoritárias, refinamento de aumento de 
+dados direcionado
+ []
+
+
+Overfull \hbox (51.10614pt too wide) in paragraph at lines 901--902
+\T1/lmtt/m/n/12 e, se necessário, afrouxar ou ajustar limiares de decisão em ce
+nários operacionais
+ []
+
+
+Overfull \hbox (54.37442pt too wide) in paragraph at lines 906--911
+[]\T1/lmtt/m/n/12 A eficiência computacional do sistema foi avaliada consideran
+do três aspectos
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 906--911
+\T1/lmtt/m/n/12 principais: (i) tempo médio de inferência por imagem, (ii) uso 
+de CPU durante
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 906--911
+\T1/lmtt/m/n/12 a execução do modelo e (iii) consumo de memória RAM. Todos os e
+nsaios foram
+ []
+
+
+Overfull \hbox (19.16989pt too wide) in paragraph at lines 914--918
+[]\T1/lmtt/m/n/12 A Figura []9[] apresenta a estrutura física utilizada para to
+dos os ensaios.
+ []
+
+
+Overfull \hbox (44.93114pt too wide) in paragraph at lines 914--918
+\T1/lmtt/m/n/12 O suporte foi construído com tubos de PVC, permitindo fixar a w
+ebcam USB genérica
+ []
+
+
+Overfull \hbox (69.63115pt too wide) in paragraph at lines 914--918
+\T1/lmtt/m/n/12 na posição superior, perpendicular ao plano de deposição dos re
+síduos. O Raspberry Pi
+ []
+
+
+Overfull \hbox (23.31862pt too wide) in paragraph at lines 914--918
+\T1/lmtt/m/n/12 utilizado para realizar as inferências foi instalado diretament
+e na estrutura,
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 914--918
+\T1/lmtt/m/n/12 garantindo estabilidade e reduzindo interferências externas. Es
+sa montagem
+ []
+
+
+Overfull \hbox (81.98116pt too wide) in paragraph at lines 914--918
+\T1/lmtt/m/n/12 assegurou distância fixa entre câmera e objeto, iluminação unif
+orme e reprodutibilidade
+ []
+
+
 
 [39 <./imagens/roc_multiclasse.png>]
-<imagens/ensaios/montagem.jpeg, id=923, 724.95844pt x 963.6pt>
+<imagens/ensaios/montagem.jpeg, id=932, 724.95844pt x 963.6pt>
 File: imagens/ensaios/montagem.jpeg Graphic file (type jpg)
 <use imagens/ensaios/montagem.jpeg>
-Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 902.
+Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 921.
 
 (pdftex.def)             Requested size: 318.66948pt x 423.57362pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (14.29375pt too wide) in paragraph at lines 927--928
+[]\T1/lmtt/m/n/12 A base da estrutura mede 60 cm $\OMS/lmsy/m/n/12 ^^B$ \T1/lmt
+t/m/n/12 60 cm, proporcionando área suficiente
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 927--928
+\T1/lmtt/m/n/12 para a colocação dos resíduos a serem classificados. A altura d
+a haste que
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 927--928
+\T1/lmtt/m/n/12 suporta a câmera foi regulado experimentalmente, fixando o foco
+ da câmera e
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 927--928
+\T1/lmtt/m/n/12 ajustando a altura da câmera de forma a enquadar adequadamente 
+a área interna
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 927--928
+\T1/lmtt/m/n/12 do quadrado da base. Com este teste feito, a altura ideal encon
+trada para este
+ []
+
+
+Overfull \hbox (63.1404pt too wide) in paragraph at lines 927--928
+\T1/lmtt/m/n/12 caso foi de 90 cm. Finalmente, um tubo de 30 cm foi utilizado d
+e forma a centralizar
+ []
 
 
 
 [40 <./imagens/ensaios/montagem.jpeg>]
-<imagens/ensaios/metal.png, id=930, 1445.4pt x 903.375pt>
+Overfull \hbox (13.00189pt too wide) in paragraph at lines 929--930
+[]\T1/lmtt/m/n/12 A Tabela []10[] detalha os materiais utilizados na construção
+ da estrutura. 
+ []
+
+
+Overfull \hbox (11.1424pt too wide) in paragraph at lines 951--952
+[]\T1/lmtt/m/n/12 Nota: Para a montagem da base, o segmento de 60 cm deve ser s
+eccionado
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 951--952
+\T1/lmtt/m/n/12 para a inserção da conexão em T. Recomenda-se cortar o tubo ini
+cialmente ao
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 951--952
+\T1/lmtt/m/n/12 meio e acoplar as duas partes à conexão. Em seguida, deve-se re
+alizar o ajuste
+ []
+
+
+Overfull \hbox (44.93114pt too wide) in paragraph at lines 951--952
+\T1/lmtt/m/n/12 final nas extremidades para que o conjunto (tubos + conexão) at
+inja o comprimento
+ []
+
+
+Overfull \hbox (17.3244pt too wide) in paragraph at lines 954--955
+[]\T1/lmtt/m/n/12 As medições de latência e as métricas apresentadas nesta subs
+eção foram
+ []
+
+
+Overfull \hbox (90.00865pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 obtidas a partir da rotina de teste desenvolvida no arquivo met
+adados/test_tinyml_rpi.py.
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 O código carrega o modelo com tflite_runtime.Interpreter, captu
+ra quadros da
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 câmera via OpenCV, redimensiona cada frame para o input_shape e
+sperado pelo
+ []
+
+
+Overfull \hbox (3.55861pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 modelo e converte os dados para uint8 quando se trata de modelo
+ quantizado.
+ []
+
+
+Overfull \hbox (26.09738pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 A latência por inferência é medida com time.perf_counter() imed
+iatamente antes
+ []
+
+
+Overfull \hbox (57.28114pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 e após interpreter.invoke() e convertida para milissegundos; al
+ém disso é computada
+ []
+
+
+Overfull \hbox (26.89015pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 uma média exponencial (EMA) da latência usando $\OML/lmm/m/it/1
+2  \OT1/lmr/m/n/12 (-20) = 0[]12$ \T1/lmtt/m/n/12 para suavizar variações
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 pontuais. A aplicação registra ainda um log simples a cada 30 f
+rames e sobrepõe
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 954--955
+\T1/lmtt/m/n/12 no próprio frame a predição, a confiança (saída dividida por 25
+5 para modelos
+ []
+
+
+Overfull \hbox (35.84941pt too wide) in paragraph at lines 956--959
+[]\T1/lmtt/m/n/12 Durante os ensaios, observou-se que o sistema manteve tempos 
+de inferência
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 956--959
+\T1/lmtt/m/n/12 estáveis, próximos de 200 ms por imagem. A Figura []10[] aprese
+nta um exemplo do
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 956--959
+\T1/lmtt/m/n/12 ensaio com um objeto metálico, onde o tempo de inferência regis
+trado foi de
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 956--959
+\T1/lmtt/m/n/12 aproximadamente 204 ms. Esse valor é representativo do comporta
+mento geral
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 956--959
+\T1/lmtt/m/n/12 do modelo durante todo o período de testes. Todos os ensaios fo
+ram realizados
+ []
+
+<imagens/ensaios/metal.png, id=939, 965.85844pt x 441.90094pt>
 File: imagens/ensaios/metal.png Graphic file (type png)
 <use imagens/ensaios/metal.png>
-Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 943.
-(pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
+Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 962.
+(pdftex.def)             Requested size: 386.96027pt x 177.04044pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [41]
-<imagens/ensaios/papel.png, id=936, 1445.4pt x 903.375pt>
+Overfull \hbox (54.06567pt too wide) in paragraph at lines 968--970
+[]\T1/lmtt/m/n/12 Também foi avaliado o desempenho com resíduos da classe papel
+ A4. A Figura []11[]
+ []
+
+
+Overfull \hbox (19.92238pt too wide) in paragraph at lines 968--970
+\T1/lmtt/m/n/12 mostra que o sistema apresentou tempo de inferência da ordem de
+ 220 ms, valor
+ []
+
+<imagens/ensaios/papel.png, id=945, 959.83594pt x 435.12563pt>
 File: imagens/ensaios/papel.png Graphic file (type png)
 <use imagens/ensaios/papel.png>
-Package pdftex.def Info: imagens/ensaios/papel.png  used on input line 954.
-(pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
-<imagens/ensaios/papelao.png, id=938, 1445.4pt x 903.375pt>
+Package pdftex.def Info: imagens/ensaios/papel.png  used on input line 973.
+(pdftex.def)             Requested size: 386.96027pt x 175.42152pt.
+
+Overfull \hbox (11.1494pt too wide) in paragraph at lines 979--980
+[]\T1/lmtt/m/n/12 A Figura []12[] corresponde ao ensaio com papelão, com tempo 
+de inferência
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 979--980
+\T1/lmtt/m/n/12 em torno de 210 ms, mantendo o padrão observado nos demais test
+es e confirmando
+ []
+
+
+Overfull \hbox (52.95863pt too wide) in paragraph at lines 979--980
+\T1/lmtt/m/n/12 estabilidade temporal do modelo. As amostras de papelão são cai
+xas de medicamentos. 
+ []
+
+<imagens/ensaios/papelao.png, id=947, 986.18437pt x 449.42906pt>
 File: imagens/ensaios/papelao.png Graphic file (type png)
 <use imagens/ensaios/papelao.png>
-Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 964.
-(pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
+Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 983.
+(pdftex.def)             Requested size: 386.96027pt x 176.34642pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-[42 <./imagens/ensaios/metal.png (PNG copy)> <./imagens/ensaios/papel.png (PNG 
-copy)>]
-<imagens/ensaios/textil.png, id=944, 1445.4pt x 903.375pt>
+
+[42 <./imagens/ensaios/metal.png> <./imagens/ensaios/papel.png>]
+Overfull \hbox (17.3244pt too wide) in paragraph at lines 989--990
+[]\T1/lmtt/m/n/12 Por fim, a Figura []13[] mostra o desempenho com material têx
+til, novamente
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 989--990
+\T1/lmtt/m/n/12 mantendo tempos de inferência próximos de 210 ms. Neste caso fo
+i utilizada
+ []
+
+<imagens/ensaios/textil.png, id=955, 981.6675pt x 440.39531pt>
 File: imagens/ensaios/textil.png Graphic file (type png)
 <use imagens/ensaios/textil.png>
-Package pdftex.def Info: imagens/ensaios/textil.png  used on input line 974.
-(pdftex.def)             Requested size: 386.96027pt x 241.84685pt.
+Package pdftex.def Info: imagens/ensaios/textil.png  used on input line 993.
+(pdftex.def)             Requested size: 386.96027pt x 173.59473pt.
+
+Overfull \hbox (60.54942pt too wide) in paragraph at lines 1001--1003
+[]\T1/lmtt/m/n/12 Em todos os experimentos, o uso de CPU observado no processo 
+python permaneceu
+ []
 
 
-[43 <./imagens/ensaios/papelao.png (PNG copy)> <./imagens/ensaios/textil.png (P
-NG copy)>]
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 1001--1003
+\T1/lmtt/m/n/12 entre 25% e 27%. Esse valor indica utilização praticamente comp
+leta de um dos
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 1001--1003
+\T1/lmtt/m/n/12 quatro núcleos do Raspberry Pi, o que é esperado, pois o Tensor
+Flow Lite, em
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 1001--1003
+\T1/lmtt/m/n/12 sua configuração padrão, executa inferências utilizando apenas 
+um núcleo de
+ []
+
+
+Overfull \hbox (11.1424pt too wide) in paragraph at lines 1004--1006
+[]\T1/lmtt/m/n/12 O consumo de memória RAM apresentou valores entre 85 MB e 90 
+MB para o
+ []
+
+
+Overfull \hbox (38.75613pt too wide) in paragraph at lines 1004--1006
+\T1/lmtt/m/n/12 processo responsável pela inferência, enquanto o uso total do s
+istema permaneceu
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 1004--1006
+\T1/lmtt/m/n/12 entre 280 MB e 330 MB. Esses valores confirmam que a aplicação 
+opera de forma
+ []
+
+
+Overfull \hbox (42.02441pt too wide) in paragraph at lines 1009--1010
+[]\T1/lmtt/m/n/12 Os resultados obtidos permitem concluir que o modelo MobileNe
+tV2 quantizado
+ []
+
+
+Overfull \hbox (57.28114pt too wide) in paragraph at lines 1009--1010
+\T1/lmtt/m/n/12 executado via TensorFlow Lite apresenta desempenho adequado par
+a operação embarcada
+ []
+
+
+
+[43 <./imagens/ensaios/papelao.png> <./imagens/ensaios/textil.png>]
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 1018--1019
+[]\T1/lmtt/m/n/12 Esses valores estão alinhados com trabalhos similares na lite
+ratura e
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 1018--1019
+\T1/lmtt/m/n/12 confirmam que a solução do estudo de caso atende aos requisitos
+ de desempenho
+ []
+
+
+Overfull \hbox (23.4994pt too wide) in paragraph at lines 1023--1024
+[]\T1/lmtt/m/n/12 Durante o desenvolvimento e a análise dos resultados, algumas
+ limitações
+ []
+
+
+Overfull \hbox (38.75613pt too wide) in paragraph at lines 1023--1024
+\T1/lmtt/m/n/12 do modelo puderam ser observadas. A matriz de confusão apresent
+ada anteriormente
+ []
+
+
+Overfull \hbox (51.10614pt too wide) in paragraph at lines 1023--1024
+\T1/lmtt/m/n/12 já indicava a tendência do modelo em confundir determinadas cla
+sses, especialmente
+ []
+
+
+Overfull \hbox (7.57237pt too wide) in paragraph at lines 1023--1024
+\T1/lmtt/m/n/12 entre vidro, plástico e metal. Esse comportamento está alinhado
+ com o valor
+ []
+
+
+Overfull \hbox (14.04912pt too wide) in paragraph at lines 1023--1024
+\T1/lmtt/m/n/12 do escore F1 obtido (aproximadamente 0,68), evidenciando que ai
+nda há margem
+ []
+
+
+Overfull \hbox (48.19942pt too wide) in paragraph at lines 1025--1026
+[]\T1/lmtt/m/n/12 Outro ponto notado foi a influência da iluminação e da forma 
+como os objetos
+ []
+
+
+Overfull \hbox (57.28114pt too wide) in paragraph at lines 1025--1026
+\T1/lmtt/m/n/12 são posicionados durante a captura das imagens. Variações nesse
+s fatores impactaram
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 1025--1026
+\T1/lmtt/m/n/12 diretamente o desempenho, sugerindo que a padronização das cond
+ições de captura
+ []
+
+
+Overfull \hbox (20.4119pt too wide) in paragraph at lines 1027--1028
+[]\T1/lmtt/m/n/12 Além disso, embora o uso de bancos de dados públicos tenha si
+do valioso,
+ []
+
+
+Overfull \hbox (44.93114pt too wide) in paragraph at lines 1027--1028
+\T1/lmtt/m/n/12 eles nem sempre se mostraram totalmente adequados para um probl
+ema tão específico
+ []
+
+
+Overfull \hbox (23.31862pt too wide) in paragraph at lines 1027--1028
+\T1/lmtt/m/n/12 quanto o abordado neste trabalho. A criação de um conjunto de i
+magens próprio,
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 1027--1028
+\T1/lmtt/m/n/12 mais direcionado ao contexto real de uso, pode melhorar signifi
+cativamente
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 1027--1028
+\T1/lmtt/m/n/12 a qualidade do treinamento. Uma abordagem híbrida, combinando d
+ados próprios
+ []
+
+
+Overfull \hbox (68.57692pt too wide) in paragraph at lines 1029--1030
+[]\T1/lmtt/m/n/12 A qualidade e o tipo da câmera utilizada também se mostraram 
+fatores relevantes.
+ []
+
+
+Overfull \hbox (7.57237pt too wide) in paragraph at lines 1029--1030
+\T1/lmtt/m/n/12 A câmera empregada apresentou limitações, como ruído visual e g
+ranulação, o
+ []
+
+
+Overfull \hbox (69.63115pt too wide) in paragraph at lines 1029--1030
+\T1/lmtt/m/n/12 que possivelmente afetou o desempenho do modelo. Para trabalhos
+ futuros, recomenda-se
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 1029--1030
+\T1/lmtt/m/n/12 utilizar a mesma câmera tanto para a construção do conjunto de 
+treinamento
+ []
+
+
+Overfull \hbox (40.60863pt too wide) in paragraph at lines 1029--1030
+\T1/lmtt/m/n/12 quanto para a realização das inferências, ou empregar câmeras d
+e maior qualidade. 
+ []
+
+
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 1031--1032
+[]\T1/lmtt/m/n/12 Por fim, observa-se que a otimização dos parâmetros e hiperpa
+râmetros
+ []
+
+
+Overfull \hbox (69.63115pt too wide) in paragraph at lines 1031--1032
+\T1/lmtt/m/n/12 do modelo pode ser uma linha promissora de evolução. Técnicas c
+omo ajuste sistemático
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 1031--1032
+\T1/lmtt/m/n/12 de taxa de aprendizado, número de camadas treináveis, funções d
+e ativação, além
+ []
+
+
+Overfull \hbox (19.92238pt too wide) in paragraph at lines 1031--1032
+\T1/lmtt/m/n/12 de estratégias de data augmentation específicas, podem contribu
+ir para elevar
+ []
+
+
 
 [44]
-
-[45]
 Cap\'{\i }tulo 7.
 
+Overfull \hbox (4.9744pt too wide) in paragraph at lines 1039--1040
+[]\T1/lmtt/m/n/12 O presente trabalho teve como objetivo geral avaliar a viabil
+idade da
+ []
 
-[46
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 1039--1040
+\T1/lmtt/m/n/12 aplicação de técnicas de aprendizado de máquina em dispositivos
+ embarcados
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 1039--1040
+\T1/lmtt/m/n/12 com recursos computacionais limitados. Com base nos resultados 
+obtidos e nas
+ []
+
+
+Overfull \hbox (20.23112pt too wide) in paragraph at lines 1039--1040
+\T1/lmtt/m/n/12 etapas desenvolvidas ao longo do estudo, é possível afirmar que
+ esse objetivo
+ []
+
+
+Overfull \hbox (23.4994pt too wide) in paragraph at lines 1041--1042
+[]\T1/lmtt/m/n/12 Os objetivos específicos definidos no Capítulo []1[] também f
+oram alcançados
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 1041--1042
+\T1/lmtt/m/n/12 de forma consistente. Primeiramente, realizou-se uma pesquisa a
+brangente sobre
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 1041--1042
+\T1/lmtt/m/n/12 ferramentas de desenvolvimento TinyML, destacando suas capacida
+des, limitações
+ []
+
+
+Overfull \hbox (38.75613pt too wide) in paragraph at lines 1041--1042
+\T1/lmtt/m/n/12 e adequação a diferentes cenários de uso. Em seguida, o levanta
+mento e a análise
+ []
+
+
+Overfull \hbox (13.74738pt too wide) in paragraph at lines 1041--1042
+\T1/lmtt/m/n/12 das principais plataformas de hardware disponíveis permitiram c
+ontextualizar
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 1041--1042
+\T1/lmtt/m/n/12 alternativas viáveis para implementação de soluções embarcadas,
+ considerando
+ []
+
+
+Overfull \hbox (91.42444pt too wide) in paragraph at lines 1043--1044
+[]\T1/lmtt/m/n/12 Na sequência, foi elaborado um fluxo de trabalho ponta-a-pont
+a para desenvolvimento
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 1043--1044
+\T1/lmtt/m/n/12 de soluções TinyML, cobrindo desde a aquisição e preparação dos
+ dados até a
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 1043--1044
+\T1/lmtt/m/n/12 quantização, validação e implantação do modelo. Esse fluxo se m
+ostrou adequado
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 1043--1044
+\T1/lmtt/m/n/12 tanto conceitualmente quanto na prática, servindo como diretriz
+ estruturada
+ []
+
+
+Overfull \hbox (11.1494pt too wide) in paragraph at lines 1045--1046
+[]\T1/lmtt/m/n/12 Por fim, o quarto objetivo específico ^^V o desenvolvimento d
+e um modelo
+ []
+
+
+Overfull \hbox (27.94987pt too wide) in paragraph at lines 1045--1046
+\T1/lmtt/m/n/12 TinyML para classificação de resíduos sólidos ^^V foi atingido 
+de forma completa.
+ []
+
+
+Overfull \hbox (38.75613pt too wide) in paragraph at lines 1045--1046
+\T1/lmtt/m/n/12 O modelo implementado, baseado em uma MobileNetV2 quantizada em
+ INT8, apresentou
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 1045--1046
+\T1/lmtt/m/n/12 desempenho satisfatório dentro das restrições de hardware, com 
+latência estável
+ []
+
+
+Overfull \hbox (17.14362pt too wide) in paragraph at lines 1045--1046
+\T1/lmtt/m/n/12 em torno de 200 ms e consumo reduzido de recursos computacionai
+s. Além disso,
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 1045--1046
+\T1/lmtt/m/n/12 foi possível compará-lo diretamente com o estudo de referência 
+do conjunto
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 1045--1046
+\T1/lmtt/m/n/12 de dados RealWaste, reforçando a coerência dos resultados e evi
+denciando os
+ []
+
+
+Overfull \hbox (11.1494pt too wide) in paragraph at lines 1047--1048
+[]\T1/lmtt/m/n/12 Os experimentos realizados demonstram que o uso de TinyML pod
+e ser uma
+ []
+
+
+Overfull \hbox (32.58113pt too wide) in paragraph at lines 1047--1048
+\T1/lmtt/m/n/12 alternativa viável para sistemas que exigem processamento local
+, baixa latência
+ []
+
+
+Overfull \hbox (51.10614pt too wide) in paragraph at lines 1047--1048
+\T1/lmtt/m/n/12 e independência de conectividade, desde que os requisitos de la
+tência da aplicação
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 1047--1048
+\T1/lmtt/m/n/12 alvo sejam atendidos. Embora o desempenho obtido seja inferior 
+ao de modelos
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 1047--1048
+\T1/lmtt/m/n/12 executados em ambientes tradicionais de maior capacidade comput
+acional, os
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 1047--1048
+\T1/lmtt/m/n/12 resultados mostram que, para o contexto de recursos limitados d
+a plataforma
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 1047--1048
+\T1/lmtt/m/n/12 Raspberry Pi 3, soluções compactas e quantizadas podem operar d
+e forma robusta
+ []
+
+
+Overfull \hbox (23.4994pt too wide) in paragraph at lines 1049--1050
+[]\T1/lmtt/m/n/12 Como perspectivas de continuidade, sugere-se o aprimoramento 
+do conjunto
+ []
+
+
+Overfull \hbox (26.40613pt too wide) in paragraph at lines 1049--1050
+\T1/lmtt/m/n/12 de dados, a adoção de câmeras de maior qualidade, a exploração 
+de arquiteturas
+ []
+
+
+Overfull \hbox (3.55861pt too wide) in paragraph at lines 1049--1050
+\T1/lmtt/m/n/12 mais otimizadas para quantização e o ajuste sistemático de hipe
+rparâmetros.
+ []
+
+
+Overfull \hbox (38.75613pt too wide) in paragraph at lines 1049--1050
+\T1/lmtt/m/n/12 Essas estratégias podem elevar a precisão do modelo e ampliar s
+ua aplicabilidade
+ []
+
+
+Overfull \hbox (17.01566pt too wide) in paragraph at lines 1051--1052
+[]\T1/lmtt/m/n/12 Em síntese, o trabalho confirma que técnicas de TinyML podem 
+substituir
+ []
+
+
+Overfull \hbox (75.80615pt too wide) in paragraph at lines 1051--1052
+\T1/lmtt/m/n/12 ou complementar arquiteturas tradicionais de IoT em aplicações 
+práticas, especialmente
+ []
+
+
+Overfull \hbox (14.05612pt too wide) in paragraph at lines 1051--1052
+\T1/lmtt/m/n/12 em cenários onde a velocidade de inferência obtida é suficiente
+ para o fluxo
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 1051--1052
+\T1/lmtt/m/n/12 de trabalho, consolidando o potencial da computação de borda co
+mo elemento
+ []
+
+
+
+[45
+
+]
+Overfull \hbox (20.4119pt too wide) in paragraph at lines 1053--1054
+[]\T1/lmtt/m/n/12 Assim, além de comprovar a viabilidade técnica para este estu
+do de caso,
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 1053--1054
+\T1/lmtt/m/n/12 este estudo evidencia que aplicações TinyML representam um cami
+nho concreto
+ []
+
+
+Overfull \hbox (1.70612pt too wide) in paragraph at lines 1053--1054
+\T1/lmtt/m/n/12 para a próxima geração de sistemas inteligentes embarcados que 
+priorizam a
+ []
+
+
+Overfull \hbox (7.88112pt too wide) in paragraph at lines 1053--1054
+\T1/lmtt/m/n/12 eficiência energética e a autonomia de processamento, reforçand
+o o papel de
+ []
+
+
+
+[46]
+
+[47
 
 ]
 
-[47]
-
-[48
-
-]
+[48]
 
 [49]
 
-[50]
-
-[51] (C:\gitclones\ai4rpi\build\tcc1_maxwell.aux)
+[50] (C:\gitclones\ai4rpi\build\tcc1_maxwell.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `tcc1_maxwell.out' has not changed.
-(rerunfilecheck)             Checksum: 0B1E7BC2C271102DBD686B229C149392;11352.
+(rerunfilecheck)             Checksum: 95ABBDE2D2FAE9D90EC7674E99F0C8FB;11088.
 Package logreq Info: Writing requests to 'tcc1_maxwell.run.xml'.
 \openout1 = `tcc1_maxwell.run.xml'.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 585 ({)
+### bottom level 
 Here is how much of TeX's memory you used:
- 69939 strings out of 468080
- 1639353 string characters out of 5431078
- 2824344 words of memory out of 5000000
- 97072 multiletter control sequences out of 15000+600000
- 747952 words of font info for 315 fonts, out of 8000000 for 9000
+ 69947 strings out of 468080
+ 1639558 string characters out of 5431078
+ 2826995 words of memory out of 5000000
+ 97095 multiletter control sequences out of 15000+600000
+ 748972 words of font info for 312 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,11n,129p,1913b,3961s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmbx10.pfb><C:/mikte
-x-portable/texmfs/install/fonts/type1/public/lm/lmbx12.pfb><C:/miktex-portable/
-texmfs/install/fonts/type1/public/lm/lmbxi10.pfb><C:/miktex-portable/texmfs/ins
-tall/fonts/type1/public/lm/lmcsc10.pfb><C:/miktex-portable/texmfs/install/fonts
-/type1/public/lm/lmex10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/publ
-ic/lm/lmmi12.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmmi8
-.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmr10.pfb><C:/mik
-tex-portable/texmfs/install/fonts/type1/public/lm/lmr12.pfb><C:/miktex-portable
-/texmfs/install/fonts/type1/public/lm/lmr7.pfb><C:/miktex-portable/texmfs/insta
-ll/fonts/type1/public/lm/lmr8.pfb><C:/miktex-portable/texmfs/install/fonts/type
-1/public/lm/lmri10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm
-/lmri12.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmro10.pfb
-><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmss12.pfb><C:/miktex
--portable/texmfs/install/fonts/type1/public/lm/lmssbo10.pfb><C:/miktex-portable
-/texmfs/install/fonts/type1/public/lm/lmssbx10.pfb><C:/miktex-portable/texmfs/i
-nstall/fonts/type1/public/lm/lmsy10.pfb><C:/miktex-portable/texmfs/install/font
-s/type1/public/lm/lmsy8.pfb><C:/miktex-portable/texmfs/install/fonts/type1/publ
-ic/lm/lmtk10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmtt1
-0.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmtt12.pfb>
-Output written on C:\gitclones\ai4rpi\build\tcc1_maxwell.pdf (51 pages, 5396766
+<C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmbx10
+.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmbx12.pfb><C:/mi
+ktex-portable/texmfs/install/fonts/type1/public/lm/lmbxi10.pfb><C:/miktex-porta
+ble/texmfs/install/fonts/type1/public/lm/lmcsc10.pfb><C:/miktex-portable/texmfs
+/install/fonts/type1/public/lm/lmex10.pfb><C:/miktex-portable/texmfs/install/fo
+nts/type1/public/lm/lmmi12.pfb><C:/miktex-portable/texmfs/install/fonts/type1/p
+ublic/lm/lmmi8.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmr
+10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmr12.pfb><C:/m
+iktex-portable/texmfs/install/fonts/type1/public/lm/lmr7.pfb><C:/miktex-portabl
+e/texmfs/install/fonts/type1/public/lm/lmr8.pfb><C:/miktex-portable/texmfs/inst
+all/fonts/type1/public/lm/lmri10.pfb><C:/miktex-portable/texmfs/install/fonts/t
+ype1/public/lm/lmri12.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public
+/lm/lmro10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmss12.
+pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmssbo10.pfb><C:/m
+iktex-portable/texmfs/install/fonts/type1/public/lm/lmssbx10.pfb><C:/miktex-por
+table/texmfs/install/fonts/type1/public/lm/lmsy10.pfb><C:/miktex-portable/texmf
+s/install/fonts/type1/public/lm/lmsy8.pfb><C:/miktex-portable/texmfs/install/fo
+nts/type1/public/lm/lmtcsc10.pfb><C:/miktex-portable/texmfs/install/fonts/type1
+/public/lm/lmtk10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/
+lmtt10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmtt12.pfb>
+<C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmtti10.pfb>
+Output written on C:\gitclones\ai4rpi\build\tcc1_maxwell.pdf (50 pages, 3808971
  bytes).
 PDF statistics:
- 1213 PDF objects out of 1440 (max. 8388607)
- 261 named destinations out of 1000 (max. 500000)
- 64118 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1226 PDF objects out of 1440 (max. 8388607)
+ 259 named destinations out of 1000 (max. 500000)
+ 66670 words of extra memory for PDF output out of 74296 (max. 10000000)
 
