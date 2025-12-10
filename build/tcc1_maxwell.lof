@@ -1,0 +1,59 @@
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Exemplo de uma rede neural simples.}}{17}{figure.caption.32}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Exemplo de um gráfico COR.}}{21}{figure.caption.48}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Exemplo de uma Matriz de Confusão.}}{22}{figure.caption.49}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Processo de seleção manual de resíduos.}}{25}{figure.caption.55}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Exemplos de imagens do conjunto de dados \textit {RealWaste}: (a) papel; (b) metal; (c) vidro; (d) plástico; (e) resíduo orgânico alimentar; (f) resíduo têxtil.}}{29}{figure.caption.70}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Curvas de acurácia e perda por época (treino e validação).}}{32}{figure.caption.81}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Matriz de confusão normalizada (\%).}}{38}{figure.caption.155}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Curvas COR por classe e respectivas AUCs.}}{39}{figure.caption.157}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Montagem utilizada nos ensaios, composta por tubos de PVC, presilhas de fixação, webcam USB e Raspberry Pi.}}{40}{figure.caption.161}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Ensaio com tampa metálico de Ø 160 mm mostrando a predição da classe e o tempo de inferência.}}{42}{figure.caption.164}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Ensaio com papel A4, ilustrando o tempo de inferência registrado e a classificação produzida pelo modelo.}}{42}{figure.caption.165}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Ensaio com caixas de medicamento (papelão), exibindo o tempo de inferência e a predição realizada.}}{43}{figure.caption.166}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Ensaio com toalha de banho (têxtil), evidenciando tempo de inferência e classificação final.}}{43}{figure.caption.167}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Ensaio de controle com modelo Float32: latência equivalente (~183 ms), porém com aumento significativo no consumo de memória (+27\%) devido à precisão de 32 bits.}}{45}{figure.caption.172}%
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\babel@toc {brazilian}{}\relax 
+\contentsfinish 
