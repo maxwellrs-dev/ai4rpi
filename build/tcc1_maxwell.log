@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4 Portable) (preloaded format=pdflatex 2025.11.6)  10 DEC 2025 12:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4 Portable) (preloaded format=pdflatex 2025.11.6)  10 DEC 2025 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2239,18 +2239,18 @@ Package pdftex.def Info: imagens/selecao.jpg  used on input line 454.
 
 [27]
 Cap\'{\i }tulo 5.
+<imagens/rw.png, id=783, 623.32875pt x 476.53032pt>
+File: imagens/rw.png Graphic file (type png)
+<use imagens/rw.png>
+Package pdftex.def Info: imagens/rw.png  used on input line 564.
+(pdftex.def)             Requested size: 386.96027pt x 295.83112pt.
 
 
 [28
 
 ]
-<imagens/rw.png, id=795, 623.32875pt x 476.53032pt>
-File: imagens/rw.png Graphic file (type png)
-<use imagens/rw.png>
-Package pdftex.def Info: imagens/rw.png  used on input line 566.
-(pdftex.def)             Requested size: 386.96027pt x 295.83112pt.
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-80.
+78.
  (C:\miktex-portable\texmfs\install\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2264,37 +2264,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 [30]
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <12> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 611.
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 609.
 
-<imagens/treino_acc_loss.png, id=812, 729.927pt x 341.1144pt>
+<imagens/treino_acc_loss.png, id=804, 729.927pt x 341.1144pt>
 File: imagens/treino_acc_loss.png Graphic file (type png)
 <use imagens/treino_acc_loss.png>
-Package pdftex.def Info: imagens/treino_acc_loss.png  used on input line 634.
+Package pdftex.def Info: imagens/treino_acc_loss.png  used on input line 632.
 (pdftex.def)             Requested size: 386.96027pt x 180.8366pt.
 
 
-[31]
-Package csquotes Info: Input encoding change on input line 651.
- (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 656.
+[31 <./imagens/treino_acc_loss.png>]
+Package csquotes Info: Input encoding change on input line 649.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2315,7 +2295,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 661.
+Package csquotes Info: Input encoding change on input line 654.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2336,7 +2316,70 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 670.
+Package csquotes Info: Input encoding change on input line 659.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 668.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 673.
+
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 679.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2358,57 +2401,15 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
 
-[32 <./imagens/treino_acc_loss.png>]
-Package csquotes Info: Input encoding change on input line 675.
-
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 681.
-
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Overfull \hbox (6.19327pt too wide) in paragraph at lines 706--723
+[32]
+Overfull \hbox (6.19327pt too wide) in paragraph at lines 704--721
  [][] 
  []
 
 
 
 [33]
-Overfull \hbox (8.19629pt too wide) in paragraph at lines 732--733
+Overfull \hbox (8.19629pt too wide) in paragraph at lines 730--731
 []\T1/lmr/bx/n/12 (-20) Habilitação de pe-ri-fé-ri-cos\T1/lmr/m/n/12 (-20) : at
 i-va-ção op-ci-o-nal do su-porte à câ-mera via \T1/lmtt/m/n/12 raspi-config\T1/
 lmr/m/n/12 (-20) ; 
@@ -2417,10 +2418,9 @@ lmr/m/n/12 (-20) ;
 (C:\miktex-portable\texmfs\install\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
+Package csquotes Info: Input encoding change on input line 742.
 
-[34]
-Package csquotes Info: Input encoding change on input line 744.
- (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
 LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
 ding ?) on input line 47.
@@ -2440,8 +2440,8 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 745.
-Package csquotes Info: Input encoding change on input line 753.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 743.
+Package csquotes Info: Input encoding change on input line 751.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2462,7 +2462,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 757.
+Package csquotes Info: Input encoding change on input line 755.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2484,12 +2484,12 @@ LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 760.
+(Font)              <10> on input line 758.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 760.
+(Font)              <7> on input line 758.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 760.
-Package csquotes Info: Input encoding change on input line 761.
+(Font)              <5> on input line 758.
+Package csquotes Info: Input encoding change on input line 759.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2510,7 +2510,29 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 765.
+
+[34]
+Package csquotes Info: Input encoding change on input line 763.
+ (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
+File: latin1.def 2024/02/08 v1.3d Input encoding file
+LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
+ding ?) on input line 47.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
+oding ?) on input line 48.
+LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
+encoding ?) on input line 49.
+LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
+s (encoding ?) on input line 50.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
+ng ?) on input line 51.
+LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
+g ?) on input line 53.
+LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
+coding ?) on input line 55.
+LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
+ncoding ?) on input line 57.
+)
+Package csquotes Info: Input encoding change on input line 767.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2531,7 +2553,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 769.
+Package csquotes Info: Input encoding change on input line 771.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2552,28 +2574,7 @@ coding ?) on input line 55.
 LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
 ncoding ?) on input line 57.
 )
-Package csquotes Info: Input encoding change on input line 773.
-
-(C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
-File: latin1.def 2024/02/08 v1.3d Input encoding file
-LaTeX Encoding Info:    Ignoring declaration for text command \textdegree (enco
-ding ?) on input line 47.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonehalf (enc
-oding ?) on input line 48.
-LaTeX Encoding Info:    Ignoring declaration for text command \textonequarter (
-encoding ?) on input line 49.
-LaTeX Encoding Info:    Ignoring declaration for text command \textthreequarter
-s (encoding ?) on input line 50.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcent (encodi
-ng ?) on input line 51.
-LaTeX Encoding Info:    Ignoring declaration for text command \textyen (encodin
-g ?) on input line 53.
-LaTeX Encoding Info:    Ignoring declaration for text command \textcurrency (en
-coding ?) on input line 55.
-LaTeX Encoding Info:    Ignoring declaration for text command \textbrokenbar (e
-ncoding ?) on input line 57.
-)
-Package csquotes Info: Input encoding change on input line 777.
+Package csquotes Info: Input encoding change on input line 775.
 
 (C:\miktex-portable\texmfs\install\tex/latex/base\latin1.def
 File: latin1.def 2024/02/08 v1.3d Input encoding file
@@ -2604,35 +2605,35 @@ Cap\'{\i }tulo 6.
 ]
 
 [37]
-<imagens/matriz_confusao.png, id=925, 414.8298pt x 371.4678pt>
+<imagens/matriz_confusao.png, id=917, 414.8298pt x 371.4678pt>
 File: imagens/matriz_confusao.png Graphic file (type png)
 <use imagens/matriz_confusao.png>
-Package pdftex.def Info: imagens/matriz_confusao.png  used on input line 878.
+Package pdftex.def Info: imagens/matriz_confusao.png  used on input line 876.
 (pdftex.def)             Requested size: 409.71692pt x 366.89836pt.
 
 
 [38 <./imagens/matriz_confusao.png>]
-<imagens/roc_multiclasse.png, id=932, 731.3724pt x 506.6127pt>
+<imagens/roc_multiclasse.png, id=924, 731.3724pt x 506.6127pt>
 File: imagens/roc_multiclasse.png Graphic file (type png)
 <use imagens/roc_multiclasse.png>
-Package pdftex.def Info: imagens/roc_multiclasse.png  used on input line 894.
+Package pdftex.def Info: imagens/roc_multiclasse.png  used on input line 892.
 (pdftex.def)             Requested size: 409.71692pt x 283.80939pt.
 
 
 [39 <./imagens/roc_multiclasse.png>]
-<imagens/ensaios/montagem.jpeg, id=939, 724.95844pt x 963.6pt>
+<imagens/ensaios/montagem.jpeg, id=931, 724.95844pt x 963.6pt>
 File: imagens/ensaios/montagem.jpeg Graphic file (type jpg)
 <use imagens/ensaios/montagem.jpeg>
-Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 921.
+Package pdftex.def Info: imagens/ensaios/montagem.jpeg  used on input line 919.
 
 (pdftex.def)             Requested size: 318.66948pt x 423.57362pt.
 
 
 [40 <./imagens/ensaios/montagem.jpeg>]
-<imagens/ensaios/metal.png, id=946, 965.85844pt x 441.90094pt>
+<imagens/ensaios/metal.png, id=938, 965.85844pt x 441.90094pt>
 File: imagens/ensaios/metal.png Graphic file (type png)
 <use imagens/ensaios/metal.png>
-Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 962.
+Package pdftex.def Info: imagens/ensaios/metal.png  used on input line 960.
 (pdftex.def)             Requested size: 386.96027pt x 177.04044pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2640,15 +2641,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [41]
-<imagens/ensaios/papel.png, id=952, 959.83594pt x 435.12563pt>
+<imagens/ensaios/papel.png, id=944, 959.83594pt x 435.12563pt>
 File: imagens/ensaios/papel.png Graphic file (type png)
 <use imagens/ensaios/papel.png>
-Package pdftex.def Info: imagens/ensaios/papel.png  used on input line 973.
+Package pdftex.def Info: imagens/ensaios/papel.png  used on input line 971.
 (pdftex.def)             Requested size: 386.96027pt x 175.42152pt.
-<imagens/ensaios/papelao.png, id=954, 986.18437pt x 449.42906pt>
+<imagens/ensaios/papelao.png, id=946, 986.18437pt x 449.42906pt>
 File: imagens/ensaios/papelao.png Graphic file (type png)
 <use imagens/ensaios/papelao.png>
-Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 983.
+Package pdftex.def Info: imagens/ensaios/papelao.png  used on input line 981.
 (pdftex.def)             Requested size: 386.96027pt x 176.34642pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2656,18 +2657,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [42 <./imagens/ensaios/metal.png> <./imagens/ensaios/papel.png>]
-<imagens/ensaios/textil.png, id=962, 981.6675pt x 440.39531pt>
+<imagens/ensaios/textil.png, id=954, 981.6675pt x 440.39531pt>
 File: imagens/ensaios/textil.png Graphic file (type png)
 <use imagens/ensaios/textil.png>
-Package pdftex.def Info: imagens/ensaios/textil.png  used on input line 993.
+Package pdftex.def Info: imagens/ensaios/textil.png  used on input line 991.
 (pdftex.def)             Requested size: 386.96027pt x 173.59473pt.
 
 
 [43 <./imagens/ensaios/papelao.png> <./imagens/ensaios/textil.png>]
-<imagens/modelo32.png, id=972, 960.58875pt x 445.665pt>
+<imagens/modelo32.png, id=964, 960.58875pt x 445.665pt>
 File: imagens/modelo32.png Graphic file (type png)
 <use imagens/modelo32.png>
-Package pdftex.def Info: imagens/modelo32.png  used on input line 1028.
+Package pdftex.def Info: imagens/modelo32.png  used on input line 1026.
 (pdftex.def)             Requested size: 409.71692pt x 190.08855pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2708,10 +2709,10 @@ Package logreq Info: Writing requests to 'tcc1_maxwell.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 69966 strings out of 468080
- 1639785 string characters out of 5431078
- 2824768 words of memory out of 5000000
- 97092 multiletter control sequences out of 15000+600000
+ 69958 strings out of 468080
+ 1639602 string characters out of 5431078
+ 2817686 words of memory out of 5000000
+ 97085 multiletter control sequences out of 15000+600000
  748063 words of font info for 316 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,11n,129p,1913b,3961s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2734,10 +2735,10 @@ nstall/fonts/type1/public/lm/lmsy10.pfb><C:/miktex-portable/texmfs/install/font
 s/type1/public/lm/lmsy8.pfb><C:/miktex-portable/texmfs/install/fonts/type1/publ
 ic/lm/lmtk10.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmtt1
 0.pfb><C:/miktex-portable/texmfs/install/fonts/type1/public/lm/lmtt12.pfb>
-Output written on C:\gitclones\ai4rpi\build\tcc1_maxwell.pdf (52 pages, 4414718
+Output written on C:\gitclones\ai4rpi\build\tcc1_maxwell.pdf (52 pages, 4411473
  bytes).
 PDF statistics:
- 1240 PDF objects out of 1440 (max. 8388607)
- 265 named destinations out of 1000 (max. 500000)
+ 1228 PDF objects out of 1440 (max. 8388607)
+ 264 named destinations out of 1000 (max. 500000)
  64123 words of extra memory for PDF output out of 74296 (max. 10000000)
 
